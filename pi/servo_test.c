@@ -62,13 +62,8 @@ int main(int argc, char *argv[]){
       if (used[g]){
 
          printf(" %d", g);
-         step[g] = randint(5, 25);
 
-         if((step[g] % 2) == 0){
-            step[g] = -step[g];
-         }
-
-         width[g] = randint(MIN_WIDTH, MAX_WIDTH);
+         width[g] = 1000;
       }
    }
 
@@ -82,15 +77,15 @@ int main(int argc, char *argv[]){
 
             // printf("%d %d\n", g, width[g]);
 
-            width[g] += step[g];
-
-            if ((width[g]<MIN_WIDTH) || (width[g]>MAX_WIDTH)){
-               step[g] = -step[g];
-               width[g] += step[g];
+            if (width[g] > 2000){
+               width[g] = 1000;
+            }
+            else{
+               width[g] += 100;
             }
          }
       }
-      time_sleep(0.1);
+      time_sleep(1);
    }
 
    printf("\ntidying up\n");
