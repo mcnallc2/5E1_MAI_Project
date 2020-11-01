@@ -30,14 +30,17 @@
 // this is the RPLidar SDK header provided by SLAMTEC
 #include "rplidar.h"
 
-
 #ifndef _countof
-#define _countof(_Array) (int)(sizeof(_Array) / sizeof(_Array[0]))
+#define _countof(_Array) (int)(sizeof(_Array) / sizeof(_Array[0])) //macro to get array length
 #endif
 
 #include <unistd.h>
 #include <signal.h>
 
+// rplidar namespace
+using namespace rp::standalone::rplidar;
+
+// create runtime delay
 static inline void delay(_word_size_t ms){
     while (ms>=1000){
         usleep(1000*1000);
@@ -47,191 +50,187 @@ static inline void delay(_word_size_t ms){
         usleep(ms*1000);
 }
 
-using namespace rp::standalone::rplidar;
-
+// checking lidar health status
 bool checkRPLIDARHealth(RPlidarDriver * drv){
-
-    u_result     op_result;
+    //
+    u_result op_result;
     rplidar_response_device_health_t healthinfo;
-
-
+    //
+    // obtain health info
     op_result = drv->getHealth(healthinfo);
-    if (IS_OK(op_result)) { // the macro IS_OK is the preperred way to judge whether the operation is succeed.
-        printf("RPLidar health status : %d\n", healthinfo.status);
+    //
+    // macro to compare with a failure bit to check for success
+    if (IS_OK(op_result)) {
+        //
+        // printf("RPLidar health status : %d\n", healthinfo.status);
+        //
+        // if status is 0x2 there is an error
         if (healthinfo.status == RPLIDAR_STATUS_ERROR) {
             fprintf(stderr, "Error, rplidar internal error detected. Please reboot the device to retry.\n");
-            // enable the following code if you want rplidar to be reboot by software
-            // drv->reset();
+            //
+            //using driver to reboot the lidar
+            drv->reset();
             return false;
-        } else {
+        }
+        //
+        // if no error return true
+        else{
             return true;
         }
-
-    } else {
+    }
+    // 
+    // if cannot get lidar health status
+    else{
         fprintf(stderr, "Error, cannot retrieve the lidar health code: %x\n", op_result);
         return false;
     }
 }
 
+// get the average distance for the angle range
 void getDistanceforAngle(rplidar_response_measurement_node_hq_t * nodebuffer, size_t count, int lower, int upper){
-
+    //
     float distance = 0;
     float angle;
-
-    for (int pos = 0; pos < (int)count ; ++pos) {
-
+    //
+    // loop through the lidar range of angles
+    for (int pos = 0; pos < (int)count ; ++pos){
+        //
+        // get angle in degrees
         angle = (nodebuffer[pos].angle_z_q14 * 90.f / (1 << 14));
-
+        //
+        // if angle is within the range and the info is good quality
         if ((angle >= lower) && (angle < upper) && (nodebuffer[pos].quality != 0)){
+            //
+            // for the first read the distance is 0, store the first distance
             if (distance == 0){
                 distance = nodebuffer[pos].dist_mm_q2/4.0f;
             }
+            //
+            // else add the new distance to the average value
             else{
                 distance = (distance + nodebuffer[pos].dist_mm_q2/4.0f) / 2;                        
             }
         }
     }
-
+    // print the average ditance for the angle range
     printf("Angle: %i-%i\t- Dist: %08.2f\n", lower, upper, distance);
 }
 
+// end when ctrl_c is pressed
 bool ctrl_c_pressed;
-void ctrlc(int)
-{
+void ctrlc(int){
     ctrl_c_pressed = true;
 }
 
 
 int main(int argc, const char * argv[]){
-
+    //
     const char * opt_com_path = NULL;
-    _u32         baudrateArray[2] = {115200, 256000};
-    _u32         opt_com_baudrate = 0;
+    _u32         opt_com_baudrate = 115200;
     u_result     op_result;
-
-    bool useArgcBaudrate = false;
-
-    printf("Ultra simple LIDAR data grabber for RPLIDAR.\n"
-           "Version: " RPLIDAR_SDK_VERSION "\n");
-
+    //bool useArgcBaudrate = false;
+    //
+    printf("RPLiDar: Getting distance values for angle range\n");
+    //
     // read serial port from the command line...
-    if (argc>1) opt_com_path = argv[1]; // or set to a fixed value: e.g. "com3" 
-
-    // read baud rate from the command line if specified...
-    if (argc>2)
-    {
-        opt_com_baudrate = strtoul(argv[2], NULL, 10);
-        useArgcBaudrate = true;
-    }
-
+    if (argc>1) opt_com_path = argv[1];
+    //
+    // specify port to use
     if (!opt_com_path) {
         opt_com_path = "/dev/ttyUSB0";
     }
-
-    // create the driver instance
+    //
+    // read baud rate from the command line if specified
+    if (argc>2){
+        opt_com_baudrate = strtoul(argv[2], NULL, 10);
+        //useArgcBaudrate = true;
+    }
+    //
+    // create the RPLIDAR driver instance
 	RPlidarDriver * drv = RPlidarDriver::CreateDriver(DRIVER_TYPE_SERIALPORT);
     if (!drv){
         fprintf(stderr, "insufficent memory, exit\n");
         exit(-2);
     }
-    
+    //
+    // check if device is connected
     rplidar_response_device_info_t devinfo;
     bool connectSuccess = false;
-    // make connection...
-    if(useArgcBaudrate){
-        if(!drv){
-            drv = RPlidarDriver::CreateDriver(DRIVER_TYPE_SERIALPORT);
+    //
+    if (IS_OK(drv->connect(opt_com_path, opt_com_baudrate))){
+        //
+        op_result = drv->getDeviceInfo(devinfo);
+        //
+        // if the device is connected
+        if (IS_OK(op_result)){
+            connectSuccess = true;
         }
-        if (IS_OK(drv->connect(opt_com_path, opt_com_baudrate))){
-            op_result = drv->getDeviceInfo(devinfo);
-
-            if (IS_OK(op_result)){
-                connectSuccess = true;
-            }
-            else{
-                delete drv;
-                drv = NULL;
-            }
+        // else delete the driver
+        else{
+            delete drv;
+            drv = NULL;
         }
     }
-    else{
-        size_t baudRateArraySize = (sizeof(baudrateArray))/ (sizeof(baudrateArray[0]));
-        for(size_t i = 0; i < baudRateArraySize; ++i){
-            if(!drv){
-                drv = RPlidarDriver::CreateDriver(DRIVER_TYPE_SERIALPORT);
-            }
-            if(IS_OK(drv->connect(opt_com_path, baudrateArray[i]))){
 
-                op_result = drv->getDeviceInfo(devinfo);
-
-                if (IS_OK(op_result)){
-                    connectSuccess = true;
-                    break;
-                }
-                else{
-                    delete drv;
-                    drv = NULL;
-                }
-            }
-        }
-    }
+    // if the device is not connected throw error
     if (!connectSuccess){
-        fprintf(stderr, "Error, cannot bind to the specified serial port %s.\n"
-            , opt_com_path);
+        fprintf(stderr, "Error, cannot bind to the specified serial port %s.\n", opt_com_path);
         goto on_finished;
     }
 
-    // print out the device serial number, firmware and hardware version number..
-    printf("RPLIDAR S/N: ");
-    for (int pos = 0; pos < 16 ;++pos){
-        printf("%02X", devinfo.serialnum[pos]);
-    }
-
-    printf("\n"
-            "Firmware Ver: %d.%02d\n"
-            "Hardware Rev: %d\n"
-            , devinfo.firmware_version>>8
-            , devinfo.firmware_version & 0xFF
-            , (int)devinfo.hardware_version);
-
-
-
-    // check health...
+    // check health of the device using driver
     if (!checkRPLIDARHealth(drv)) {
         goto on_finished;
     }
 
+    // create ctrl_c button
     signal(SIGINT, ctrlc);
     
+    // call driver to start motor
     drv->startMotor();
-    // start scan...
+    // call driver to start scanning 
     drv->startScan(0,1);
 
-    // fetech result and print it out...
+    // enter the embedded loop
     while (1){
-
+        //
+        // init the nodes for scans at each angle 
         rplidar_response_measurement_node_hq_t nodes[8192];
         size_t   count = _countof(nodes);
-
+        //
+        // scan for each node
         op_result = drv->grabScanDataHq(nodes, count);
-
+        //
+        // if the scan result is obtained
         if (IS_OK(op_result)){
+            //
+            // push scanned data into vector
             drv->ascendScanData(nodes, count);
+            //
+            // loop through each angle range
+            // Starting: 160
+            // Finish: 180
+            // Width: 5
             for(int range = 160; range < 175; range=range+5){
+                //
+                // get the average distance value for range
                 getDistanceforAngle(nodes, count, range, range+5);
             }
             printf("\n");
         }
-
+        //
+        // break if ctrl_c is pressed
         if (ctrl_c_pressed){ 
             break;
         }
     }
 
+    // stop motor and scanning
     drv->stop();
     drv->stopMotor();
-    // done!
+    //
 on_finished:
+    // delete driver instance
     RPlidarDriver::DisposeDriver(drv);
     drv = NULL;
     return 0;
