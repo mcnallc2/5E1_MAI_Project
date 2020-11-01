@@ -2285,8 +2285,8 @@ u_result RPlidarDriverSerial::connect(const char * port_path, _u32 baudrate, _u3
 
     _isConnected = true;
 
-    checkMotorCtrlSupport(_isSupportingMotorCtrl);
-    stopMotor();
+    //checkMotorCtrlSupport(_isSupportingMotorCtrl);
+    //stopMotor();
 
     return RESULT_OK;
 }

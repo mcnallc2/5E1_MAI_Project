@@ -152,6 +152,7 @@ int main(int argc, const char * argv[]){
         fprintf(stderr, "insufficent memory, exit\n");
         exit(-2);
     }
+    printf("driver made!!");
     //
     // check if device is connected
     rplidar_response_device_info_t devinfo;
@@ -185,15 +186,16 @@ int main(int argc, const char * argv[]){
 
     // create ctrl_c button
     signal(SIGINT, ctrlc);
-    
     // call driver to start motor
-    drv->startMotor();
+    //drv->startMotor();
     // call driver to start scanning 
     drv->startScan(0,1);
 
     // enter the embedded loop
     while (1){
         //
+	printf("getting into loop");
+	//
         // init the nodes for scans at each angle 
         rplidar_response_measurement_node_hq_t nodes[8192];
         size_t   count = _countof(nodes);
@@ -227,7 +229,8 @@ int main(int argc, const char * argv[]){
 
     // stop motor and scanning
     drv->stop();
-    drv->stopMotor();
+    //drv->stopMotor();
+    //
     //
 on_finished:
     // delete driver instance
