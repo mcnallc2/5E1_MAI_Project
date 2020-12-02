@@ -26,6 +26,11 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
+#include <errno.h>
+
+#include <wiringPi.h>
+#include <wiringSerial.h>
 
 // this is the RPLidar SDK header provided by SLAMTEC
 #include "rplidar.h"
@@ -125,6 +130,19 @@ void ctrlc(int){
 
 int main(int argc, const char * argv[]){
     //
+    int serial_port ;
+    char dat;
+    if ((serial_port = serialOpen ("/dev/ttyS0", 115200)) < 0){   /* open serial port */
+        fprintf(stderr, "Unable to open serial device: %s\n", strerror (errno));
+        return 1 ;
+    }
+
+    if (wiringPiSetup () == -1){    /* initializes wiringPi setup */
+        fprintf (stdout, "Unable to start wiringPi: %s\n", strerror (errno)) ;
+        return 1 ;
+    }
+    //
+    //
     const char * opt_com_path = NULL;
     _u32         opt_com_baudrate = 115200;
     u_result     op_result;
@@ -187,15 +205,15 @@ int main(int argc, const char * argv[]){
     // create ctrl_c button
     signal(SIGINT, ctrlc);
     // call driver to start motor
-    //drv->startMotor();
+    drv->startMotor();
     // call driver to start scanning 
     drv->startScan(0,1);
 
     // enter the embedded loop
     while (1){
         //
-	printf("getting into loop");
-	//
+	    // printf("getting into loop");
+	    //
         // init the nodes for scans at each angle 
         rplidar_response_measurement_node_hq_t nodes[8192];
         size_t   count = _countof(nodes);
@@ -220,6 +238,11 @@ int main(int argc, const char * argv[]){
             }
             printf("\n");
         }
+        //
+        dat = 'A';
+        printf("Sending CHAR - %c\n", dat);
+        fflush(stdout);
+        serialPutchar(serial_port, dat);    /* transmit character serially on port */
         //
         // break if ctrl_c is pressed
         if (ctrl_c_pressed){ 
