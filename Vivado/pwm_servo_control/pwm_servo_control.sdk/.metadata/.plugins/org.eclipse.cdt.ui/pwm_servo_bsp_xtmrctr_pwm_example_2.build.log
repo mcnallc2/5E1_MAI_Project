@@ -1,0 +1,30 @@
+18:00:35 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:215:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/pwm_servo_control.c:214:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30260	   1976	  22648	  54884	   d664	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+
+18:00:35 Build Finished (took 174ms)
+

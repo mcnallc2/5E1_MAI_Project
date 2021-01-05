@@ -1,0 +1,9 @@
+{
+	"version": "1.0",
+	"modules": {
+		"servo_control": {
+			"proto_instances": {
+			}
+		}
+	}
+}

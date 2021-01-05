@@ -1,0 +1,573 @@
+16:16:41 **** Build of project pwm_servo_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_5/src
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_5/src
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling tmrctr
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpiops
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+16:16:52 **** Build of configuration Debug for project pwm_servo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: pwm_servo.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo.elf  |tee "pwm_servo.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19348	   1144	  22568	  43060	   a834	pwm_servo.elf
+Finished building: pwm_servo.elf.size
+ 
+16:16:53 **** Auto Build of configuration Debug for project pwm_servo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:17:05 **** Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/xtmrctr_pwm_example.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xtmrctr_pwm_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xtmrctr_pwm_example.d" -MT"src/xtmrctr_pwm_example.o" -o "src/xtmrctr_pwm_example.o" "../src/xtmrctr_pwm_example.c"
+Finished building: ../src/xtmrctr_pwm_example.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_1.elf"  ./src/xtmrctr_pwm_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_1.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30940	   1976	  22648	  55564	   d90c	pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_1.elf.size
+ 
+16:17:06 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:17:39 **** Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/xtmrctr_pwm_example.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xtmrctr_pwm_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xtmrctr_pwm_example.d" -MT"src/xtmrctr_pwm_example.o" -o "src/xtmrctr_pwm_example.o" "../src/xtmrctr_pwm_example.c"
+Finished building: ../src/xtmrctr_pwm_example.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/xtmrctr_pwm_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30940	   1976	  22648	  55564	   d90c	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+16:17:40 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:23:51 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/xtmrctr_pwm_example.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xtmrctr_pwm_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xtmrctr_pwm_example.d" -MT"src/xtmrctr_pwm_example.o" -o "src/xtmrctr_pwm_example.o" "../src/xtmrctr_pwm_example.c"
+../src/xtmrctr_pwm_example.c: In function 'TmrCtrPwmExample':
+../src/xtmrctr_pwm_example.c:230:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+Finished building: ../src/xtmrctr_pwm_example.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/xtmrctr_pwm_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30916	   1976	  22648	  55540	   d8f4	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+16:24:16 **** Clean-only build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make clean 
+rm -rf  ./src/xtmrctr_pwm_example.o  ./src/xtmrctr_pwm_example.d  pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size  pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+16:24:16 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:230:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30916	   1976	  22648	  55540	   d8f4	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+16:25:28 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:26:46 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:28:19 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:00:14 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:00:46 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:04:19 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:06:15 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:16:56 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:21:23 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/xtmrctr_pwm_example.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xtmrctr_pwm_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xtmrctr_pwm_example.d" -MT"src/xtmrctr_pwm_example.o" -o "src/xtmrctr_pwm_example.o" "../src/xtmrctr_pwm_example.c"
+Finished building: ../src/xtmrctr_pwm_example.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_1.elf"  ./src/xtmrctr_pwm_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_1.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30940	   1976	  22648	  55564	   d90c	pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_1.elf.size
+ 
+17:21:28 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:21:38 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:27:19 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:28:32 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:29:50 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:30:38 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:31:00 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:31:30 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:31:55 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:44:49 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/xtmrctr_pwm_example.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/xtmrctr_pwm_example.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/xtmrctr_pwm_example.d" -MT"src/xtmrctr_pwm_example.o" -o "src/xtmrctr_pwm_example.o" "../src/xtmrctr_pwm_example.c"
+Finished building: ../src/xtmrctr_pwm_example.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_1.elf"  ./src/xtmrctr_pwm_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_1.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_1.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30940	   1976	  22648	  55564	   d90c	pwm_servo_bsp_xtmrctr_pwm_example_1.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_1.elf.size
+ 
+17:51:41 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:230:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30916	   1976	  22648	  55540	   d8f4	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+17:53:29 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:231:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30916	   1976	  22648	  55540	   d8f4	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+17:55:18 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:296:2: error: expected ';' before 'DutyCycle'
+  DutyCycle = XTmrCtr_PwmConfigure(TmrCtrInstancePtr, Period, HighTime);
+  ^~~~~~~~~
+../src/pwm_servo_control.c:233:6: warning: variable 'HighTime' set but not used [-Wunused-but-set-variable]
+  u32 HighTime;
+      ^~~~~~~~
+../src/pwm_servo_control.c:232:6: warning: variable 'Period' set but not used [-Wunused-but-set-variable]
+  u32 Period;
+      ^~~~~~
+../src/pwm_servo_control.c:231:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+make: *** [src/pwm_servo_control.o] Error 1
+src/subdir.mk:21: recipe for target 'src/pwm_servo_control.o' failed
+17:55:24 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:231:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30340	   1976	  22648	  54964	   d6b4	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+17:55:29 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:56:13 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:231:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30340	   1976	  22648	  54964	   d6b4	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+17:56:15 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:58:50 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:231:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30340	   1976	  22648	  54964	   d6b4	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+17:58:55 **** Incremental Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:00:11 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:231:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/pwm_servo_control.c:230:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30260	   1976	  22648	  54884	   d664	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
+18:00:35 **** Auto Build of configuration Debug for project pwm_servo_bsp_xtmrctr_pwm_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/pwm_servo_control.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/pwm_servo_control.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../pwm_servo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/pwm_servo_control.d" -MT"src/pwm_servo_control.o" -o "src/pwm_servo_control.o" "../src/pwm_servo_control.c"
+../src/pwm_servo_control.c: In function 'TmrCtrPwmExample':
+../src/pwm_servo_control.c:215:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/pwm_servo_control.c:214:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/pwm_servo_control.c
+ 
+Building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../pwm_servo_bsp/ps7_cortexa9_0/lib -o "pwm_servo_bsp_xtmrctr_pwm_example_2.elf"  ./src/pwm_servo_control.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size pwm_servo_bsp_xtmrctr_pwm_example_2.elf  |tee "pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30260	   1976	  22648	  54884	   d664	pwm_servo_bsp_xtmrctr_pwm_example_2.elf
+Finished building: pwm_servo_bsp_xtmrctr_pwm_example_2.elf.size
+ 
