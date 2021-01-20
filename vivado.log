@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Jan 15 21:47:02 2021
+# Process ID: 343
+# Current directory: /home/cmcnally/Repos/mai_project
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/mai_project/vivado.log
+# Journal file: /home/cmcnally/Repos/mai_project/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/mai_project/Vivado/ultrasonic_sensors/ultrasonic_sensors.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 6419.984 ; gain = 117.281 ; free physical = 171 ; free virtual = 3754
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/cmcnally/Repos/mai_project/Vivado/ultrasonic_sensors/ultrasonic_sensors.sdk -hwspec /home/cmcnally/Repos/mai_project/Vivado/ultrasonic_sensors/ultrasonic_sensors.sdk/ultrasonic_unit_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/mai_project/Vivado/ultrasonic_sensors/ultrasonic_sensors.sdk -hwspec /home/cmcnally/Repos/mai_project/Vivado/ultrasonic_sensors/ultrasonic_sensors.sdk/ultrasonic_unit_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+exit
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 16 11:19:19 2021...

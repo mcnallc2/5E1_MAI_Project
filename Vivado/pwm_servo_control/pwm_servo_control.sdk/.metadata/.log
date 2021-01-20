@@ -12675,3 +12675,12 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-19
 
 !ENTRY com.xilinx.sdk.utils 0 0 2021-01-05 17:59:06.157
 !MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-19
+
+!ENTRY com.xilinx.sdk.utils 1 0 2021-01-06 11:53:57.776
+!MESSAGE Executed Webtalk command
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-01-06 11:53:57.852
+!MESSAGE XSCT Command: [disconnect tcfchan#19], Thread: Thread-1218
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-01-06 11:53:57.907
+!MESSAGE XSCT command with result: [disconnect tcfchan#19], Result: [null, ]. Thread: Thread-1218

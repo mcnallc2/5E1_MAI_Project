@@ -878,3 +878,4 @@ con
 ----------------End of Script----------------
 
 17:59:06 INFO  : Launch script is exported to file '/home/cmcnally/Repos/mai_project/Vivado/pwm_servo_control/pwm_servo_control.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_pwm_servo_bsp_xtmrctr_pwm_example_2.elf_on_local.tcl'
+11:53:57 INFO  : Disconnected from the channel tcfchan#19.
