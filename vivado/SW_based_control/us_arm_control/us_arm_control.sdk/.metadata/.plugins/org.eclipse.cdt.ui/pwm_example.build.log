@@ -1,4 +1,4 @@
-14:45:00 **** Build of configuration Debug for project pwm_example ****
+22:29:49 **** Build of configuration Debug for project pwm_example ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -19,5 +19,5 @@ arm-none-eabi-size pwm_example.elf  |tee "pwm_example.elf.size"
 Finished building: pwm_example.elf.size
  
 
-14:45:01 Build Finished (took 290ms)
+22:29:49 Build Finished (took 175ms)
 

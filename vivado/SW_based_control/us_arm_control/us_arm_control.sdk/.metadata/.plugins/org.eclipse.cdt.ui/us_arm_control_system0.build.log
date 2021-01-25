@@ -1,38 +1,8 @@
-18:47:01 **** Build of configuration Debug for project us_arm_control_system0 ****
+22:55:57 **** Incremental Build of configuration Debug for project us_arm_control_system0 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/main.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:44:0:
-../../us_arm_control_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-../src/main.c: In function 'main':
-../src/main.c:147:6: warning: unused variable 'US' [-Wunused-variable]
-  int US = 1;
-      ^~
-../src/main.c: In function 'TmrCtrPwmExample':
-../src/main.c:401:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
-  u8  NoOfCycles;
-      ^~~~~~~~~~
-../src/main.c:400:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
-  u8  DutyCycle;
-      ^~~~~~~~~
-Finished building: ../src/main.c
- 
-Building target: us_arm_control_system0.elf
-Invoking: ARM v7 gcc linker
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system0.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-Finished building target: us_arm_control_system0.elf
- 
-Invoking: ARM v7 Print Size
-arm-none-eabi-size us_arm_control_system0.elf  |tee "us_arm_control_system0.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  83756	   3424	  23424	 110604	  1b00c	us_arm_control_system0.elf
-Finished building: us_arm_control_system0.elf.size
- 
+make: Nothing to be done for 'main-build'.
 
-18:47:02 Build Finished (took 292ms)
+22:55:57 Build Finished (took 69ms)
 

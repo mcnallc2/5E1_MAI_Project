@@ -4,3 +4,6 @@
 1611599711192	Rename resource 'us_arm_control_bsp_xgpio_example_1'
 1611600420606	Rename resource 'us_arm_control_system'
 1611600430468	Rename resource 'us_arm_control_system2'
+1611614369479	Delete resource 'us_arm_control_wrapper_hw_platform_1'
+1611614378225	Delete resource 'us_arm_control_wrapper_hw_platform_0'
+1611614383411	Delete resource 'us_arm_control_wrapper_hw_platform_2'

@@ -20,7 +20,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='/home/cmcnally/Repos/mai_project/Vivado/us_arm_control/us_arm_control.runs/impl_1'
+HD_PWD='/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/SW_based_control/us_arm_control/us_arm_control.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

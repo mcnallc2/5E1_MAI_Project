@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>us_arm_control_wrapper_hw_platform_0</name>
+	<name>us_arm_control_wrapper_hw_platform_2</name>
 	<comment>Created by SDK v2018.3</comment>
 	<projects>
 	</projects>
@@ -11,7 +11,7 @@
 	</natures>
 	<filteredResources>
 		<filter>
-			<id>1611571480965</id>
+			<id>1611614114829</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -20,7 +20,7 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1611571480967</id>
+			<id>1611614114833</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
@@ -29,7 +29,34 @@
 			</matcher>
 		</filter>
 		<filter>
-			<id>1611571480969</id>
+			<id>1611614114835</id>
+			<name></name>
+			<type>6</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*.hwh</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1611614418347</id>
+			<name></name>
+			<type>6</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*.xml</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1611614418353</id>
+			<name></name>
+			<type>6</type>
+			<matcher>
+				<id>org.eclipse.ui.ide.multiFilter</id>
+				<arguments>1.0-name-matches-false-false-*.svd</arguments>
+			</matcher>
+		</filter>
+		<filter>
+			<id>1611614418357</id>
 			<name></name>
 			<type>6</type>
 			<matcher>
