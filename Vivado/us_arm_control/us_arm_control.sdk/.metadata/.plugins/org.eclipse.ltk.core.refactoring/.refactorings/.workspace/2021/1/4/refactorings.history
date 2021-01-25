@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;us_arm_control_bsp_xgpio_example_1&apos; to &apos;us_arm_control_system&apos;" description="Rename resource &apos;us_arm_control_bsp_xgpio_example_1&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/us_arm_control_bsp_xgpio_example_1" name="us_arm_control_system" stamp="1611571764191" updateReferences="true"/>
+</session>

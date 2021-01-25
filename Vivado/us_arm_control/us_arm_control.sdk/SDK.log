@@ -1,0 +1,7 @@
+10:44:36 INFO  : Registering command handlers for SDK TCF services
+10:44:37 INFO  : Launching XSCT server: xsct -n -interactive /home/cmcnally/Repos/mai_project/Vivado/us_arm_control/us_arm_control.sdk/temp_xsdb_launch_script.tcl
+10:44:40 INFO  : XSCT server has started successfully.
+10:44:40 INFO  : Successfully done setting XSCT server connection channel  
+10:44:40 INFO  : Successfully done setting SDK workspace  
+10:44:40 INFO  : Processing command line option -hwspec /home/cmcnally/Repos/mai_project/Vivado/us_arm_control/us_arm_control.sdk/us_arm_control_wrapper.hdf.
+10:48:09 INFO  : Example project us_arm_control_bsp_xgpio_example_1 has been created successfully.
