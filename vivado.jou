@@ -2,14 +2,13 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Fri Jan 15 21:47:02 2021
-# Process ID: 343
-# Current directory: /home/cmcnally/Repos/mai_project
+# Start of session at: Mon Jan 25 21:50:48 2021
+# Process ID: 19771
+# Current directory: /home/cmcnally/Repos/robotic_arm_control_system_analysis
 # Command line: vivado
-# Log file: /home/cmcnally/Repos/mai_project/vivado.log
-# Journal file: /home/cmcnally/Repos/mai_project/vivado.jou
+# Log file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/cmcnally/Repos/mai_project/Vivado/ultrasonic_sensors/ultrasonic_sensors.xpr
+open_project /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/SW_based_control/us_arm_control/us_arm_control.xpr
 update_compile_order -fileset sources_1
-launch_sdk -workspace /home/cmcnally/Repos/mai_project/Vivado/ultrasonic_sensors/ultrasonic_sensors.sdk -hwspec /home/cmcnally/Repos/mai_project/Vivado/ultrasonic_sensors/ultrasonic_sensors.sdk/ultrasonic_unit_wrapper.hdf
