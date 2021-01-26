@@ -176,3 +176,6 @@ dismissDialog("Launch SDK"); // aa (cp)
 // Tcl Message: launch_sdk -workspace /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/SW_based_control/us_arm_control/us_arm_control.sdk -hwspec /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/SW_based_control/us_arm_control/us_arm_control.sdk/us_arm_control_wrapper.hdf 
 // Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/SW_based_control/us_arm_control/us_arm_control.sdk -hwspec /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/SW_based_control/us_arm_control/us_arm_control.sdk/us_arm_control_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
 // HMemoryUtils.trashcanNow. Engine heap size: 1,043 MB. GUI used memory: 61 MB. Current time: 1/25/21, 10:40:10 PM GMT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,044 MB. GUI used memory: 61 MB. Current time: 1/25/21, 11:10:10 PM GMT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,020 MB. GUI used memory: 54 MB. Current time: 1/25/21, 11:40:10 PM GMT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,020 MB. GUI used memory: 54 MB. Current time: 1/26/21, 12:10:10 AM GMT

@@ -7,3 +7,5 @@
 1611614369479	Delete resource 'us_arm_control_wrapper_hw_platform_1'
 1611614378225	Delete resource 'us_arm_control_wrapper_hw_platform_0'
 1611614383411	Delete resource 'us_arm_control_wrapper_hw_platform_2'
+1611657182233	Delete resource 'us_arm_control_system1'
+1611657194403	Rename resource 'us_arm_control_system0'
