@@ -1,0 +1,16 @@
+17:00:14 **** Build of configuration Debug for project RTOSDemo ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/lwIP_Demo/lwIP_port/netif/xadapter.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -I"/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/freertos_system/us_arm_control_system/us_arm_control_system.sdk/RTOSDemo/src/lwIP_Demo/lwIP_port/include" -I"/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/freertos_system/us_arm_control_system/us_arm_control_system.sdk/RTOSDemo/src/lwIP_Demo/lwIP_port/netif" -I"/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/freertos_system/us_arm_control_system/us_arm_control_system.sdk/RTOSDemo/src/Full_Demo" -I"/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/FreeRTOS-Plus/Source/FreeRTOS-Plus-CLI" -I"/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/freertos_system/us_arm_control_system/us_arm_control_system.sdk/RTOSDemo/src" -c -fmessage-length=0 -MT"src/lwIP_Demo/lwIP_port/netif/xadapter.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wextra -ffunction-sections -fdata-sections -I../../RTOSDemo_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/lwIP_Demo/lwIP_port/netif/xadapter.d" -MT"src/lwIP_Demo/lwIP_port/netif/xadapter.o" -o "src/lwIP_Demo/lwIP_port/netif/xadapter.o" "../src/lwIP_Demo/lwIP_port/netif/xadapter.c"
+../src/lwIP_Demo/lwIP_port/netif/xadapter.c:29:10: fatal error: lwip/mem.h: No such file or directory
+ #include "lwip/mem.h"
+          ^~~~~~~~~~~~
+compilation terminated.
+src/lwIP_Demo/lwIP_port/netif/subdir.mk:36: recipe for target 'src/lwIP_Demo/lwIP_port/netif/xadapter.o' failed
+make: *** [src/lwIP_Demo/lwIP_port/netif/xadapter.o] Error 1
+
+17:00:14 Build Finished (took 125ms)
+

@@ -1007,3 +1007,6 @@ selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "us_arm_
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "PYNQ-Z2_v1.0.xdc", 2); // k (j, cp)
 selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "System", 0); // k (j, cp)
 // TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,836 MB. GUI used memory: 107 MB. Current time: 1/26/21, 11:45:53 AM GMT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,836 MB. GUI used memory: 93 MB. Current time: 1/26/21, 12:15:53 PM GMT
+// HMemoryUtils.trashcanNow. Engine heap size: 1,836 MB. GUI used memory: 92 MB. Current time: 1/26/21, 12:45:53 PM GMT
