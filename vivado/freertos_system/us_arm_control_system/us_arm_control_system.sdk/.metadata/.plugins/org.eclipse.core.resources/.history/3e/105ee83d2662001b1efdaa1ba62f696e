@@ -1,0 +1,760 @@
+/******************************************************************************
+*
+* Copyright (C) 2002 - 2015 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+/*****************************************************************************/
+/**
+* @file xgpio_example.c
+*
+* This file contains a design example using the AXI GPIO driver (XGpio) and
+* hardware device.  It only uses channel 1 of a GPIO device and assumes that
+* the bit 0 of the GPIO is connected to the LED on the HW board.
+*
+*
+* <pre>
+* MODIFICATION HISTORY:
+*
+* Ver   Who  Date     Changes
+* ----- ---- -------- -----------------------------------------------
+* 1.00a rmm  03/13/02 First release
+* 1.00a rpm  08/04/03 Removed second example and invalid macro calls
+* 2.00a jhl  12/15/03 Added support for dual channels
+* 2.00a sv   04/20/05 Minor changes to comply to Doxygen and coding guidelines
+* 3.00a ktn  11/20/09 Minor changes as per coding guidelines.
+* 4.1   lks  11/18/15 Updated to use canonical xparameters and
+*		      clean up of the comments and code for CR 900381
+* 4.3   sk   09/29/16 Modified the example to make it work when LED_bits are
+*                     configured as an output. CR# 958644
+*       ms   01/23/17 Added xil_printf statement in main function to
+*                     ensure that "Successfully ran" and "Failed" strings
+*                     are available in all examples. This is a fix for
+*                     CR-965028.
+*
+* </pre>
+******************************************************************************/
+
+/***************************** Include Files *********************************/
+/* FreeRTOS includes. */
+#include "FreeRTOS.h"
+#include "task.h"
+#include "queue.h"
+#include "timers.h"
+
+/* Xilinx includes. */
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xil_printf.h"
+
+#include <stdio.h>
+#include "xtime_l.h"
+
+#include "xtmrctr.h"
+#include "xil_exception.h"
+
+#ifdef XPAR_INTC_0_DEVICE_ID
+#include "xintc.h"
+#include <stdio.h>
+#else
+#include "xscugic.h"
+#endif
+
+/************************** Constant Definitions *****************************/
+/* FreeRTOS includes. */
+#define TIMER_ID	1
+#define DELAY_10_SECONDS	10000UL
+#define DELAY_1_SECOND		1000UL
+#define DELAY_1_MSECOND		1UL
+#define DELAY_10_USECOND	0.010
+#define DELAY_2_USECOND		0.002
+#define TIMER_CHECK_THRESHOLD	7
+
+#define TRIG 0x1   /* Assumes bit 0 of GPIO is connected to an TRIG pin  */
+#define ECHO 0x2   /* Assumes bit 1 of GPIO is connected to an ECHO pin  */
+#define BOTH 0x3   /* Mask for both TRIG and ECHO GPIO pins	*/
+#define LED	 0x4   /* Mask for LED pin to light when distance threshold is breached	*/
+
+
+/*
+ * The following constants map to the XPAR parameters created in the
+ * xparameters.h file. They are defined here such that a user can easily
+ * change all the needed parameters in one place.
+ */
+#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+
+/*
+ * The following constant is used to specify the amount of
+ * distance measurements performed per output reading
+ */
+#define TOTAL_CALC	10
+
+/*
+ * The following constant is used to determine which channel of the GPIO is
+ * used for the sensor pins if there are 2 channels supported.
+ */
+#define CHANNEL 1
+
+/*
+ * The following constants are used for the pwm pins.
+ */
+#define BASE_SERVO_DEVICE_ID		XPAR_TMRCTR_0_DEVICE_ID
+#define SHOULDER_SERVO_DEVICE_ID	XPAR_TMRCTR_1_DEVICE_ID
+#define ELBOW_SERVO_DEVICE_ID		XPAR_TMRCTR_2_DEVICE_ID
+#define CLAW_SERVO_DEVICE_ID		XPAR_TMRCTR_3_DEVICE_ID
+
+#define BASE_SERVO_INTERRUPT_ID		XPAR_FABRIC_TMRCTR_0_VEC_ID
+#define SHOULDER_SERVO_INTERRUPT_ID	XPAR_FABRIC_TMRCTR_1_VEC_ID
+#define ELBOW_SERVO_INTERRUPT_ID	XPAR_FABRIC_TMRCTR_2_VEC_ID
+#define CLAW_SERVO_INTERRUPT_ID		XPAR_FABRIC_TMRCTR_3_VEC_ID
+
+#define INTC_DEVICE_ID          XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define INTC                    XScuGic
+#define INTC_HANDLER            XScuGic_InterruptHandler
+
+#define PWM_PERIOD              50000000    /* PWM period in (.500 ms) */
+#define PWM_MIN_HIGH            277777      /* PWM minimujm high time (.00278 ms) */
+#define TMRCTR_0                0            /* Timer 0 ID */
+#define TMRCTR_1                1            /* Timer 1 ID */
+#define CYCLE_PER_DUTYCYCLE     10           /* Clock cycles per duty cycle */
+#define MAX_DUTYCYCLE           100          /* Max duty cycle */
+#define DUTYCYCLE_DIVISOR       4            /* Duty cycle Divisor */
+#define WAIT_COUNT              PWM_PERIOD   /* Interrupt wait counter */
+#define ANGLE_SHIFT				5
+
+
+/**************************** Type Definitions *******************************/
+
+
+/***************** Macros (Inline Functions) Definitions *********************/
+
+#ifdef PRE_2_00A_APPLICATION
+
+/*
+ * The following macros are provided to allow an application to compile that
+ * uses an older version of the driver (pre 2.00a) which did not have a channel
+ * parameter. Note that the channel parameter is fixed as channel 1.
+ */
+#define XGpio_SetDataDirection(InstancePtr, DirectionMask) \
+        XGpio_SetDataDirection(InstancePtr, LED_CHANNEL, DirectionMask)
+
+#define XGpio_DiscreteRead(InstancePtr) \
+        XGpio_DiscreteRead(InstancePtr, LED_CHANNEL)
+
+#define XGpio_DiscreteWrite(InstancePtr, Mask) \
+        XGpio_DiscreteWrite(InstancePtr, LED_CHANNEL, Mask)
+
+#define XGpio_DiscreteSet(InstancePtr, Mask) \
+        XGpio_DiscreteSet(InstancePtr, LED_CHANNEL, Mask)
+
+#endif
+
+/************************** Function Prototypes ******************************/
+
+/* The Tx and Rx tasks as described at the top of this file. */
+static void prvTxTask( void *pvParameters );
+static void prvRxTask( void *pvParameters );
+static void vTimerCallback( TimerHandle_t pxTimer );
+
+int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *InstancePtr, u16 DeviceId,
+								u16 IntrId, u8 Div, int ID);
+static void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber);
+static int TmrCtrSetupIntrSystem(INTC *IntcInstancePtr, XTmrCtr *InstancePtr,
+						u16 DeviceId, u16 IntrId);
+static void TmrCtrDisableIntr(INTC *IntcInstancePtr, u16 IntrId);
+
+/************************** Function Definitions *****************************/
+float get_distance();
+float get_mode();
+void test_delay();
+void _delay_();
+
+
+/************************** Variable Definitions *****************************/
+/*
+ * The following are declared globally so they are zeroed and so they are
+ * easily accessible from a debugger
+ */
+
+XGpio Gpio; /* The Instance of the GPIO Driver */
+
+INTC InterruptController;  /* The instance of the Interrupt Controller */
+XTmrCtr TimerCounterInst;  /* The instance of the Timer Counter */
+
+/*
+ * The following variables are shared between non-interrupt processing and
+ * interrupt processing such that they must be global.
+ */
+static int   PeriodTimerHit = FALSE;
+static int   HighTimerHit = FALSE;
+
+/* The queue used by the Tx and Rx tasks, as described at the top of this
+file. */
+static TaskHandle_t xTxTask;
+static TaskHandle_t xRxTask;
+static QueueHandle_t xQueue = NULL;
+static TimerHandle_t xTimer = NULL;
+char HWstring[50] =  "";//"Hello World";
+long RxtaskCntr = 0;
+
+/*****************************************************************************/
+/**
+*
+* The purpose of this function is to illustrate how to use the GPIO
+* driver to turn on and off an LED.
+*
+* @param	None
+*
+* @return	XST_FAILURE to indicate that the GPIO Initialization had
+*		failed.
+*
+* @note		This function will not return if the test is running.
+*
+******************************************************************************/
+int main(void)
+{
+
+	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+
+	xil_printf( "\nHello from Freertos example main\r\n" );
+
+	/* Create the two tasks.  The Tx task is given a lower priority than the
+	Rx task, so the Rx task will leave the Blocked state and pre-empt the Tx
+	task as soon as the Tx task places an item in the queue. */
+	xTaskCreate( 	prvTxTask, 					/* The function that implements the task. */
+					( const char * ) "Tx", 		/* Text name for the task, provided to assist debugging only. */
+					configMINIMAL_STACK_SIZE, 	/* The stack allocated to the task. */
+					NULL, 						/* The task parameter is not used, so set to NULL. */
+					tskIDLE_PRIORITY,			/* The task runs at the idle priority. */
+					&xTxTask );
+
+	xTaskCreate( prvRxTask,
+				 ( const char * ) "GB",
+				 configMINIMAL_STACK_SIZE,
+				 NULL,
+				 tskIDLE_PRIORITY + 1,
+				 &xRxTask );
+
+	/* Create the queue used by the tasks.  The Rx task has a higher priority
+	than the Tx task, so will preempt the Tx task and remove values from the
+	queue as soon as the Tx task writes to the queue - therefore the queue can
+	never have more than one item in it. */
+	xQueue = xQueueCreate( 	1,						/* There is only one space in the queue. */
+							sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+
+	/* Check the queue was created. */
+	configASSERT( xQueue );
+
+	/* Create a timer with a timer expiry of 10 seconds. The timer would expire
+	 after 10 seconds and the timer call back would get called. In the timer call back
+	 checks are done to ensure that the tasks have been running properly till then.
+	 The tasks are deleted in the timer call back and a message is printed to convey that
+	 the example has run successfully.
+	 The timer expiry is set to 10 seconds and the timer set to not auto reload. */
+	xTimer = xTimerCreate( (const char *) "Timer",
+							x10seconds,
+							pdFALSE,
+							(void *) TIMER_ID,
+							vTimerCallback);
+	/* Check the timer was created. */
+	configASSERT( xTimer );
+
+	/* start the timer with a block time of 0 ticks. This means as soon
+	   as the schedule starts the timer will start running and will expire after
+	   10 seconds */
+	xTimerStart( xTimer, 0 );
+
+	/* Start the tasks and timer running. */
+	vTaskStartScheduler();
+
+	/* If all is well, the scheduler will now be running, and the following line
+	will never be reached.  If the following line does execute, then there was
+	insufficient FreeRTOS heap memory available for the idle and/or timer tasks
+	to be created.  See the memory management section on the FreeRTOS web site
+	for more details. */
+	for( ;; );
+}
+
+
+/*-----------------------------------------------------------*/
+static void prvTxTask( void *pvParameters )
+{
+	int Status;
+
+	/* Initialize the GPIO driver */
+	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio Initialization Failed\r\n");
+		//return XST_FAILURE;
+	}
+
+	/* Set the direction for all signals as inputs except the TRIG output */
+	XGpio_SetDataDirection(&Gpio, CHANNEL, ~TRIG);
+
+	const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
+
+	while (1) {
+			float dist_list[TOTAL_CALC];
+			float mode_dist;
+
+			for(int i = 0; i < TOTAL_CALC; i++){
+				/* add reading to list */
+				dist_list[i] = get_distance();
+
+				/* Delay for 1 second. */
+				vTaskDelay( x1msecond );
+			}
+
+			/* find the model value from all readings */
+			mode_dist = get_mode(dist_list);
+
+			printf("\n\nDistance: %f mm", mode_dist);
+
+			//int ret = snprintf(HWstring, sizeof HWstring, "%f", mode_dist);
+
+//			if (ret < 0) {
+//				xil_printf("Float Conversion Failed\r\n");
+//			}
+//			if (ret >= sizeof HWstring) {
+//			    // Result was truncated - resize the buffer and retry.
+//			}
+
+			xQueueSend( xQueue,			/* The queue being written to. */
+						HWstring, /* The address of the data being sent. */
+						0UL );			/* The block time. */
+	}
+}
+
+/*-----------------------------------------------------------*/
+static void prvRxTask( void *pvParameters )
+{
+char Recdstring[50] = "";
+
+	for( ;; )
+	{
+		/* Block to wait for data arriving on the queue. */
+		xQueueReceive( 	xQueue,				/* The queue being read. */
+						Recdstring,	/* Data is read into this address. */
+						portMAX_DELAY );	/* Wait without a timeout for data. */
+
+		//xil_printf( "Rx task received string from Tx task - Distance: %smm\r\n", Recdstring );
+	}
+}
+
+/*-----------------------------------------------------------*/
+static void vTimerCallback( TimerHandle_t pxTimer )
+{
+	long lTimerId;
+	configASSERT( pxTimer );
+
+	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
+
+	if (lTimerId != TIMER_ID) {
+		xil_printf("FreeRTOS Hello World Example FAILED");
+	}
+
+	/* If the RxtaskCntr is updated every time the Rx task is called. The
+	 Rx task is called every time the Tx task sends a message. The Tx task
+	 sends a message every 1 second.
+	 The timer expires after 10 seconds. We expect the RxtaskCntr to at least
+	 have a value of 9 (TIMER_CHECK_THRESHOLD) when the timer expires. */
+	if (RxtaskCntr >= TIMER_CHECK_THRESHOLD) {
+		xil_printf("FreeRTOS Hello World Example PASSED");
+	} else {
+		xil_printf("FreeRTOS Hello World Example FAILED");
+	}
+
+	vTaskDelete( xRxTask );
+	vTaskDelete( xTxTask );
+}
+
+
+/*****************************************************************************/
+/**
+* This function is the main function of the Tmrctr PWM example.
+*
+* @param	None.
+*
+* @return	XST_SUCCESS to indicate success, else XST_FAILURE to indicate a
+*		Failure.
+*
+* @note		None.
+*
+******************************************************************************/
+
+
+float get_mode(float list[]) {
+
+   int modeValue = 0, modeCount = 0, i, j;
+
+   /* loop through list of values */
+   for (i = 0; i < TOTAL_CALC; ++i) {
+      int count = 0;
+
+      /* count number of occurrences */
+      for (j = 0; j < TOTAL_CALC; ++j) {
+         if (list[j] == list[i])
+         count++;
+      }
+
+      /* check if value is the mode */
+      if (count > modeCount) {
+         modeCount = count;
+         modeValue = list[i];
+      }
+   }
+   /* return the mode value */
+   return modeValue;
+}
+
+float get_distance(){
+
+	XTime tStart, tEnd;
+
+	/* Clear the TRIG bit */
+	XGpio_DiscreteClear(&Gpio, CHANNEL, BOTH);
+
+	/* Wait 2us so TRIG is low */
+	_delay_(2);
+
+	/* Set the TRIG to High */
+	XGpio_DiscreteWrite(&Gpio, CHANNEL, TRIG);
+
+//	xil_printf("Triggering: 0x%x\n", XGpio_DiscreteRead(&Gpio, CHANNEL));
+
+	/* 10us TRIG high pulse */
+	_delay_(10);
+
+	/* Clear the TRIG bit */
+	XGpio_DiscreteClear(&Gpio, CHANNEL, TRIG);
+
+//	xil_printf("Wait for Echo pulse: 0x%x\n", XGpio_DiscreteRead(&Gpio, CHANNEL));
+
+	/* wait for the echo pulse to begin (rising edge) */
+	while(!(XGpio_DiscreteRead(&Gpio, CHANNEL) & ECHO)){}
+	/* record time at rising edge */
+	XTime_GetTime(&tStart);
+
+//	xil_printf("Measuring Echo pulse: 0x%x\n", XGpio_DiscreteRead(&Gpio, CHANNEL));
+
+	/* wait for the echo pulse to end (falling edge) */
+	while(XGpio_DiscreteRead(&Gpio, CHANNEL) & ECHO){}
+	/* record time at falling edge */
+	XTime_GetTime(&tEnd);
+
+//	xil_printf("Echo pulse ended: 0x%x\n", XGpio_DiscreteRead(&Gpio, CHANNEL));
+
+//	printf("Start %f us\n", (1.0 * tStart));
+//	printf("End %f us\n", (1.0 * tEnd));
+
+	/* calculate pulse length in micro-seconds */
+	float pulse = 1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000);
+
+	/* speed of signal is 343000 mm/sec */
+	/* pulse length time to obstacle and back (x2 distance) */
+	/* calculate distance in millimeters */
+	float distance = (pulse/1000000)/2 * 343000;
+
+//	printf("Pulse Length: %f us\n", delay);
+//	printf("Distance: %f mm\n\n", distance);
+
+	/* clear all pins */
+	XGpio_DiscreteClear(&Gpio, CHANNEL, BOTH);
+
+	/* return measured distance */
+	return distance;
+}
+
+/*****************************************************************************/
+/**
+* This function demonstrates the use of tmrctr PWM APIs.
+*
+* @param	IntcInstancePtr is a pointer to the Interrupt Controller
+*		driver Instance
+* @param	TmrCtrInstancePtr is a pointer to the XTmrCtr driver Instance
+* @param	DeviceId is the XPAR_<TmrCtr_instance>_DEVICE_ID value from
+*		xparameters.h
+* @param	IntrId is XPAR_<INTC_instance>_<TmrCtr_instance>_INTERRUPT_INTR
+*		value from xparameters.h
+*
+* @return	XST_SUCCESS if the Test is successful, otherwise XST_FAILURE
+*
+* @note		none.
+*
+*****************************************************************************/
+int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *TmrCtrInstancePtr,
+						u16 DeviceId, u16 IntrId, u8 Div, int ID)
+{
+	u8  DutyCycle;
+	u8  NoOfCycles;
+	u32 Period;
+	u32 HighTime;
+	u64 WaitCount;
+	int Status;
+
+	/*
+	 * Initialize the timer counter so that it's ready to use,
+	 * specify the device ID that is generated in xparameters.h
+	 */
+	Status = XTmrCtr_Initialize(TmrCtrInstancePtr, DeviceId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Perform a self-test to ensure that the hardware was built
+	 * correctly. Timer0 is used for self test
+	 */
+	Status = XTmrCtr_SelfTest(TmrCtrInstancePtr, TMRCTR_0);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Connect the timer counter to the interrupt subsystem such that
+	 * interrupts can occur
+	 */
+	Status = TmrCtrSetupIntrSystem(IntcInstancePtr, TmrCtrInstancePtr,
+							DeviceId, IntrId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Setup the handler for the timer counter that will be called from the
+	 * interrupt context when the timer expires
+	 */
+	XTmrCtr_SetHandler(TmrCtrInstancePtr, TimerCounterHandler,
+							TmrCtrInstancePtr);
+
+	/* Enable the interrupt of the timer counter */
+	XTmrCtr_SetOptions(TmrCtrInstancePtr, TMRCTR_0, XTC_INT_MODE_OPTION);
+	XTmrCtr_SetOptions(TmrCtrInstancePtr, TMRCTR_1, XTC_INT_MODE_OPTION);
+
+	/*
+	 * We start with the fixed divisor and after every CYCLE_PER_DUTYCYCLE
+	 * decrement the divisor by 1, as a result Duty cycle increases
+	 * proportionally. This is done until duty cycle is reached upto
+	 * MAX_DUTYCYCLE
+	 */
+
+
+	/* Disable PWM for reconfiguration */
+	XTmrCtr_PwmDisable(TmrCtrInstancePtr);
+
+	/* Configure PWM */
+	Period = PWM_PERIOD;
+	HighTime = PWM_MIN_HIGH + (Div * 12345);
+	DutyCycle = XTmrCtr_PwmConfigure(TmrCtrInstancePtr, Period, HighTime);
+	if (Status != XST_SUCCESS) {
+		Status = XST_FAILURE;
+		goto err;
+	}
+
+	xil_printf("\nPWM %i \r\n", ID);
+	xil_printf("Angle = %d\r\n", Div);
+
+	/* Enable PWM */
+	XTmrCtr_PwmEnable(TmrCtrInstancePtr);
+
+	WaitCount = PWM_PERIOD / 10;
+	while (WaitCount > 0) {
+		WaitCount--;
+	}
+
+	Status = XST_SUCCESS;
+err:
+	/* Disable PWM */
+	XTmrCtr_PwmDisable(TmrCtrInstancePtr);
+
+	/* Disable interrupts */
+	TmrCtrDisableIntr(IntcInstancePtr, DeviceId);
+
+	return Status;
+}
+
+/*****************************************************************************/
+/**
+* This function is the handler which performs processing for the timer counter.
+* It is called from an interrupt context.
+*
+* @param	CallBackRef is a pointer to the callback function
+* @param	TmrCtrNumber is the number of the timer to which this
+*		handler is associated with.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+static void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber)
+{
+	/* Mark if period timer expired */
+	if (TmrCtrNumber == TMRCTR_0) {
+		PeriodTimerHit = TRUE;
+	}
+
+	/* Mark if high time timer expired */
+	if (TmrCtrNumber == TMRCTR_1) {
+		HighTimerHit = TRUE;
+	}
+}
+
+/*****************************************************************************/
+/**
+* This function setups the interrupt system such that interrupts can occur
+* for the timer counter. This function is application specific since the actual
+* system may or may not have an interrupt controller.  The timer counter could
+* be directly connected to a processor without an interrupt controller.  The
+* user should modify this function to fit the application.
+*
+* @param	IntcInstancePtr is a pointer to the Interrupt Controller
+*		driver Instance.
+* @param	TmrCtrInstancePtr is a pointer to the XTmrCtr driver Instance.
+* @param	DeviceId is the XPAR_<TmrCtr_instance>_DEVICE_ID value from
+*		xparameters.h.
+* @param	IntrId is XPAR_<INTC_instance>_<TmrCtr_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	XST_SUCCESS if the Test is successful, otherwise XST_FAILURE.
+*
+* @note		none.
+*
+******************************************************************************/
+static int TmrCtrSetupIntrSystem(INTC *IntcInstancePtr,
+			XTmrCtr *TmrCtrInstancePtr, u16 DeviceId, u16 IntrId)
+{
+	 int Status;
+
+#ifdef XPAR_INTC_0_DEVICE_ID
+	/*
+	 * Initialize the interrupt controller driver so that
+	 * it's ready to use, specify the device ID that is generated in
+	 * xparameters.h
+	 */
+	Status = XIntc_Initialize(IntcInstancePtr, INTC_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Connect a device driver handler that will be called when an interrupt
+	 * for the device occurs, the device driver handler performs the
+	 * specific interrupt processing for the device
+	 */
+	Status = XIntc_Connect(IntcInstancePtr, IntrId,
+				(XInterruptHandler)XTmrCtr_InterruptHandler,
+				(void *)TmrCtrInstancePtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Start the interrupt controller such that interrupts are enabled for
+	 * all devices that cause interrupts, specific real mode so that
+	 * the timer counter can cause interrupts through the interrupt
+	 * controller
+	 */
+	Status = XIntc_Start(IntcInstancePtr, XIN_REAL_MODE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/* Enable the interrupt for the timer counter */
+	XIntc_Enable(IntcInstancePtr, IntrId);
+#else
+	XScuGic_Config *IntcConfig;
+
+	/*
+	 * Initialize the interrupt controller driver so that it is ready to
+	 * use
+	 */
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+	if (NULL == IntcConfig) {
+		return XST_FAILURE;
+	}
+
+	Status = XScuGic_CfgInitialize(IntcInstancePtr, IntcConfig,
+					IntcConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XScuGic_SetPriorityTriggerType(IntcInstancePtr, IntrId,
+					0xA0, 0x3);
+
+	/*
+	 * Connect the interrupt handler that will be called when an
+	 * interrupt occurs for the device.
+	 */
+	Status = XScuGic_Connect(IntcInstancePtr, IntrId,
+				 (Xil_ExceptionHandler)XTmrCtr_InterruptHandler,
+				 TmrCtrInstancePtr);
+	if (Status != XST_SUCCESS) {
+		return Status;
+	}
+
+	/* Enable the interrupt for the Timer device */
+	XScuGic_Enable(IntcInstancePtr, IntrId);
+#endif /* XPAR_INTC_0_DEVICE_ID */
+
+	/* Initialize the exception table */
+	Xil_ExceptionInit();
+
+	/* Register the interrupt controller handler with the exception table */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+					(Xil_ExceptionHandler)
+					INTC_HANDLER,
+					IntcInstancePtr);
+
+	/* Enable non-critical exceptions */
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+/******************************************************************************/
+/**
+*
+* This function disconnects the interrupts for the Timer.
+*
+* @param	IntcInstancePtr is a reference to the Interrupt Controller
+*		driver Instance.
+* @param	IntrId is XPAR_<INTC_instance>_<Timer_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+void TmrCtrDisableIntr(INTC *IntcInstancePtr, u16 IntrId)
+{
+	/* Disconnect the interrupt for the timer counter */
+#ifdef XPAR_INTC_0_DEVICE_ID
+	XIntc_Disconnect(IntcInstancePtr, IntrId);
+#else
+	XScuGic_Disconnect(IntcInstancePtr, IntrId);
+#endif
+}

@@ -32,3 +32,4 @@
 1611856935782	Delete resource 'linux'
 1611857030981	Delete resource 'freertos10_2_bsp'
 1611857037237	Delete resource 'freertos10_2'
+1611917332758	Rename resource 'freertos10_bsp_xgpio_example_1'

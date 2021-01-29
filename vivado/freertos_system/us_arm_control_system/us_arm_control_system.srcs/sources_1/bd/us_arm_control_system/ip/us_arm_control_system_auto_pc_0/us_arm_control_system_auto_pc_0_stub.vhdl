@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Wed Jan 27 14:11:47 2021
+-- Date        : Wed Jan 27 14:11:46 2021
 -- Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/freertos_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_control_system/ip/us_arm_control_system_auto_pc_0/us_arm_control_system_auto_pc_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top us_arm_control_system_auto_pc_0 -prefix
+--               us_arm_control_system_auto_pc_0_ us_arm_control_system_auto_pc_0_stub.vhdl
 -- Design      : us_arm_control_system_auto_pc_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

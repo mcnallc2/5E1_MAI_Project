@@ -12,13 +12,31 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_
 # IP: bd/us_arm_control_system/ip/us_arm_control_system_axi_gpio_0_0/us_arm_control_system_axi_gpio_0_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_axi_gpio_0_0 || ORIG_REF_NAME==us_arm_control_system_axi_gpio_0_0} -quiet] -quiet
 
-# IP: bd/us_arm_control_system/ip/us_arm_control_system_auto_pc_0/us_arm_control_system_auto_pc_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_auto_pc_0 || ORIG_REF_NAME==us_arm_control_system_auto_pc_0} -quiet] -quiet
-
 # IP: bd/us_arm_control_system/ip/us_arm_control_system_ps7_0_axi_periph_0/us_arm_control_system_ps7_0_axi_periph_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_ps7_0_axi_periph_0 || ORIG_REF_NAME==us_arm_control_system_ps7_0_axi_periph_0} -quiet] -quiet
 
 # IP: bd/us_arm_control_system/ip/us_arm_control_system_rst_ps7_0_100M_0/us_arm_control_system_rst_ps7_0_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_rst_ps7_0_100M_0 || ORIG_REF_NAME==us_arm_control_system_rst_ps7_0_100M_0} -quiet] -quiet
+
+# IP: bd/us_arm_control_system/ip/us_arm_control_system_xbar_0/us_arm_control_system_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_xbar_0 || ORIG_REF_NAME==us_arm_control_system_xbar_0} -quiet] -quiet
+
+# IP: bd/us_arm_control_system/ip/us_arm_control_system_auto_pc_0/us_arm_control_system_auto_pc_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_auto_pc_0 || ORIG_REF_NAME==us_arm_control_system_auto_pc_0} -quiet] -quiet
+
+# IP: bd/us_arm_control_system/ip/us_arm_control_system_axi_timer_0_0/us_arm_control_system_axi_timer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_axi_timer_0_0 || ORIG_REF_NAME==us_arm_control_system_axi_timer_0_0} -quiet] -quiet
+
+# IP: bd/us_arm_control_system/ip/us_arm_control_system_axi_timer_1_0/us_arm_control_system_axi_timer_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_axi_timer_1_0 || ORIG_REF_NAME==us_arm_control_system_axi_timer_1_0} -quiet] -quiet
+
+# IP: bd/us_arm_control_system/ip/us_arm_control_system_axi_timer_2_0/us_arm_control_system_axi_timer_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_axi_timer_2_0 || ORIG_REF_NAME==us_arm_control_system_axi_timer_2_0} -quiet] -quiet
+
+# IP: bd/us_arm_control_system/ip/us_arm_control_system_axi_timer_3_0/us_arm_control_system_axi_timer_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_axi_timer_3_0 || ORIG_REF_NAME==us_arm_control_system_axi_timer_3_0} -quiet] -quiet
+
+# IP: bd/us_arm_control_system/ip/us_arm_control_system_xlconcat_0_0/us_arm_control_system_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_control_system_xlconcat_0_0 || ORIG_REF_NAME==us_arm_control_system_xlconcat_0_0} -quiet] -quiet
 
 # XDC: bd/us_arm_control_system/us_arm_control_system_ooc.xdc
