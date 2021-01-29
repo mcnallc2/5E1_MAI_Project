@@ -1,8 +1,8 @@
-12:08:09 **** Incremental Build of configuration Debug for project freertos_us_arm_control_system ****
+15:43:30 **** Incremental Build of configuration Debug for project freertos_us_arm_control_system ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 
-12:08:09 Build Finished (took 217ms)
+15:43:30 Build Finished (took 83ms)
 

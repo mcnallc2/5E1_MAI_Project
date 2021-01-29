@@ -139,7 +139,7 @@
 #define MAX_DUTYCYCLE           100          /* Max duty cycle */
 #define DUTYCYCLE_DIVISOR       4            /* Duty cycle Divisor */
 #define WAIT_COUNT              PWM_PERIOD   /* Interrupt wait counter */
-#define ANGLE_SHIFT				5
+#define ANGLE_SHIFT				2
 
 
 /**************************** Type Definitions *******************************/
@@ -213,7 +213,7 @@ static TaskHandle_t xTxTask;
 static TaskHandle_t xRxTask;
 static QueueHandle_t xQueue = NULL;
 static TimerHandle_t xTimer = NULL;
-char HWstring[50] =  "";//"Hello World";
+char too_close[1] = "0";
 long RxtaskCntr = 0;
 
 /*****************************************************************************/
@@ -233,7 +233,7 @@ long RxtaskCntr = 0;
 int main(void)
 {
 
-//	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
+	const TickType_t x10seconds = pdMS_TO_TICKS( DELAY_10_SECONDS );
 
 	xil_printf( "\nHello from Freertos example main\r\n" );
 
@@ -259,29 +259,29 @@ int main(void)
 	queue as soon as the Tx task writes to the queue - therefore the queue can
 	never have more than one item in it. */
 	xQueue = xQueueCreate( 	1,						/* There is only one space in the queue. */
-							sizeof( HWstring ) );	/* Each space in the queue is large enough to hold a uint32_t. */
+							sizeof( too_close ) );	/* Each space in the queue is large enough to hold a uint32_t. */
 
 	/* Check the queue was created. */
 	configASSERT( xQueue );
 
-//	/* Create a timer with a timer expiry of 10 seconds. The timer would expire
-//	 after 10 seconds and the timer call back would get called. In the timer call back
-//	 checks are done to ensure that the tasks have been running properly till then.
-//	 The tasks are deleted in the timer call back and a message is printed to convey that
-//	 the example has run successfully.
-//	 The timer expiry is set to 10 seconds and the timer set to not auto reload. */
-//	xTimer = xTimerCreate( (const char *) "Timer",
-//							x10seconds,
-//							pdFALSE,
-//							(void *) TIMER_ID,
-//							vTimerCallback);
-//	/* Check the timer was created. */
-//	configASSERT( xTimer );
-//
-//	/* start the timer with a block time of 0 ticks. This means as soon
-//	   as the schedule starts the timer will start running and will expire after
-//	   10 seconds */
-//	xTimerStart( xTimer, 0 );
+	/* Create a timer with a timer expiry of 10 seconds. The timer would expire
+	 after 10 seconds and the timer call back would get called. In the timer call back
+	 checks are done to ensure that the tasks have been running properly till then.
+	 The tasks are deleted in the timer call back and a message is printed to convey that
+	 the example has run successfully.
+	 The timer expiry is set to 10 seconds and the timer set to not auto reload. */
+	xTimer = xTimerCreate( (const char *) "Timer",
+							x10seconds,
+							pdFALSE,
+							(void *) TIMER_ID,
+							vTimerCallback);
+	/* Check the timer was created. */
+	configASSERT( xTimer );
+
+	/* start the timer with a block time of 0 ticks. This means as soon
+	   as the schedule starts the timer will start running and will expire after
+	   10 seconds */
+	xTimerStart( xTimer, 0 );
 
 	/* Start the tasks and timer running. */
 	vTaskStartScheduler();
@@ -329,28 +329,15 @@ static void prvTxTask( void *pvParameters )
 
 			/* find the model value from all readings */
 			mode_dist = get_mode(dist_list);
+			printf("Dist: %f mm\n", mode_dist);
 
-//			char distance[15];
-//			int ret = snprintf(distance, sizeof distance, "%f", mode_dist);
-//
-//			if (ret < 0) {
-//				xil_printf("Float Conversion Failed\r\n");
-//			}
-//			if (ret >= sizeof distance) {
-//			    // Result was truncated - resize the buffer and retry.
-//			}
-			int dist_int;
-
-			for(int i=0; i<3; i++){
-				dist_int = mode_dist % 10;
-				printf("%i\n", dist_int);
-				dist_int /= 10;
-			}
-
-//			printf("\n\nDistance: %s mm", distance);
+			if(mode_dist < 100)
+				too_close[0] = '1';
+			else
+				too_close[0] = '0';
 
 			xQueueSend( xQueue,			/* The queue being written to. */
-						HWstring, /* The address of the data being sent. */
+						too_close,		/* The address of the data being sent. */
 						0UL );			/* The block time. */
 	}
 }
@@ -358,14 +345,78 @@ static void prvTxTask( void *pvParameters )
 /*-----------------------------------------------------------*/
 static void prvRxTask( void *pvParameters )
 {
-char Recdstring[50] = "";
+	char too_close[1] = "";
+
+	int Status;
+	int US_MASK;
+
+//	u8 Div0_list[5] = {0, 45, 90, 135, 180};
+	int shift = 1;
+	int angle = 0;
+
+	/* Initialize the GPIO driver */
+	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		xil_printf("Gpio Initialization Failed\r\n");
+		//return XST_FAILURE;
+	}
 
 	for( ;; )
 	{
 		/* Block to wait for data arriving on the queue. */
 		xQueueReceive( 	xQueue,				/* The queue being read. */
-						Recdstring,	/* Data is read into this address. */
+						too_close,	/* Data is read into this address. */
 						portMAX_DELAY );	/* Wait without a timeout for data. */
+
+		if (too_close[0] == '1'){
+			US_MASK = 0;
+			xil_printf("BASE_SERVO BLOCKED\r\n");
+		}
+		else{
+			US_MASK = 1;
+			xil_printf("BASE_SERVO PWM RUNNING\r\n");
+		}
+
+		/* Run the Timer Counter for BASE_SERVO PWM */
+		Status = TmrCtrPwmExample(&InterruptController, &TimerCounterInst,
+					  BASE_SERVO_DEVICE_ID, BASE_SERVO_INTERRUPT_ID, angle, 0);
+		if (Status != XST_SUCCESS) {
+			xil_printf("BASE_SERVO PWM Failed\r\n");
+			//return XST_FAILURE;
+		}
+
+//		/* Run the Timer Counter for SHOULDER_SERVO PWM */
+//		Status = TmrCtrPwmExample(&InterruptController, &TimerCounterInst,
+//				SHOULDER_SERVO_DEVICE_ID, SHOULDER_SERVO_INTERRUPT_ID, 72, 0);
+//		if (Status != XST_SUCCESS) {
+//			xil_printf("BASE_SERVO PWM Failed\r\n");
+//			//return XST_FAILURE;
+//		}
+//
+//		/* Run the Timer Counter for ELBOW_SERVO PWM */
+//		Status = TmrCtrPwmExample(&InterruptController, &TimerCounterInst,
+//				ELBOW_SERVO_DEVICE_ID, ELBOW_SERVO_INTERRUPT_ID, 130, 0);
+//		if (Status != XST_SUCCESS) {
+//			xil_printf("BASE_SERVO PWM Failed\r\n");
+//			//return XST_FAILURE;
+//		}
+//
+//		/* Run the Timer Counter for CLAW_SERVO PWM */
+//		Status = TmrCtrPwmExample(&InterruptController, &TimerCounterInst,
+//				CLAW_SERVO_DEVICE_ID, CLAW_SERVO_INTERRUPT_ID, 150, 0);
+//		if (Status != XST_SUCCESS) {
+//			xil_printf("BASE_SERVO PWM Failed\r\n");
+//			//return XST_FAILURE;
+//		}
+
+		if (angle == 180){
+			shift = -ANGLE_SHIFT;
+		}
+		if (angle == 0){
+			shift = ANGLE_SHIFT;
+		}
+
+		angle = angle + (shift * US_MASK);
 
 		//xil_printf( "Rx task received string from Tx task - Distance: %smm\r\n", Recdstring );
 	}
@@ -378,21 +429,6 @@ static void vTimerCallback( TimerHandle_t pxTimer )
 	configASSERT( pxTimer );
 
 	lTimerId = ( long ) pvTimerGetTimerID( pxTimer );
-
-	if (lTimerId != TIMER_ID) {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
-
-	/* If the RxtaskCntr is updated every time the Rx task is called. The
-	 Rx task is called every time the Tx task sends a message. The Tx task
-	 sends a message every 1 second.
-	 The timer expires after 10 seconds. We expect the RxtaskCntr to at least
-	 have a value of 9 (TIMER_CHECK_THRESHOLD) when the timer expires. */
-	if (RxtaskCntr >= TIMER_CHECK_THRESHOLD) {
-		xil_printf("FreeRTOS Hello World Example PASSED");
-	} else {
-		xil_printf("FreeRTOS Hello World Example FAILED");
-	}
 
 	vTaskDelete( xRxTask );
 	vTaskDelete( xTxTask );
@@ -626,8 +662,8 @@ int TmrCtrPwmExample(INTC *IntcInstancePtr, XTmrCtr *TmrCtrInstancePtr,
 		goto err;
 	}
 
-	xil_printf("\nPWM %i \r\n", ID);
-	xil_printf("Angle = %d\r\n", Div);
+//	xil_printf("\nPWM %i \r\n", ID);
+//	xil_printf("Angle = %d\r\n", Div);
 
 	/* Enable PWM */
 	XTmrCtr_PwmEnable(TmrCtrInstancePtr);
