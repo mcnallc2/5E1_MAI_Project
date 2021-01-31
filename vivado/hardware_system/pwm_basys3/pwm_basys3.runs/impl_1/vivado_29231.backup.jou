@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Jan 31 13:36:44 2021
+# Process ID: 29231
+# Current directory: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/pwm_basys3/pwm_basys3.runs/impl_1
+# Command line: vivado -log pwm_gen.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source pwm_gen.tcl -notrace
+# Log file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/pwm_basys3/pwm_basys3.runs/impl_1/pwm_gen.vdi
+# Journal file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/pwm_basys3/pwm_basys3.runs/impl_1/vivado.jou
+#-----------------------------------------------------------
+source pwm_gen.tcl -notrace

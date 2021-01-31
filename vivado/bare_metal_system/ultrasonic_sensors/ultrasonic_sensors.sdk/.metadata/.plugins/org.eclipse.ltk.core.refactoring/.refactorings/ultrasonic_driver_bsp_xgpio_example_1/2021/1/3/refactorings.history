@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename resource &apos;ultrasonic_driver_bsp_xgpio_example_1/src/xgpio_example.c&apos; to &apos;ultrasonic_sensor_driver.c&apos;" description="Rename resource &apos;xgpio_example.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/xgpio_example.c" name="ultrasonic_sensor_driver.c" stamp="1611184137216" updateReferences="true"/>
-</session>

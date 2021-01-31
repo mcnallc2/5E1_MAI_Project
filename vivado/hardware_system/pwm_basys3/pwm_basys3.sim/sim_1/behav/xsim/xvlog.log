@@ -1,0 +1,5 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/pwm_basys3/pwm_basys3.srcs/sources_1/new/pwm_top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm_gen
+INFO: [VRFC 10-311] analyzing module counter
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/pwm_basys3/pwm_basys3.srcs/sim_1/new/pwm_top_tb.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pwm_top_tb
