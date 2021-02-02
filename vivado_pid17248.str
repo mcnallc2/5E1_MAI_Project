@@ -137,3 +137,67 @@ selectCodeEditor("us_arm_control_wrapper.v", 404, 279); // cl (w, cp)
 // TclEventType: DG_GRAPH_STALE
 // TclEventType: FILE_SET_CHANGE
 // HMemoryUtils.trashcanNow. Engine heap size: 1,028 MB. GUI used memory: 57 MB. Current time: 2/2/21, 11:42:05 AM GMT
+// Elapsed time: 98 seconds
+selectCodeEditor("us_arm_control_wrapper.v", 418, 216); // cl (w, cp)
+selectCodeEditor("us_arm_control_wrapper.v", 2, 203); // cl (w, cp)
+selectCodeEditor("us_arm_control_wrapper.v", 2, 203); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("us_arm_control_wrapper.v", 274, 131); // cl (w, cp)
+// [GUI Memory]: 117 MB (+500kb) [00:03:49]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, us_arm_control_wrapper (us_arm_control_wrapper.v)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, us_arm_control_wrapper (us_arm_control_wrapper.v)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectCodeEditor("us_arm_control_wrapper.v", 26, 504); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,061 MB (+3788kb) [00:03:59]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,061 MB. GUI used memory: 58 MB. Current time: 2/2/21, 11:44:00 AM GMT
+// Elapsed time: 37 seconds
+selectCodeEditor("us_arm_control_wrapper.v", 478, 415); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 4 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (cp):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Tue Feb  2 11:44:48 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.runs/synth_1/runme.log [Tue Feb  2 11:44:48 2021] Launched impl_1... Run output will be captured here: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,088 MB. GUI used memory: 58 MB. Current time: 2/2/21, 11:44:50 AM GMT
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 98 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (cp):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// [Engine Memory]: 1,115 MB (+404kb) [00:06:32]
+// WARNING: HEventQueue.dispatchEvent() is taking  1103 ms.
+// Tcl Message: open_hw 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// [GUI Memory]: 123 MB (+771kb) [00:06:32]
+dismissDialog("Open Hardware Manager"); // bx (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,140 MB. GUI used memory: 62 MB. Current time: 2/2/21, 11:46:35 AM GMT

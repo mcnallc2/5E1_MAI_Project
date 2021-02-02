@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Feb  2 11:10:50 2021
-# Process ID: 13957
+# Start of session at: Tue Feb  2 11:44:50 2021
+# Process ID: 18054
 # Current directory: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.runs/synth_1
 # Command line: vivado -log us_arm_control_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source us_arm_control_wrapper.tcl
 # Log file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.runs/synth_1/us_arm_control_wrapper.vds
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13971 
+INFO: Helper process launched with PID 18071 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1384.160 ; gain = 0.000 ; free physical = 454 ; free virtual = 3273
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1356.887 ; gain = 0.000 ; free physical = 1139 ; free virtual = 3940
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'us_arm_control_wrapper' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:12]
+INFO: [Synth 8-6157] synthesizing module 'us_arm_control_wrapper' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:1]
 	Parameter threshold bound to: 58309 - type: integer 
 INFO: [Synth 8-6157] synthesizing module 'pwm_generator' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/pwm_generator.v:1]
 INFO: [Synth 8-6157] synthesizing module 'counter' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/pwm_generator.v:47]
@@ -32,14 +32,14 @@ INFO: [Synth 8-6157] synthesizing module 'us_sensor' [/home/cmcnally/Repos/robot
 	Parameter C bound to: 3'b010 
 	Parameter D bound to: 3'b011 
 	Parameter E bound to: 3'b100 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:60]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:59]
 INFO: [Synth 8-6155] done synthesizing module 'us_sensor' (3#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:1]
-WARNING: [Synth 8-689] width (32) of port connection 'delay' does not match port width (33) of module 'us_sensor' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:82]
-WARNING: [Synth 8-3848] Net clk in module/entity us_arm_control_wrapper does not have driver. [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:38]
-INFO: [Synth 8-6155] done synthesizing module 'us_arm_control_wrapper' (4#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:12]
+WARNING: [Synth 8-689] width (32) of port connection 'delay' does not match port width (33) of module 'us_sensor' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:71]
+WARNING: [Synth 8-3848] Net clk in module/entity us_arm_control_wrapper does not have driver. [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:27]
+INFO: [Synth 8-6155] done synthesizing module 'us_arm_control_wrapper' (4#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:1]
 WARNING: [Synth 8-3331] design counter has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.559 ; gain = 16.398 ; free physical = 467 ; free virtual = 3286
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.535 ; gain = 43.648 ; free physical = 1152 ; free virtual = 3955
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -52,10 +52,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.559 ; gain = 16.398 ; free physical = 466 ; free virtual = 3285
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.535 ; gain = 43.648 ; free physical = 1151 ; free virtual = 3955
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.559 ; gain = 16.398 ; free physical = 466 ; free virtual = 3285
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.535 ; gain = 43.648 ; free physical = 1151 ; free virtual = 3955
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -66,30 +66,30 @@ Parsing XDC File [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivad
 Finished Parsing XDC File [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/us_arm_control_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/us_arm_control_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.066 ; gain = 0.000 ; free physical = 202 ; free virtual = 3009
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.051 ; gain = 0.000 ; free physical = 835 ; free virtual = 3675
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.066 ; gain = 0.000 ; free physical = 203 ; free virtual = 3010
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.051 ; gain = 0.000 ; free physical = 837 ; free virtual = 3677
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.066 ; gain = 0.000 ; free physical = 203 ; free virtual = 3010
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.066 ; gain = 0.000 ; free physical = 203 ; free virtual = 3010
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.051 ; gain = 0.000 ; free physical = 837 ; free virtual = 3677
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.051 ; gain = 0.000 ; free physical = 837 ; free virtual = 3677
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.066 ; gain = 358.906 ; free physical = 282 ; free virtual = 3089
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 913 ; free virtual = 3753
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.066 ; gain = 358.906 ; free physical = 282 ; free virtual = 3089
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 913 ; free virtual = 3753
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.066 ; gain = 358.906 ; free physical = 284 ; free virtual = 3090
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 914 ; free virtual = 3754
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5545] ROM "counter_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "pwm_hightime" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
@@ -101,8 +101,8 @@ INFO: [Synth 8-5544] ROM "trig" won't be mapped to Block RAM because address siz
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
 INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:72]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:72]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:71]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:71]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -112,12 +112,12 @@ WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' 
                        D |                               11 |                              011
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'us_sensor'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:72]
-WARNING: [Synth 8-327] inferring latch for variable 'next_echo_pulse_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:71]
-WARNING: [Synth 8-327] inferring latch for variable 'trig_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:65]
-WARNING: [Synth 8-327] inferring latch for variable 'next_delay_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:70]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:71]
+WARNING: [Synth 8-327] inferring latch for variable 'next_echo_pulse_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:70]
+WARNING: [Synth 8-327] inferring latch for variable 'trig_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:64]
+WARNING: [Synth 8-327] inferring latch for variable 'next_delay_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:69]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1743.066 ; gain = 358.906 ; free physical = 276 ; free virtual = 3083
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 916 ; free virtual = 3746
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -290,7 +290,7 @@ WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[2]) is un
 WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[1]) is unused and will be removed from module us_arm_control_wrapper.
 WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[0]) is unused and will be removed from module us_arm_control_wrapper.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1743.066 ; gain = 358.906 ; free physical = 260 ; free virtual = 3069
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 897 ; free virtual = 3731
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -302,13 +302,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1743.066 ; gain = 358.906 ; free physical = 133 ; free virtual = 2942
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 759 ; free virtual = 3604
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 148 ; free virtual = 2939
+Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -323,7 +323,7 @@ INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[12]' (FD
 INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[16]' (FD) to 'pwm_generator_i/pwm_hightime_reg[17]'
 INFO: [Synth 8-3333] propagating constant 1 across sequential element (\pwm_generator_i/pwm_hightime_reg[17] )
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 147 ; free virtual = 2938
+Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 756 ; free virtual = 3601
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -347,7 +347,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 148 ; free virtual = 2938
+Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -360,7 +360,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 148 ; free virtual = 2938
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -372,25 +372,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 148 ; free virtual = 2938
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 148 ; free virtual = 2938
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 148 ; free virtual = 2938
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 148 ; free virtual = 2938
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -429,27 +429,27 @@ Report Instance Areas:
 |4     |  us_sensor_i     |us_sensor     |    94|
 +------+------------------+--------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.066 ; gain = 359.906 ; free physical = 148 ; free virtual = 2938
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1744.066 ; gain = 17.398 ; free physical = 204 ; free virtual = 2994
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.074 ; gain = 359.906 ; free physical = 204 ; free virtual = 2994
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1744.051 ; gain = 44.648 ; free physical = 813 ; free virtual = 3658
+Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1744.059 ; gain = 387.164 ; free physical = 813 ; free virtual = 3658
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1744.074 ; gain = 0.000 ; free physical = 145 ; free virtual = 2936
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1744.059 ; gain = 0.000 ; free physical = 751 ; free virtual = 3596
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 51 Infos, 77 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1744.074 ; gain = 360.016 ; free physical = 199 ; free virtual = 2989
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1744.074 ; gain = 0.000 ; free physical = 199 ; free virtual = 2989
+synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1744.059 ; gain = 387.273 ; free physical = 804 ; free virtual = 3649
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1744.059 ; gain = 0.000 ; free physical = 804 ; free virtual = 3649
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.runs/synth_1/us_arm_control_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file us_arm_control_wrapper_utilization_synth.rpt -pb us_arm_control_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Feb  2 11:11:14 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  2 11:45:14 2021...
