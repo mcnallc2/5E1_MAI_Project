@@ -1,0 +1,9 @@
+0.6
+2018.3
+Dec  6 2018
+23:39:36
+/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
+/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sim_1/new/us_arm_control_tb.v,1612219326,verilog,,,,us_arm_control_tb,,,,,,,,
+/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v,1612209144,verilog,,/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v,,us_arm_control_wrapper,,,,,,,,
+/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/pwm_generator.v,1612180513,verilog,,/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v,,counter;pwm_generator,,,,,,,,
+/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v,1612219949,verilog,,/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sim_1/new/us_arm_control_tb.v,,us_sensor,,,,,,,,
