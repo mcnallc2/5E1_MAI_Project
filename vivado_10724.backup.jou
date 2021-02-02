@@ -1,0 +1,33 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Jan 31 10:43:05 2021
+# Process ID: 10724
+# Current directory: /home/cmcnally/Repos/robotic_arm_control_system_analysis
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project arm_control /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control -part xc7z020clg400-1
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+create_bd_design "top_arm_control"
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+connect_bd_net [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+delete_bd_objs [get_bd_intf_nets processing_system7_0_FIXED_IO] [get_bd_nets processing_system7_0_FCLK_CLK0] [get_bd_intf_nets processing_system7_0_DDR] [get_bd_cells processing_system7_0]
+delete_bd_objs [get_bd_intf_ports DDR]
+delete_bd_objs [get_bd_intf_ports FIXED_IO]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+connect_bd_net [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+save_bd_design

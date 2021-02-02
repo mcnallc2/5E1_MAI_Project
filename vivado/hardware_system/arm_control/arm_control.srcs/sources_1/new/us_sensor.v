@@ -3,7 +3,6 @@ module us_sensor
     reset,
     echo_pulse,
     echo,
-//    trig);
     trig,
     //sim
     current_state,
