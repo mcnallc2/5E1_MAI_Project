@@ -31,8 +31,8 @@ module us_arm_control_wrapper
     output [1:0] sel_hightime;
 //    //sim
 //    output [2:0] current_state;
-//    output [20:0] delay;
-//    output [20:0] echo_pulse;
+//    output [31:0] delay;
+//    output [31:0] echo_pulse;
 
     
     wire clk;
