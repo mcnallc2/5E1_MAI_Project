@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log pwm_gen.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source pwm_gen.tcl -notrace
+vivado -log us_arm_control_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source us_arm_control_wrapper.tcl -notrace

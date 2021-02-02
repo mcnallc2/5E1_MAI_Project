@@ -1,73 +1,39 @@
 module us_arm_control_wrapper
-   (sysclk,
-    reset,
-    pwm_out,
-    echo,
-    trig,
-    // debug
-    sel_hightime);
+   (input  wire clk,
+    input  wire reset,
+    output wire pwm_out,
+    input  wire echo,
+    output wire trig);
 //    //sim
-//    current_state,
-//    delay,
-//    echo_pulse);
-   
-    input sysclk;
-    input reset;
-    output pwm_out;
-    input echo;
-    output trig;
-    // debug
-    output [1:0] sel_hightime;
-//    //sim
-//    output [2:0] current_state;
-//    output [31:0] delay;
-//    output [31:0] echo_pulse;
+//    output wire [15:0] echo_pulse_ff,
+//    output wire [31:0] delay_ff,
+//    output wire [1:0] state_ff,
+//    output wire [15:0] counter_ff);
+    
+    // !sim
+    wire [15:0] echo_pulse_ff;
+    wire [31:0] delay_ff;
+    wire [1:0] state_ff;
+    wire [15:0] counter_ff;
+    
+    wire [15:0] pwm_hightime;
+    
+    assign pwm_hightime = echo_pulse_ff;
 
-    
-    wire clk;
-    wire reset;
-    wire pwm_out;
-    wire echo;
-    wire trig;
-    //sim
-    wire [2:0] current_state;
-    wire [31:0] delay;
-    
-    
-    wire [31:0] echo_pulse;
-    reg [1:0] sel_hightime;
-    
-    // find magic number using equation [ pulse = (dist-mm * 100*10^6) / 171500 ]
-    // US echo pulse length for 100mm
-    localparam threshold = 32'hE3C5;
-    
-    always @(posedge clk)
-    begin
-        if (echo_pulse > threshold)
-        begin
-            sel_hightime <= 2'b01;
-        end
-        else
-        begin
-            sel_hightime <= 2'b10;
-        end
-    end
-
-
-    pwm_generator pwm_generator_i
-       (.clk(sysclk),
+    arm_controller arm_controller_i
+       (.clk(clk),
         .reset(reset),
-        .sel_hightime(sel_hightime),
         .pwm_out(pwm_out));
 
     us_sensor us_sensor_i
-       (.clk(sysclk),
+       (.clk(clk),
         .reset(reset),
-        .echo_pulse(echo_pulse),
         .echo(echo),
         .trig(trig),
+        .echo_pulse_ff(echo_pulse_ff),
         //sim
-        .current_state(current_state),
-        .delay(delay));
+        .delay_ff(delay_ff),
+        .state_ff(state_ff),
+        .counter_ff(counter_ff));
 
 endmodule

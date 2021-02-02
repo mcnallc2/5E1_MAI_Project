@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Feb  2 11:45:39 2021
+| Date         : Tue Feb  2 23:01:55 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_control_sets -verbose -file us_arm_control_wrapper_control_sets_placed.rpt
 | Design       : us_arm_control_wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     3 |
-| Unused register locations in slices containing registers |    12 |
+| Number of unique control sets                            |     4 |
+| Unused register locations in slices containing registers |    16 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      1 |            1 |
+|      1 |            2 |
 |    16+ |            2 |
 +--------+--------------+
 
@@ -45,9 +45,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |               1 |            1 |
-| No           | No                    | Yes                    |              35 |           14 |
-| No           | Yes                   | No                     |              32 |            9 |
+| No           | No                    | No                     |               2 |            2 |
+| No           | No                    | Yes                    |             110 |           29 |
+| No           | Yes                   | No                     |              64 |           17 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |               0 |            0 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -57,12 +57,13 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+-------------------+---------------+---------------------------------------------------+------------------+----------------+
-|    Clock Signal   | Enable Signal |                  Set/Reset Signal                 | Slice Load Count | Bel Load Count |
-+-------------------+---------------+---------------------------------------------------+------------------+----------------+
-|  sysclk_IBUF_BUFG |               |                                                   |                1 |              1 |
-|  sysclk_IBUF_BUFG |               | pwm_generator_i/counter_i/counter_out[31]_i_1_n_0 |                9 |             32 |
-|  sysclk_IBUF_BUFG |               | reset_IBUF                                        |               14 |             35 |
-+-------------------+---------------+---------------------------------------------------+------------------+----------------+
++-------------------------------+---------------+----------------------------------------------------+------------------+----------------+
+|          Clock Signal         | Enable Signal |                  Set/Reset Signal                  | Slice Load Count | Bel Load Count |
++-------------------------------+---------------+----------------------------------------------------+------------------+----------------+
+|  us_sensor_i/trig_reg_i_2_n_0 |               |                                                    |                1 |              1 |
+|  clk_IBUF_BUFG                |               |                                                    |                1 |              1 |
+|  clk_IBUF_BUFG                |               | arm_controller_i/counter_i/counter_out[63]_i_1_n_0 |               17 |             64 |
+|  clk_IBUF_BUFG                |               | reset_IBUF                                         |               29 |            110 |
++-------------------------------+---------------+----------------------------------------------------+------------------+----------------+
 
 

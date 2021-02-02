@@ -38,6 +38,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log pwm_gen.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source pwm_gen.tcl -notrace
+EAStep vivado -log us_arm_control_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source us_arm_control_wrapper.tcl -notrace
 
 

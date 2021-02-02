@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Tue Feb  2 11:44:50 2021
-# Process ID: 18054
+# Start of session at: Tue Feb  2 23:00:52 2021
+# Process ID: 7764
 # Current directory: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.runs/synth_1
 # Command line: vivado -log us_arm_control_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source us_arm_control_wrapper.tcl
 # Log file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.runs/synth_1/us_arm_control_wrapper.vds
@@ -15,31 +15,34 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 18071 
+INFO: Helper process launched with PID 7779 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1356.887 ; gain = 0.000 ; free physical = 1139 ; free virtual = 3940
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1384.152 ; gain = 0.000 ; free physical = 494 ; free virtual = 3928
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'us_arm_control_wrapper' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:1]
-	Parameter threshold bound to: 58309 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'pwm_generator' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/pwm_generator.v:1]
-INFO: [Synth 8-6157] synthesizing module 'counter' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/pwm_generator.v:47]
-	Parameter full_period bound to: 2000000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'counter' (1#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/pwm_generator.v:47]
-INFO: [Synth 8-6155] done synthesizing module 'pwm_generator' (2#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/pwm_generator.v:1]
+INFO: [Synth 8-6157] synthesizing module 'arm_controller' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:29]
+	Parameter FULL_PERIOD bound to: 64'b0000000000000000000000000000000000000000000111101000010010000000 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (1#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:29]
+INFO: [Synth 8-6157] synthesizing module 'rotate_arm' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:45]
+	Parameter DELAY_30MS bound to: 64'b0000000000000000000000000000000000000000000000000000011111010000 
+	Parameter ANGLE_0 bound to: 64'b0000000000000000000000000000000000000000000000001001110001000000 
+	Parameter ANGLE_180 bound to: 64'b0000000000000000000000000000000000000000000001001011101011110000 
+	Parameter A bound to: 2'b00 
+	Parameter B bound to: 2'b01 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:78]
+INFO: [Synth 8-6155] done synthesizing module 'rotate_arm' (2#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:45]
+INFO: [Synth 8-6155] done synthesizing module 'arm_controller' (3#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:1]
 INFO: [Synth 8-6157] synthesizing module 'us_sensor' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:1]
-	Parameter A bound to: 3'b000 
-	Parameter B bound to: 3'b001 
-	Parameter C bound to: 3'b010 
-	Parameter D bound to: 3'b011 
-	Parameter E bound to: 3'b100 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:59]
-INFO: [Synth 8-6155] done synthesizing module 'us_sensor' (3#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:1]
-WARNING: [Synth 8-689] width (32) of port connection 'delay' does not match port width (33) of module 'us_sensor' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:71]
-WARNING: [Synth 8-3848] Net clk in module/entity us_arm_control_wrapper does not have driver. [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:27]
-INFO: [Synth 8-6155] done synthesizing module 'us_arm_control_wrapper' (4#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:1]
+	Parameter A bound to: 2'b00 
+	Parameter B bound to: 2'b01 
+	Parameter C bound to: 2'b10 
+	Parameter D bound to: 2'b11 
+INFO: [Synth 8-6155] done synthesizing module 'us_sensor' (4#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'us_arm_control_wrapper' (5#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:1]
 WARNING: [Synth 8-3331] design counter has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.535 ; gain = 43.648 ; free physical = 1152 ; free virtual = 3955
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 507 ; free virtual = 3941
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -52,10 +55,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.535 ; gain = 43.648 ; free physical = 1151 ; free virtual = 3955
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 506 ; free virtual = 3940
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.535 ; gain = 43.648 ; free physical = 1151 ; free virtual = 3955
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 506 ; free virtual = 3940
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -66,58 +69,64 @@ Parsing XDC File [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivad
 Finished Parsing XDC File [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/us_arm_control_wrapper_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/us_arm_control_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.051 ; gain = 0.000 ; free physical = 835 ; free virtual = 3675
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1745.590 ; gain = 0.000 ; free physical = 246 ; free virtual = 3660
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.051 ; gain = 0.000 ; free physical = 837 ; free virtual = 3677
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1745.590 ; gain = 0.000 ; free physical = 247 ; free virtual = 3661
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.051 ; gain = 0.000 ; free physical = 837 ; free virtual = 3677
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1743.051 ; gain = 0.000 ; free physical = 837 ; free virtual = 3677
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1745.590 ; gain = 0.000 ; free physical = 247 ; free virtual = 3661
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1745.590 ; gain = 0.000 ; free physical = 247 ; free virtual = 3661
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 913 ; free virtual = 3753
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1745.590 ; gain = 361.438 ; free physical = 327 ; free virtual = 3741
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 913 ; free virtual = 3753
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1745.590 ; gain = 361.438 ; free physical = 327 ; free virtual = 3741
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 914 ; free virtual = 3754
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1745.590 ; gain = 361.438 ; free physical = 329 ; free virtual = 3743
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "counter_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "pwm_hightime" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'us_sensor'
-INFO: [Synth 8-5544] ROM "trig" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "trig" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "trig" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "trig" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "next_state" won't be mapped to RAM because address size (33) is larger than maximum supported(25)
-INFO: [Synth 8-5544] ROM "next_state" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:71]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:71]
+INFO: [Synth 8-5545] ROM "counter_out" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'rotate_arm'
+INFO: [Synth 8-5544] ROM "delay_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "delay_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "delay_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'us_sensor'
+INFO: [Synth 8-5544] ROM "trig" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "echo_pulse_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'pwm_hightime_nxt_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:82]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                       A |                               00 |                              000
-                       B |                               01 |                              001
-                       C |                               10 |                              010
-                       D |                               11 |                              011
+                       A |                                0 |                               00
+                       B |                                1 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'us_sensor'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_next_state_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:71]
-WARNING: [Synth 8-327] inferring latch for variable 'next_echo_pulse_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:70]
-WARNING: [Synth 8-327] inferring latch for variable 'trig_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:64]
-WARNING: [Synth 8-327] inferring latch for variable 'next_delay_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:69]
+INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encoding 'sequential' in module 'rotate_arm'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_nxt_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:83]
+WARNING: [Synth 8-327] inferring latch for variable 'delay_nxt_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:81]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                       A |                               00 |                               00
+                       B |                               01 |                               01
+                       C |                               10 |                               10
+                       D |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encoding 'sequential' in module 'us_sensor'
+WARNING: [Synth 8-327] inferring latch for variable 'trig_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:52]
+WARNING: [Synth 8-327] inferring latch for variable 'echo_pulse_nxt_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:49]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 916 ; free virtual = 3746
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1745.590 ; gain = 361.438 ; free physical = 319 ; free virtual = 3733
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -130,23 +139,26 @@ Start RTL Component Statistics
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 1     
+	   2 Input     64 Bit       Adders := 3     
 	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
 +---Registers : 
-	               33 Bit    Registers := 1     
-	               32 Bit    Registers := 3     
-	                2 Bit    Registers := 1     
+	               64 Bit    Registers := 3     
+	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     33 Bit        Muxes := 3     
-	   4 Input     33 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     18 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 5     
 	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -154,41 +166,46 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module us_arm_control_wrapper 
-Detailed RTL Component Info : 
-+---Registers : 
-	                2 Bit    Registers := 1     
 Module counter 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     32 Bit       Adders := 1     
+	   2 Input     64 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
+	               64 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-Module pwm_generator 
+	   2 Input     64 Bit        Muxes := 1     
+Module rotate_arm 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 2     
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 2     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 4     
+Module arm_controller 
 Detailed RTL Component Info : 
 +---Registers : 
-	               32 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
-+---Muxes : 
-	   2 Input     18 Bit        Muxes := 1     
-	   2 Input     17 Bit        Muxes := 1     
 Module us_sensor 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   2 Input     16 Bit       Adders := 1     
 +---Registers : 
-	               33 Bit    Registers := 1     
 	               32 Bit    Registers := 1     
+	               16 Bit    Registers := 2     
 +---Muxes : 
-	   2 Input     33 Bit        Muxes := 3     
-	   4 Input     33 Bit        Muxes := 1     
 	   2 Input     32 Bit        Muxes := 1     
 	   4 Input     32 Bit        Muxes := 1     
+	   2 Input     16 Bit        Muxes := 1     
+	   4 Input     16 Bit        Muxes := 2     
 	   4 Input      2 Bit        Muxes := 1     
 	   2 Input      2 Bit        Muxes := 4     
-	   4 Input      1 Bit        Muxes := 1     
+	   4 Input      1 Bit        Muxes := 3     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -205,92 +222,215 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5544] ROM "pwm_generator_i/pwm_hightime" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-INFO: [Synth 8-5545] ROM "pwm_generator_i/counter_i/counter_out" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[0]' (FD) to 'pwm_generator_i/pwm_hightime_reg[4]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[1]' (FD) to 'pwm_generator_i/pwm_hightime_reg[4]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[2]' (FD) to 'pwm_generator_i/pwm_hightime_reg[4]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[3]' (FD) to 'pwm_generator_i/pwm_hightime_reg[4]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\pwm_generator_i/pwm_hightime_reg[4] )
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[5]' (FD) to 'pwm_generator_i/pwm_hightime_reg[7]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[6]' (FD) to 'pwm_generator_i/pwm_hightime_reg[11]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[7]' (FD) to 'pwm_generator_i/pwm_hightime_reg[9]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[8]' (FD) to 'pwm_generator_i/pwm_hightime_reg[13]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[9]' (FD) to 'pwm_generator_i/pwm_hightime_reg[16]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[10]' (FD) to 'pwm_generator_i/pwm_hightime_reg[15]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[13]' (FD) to 'pwm_generator_i/pwm_hightime_reg[14]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[14]' (FD) to 'pwm_generator_i/pwm_hightime_reg[17]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\pwm_generator_i/pwm_hightime_reg[15] )
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/FSM_sequential_next_state_reg[1]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/FSM_sequential_next_state_reg[0]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[31]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[30]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[29]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[28]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[27]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[26]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[25]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[24]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[23]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[22]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[21]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[20]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[19]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[18]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[17]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[16]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[15]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[14]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[13]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[12]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[11]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[10]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[9]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[8]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[7]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[6]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[5]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[4]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[3]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[2]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[1]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_echo_pulse_reg[0]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/trig_reg) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[32]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[31]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[30]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[29]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[28]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[27]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[26]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[25]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[24]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[23]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[22]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[21]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[20]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[19]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[18]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[17]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[16]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[15]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[14]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[13]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[12]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[11]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[10]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[9]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[8]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[7]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[6]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[5]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[4]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[3]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[2]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[1]) is unused and will be removed from module us_arm_control_wrapper.
-WARNING: [Synth 8-3332] Sequential element (us_sensor_i/next_delay_reg[0]) is unused and will be removed from module us_arm_control_wrapper.
+INFO: [Synth 8-5545] ROM "arm_controller_i/counter_i/counter_out" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\arm_controller_i/rotate_arm_i/delay_nxt_reg[63] )
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[11]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[12]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[12]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[13]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[13]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[14]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[14]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[15]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[15]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[16]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[16]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[17]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[17]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[18]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[18]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[19]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[19]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[20]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[20]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[21]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[21]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[22]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[22]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[23]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[23]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[24]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[24]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[25]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[25]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[26]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[26]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[27]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[27]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[28]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[28]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[29]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[29]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[30]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[30]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[31]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[32]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[32]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[33]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[33]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[34]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[34]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[35]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[35]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[36]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[36]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[37]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[37]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[38]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[38]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[39]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[39]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[40]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[40]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[41]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[41]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[42]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[42]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[43]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[43]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[44]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[44]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[45]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[45]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[46]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[46]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[47]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[47]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[48]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[48]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[49]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[49]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[50]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[50]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[51]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[51]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[52]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[52]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[53]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[53]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[54]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[54]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[55]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[55]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[56]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[56]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[57]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[57]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[58]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[58]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[59]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[59]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[60]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[60]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[61]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[61]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[62]'
+INFO: [Synth 8-3886] merging instance 'arm_controller_i/rotate_arm_i/delay_ff_reg[62]' (FDC) to 'arm_controller_i/rotate_arm_i/delay_ff_reg[63]'
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[63]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[62]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[61]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[60]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[59]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[58]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[57]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[56]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[55]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[54]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[53]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[52]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[51]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[50]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[49]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[48]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[47]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[46]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[45]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[44]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[43]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[42]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[41]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[40]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[39]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[38]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[37]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[36]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[35]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[34]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[33]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[32]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[31]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[30]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[29]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[28]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[27]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[26]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[25]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[24]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[23]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[22]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[21]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[20]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[19]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[18]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[17]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[16]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[15]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[14]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[13]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[12]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[11]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[10]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[9]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[8]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[7]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[6]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[5]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[4]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[3]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[2]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[1]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/pwm_hightime_nxt_reg[0]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/FSM_sequential_state_nxt_reg) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[63]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[62]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[61]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[60]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[59]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[58]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[57]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[56]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[55]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[54]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[53]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[52]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[51]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[50]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[49]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[48]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[47]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[46]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[45]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[44]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[43]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[42]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[41]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[40]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[39]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[38]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[37]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[36]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[35]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[34]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[33]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[32]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[31]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[30]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (arm_controller_i/rotate_arm_i/delay_nxt_reg[29]) is unused and will be removed from module us_arm_control_wrapper.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 897 ; free virtual = 3731
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:14 . Memory (MB): peak = 1745.590 ; gain = 361.438 ; free physical = 290 ; free virtual = 3707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -302,13 +442,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1743.051 ; gain = 386.164 ; free physical = 759 ; free virtual = 3604
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1745.590 ; gain = 361.438 ; free physical = 159 ; free virtual = 3581
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
+Finished Timing Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 147 ; free virtual = 3568
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -319,11 +459,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[12]' (FD) to 'pwm_generator_i/pwm_hightime_reg[17]'
-INFO: [Synth 8-3886] merging instance 'pwm_generator_i/pwm_hightime_reg[16]' (FD) to 'pwm_generator_i/pwm_hightime_reg[17]'
-INFO: [Synth 8-3333] propagating constant 1 across sequential element (\pwm_generator_i/pwm_hightime_reg[17] )
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:14 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 756 ; free virtual = 3601
+Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 145 ; free virtual = 3567
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -347,7 +484,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 150 ; free virtual = 3567
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -360,7 +497,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 150 ; free virtual = 3567
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -372,25 +509,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 150 ; free virtual = 3567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 150 ; free virtual = 3567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 150 ; free virtual = 3567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 150 ; free virtual = 3567
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -407,49 +544,54 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |BUFG   |     1|
-|2     |CARRY4 |    20|
-|3     |LUT1   |     3|
-|4     |LUT2   |    23|
-|5     |LUT4   |    10|
-|6     |LUT5   |     7|
-|7     |LUT6   |    39|
-|8     |FDCE   |    35|
-|9     |FDRE   |    33|
-|10    |IBUF   |     3|
-|11    |OBUF   |     4|
+|2     |CARRY4 |    66|
+|3     |LUT1   |     5|
+|4     |LUT2   |   108|
+|5     |LUT3   |    68|
+|6     |LUT4   |   116|
+|7     |LUT5   |    12|
+|8     |LUT6   |    10|
+|9     |FDCE   |   105|
+|10    |FDPE   |     5|
+|11    |FDRE   |    65|
+|12    |LD     |     1|
+|13    |IBUF   |     3|
+|14    |OBUF   |     2|
 +------+-------+------+
 
 Report Instance Areas: 
-+------+------------------+--------------+------+
-|      |Instance          |Module        |Cells |
-+------+------------------+--------------+------+
-|1     |top               |              |   178|
-|2     |  pwm_generator_i |pwm_generator |    76|
-|3     |    counter_i     |counter       |    71|
-|4     |  us_sensor_i     |us_sensor     |    94|
-+------+------------------+--------------+------+
++------+-------------------+---------------+------+
+|      |Instance           |Module         |Cells |
++------+-------------------+---------------+------+
+|1     |top                |               |   567|
+|2     |  arm_controller_i |arm_controller |   467|
+|3     |    counter_i      |counter        |    98|
+|4     |    rotate_arm_i   |rotate_arm     |   360|
+|5     |  us_sensor_i      |us_sensor      |    94|
++------+-------------------+---------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1744.051 ; gain = 387.164 ; free physical = 757 ; free virtual = 3602
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1778.605 ; gain = 394.453 ; free physical = 150 ; free virtual = 3567
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 74 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1744.051 ; gain = 44.648 ; free physical = 813 ; free virtual = 3658
-Synthesis Optimization Complete : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1744.059 ; gain = 387.164 ; free physical = 813 ; free virtual = 3658
+Synthesis finished with 0 errors, 0 critical warnings and 150 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:16 ; elapsed = 00:00:18 . Memory (MB): peak = 1778.605 ; gain = 49.414 ; free physical = 205 ; free virtual = 3622
+Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:23 . Memory (MB): peak = 1778.613 ; gain = 394.453 ; free physical = 205 ; free virtual = 3622
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 20 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 67 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1744.059 ; gain = 0.000 ; free physical = 751 ; free virtual = 3596
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1778.613 ; gain = 0.000 ; free physical = 148 ; free virtual = 3564
 INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
+  A total of 1 instances were transformed.
+  LD => LDCE: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-51 Infos, 77 Warnings, 0 Critical Warnings and 0 Errors encountered.
+142 Infos, 106 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1744.059 ; gain = 387.273 ; free physical = 804 ; free virtual = 3649
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1744.059 ; gain = 0.000 ; free physical = 804 ; free virtual = 3649
+synth_design: Time (s): cpu = 00:00:23 ; elapsed = 00:00:24 . Memory (MB): peak = 1778.613 ; gain = 394.562 ; free physical = 203 ; free virtual = 3620
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1778.613 ; gain = 0.000 ; free physical = 203 ; free virtual = 3620
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/hardware_system/arm_control/arm_control.runs/synth_1/us_arm_control_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file us_arm_control_wrapper_utilization_synth.rpt -pb us_arm_control_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Feb  2 11:45:14 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Feb  2 23:01:24 2021...

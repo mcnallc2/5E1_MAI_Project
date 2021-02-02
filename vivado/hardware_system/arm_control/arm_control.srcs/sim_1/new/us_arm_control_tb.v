@@ -2,53 +2,54 @@
 
 module us_arm_control_tb;
 
-    // signal declaration
-    reg test_clk, test_reset;
-    wire test_pwm_out, test_trig;
-    reg test_echo;
-    wire [2:0] test_current_state;
-    wire [20:0] test_delay, test_echo_pulse;
+    reg clk;
+    reg reset;
+    wire pwm_out;
+    reg echo;
+    wire trig;
+    wire [31:0] delay_ff;
+    wire [1:0] state_ff;
+    wire [15:0] counter_ff;
+    wire [15:0] echo_pulse_ff;
+        
     parameter T = 2;
-    integer i = 0;
-
+    
     // instantiate the d_type_ff module
     us_arm_control_wrapper uut
-       (.sysclk(test_clk),
-        .reset(test_reset),
-        .pwm_out(test_pwm_out),
-        .echo(test_echo),
-        .trig(test_trig),
-        .current_state(test_current_state),
-        .delay(test_delay),
-        .echo_pulse(test_echo_pulse));
+       (.clk(clk),
+        .reset(reset),
+        .pwm_out(pwm_out),
+        .echo(echo),
+        .trig(trig),
+        .delay_ff(delay_ff),
+        .state_ff(state_ff),
+        .echo_pulse_ff(echo_pulse_ff),
+        .counter_ff(counter_ff));
      
-    always
-    begin
-        test_clk = 1'b1;
+    always begin
+        clk = 1'b1;
         #(T/2);
-        test_clk = 1'b0;
+        clk = 1'b0;
         #(T/2);
-        i = i + 1;
     end
     
     initial
     begin
-        test_echo  = 1'b0;
-        test_reset = 1'b1;
+        echo = 1'b0;
+        
+        reset = 1'b1;
         #(2*T);
+        reset = 1'b0;
         
-        test_reset = 1'b0;
-        #5000;
+        #20000;
+        echo = 1'b1;
+        #100000;
+        echo = 1'b0;
         
-        test_echo  = 1'b1;
-        #75000;
-        test_echo  = 1'b0;
-        #4500;
-        test_echo  = 1'b1;
-        #70000;
-        test_echo  = 1'b0;
-        #4500;
+        #100000;
+        echo = 1'b1;
+        #130000;
+        echo = 1'b0;
         
-        test_reset = 1'b0;
     end
 endmodule

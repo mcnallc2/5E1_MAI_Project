@@ -1,149 +1,81 @@
-module us_sensor
-   (clk,
-    reset,
-    echo_pulse,
-    echo,
-//    trig);
-    trig,
-    //sim
-    current_state,
-    delay);
+module us_sensor(
+	input clk,
+	input rst,
+	input echo,
+	input enable,
+	output reg trigger,
+	output reg [31:0] totalCounter,
+	output reg [31:0] output_distance,	
+	output echoLED, 
+	output triggerLED
+);
 
-    input clk;
-    input reset;
-    input echo;
-    output trig;
-    output [31:0] echo_pulse;
-    //sim
-    output [2:0] current_state;
-    output [31:0] delay;
-    
-    wire clk;
-    wire reset;
-    wire echo;
-    reg trig;
-    reg [31:0] echo_pulse, next_echo_pulse;
-    
-    reg [32:0] delay, next_delay;
-    reg [2:0] current_state, next_state;
-    
-    //these parameters are used to differenciate between each FSM
-    localparam A = 3'b000,
-               B = 3'b001,
-               C = 3'b010,
-               D = 3'b011,
-               E = 3'b100;
-               
-    // changing states
-    always @(posedge clk, posedge reset)
-        begin
-            //if there is a reset, go back the FSM A
-            if(reset)
-            begin
-                delay <= 32'h0;
-                echo_pulse <= 32'h0;
-                current_state <= A;
-            end
-            //else move to the next state
-            else
-            begin
-                delay <= next_delay;
-                echo_pulse <= next_echo_pulse;
-                current_state <= next_state;
-            end
-        end
-        
-    // us_sensor using Mealy FSMs
-    always @*
-        begin
-        //check the state of the current FSM
-        case(current_state)
-            //if FSM A
-            A:
-            begin
-                //US trigger is low
-                trig = 0;
-                //if delay has reached 2us - C8
-                //if delay has reached 1ms - 186A0
-                if(delay == 32'h186A0)
-                begin
-                    next_delay = 32'h0;
-                    next_echo_pulse = echo_pulse;
-                    next_state = B;
-                end
-                //else increment delay
-                else
-                begin
-                    next_delay = delay + 1;
-                    next_echo_pulse = echo_pulse;
-                    next_state = A;
-                end
-            end
-            
-            //if FSM B
-            B:
-            begin
-                //US trigger is high
-                trig = 1;
-                //if delay has reached 10us
-                if(delay == 32'h03E8)
-                begin
-                    next_delay = 32'h0;
-                    next_echo_pulse = echo_pulse;
-                    next_state = C;
-                end                    
-                //else increment delay
-                else
-                begin
-                    next_delay = delay + 1;
-                    next_echo_pulse = echo_pulse;
-                    next_state = B;
-                end
-            end
-            
-            //if FSM C
-            C:
-            begin
-                //US trigger is low
-                trig = 0;
-                //if US echo is high move to next state
-                if(echo)
-                begin
-                    next_delay = 32'h0;
-                    next_echo_pulse = echo_pulse;
-                    next_state = D;
-                end                 
-                //else wait
-                else
-                begin
-                    next_delay = 32'h0;
-                    next_echo_pulse = echo_pulse;
-                    next_state = C;
-                end
-            end
-              
-            //if FSM D  
-            D:
-            begin
-                //US trigger is low
-                trig = 0;
-                //if US echo is high increment delay
-                if(echo)
-                begin
-                    next_delay = delay + 1;
-                    next_echo_pulse = echo_pulse;            
-                    next_state = D;
-                end
-                //else continue to next state
-                else
-                begin
-                    next_delay = 32'h0;
-                    //save echo pulse size
-                    next_echo_pulse = delay;
-                    next_state = A;
-                end
-            end      
-        endcase
-        end
-        
+
+reg [31:0] counter, counter_cm, distance_cm;
+
+assign echoLED = echo;
+assign triggerLED = trigger;
+
+initial begin
+	counter = 0;
+	totalCounter = 0;
+end
+
+always@(posedge clk) begin
+
+	if(rst) begin
+			counter = 0;
+			totalCounter = 0;
+			distance_cm = 0;
+			counter_cm = 0;
+	end
+	else begin
+
+		//set trigger to high for 50 microseconds
+		counter = counter + 1;
+		if(counter <= 5000) begin 
+			
+			trigger = 1'b1;
+		
+		end
+		else begin
+			trigger = 1'b0;
+		end
+		
+		//count how long the echo is. Every 2942 ticks increase the centimeter counter
+		if(echo)begin
+			totalCounter = totalCounter + 1;
+			counter_cm = counter_cm + 1;
+			if(counter_cm >= 583)begin
+				counter_cm = 0;
+				distance_cm = distance_cm + 1;
+			end
+		end
+		
+		//Flip Flop - if enable is high set the outout distance
+		if(enable)begin
+			
+			//max software range is 200m. Set output to 0 if above 200m.
+			if(distance_cm < 2000) begin
+				output_distance = distance_cm;
+			end
+			else begin
+				output_distance = 0;
+			end
+		
+		end
+		
+		if(counter > 500000) begin //refresh sensor
+			counter = 0;
+			totalCounter = 0;
+			counter_cm = 0;
+			distance_cm = 0;
+		end	
+		
+		
+		
+	end
+end		
+
+
 endmodule

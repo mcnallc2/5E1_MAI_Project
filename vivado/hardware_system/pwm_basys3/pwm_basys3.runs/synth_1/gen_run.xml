@@ -1,17 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1612106667">
-  <File Type="VDS-TIMING-PB" Name="pwm_gen_timing_summary_synth.pb"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="pwm_gen_timing_summary_synth.rpt"/>
-  <File Type="RDS-DCP" Name="pwm_gen.dcp"/>
-  <File Type="RDS-UTIL-PB" Name="pwm_gen_utilization_synth.pb"/>
-  <File Type="RDS-UTIL" Name="pwm_gen_utilization_synth.rpt"/>
-  <File Type="RDS-PROPCONSTRS" Name="pwm_gen_drc_synth.rpt"/>
-  <File Type="RDS-RDS" Name="pwm_gen.vds"/>
-  <File Type="REPORTS-TCL" Name="pwm_gen_reports.tcl"/>
-  <File Type="PA-TCL" Name="pwm_gen.tcl"/>
+<GenRun Id="synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1612271455">
+  <File Type="VDS-TIMING-PB" Name="us_arm_control_wrapper_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="us_arm_control_wrapper_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="us_arm_control_wrapper.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="us_arm_control_wrapper_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="us_arm_control_wrapper_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="us_arm_control_wrapper_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="us_arm_control_wrapper.vds"/>
+  <File Type="REPORTS-TCL" Name="us_arm_control_wrapper_reports.tcl"/>
+  <File Type="PA-TCL" Name="us_arm_control_wrapper.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
     <Filter Type="Srcs"/>
-    <File Path="$PSRCDIR/sources_1/new/pwm_top.v">
+    <File Path="$PSRCDIR/sources_1/new/us_sensor.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/us_arm_control_wrapper.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -20,7 +27,7 @@
     </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
-      <Option Name="TopModule" Val="pwm_gen"/>
+      <Option Name="TopModule" Val="us_arm_control_wrapper"/>
       <Option Name="TopAutoSet" Val="TRUE"/>
     </Config>
   </FileSet>

@@ -1,33 +1,62 @@
-module us_arm_control_wrapper (sysclk, reset, sel_hightime, pwm_out, echo, trig, echo_delay);
-
-    input sysclk, reset;
-    input [1:0] sel_hightime;
-    output pwm_out;
+module us_arm_control_wrapper
+   (clk,
+    rst,
+    echo,
+    trigger,
+    output_distance_LED);
+   
+    input clk;
+    input rst;
     input echo;
-    output trig;
-    output echo_delay;
+    output trigger;
+
+    output [15:0] output_distance_LED;
+
     
-    wire sysclk, reset;  
-    wire [1:0] sel_hightime;
-    reg pwm_out;
+    wire clk;
+    wire rst;
     wire echo;
-    reg trig;
-    reg [20:0] echo_delay;
+    wire trigger;
+    wire [31:0] totalCounter;
+    wire [31:0] output_distance;
+    wire echoLED;
+    wire triggerLED;
     
-    reg [20:0] pwm_hightime;
-    wire [20:0] counter_out;
+    wire [15:0] output_distance_LED;
+    assign output_distance_LED[15:0] = output_distance[15:0];
     
-    pwm_generator pwm_generator_i
-       (.sel_hightime(sel_hightime),
-        .pwm_out(pwm_out),
-        .clk(sysclk),
-        .reset(reset));
+//    // find magic number using equation [ pulse = (dist-mm * 100*10^6) / 171500 ]
+//    // US echo pulse length for 100mm
+//    localparam threshold = 32'hE3C5;
     
-    sequence_detector
-       (.echo_delay(echo_delay),
+//    always @(posedge clk)
+//    begin
+//        if (echo_pulse > threshold)
+//        begin
+//            sel_hightime <= 2'b01;
+//        end
+//        else
+//        begin
+//            sel_hightime <= 2'b10;
+//        end
+//    end
+
+
+//    pwm_generator pwm_generator_i
+//       (.clk(sysclk),
+//        .reset(reset),
+//        .sel_hightime(sel_hightime),
+//        .pwm_out(pwm_out));
+
+    us_sensor us_sensor_i
+       (.clk(clk),
+        .rst(rst),
         .echo(echo),
-        .trig(trig),
-        .clk(sysclk),
-        .reset(reset));
-        
+        .enable(1'b1),
+        .trigger(trigger),
+        .totalCounter(totalCounter),
+        .output_distance(output_distance),
+        .echoLED(echoLED),
+        .triggerLED(triggerLED));
+
 endmodule

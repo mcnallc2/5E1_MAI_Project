@@ -1,148 +1,106 @@
 module us_sensor
-   (clk,
-    reset,
-    echo_pulse,
-    echo,
-    trig,
+   (input  wire clk,
+    input  wire reset,
+    input  wire echo,
+    output reg trig,
+    output reg [15:0] echo_pulse_ff,
     //sim
-    current_state,
-    delay);
+    output reg [31:0] delay_ff,
+    output reg [1:0] state_ff,
+    output reg [15:0] counter_ff);
+    
+    reg [15:0] echo_pulse_nxt;
+    reg [31:0] delay_nxt;
+    reg [1:0] state_nxt;
+    reg [15:0] counter_nxt;
 
-    input clk;
-    input reset;
-    input echo;
-    output trig;
-    output [31:0] echo_pulse;
-    //sim
-    output [2:0] current_state;
-    output [31:0] delay;
+    integer MAX_SEQ_LEN = 10000000; // cycles until next trigger (100ms)
+    integer TRIG_LEN    = 5000;     // cycles per trigger (50us)
     
-    wire clk;
-    wire reset;
-    wire echo;
-    reg trig;
-    reg [31:0] echo_pulse, next_echo_pulse;
-    
-    reg [32:0] delay, next_delay;
-    reg [2:0] current_state, next_state;
-    
-    //these parameters are used to differenciate between each FSM
-    localparam A = 3'b000,
-               B = 3'b001,
-               C = 3'b010,
-               D = 3'b011,
-               E = 3'b100;
+    localparam A = 2'b00,
+               B = 2'b01,
+               C = 2'b10,
+               D = 2'b11;
                
-    // changing states
-    always @(posedge clk, posedge reset)
-        begin
-            //if there is a reset, go back the FSM A
-            if(reset)
-            begin
-                delay <= 32'h0;
-                echo_pulse <= 32'h0;
-                current_state <= A;
-            end
-            //else move to the next state
-            else
-            begin
-                delay <= next_delay;
-                echo_pulse <= next_echo_pulse;
-                current_state <= next_state;
-            end
+    // sync block
+    always @(posedge clk, posedge reset) begin
+        //if there is a reset, go back the FSM A
+        if(reset) begin
+            delay_ff <= 'h0;
+            counter_ff <= 'h0;
+            echo_pulse_ff <= 'h0;
+            state_ff <= A;
         end
+        else begin
+            delay_ff <= delay_nxt;
+            counter_ff <= counter_nxt;
+            echo_pulse_ff <= echo_pulse_nxt;
+            state_ff <= state_nxt;
+        end
+    end
         
-    // us_sensor using Mealy FSMs
-    always @*
-        begin
-        //check the state of the current FSM
-        case(current_state)
-            //if FSM A
-            A:
-            begin
-                //US trigger is low
-                trig = 0;
-                //if delay has reached 2us - C8
-                //if delay has reached 1ms - 186A0
-                if(delay == 32'h186A0)
-                begin
-                    next_delay = 32'h0;
-                    next_echo_pulse = echo_pulse;
-                    next_state = B;
+    // comb block
+    always @(*) begin
+        case(state_ff)
+            // state A: trigger US pulse
+            A: begin    
+                delay_nxt = delay_ff + 1;
+                counter_nxt = counter_ff;
+                echo_pulse_nxt = echo_pulse_ff;
+                // 50 us
+                if(delay_ff <= TRIG_LEN) begin
+                    trig = 1;
+                    state_nxt = A;
                 end
-                //else increment delay
-                else
-                begin
-                    next_delay = delay + 1;
-                    next_echo_pulse = echo_pulse;
-                    next_state = A;
-                end
+                else begin
+                    trig = 0;
+                    state_nxt = B;
+                end     
             end
             
-            //if FSM B
-            B:
-            begin
-                //US trigger is high
-                trig = 1;
-                //if delay has reached 10us
-                if(delay == 32'h03E8)
-                begin
-                    next_delay = 32'h0;
-                    next_echo_pulse = echo_pulse;
-                    next_state = C;
-                end                    
-                //else increment delay
-                else
-                begin
-                    next_delay = delay + 1;
-                    next_echo_pulse = echo_pulse;
-                    next_state = B;
+            // state B: wait for echo pulse rising edge
+            B: begin  
+                delay_nxt = delay_ff + 1;
+                counter_nxt = counter_ff;
+                if(echo) begin
+                    state_nxt = C;
+                end
+                else begin
+                    state_nxt = B;
+                end  
+            end
+        
+            // state C: count length of echo pulse
+            C: begin 
+                delay_nxt = delay_ff + 1;            
+                if(echo) begin
+                    counter_nxt = counter_ff + 1;
+                    state_nxt = C;
+                end
+                else begin
+                    counter_nxt = counter_ff;
+                    state_nxt = D;
+                end 
+            end
+        
+            // state D: wait for total delay to end and assign final pulse length
+            D: begin
+                // 100 ms
+                if(delay_ff < MAX_SEQ_LEN) begin
+                    delay_nxt = delay_ff + 1;
+                    counter_nxt = counter_ff;
+                    echo_pulse_nxt = counter_ff;
+                    state_nxt = D;
+                end
+                else begin
+                    delay_nxt = 'b0;
+                    counter_nxt = 'b0;
+                    echo_pulse_nxt = echo_pulse_ff;
+                    state_nxt = A;
                 end
             end
-            
-            //if FSM C
-            C:
-            begin
-                //US trigger is low
-                trig = 0;
-                //if US echo is high move to next state
-                if(echo)
-                begin
-                    next_delay = 32'h0;
-                    next_echo_pulse = echo_pulse;
-                    next_state = D;
-                end                 
-                //else wait
-                else
-                begin
-                    next_delay = 32'h0;
-                    next_echo_pulse = echo_pulse;
-                    next_state = C;
-                end
-            end
-              
-            //if FSM D  
-            D:
-            begin
-                //US trigger is low
-                trig = 0;
-                //if US echo is high increment delay
-                if(echo)
-                begin
-                    next_delay = delay + 1;
-                    next_echo_pulse = echo_pulse;            
-                    next_state = D;
-                end
-                //else continue to next state
-                else
-                begin
-                    next_delay = 32'h0;
-                    //save echo pulse size
-                    next_echo_pulse = delay;
-                    next_state = A;
-                end
-            end      
+        
         endcase
-        end
+    end
         
 endmodule

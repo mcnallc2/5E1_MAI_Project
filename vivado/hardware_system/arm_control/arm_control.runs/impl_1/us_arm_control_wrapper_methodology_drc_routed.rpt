@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Feb  2 11:46:00 2021
+| Date         : Tue Feb  2 23:02:20 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_methodology -file us_arm_control_wrapper_methodology_drc_routed.rpt -pb us_arm_control_wrapper_methodology_drc_routed.pb -rpx us_arm_control_wrapper_methodology_drc_routed.rpx
 | Design       : us_arm_control_wrapper
@@ -27,7 +27,8 @@ Table of Contents
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 4          |
+| TIMING-18 | Warning  | Missing input or output delay | 3          |
+| TIMING-20 | Warning  | Non-clocked latch             | 1          |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -47,9 +48,9 @@ Missing input or output delay
 An output delay is missing on pwm_out relative to clock(s) sys_clk_pin
 Related violations: <none>
 
-TIMING-18#4 Warning
-Missing input or output delay  
-An output delay is missing on trig relative to clock(s) sys_clk_pin
+TIMING-20#1 Warning
+Non-clocked latch  
+The latch us_sensor_i/trig_reg cannot be properly analyzed as its control pin us_sensor_i/trig_reg/G is not reached by a timing clock
 Related violations: <none>
 
 
