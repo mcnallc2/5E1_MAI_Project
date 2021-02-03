@@ -3,18 +3,18 @@ module us_sensor
     input  wire reset,
     input  wire echo,
     output reg trig,
-    output reg [15:0] echo_pulse_ff,
+    output reg [63:0] echo_pulse_ff,
     //sim
-    output reg [31:0] delay_ff,
+    output reg [63:0] delay_ff,
     output reg [1:0] state_ff,
-    output reg [15:0] counter_ff);
+    output reg [63:0] counter_ff);
     
-    reg [15:0] echo_pulse_nxt;
-    reg [31:0] delay_nxt;
+    reg [63:0] echo_pulse_nxt;
+    reg [63:0] delay_nxt;
     reg [1:0] state_nxt;
-    reg [15:0] counter_nxt;
+    reg [63:0] counter_nxt;
 
-    integer MAX_SEQ_LEN = 10000000; // cycles until next trigger (100ms)
+    integer MAX_SEQ_LEN = 100000; // cycles until next trigger (1ms)
     integer TRIG_LEN    = 5000;     // cycles per trigger (50us)
     
     localparam A = 2'b00,

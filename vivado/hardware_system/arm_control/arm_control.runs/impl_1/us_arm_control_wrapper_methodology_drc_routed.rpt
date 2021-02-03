@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Tue Feb  2 23:02:20 2021
+| Date         : Wed Feb  3 17:49:49 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_methodology -file us_arm_control_wrapper_methodology_drc_routed.rpt -pb us_arm_control_wrapper_methodology_drc_routed.pb -rpx us_arm_control_wrapper_methodology_drc_routed.rpx
 | Design       : us_arm_control_wrapper
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 4
+             Violations found: 32
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 3          |
-| TIMING-20 | Warning  | Non-clocked latch             | 1          |
+| TIMING-18 | Warning  | Missing input or output delay | 15         |
+| TIMING-20 | Warning  | Non-clocked latch             | 17         |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -45,10 +45,150 @@ Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
+An output delay is missing on an[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on an[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on an[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on an[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#7 Warning
+Missing input or output delay  
 An output delay is missing on pwm_out relative to clock(s) sys_clk_pin
 Related violations: <none>
 
+TIMING-18#8 Warning
+Missing input or output delay  
+An output delay is missing on seven_seg[0] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#9 Warning
+Missing input or output delay  
+An output delay is missing on seven_seg[1] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#10 Warning
+Missing input or output delay  
+An output delay is missing on seven_seg[2] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#11 Warning
+Missing input or output delay  
+An output delay is missing on seven_seg[3] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#12 Warning
+Missing input or output delay  
+An output delay is missing on seven_seg[4] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#13 Warning
+Missing input or output delay  
+An output delay is missing on seven_seg[5] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#14 Warning
+Missing input or output delay  
+An output delay is missing on seven_seg[6] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
+TIMING-18#15 Warning
+Missing input or output delay  
+An output delay is missing on seven_seg[7] relative to clock(s) sys_clk_pin
+Related violations: <none>
+
 TIMING-20#1 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[0] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[0]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#2 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[10] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[10]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#3 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[11] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[11]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#4 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[12] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[12]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#5 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[13] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[13]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#6 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[14] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[14]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#7 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[15] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[15]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#8 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[1] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[1]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#9 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[2] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[2]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#10 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[3] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[3]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#11 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[4] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[4]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#12 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[5] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[5]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#13 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[6] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[6]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#14 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[7] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[7]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#15 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[8] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[8]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#16 Warning
+Non-clocked latch  
+The latch us_sensor_i/echo_pulse_nxt_reg[9] cannot be properly analyzed as its control pin us_sensor_i/echo_pulse_nxt_reg[9]/G is not reached by a timing clock
+Related violations: <none>
+
+TIMING-20#17 Warning
 Non-clocked latch  
 The latch us_sensor_i/trig_reg cannot be properly analyzed as its control pin us_sensor_i/trig_reg/G is not reached by a timing clock
 Related violations: <none>

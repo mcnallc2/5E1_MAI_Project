@@ -3,14 +3,19 @@ module arm_controller
     input  wire reset,
     output reg pwm_out);
     
-    wire  [63:0] pwm_hightime;
+    wire [63:0] pwm_hightime;
     wire [63:0] counter_out;
     
     always @(posedge clk) begin
-        if (pwm_hightime > counter_out)
-            pwm_out <= 1;
-        else
+        if(reset) begin
             pwm_out <= 0;
+        end
+        else begin
+            if (pwm_hightime > counter_out)
+                pwm_out <= 1;
+            else
+                pwm_out <= 0;
+        end
     end
     
     counter counter_i
@@ -34,10 +39,15 @@ module counter
     parameter FULL_PERIOD = 64'd2000000; // PWM period cycles (20 ms)
     
     always @(posedge clk) begin
-        if (counter_out == FULL_PERIOD)
+        if(reset) begin
             counter_out <= 64'h0;
-        else
-            counter_out <= counter_out + 1;
+        end
+        else begin
+            if (counter_out == FULL_PERIOD)
+                counter_out <= 64'h0;
+            else
+                counter_out <= counter_out + 1;
+        end
     end
 endmodule
 
