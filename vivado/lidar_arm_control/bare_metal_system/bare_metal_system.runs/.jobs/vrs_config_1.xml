@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="lidar_arm_control_rst_ps7_0_100M_0_synth_1" LaunchDir="/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_rst_ps7_0_100M_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lidar_arm_control_auto_pc_0_synth_1" LaunchDir="/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_auto_pc_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lidar_arm_control_processing_system7_0_0_synth_1" LaunchDir="/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_processing_system7_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="lidar_arm_control_axi_uartlite_0_0_synth_1" LaunchDir="/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_axi_uartlite_0_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="lidar_arm_control_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="lidar_arm_control_auto_pc_0_synth_1"/>
+		<Parent Id="lidar_arm_control_processing_system7_0_0_synth_1"/>
+		<Parent Id="lidar_arm_control_axi_uartlite_0_0_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="lidar_arm_control_rst_ps7_0_100M_0_synth_1"/>
+		<Parent Id="lidar_arm_control_auto_pc_0_synth_1"/>
+		<Parent Id="lidar_arm_control_processing_system7_0_0_synth_1"/>
+		<Parent Id="lidar_arm_control_axi_uartlite_0_0_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+
