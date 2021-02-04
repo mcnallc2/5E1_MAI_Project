@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Feb  3 17:49:29 2021
+| Date         : Thu Feb  4 00:25:02 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_control_sets -verbose -file us_arm_control_wrapper_control_sets_placed.rpt
 | Design       : us_arm_control_wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |     4 |
-| Unused register locations in slices containing registers |    14 |
+| Number of unique control sets                            |     5 |
+| Unused register locations in slices containing registers |    16 |
 +----------------------------------------------------------+-------+
 
 
@@ -35,7 +35,7 @@ Table of Contents
 | Fanout | Control Sets |
 +--------+--------------+
 |      1 |            1 |
-|    16+ |            3 |
+|    16+ |            4 |
 +--------+--------------+
 
 
@@ -45,11 +45,11 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              17 |            7 |
-| No           | No                    | Yes                    |             176 |           47 |
-| No           | Yes                   | No                     |              65 |           20 |
+| No           | No                    | No                     |             133 |           50 |
+| No           | No                    | Yes                    |             274 |           76 |
+| No           | Yes                   | No                     |              65 |           21 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |              16 |            3 |
+| Yes          | No                    | Yes                    |              64 |           12 |
 | Yes          | Yes                   | No                     |               0 |            0 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
@@ -57,13 +57,14 @@ Table of Contents
 4. Detailed Control Set Information
 -----------------------------------
 
-+---------------------------------------------+---------------------------+------------------+------------------+----------------+
-|                 Clock Signal                |       Enable Signal       | Set/Reset Signal | Slice Load Count | Bel Load Count |
-+---------------------------------------------+---------------------------+------------------+------------------+----------------+
-|  us_sensor_i/trig_reg_i_1_n_0               |                           |                  |                1 |              1 |
-|  clk_IBUF_BUFG                              | us_sensor_i/counter_nxt_1 | reset_IBUF       |                3 |             16 |
-|  us_sensor_i/echo_pulse_nxt_reg[15]_i_2_n_0 |                           |                  |                6 |             16 |
-|  clk_IBUF_BUFG                              |                           | reset_IBUF       |               67 |            241 |
-+---------------------------------------------+---------------------------+------------------+------------------+----------------+
++-------------------------------+--------------------------------------------+------------------+------------------+----------------+
+|          Clock Signal         |                Enable Signal               | Set/Reset Signal | Slice Load Count | Bel Load Count |
++-------------------------------+--------------------------------------------+------------------+------------------+----------------+
+|  us_sensor_i/trig_reg_i_1_n_2 |                                            |                  |                1 |              1 |
+|  clk_IBUF_BUFG                | us_sensor_i/counter_nxt_inferred__0/i__n_2 | reset_IBUF       |               12 |             64 |
+|  n_1_763_BUFG                 |                                            |                  |               25 |             64 |
+|  n_0_633_BUFG                 |                                            |                  |               24 |             68 |
+|  clk_IBUF_BUFG                |                                            | reset_IBUF       |               97 |            339 |
++-------------------------------+--------------------------------------------+------------------+------------------+----------------+
 
 

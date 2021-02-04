@@ -3,19 +3,21 @@ module us_sensor
     input  wire reset,
     input  wire echo,
     output reg trig,
-    output reg [63:0] echo_pulse_ff,
+    output reg [63:0] max_echo_pulse_ff,
     //sim
     output reg [63:0] delay_ff,
     output reg [1:0] state_ff,
     output reg [63:0] counter_ff);
     
-    reg [63:0] echo_pulse_nxt;
     reg [63:0] delay_nxt;
-    reg [1:0] state_nxt;
     reg [63:0] counter_nxt;
+    reg [63:0] pulse_count_ff, pulse_count_nxt;
+    reg [63:0] echo_pulse_ff, echo_pulse_nxt;
+    reg [63:0] max_echo_pulse_nxt;
+    reg [1:0]  state_nxt;
 
-    integer MAX_SEQ_LEN = 100000; // cycles until next trigger (1ms)
-    integer TRIG_LEN    = 5000;     // cycles per trigger (50us)
+    integer MAX_SEQ_LEN = 500000;   // cycles until next trigger (5ms)
+    integer TRIG_LEN    = 1000;     // cycles per trigger (10us)
     
     localparam A = 2'b00,
                B = 2'b01,
@@ -28,13 +30,17 @@ module us_sensor
         if(reset) begin
             delay_ff <= 'h0;
             counter_ff <= 'h0;
+            pulse_count_ff <= 'h0;
             echo_pulse_ff <= 'h0;
+            max_echo_pulse_ff <= 'h0;
             state_ff <= A;
         end
         else begin
             delay_ff <= delay_nxt;
             counter_ff <= counter_nxt;
+            pulse_count_ff <= pulse_count_nxt;
             echo_pulse_ff <= echo_pulse_nxt;
+            max_echo_pulse_ff <= max_echo_pulse_nxt;
             state_ff <= state_nxt;
         end
     end
@@ -85,7 +91,7 @@ module us_sensor
         
             // state D: wait for total delay to end and assign final pulse length
             D: begin
-                // 100 ms
+                
                 if(delay_ff < MAX_SEQ_LEN) begin
                     delay_nxt = delay_ff + 1;
                     counter_nxt = counter_ff;
@@ -97,6 +103,20 @@ module us_sensor
                     counter_nxt = 'b0;
                     echo_pulse_nxt = echo_pulse_ff;
                     state_nxt = A;
+                    
+                    if(pulse_count_ff < 10) begin
+                        pulse_count_nxt = pulse_count_ff + 1;
+                        if(echo_pulse_ff > max_echo_pulse_ff) begin
+                            max_echo_pulse_nxt = echo_pulse_ff;
+                        end
+                        else begin
+                            max_echo_pulse_nxt = max_echo_pulse_ff;                       
+                        end
+                    end
+                    else begin
+                        pulse_count_nxt = 'b0;
+                        max_echo_pulse_nxt = echo_pulse_ff;
+                    end
                 end
             end
         
