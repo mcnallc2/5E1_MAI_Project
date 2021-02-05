@@ -30,10 +30,6 @@
 #include <string.h>
 #include <stdio.h>
 #include <stdlib.h>
-<<<<<<< HEAD
-#include <string.h>
-=======
->>>>>>> e5be9375affe1e37dca28c48eb63a8c9ecfac585
 #include <errno.h>
 
 #include <wiringPi.h>
@@ -71,13 +67,8 @@ void ctrlc(int){
 
 int main(int argc, const char * argv[]){
     //
-<<<<<<< HEAD
-    int serial_port ;
-    char dat;
-=======
     int serial_port;
     //
->>>>>>> e5be9375affe1e37dca28c48eb63a8c9ecfac585
     if ((serial_port = serialOpen ("/dev/ttyS0", 115200)) < 0){   /* open serial port */
         fprintf(stderr, "Unable to open serial device: %s\n", strerror (errno));
         return 1 ;
@@ -158,13 +149,8 @@ int main(int argc, const char * argv[]){
     // enter the embedded loop
     while (1){
         //
-<<<<<<< HEAD
-        printf("getting into loop");
-        //
-=======
 	    // printf("getting into loop");
 	    //
->>>>>>> e5be9375affe1e37dca28c48eb63a8c9ecfac585
         // init the nodes for scans at each angle 
         rplidar_response_measurement_node_hq_t nodes[8192];
         size_t   count = _countof(nodes);
@@ -188,11 +174,8 @@ int main(int argc, const char * argv[]){
                 //
             }
         }
-        //
-        dat = 'H';
-        printf("%c", dat);
         fflush(stdout);
-        serialPutchar(serial_port, dat);    /* transmit character serially on port */
+        // serialPutchar(serial_port, dat);    /* transmit character serially on port */
         // break if ctrl_c is pressed
         if (ctrl_c_pressed){ 
             break;
