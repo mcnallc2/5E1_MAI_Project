@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Thu Feb  4 16:49:26 2021
+| Date             : Fri Feb  5 09:55:14 2021
 | Host             : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file lidar_arm_control_wrapper_power_routed.rpt -pb lidar_arm_control_wrapper_power_summary_routed.pb -rpx lidar_arm_control_wrapper_power_routed.rpx
 | Design           : lidar_arm_control_wrapper
@@ -33,7 +33,7 @@ Table of Contents
 | Total On-Chip Power (W)  | 1.399        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.261        |
+| Dynamic (W)              | 1.262        |
 | Device Static (W)        | 0.137        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.9         |
@@ -53,13 +53,13 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1244 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      372 |     53200 |            0.70 |
-|   Register              |    <0.001 |      501 |    106400 |            0.47 |
+| Slice Logic             |     0.001 |     1232 |       --- |             --- |
+|   LUT as Logic          |     0.001 |      364 |     53200 |            0.68 |
+|   Register              |    <0.001 |      497 |    106400 |            0.47 |
 |   CARRY4                |    <0.001 |        6 |     13300 |            0.05 |
 |   LUT as Shift Register |    <0.001 |       47 |     17400 |            0.27 |
 |   Others                |     0.000 |      200 |       --- |             --- |
-| Signals                 |     0.001 |      814 |       --- |             --- |
+| Signals                 |     0.001 |      806 |       --- |             --- |
 | I/O                     |    <0.001 |        2 |       125 |            1.60 |
 | PS7                     |     1.256 |        1 |       --- |             --- |
 | Static Power            |     0.137 |          |           |                 |
@@ -73,7 +73,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.018 |       0.005 |      0.013 |
+| Vccint    |       1.000 |     0.019 |       0.006 |      0.013 |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
 | Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -149,8 +149,8 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| lidar_arm_control_wrapper |     1.261 |
-|   lidar_arm_control_i     |     1.261 |
+| lidar_arm_control_wrapper |     1.262 |
+|   lidar_arm_control_i     |     1.262 |
 |     axi_uartlite_0        |     0.001 |
 |       U0                  |     0.001 |
 |     processing_system7_0  |     1.256 |

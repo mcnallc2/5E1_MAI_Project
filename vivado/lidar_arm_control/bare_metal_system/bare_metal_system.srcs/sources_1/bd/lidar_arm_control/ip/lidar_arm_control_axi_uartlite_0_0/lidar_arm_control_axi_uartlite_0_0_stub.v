@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Thu Feb  4 16:47:43 2021
+// Date        : Fri Feb  5 09:53:33 2021
 // Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_axi_uartlite_0_0/lidar_arm_control_axi_uartlite_0_0_stub.v

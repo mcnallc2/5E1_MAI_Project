@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Thu Feb  4 16:47:25 2021
+-- Date        : Thu Feb  4 16:47:23 2021
 -- Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_auto_pc_0/lidar_arm_control_auto_pc_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top lidar_arm_control_auto_pc_0 -prefix
+--               lidar_arm_control_auto_pc_0_ lidar_arm_control_auto_pc_0_sim_netlist.vhdl
 -- Design      : lidar_arm_control_auto_pc_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -38,8 +38,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_incr_cmd i
     \axlen_cnt_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 );
     \axlen_cnt_reg[5]_0\ : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_incr_cmd : entity is "axi_protocol_converter_v2_1_18_b2s_incr_cmd";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_incr_cmd;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_incr_cmd is
@@ -1744,8 +1742,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm
     m_valid_i_reg_0 : in STD_LOGIC;
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm : entity is "axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_rd_cmd_fsm is
@@ -2314,8 +2310,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_simple_fif
     aclk : in STD_LOGIC;
     shandshake_r : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_simple_fifo : entity is "axi_protocol_converter_v2_1_18_b2s_simple_fifo";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_simple_fifo;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_simple_fifo is
@@ -4142,8 +4136,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm
     cnt_read : in STD_LOGIC_VECTOR ( 1 downto 0 );
     aclk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm : entity is "axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_wr_cmd_fsm is
@@ -4595,8 +4587,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_wrap_cmd i
     \wrap_cnt_r_reg[3]_0\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]_0\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_wrap_cmd : entity is "axi_protocol_converter_v2_1_18_b2s_wrap_cmd";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_wrap_cmd;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_wrap_cmd is
@@ -5944,8 +5934,6 @@ entity lidar_arm_control_auto_pc_0_axi_register_slice_v2_1_18_axic_register_slic
     s_axi_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     \m_payload_i_reg[0]_0\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_register_slice_v2_1_18_axic_register_slice : entity is "axi_register_slice_v2_1_18_axic_register_slice";
 end lidar_arm_control_auto_pc_0_axi_register_slice_v2_1_18_axic_register_slice;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_register_slice_v2_1_18_axic_register_slice is
@@ -11995,8 +11983,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_b_channel 
     \in\ : in STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axi_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_b_channel : entity is "axi_protocol_converter_v2_1_18_b2s_b_channel";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_b_channel;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_b_channel is
@@ -12341,8 +12327,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_cmd_transl
     \wrap_cnt_r_reg[3]\ : in STD_LOGIC_VECTOR ( 2 downto 0 );
     \wrap_boundary_axaddr_r_reg[6]\ : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_cmd_translator : entity is "axi_protocol_converter_v2_1_18_b2s_cmd_translator";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_cmd_translator;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_cmd_translator is
@@ -12653,8 +12637,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_r_channel 
     D : in STD_LOGIC_VECTOR ( 11 downto 0 );
     areset_d1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_r_channel : entity is "axi_protocol_converter_v2_1_18_b2s_r_channel";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_r_channel;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_r_channel is
@@ -12894,8 +12876,6 @@ entity lidar_arm_control_auto_pc_0_axi_register_slice_v2_1_18_axi_register_slice
     E : in STD_LOGIC_VECTOR ( 0 to 0 );
     \m_payload_i_reg[0]\ : in STD_LOGIC_VECTOR ( 0 to 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_register_slice_v2_1_18_axi_register_slice : entity is "axi_register_slice_v2_1_18_axi_register_slice";
 end lidar_arm_control_auto_pc_0_axi_register_slice_v2_1_18_axi_register_slice;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_register_slice_v2_1_18_axi_register_slice is
@@ -13047,8 +13027,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_ar_channel
     \axaddr_incr_reg[3]_1\ : in STD_LOGIC_VECTOR ( 3 downto 0 );
     D : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_ar_channel : entity is "axi_protocol_converter_v2_1_18_b2s_ar_channel";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_ar_channel;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_ar_channel is
@@ -13413,8 +13391,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_aw_channel
     axaddr_incr : in STD_LOGIC_VECTOR ( 11 downto 0 );
     D : in STD_LOGIC_VECTOR ( 6 downto 0 )
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_aw_channel : entity is "axi_protocol_converter_v2_1_18_b2s_aw_channel";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_aw_channel;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s_aw_channel is
@@ -13723,8 +13699,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s is
     s_axi_arvalid : in STD_LOGIC;
     aresetn : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s : entity is "axi_protocol_converter_v2_1_18_b2s";
 end lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s;
 
 architecture STRUCTURE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_b2s is
@@ -14316,8 +14290,6 @@ entity lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_c
   attribute C_TRANSLATION_MODE of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 2;
   attribute DowngradeIPIdentifiedWarnings : string;
   attribute DowngradeIPIdentifiedWarnings of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "yes";
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is "axi_protocol_converter_v2_1_18_axi_protocol_converter";
   attribute P_AXI3 : integer;
   attribute P_AXI3 of lidar_arm_control_auto_pc_0_axi_protocol_converter_v2_1_18_axi_protocol_converter : entity is 1;
   attribute P_AXI4 : integer;
