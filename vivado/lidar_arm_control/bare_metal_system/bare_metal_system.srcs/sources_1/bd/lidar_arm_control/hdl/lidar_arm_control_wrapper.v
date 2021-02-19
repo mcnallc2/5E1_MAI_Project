@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Fri Feb  5 09:52:53 2021
+//Date        : Fri Feb 19 00:25:20 2021
 //Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target lidar_arm_control_wrapper.bd
 //Design      : lidar_arm_control_wrapper
@@ -31,8 +31,13 @@ module lidar_arm_control_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    rx_0,
-    tx_0);
+    gpio_0_tri_io,
+    pwm0_0,
+    pwm0_1,
+    pwm0_2,
+    pwm0_3,
+    uart_rtl_rxd,
+    uart_rtl_txd);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -54,8 +59,13 @@ module lidar_arm_control_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input rx_0;
-  output tx_0;
+  inout [5:0]gpio_0_tri_io;
+  output pwm0_0;
+  output pwm0_1;
+  output pwm0_2;
+  output pwm0_3;
+  input uart_rtl_rxd;
+  output uart_rtl_txd;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -78,9 +88,67 @@ module lidar_arm_control_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire rx_0;
-  wire tx_0;
+  wire [0:0]gpio_0_tri_i_0;
+  wire [1:1]gpio_0_tri_i_1;
+  wire [2:2]gpio_0_tri_i_2;
+  wire [3:3]gpio_0_tri_i_3;
+  wire [4:4]gpio_0_tri_i_4;
+  wire [5:5]gpio_0_tri_i_5;
+  wire [0:0]gpio_0_tri_io_0;
+  wire [1:1]gpio_0_tri_io_1;
+  wire [2:2]gpio_0_tri_io_2;
+  wire [3:3]gpio_0_tri_io_3;
+  wire [4:4]gpio_0_tri_io_4;
+  wire [5:5]gpio_0_tri_io_5;
+  wire [0:0]gpio_0_tri_o_0;
+  wire [1:1]gpio_0_tri_o_1;
+  wire [2:2]gpio_0_tri_o_2;
+  wire [3:3]gpio_0_tri_o_3;
+  wire [4:4]gpio_0_tri_o_4;
+  wire [5:5]gpio_0_tri_o_5;
+  wire [0:0]gpio_0_tri_t_0;
+  wire [1:1]gpio_0_tri_t_1;
+  wire [2:2]gpio_0_tri_t_2;
+  wire [3:3]gpio_0_tri_t_3;
+  wire [4:4]gpio_0_tri_t_4;
+  wire [5:5]gpio_0_tri_t_5;
+  wire pwm0_0;
+  wire pwm0_1;
+  wire pwm0_2;
+  wire pwm0_3;
+  wire uart_rtl_rxd;
+  wire uart_rtl_txd;
 
+  IOBUF gpio_0_tri_iobuf_0
+       (.I(gpio_0_tri_o_0),
+        .IO(gpio_0_tri_io[0]),
+        .O(gpio_0_tri_i_0),
+        .T(gpio_0_tri_t_0));
+  IOBUF gpio_0_tri_iobuf_1
+       (.I(gpio_0_tri_o_1),
+        .IO(gpio_0_tri_io[1]),
+        .O(gpio_0_tri_i_1),
+        .T(gpio_0_tri_t_1));
+  IOBUF gpio_0_tri_iobuf_2
+       (.I(gpio_0_tri_o_2),
+        .IO(gpio_0_tri_io[2]),
+        .O(gpio_0_tri_i_2),
+        .T(gpio_0_tri_t_2));
+  IOBUF gpio_0_tri_iobuf_3
+       (.I(gpio_0_tri_o_3),
+        .IO(gpio_0_tri_io[3]),
+        .O(gpio_0_tri_i_3),
+        .T(gpio_0_tri_t_3));
+  IOBUF gpio_0_tri_iobuf_4
+       (.I(gpio_0_tri_o_4),
+        .IO(gpio_0_tri_io[4]),
+        .O(gpio_0_tri_i_4),
+        .T(gpio_0_tri_t_4));
+  IOBUF gpio_0_tri_iobuf_5
+       (.I(gpio_0_tri_o_5),
+        .IO(gpio_0_tri_io[5]),
+        .O(gpio_0_tri_i_5),
+        .T(gpio_0_tri_t_5));
   lidar_arm_control lidar_arm_control_i
        (.DDR_addr(DDR_addr),
         .DDR_ba(DDR_ba),
@@ -103,6 +171,13 @@ module lidar_arm_control_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .rx_0(rx_0),
-        .tx_0(tx_0));
+        .gpio_0_tri_i({gpio_0_tri_i_5,gpio_0_tri_i_4,gpio_0_tri_i_3,gpio_0_tri_i_2,gpio_0_tri_i_1,gpio_0_tri_i_0}),
+        .gpio_0_tri_o({gpio_0_tri_o_5,gpio_0_tri_o_4,gpio_0_tri_o_3,gpio_0_tri_o_2,gpio_0_tri_o_1,gpio_0_tri_o_0}),
+        .gpio_0_tri_t({gpio_0_tri_t_5,gpio_0_tri_t_4,gpio_0_tri_t_3,gpio_0_tri_t_2,gpio_0_tri_t_1,gpio_0_tri_t_0}),
+        .pwm0_0(pwm0_0),
+        .pwm0_1(pwm0_1),
+        .pwm0_2(pwm0_2),
+        .pwm0_3(pwm0_3),
+        .uart_rtl_rxd(uart_rtl_rxd),
+        .uart_rtl_txd(uart_rtl_txd));
 endmodule

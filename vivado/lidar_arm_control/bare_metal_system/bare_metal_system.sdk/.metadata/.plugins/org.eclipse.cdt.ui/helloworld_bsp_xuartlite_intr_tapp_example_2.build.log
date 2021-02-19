@@ -1,0 +1,18 @@
+11:38:52 **** Build of configuration Debug for project helloworld_bsp_xuartlite_intr_tapp_example_2 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building target: helloworld_bsp_xuartlite_intr_tapp_example_2.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../helloworld_bsp/ps7_cortexa9_0/lib -o "helloworld_bsp_xuartlite_intr_tapp_example_2.elf"  ./src/xuartlite_intr_tapp_example.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: helloworld_bsp_xuartlite_intr_tapp_example_2.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size helloworld_bsp_xuartlite_intr_tapp_example_2.elf  |tee "helloworld_bsp_xuartlite_intr_tapp_example_2.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  28724	   1936	  22776	  53436	   d0bc	helloworld_bsp_xuartlite_intr_tapp_example_2.elf
+Finished building: helloworld_bsp_xuartlite_intr_tapp_example_2.elf.size
+ 
+
+11:38:53 Build Finished (took 297ms)
+

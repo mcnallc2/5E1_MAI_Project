@@ -1,8 +1,29 @@
-18:12:37 **** Incremental Build of configuration Debug for project lidar_arm_control_bsp_xuartlite_low_level_example_1 ****
+00:47:03 **** Auto Build of configuration Debug for project lidar_arm_control_bsp_xuartlite_low_level_example_1 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-make: Nothing to be done for 'main-build'.
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../lidar_arm_control_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'processUartLiteSample':
+../src/main.c:244:24: error: 'packet' undeclared (first use in this function); did you mean '__packed'?
+  int scan_start      = packet[0] & 1;
+                        ^~~~~~
+                        __packed
+../src/main.c:244:24: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'TmrCtrPwmExample':
+../src/main.c:334:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:333:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
 
-18:12:37 Build Finished (took 125ms)
+00:47:03 Build Finished (took 166ms)
 

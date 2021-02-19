@@ -1,0 +1,114 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Feb 17 22:21:51 2021
+# Process ID: 11021
+# Current directory: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 6409.062 ; gain = 117.633 ; free physical = 138 ; free virtual = 3469
+update_compile_order -fileset sources_1
+open_bd_design {/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Successfully read diagram <lidar_arm_control> from BD file </home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>
+launch_sdk -workspace /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk -hwspec /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk -hwspec /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_1
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_2
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_3
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_0/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_timer_0/S_AXI]
+</axi_timer_0/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x42800000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_1/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_timer_1/S_AXI]
+</axi_timer_1/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x42810000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_2/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_timer_2/S_AXI]
+</axi_timer_2/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x42820000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_3/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_timer_3/S_AXI]
+</axi_timer_3/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x42830000 [ 64K ]>
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_0/pwm0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_1/pwm0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_2/pwm0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_3/pwm0]
+endgroup
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout -routing
+set_property location {3 935 -141} [get_bd_cells axi_timer_0]
+regenerate_bd_layout
+set_property location {3 878 -107} [get_bd_cells axi_timer_0]
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : </home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd> 
+Wrote  : </home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ui/bd_9360b533.ui> 
+reset_run lidar_arm_control_xbar_0_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : </home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd> 
+VHDL Output written to : /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.v
+VHDL Output written to : /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/sim/lidar_arm_control.v
+VHDL Output written to : /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/hdl/lidar_arm_control_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_3 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_auto_pc_0/lidar_arm_control_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control.hwh
+Generated Block Design Tcl file /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control_bd.tcl
+Generated Hardware Definition File /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP lidar_arm_control_auto_pc_0, cache-ID = 68168676865e6a57; cache size = 3.400 MB.
+[Wed Feb 17 22:58:11 2021] Launched lidar_arm_control_xbar_0_synth_1, lidar_arm_control_axi_timer_1_0_synth_1, lidar_arm_control_axi_timer_0_0_synth_1, lidar_arm_control_axi_timer_2_0_synth_1, lidar_arm_control_axi_timer_3_0_synth_1...
+Run output will be captured here:
+lidar_arm_control_xbar_0_synth_1: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/runme.log
+lidar_arm_control_axi_timer_1_0_synth_1: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_axi_timer_1_0_synth_1/runme.log
+lidar_arm_control_axi_timer_0_0_synth_1: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_axi_timer_0_0_synth_1/runme.log
+lidar_arm_control_axi_timer_2_0_synth_1: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_axi_timer_2_0_synth_1/runme.log
+lidar_arm_control_axi_timer_3_0_synth_1: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_axi_timer_3_0_synth_1/runme.log
+[Wed Feb 17 22:58:11 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:10 ; elapsed = 00:00:07 . Memory (MB): peak = 7081.129 ; gain = 145.578 ; free physical = 133 ; free virtual = 2365

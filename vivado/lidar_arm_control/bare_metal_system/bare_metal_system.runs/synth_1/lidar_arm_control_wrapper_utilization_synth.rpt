@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Feb  5 09:54:07 2021
+| Date         : Fri Feb 19 00:26:47 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file lidar_arm_control_wrapper_utilization_synth.rpt -pb lidar_arm_control_wrapper_utilization_synth.pb
 | Design       : lidar_arm_control_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |    2 |     0 |       125 |  1.60 |
+| Bonded IOB                  |   12 |     0 |       125 |  9.60 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |  0.00 |
@@ -146,8 +146,9 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| OBUF     |    1 |                  IO |
-| IBUF     |    1 |                  IO |
+| IBUF     |    7 |                  IO |
+| OBUFT    |    6 |                  IO |
+| OBUF     |    5 |                  IO |
 +----------+------+---------------------+
 
 
@@ -157,9 +158,15 @@ Table of Contents
 +------------------------------------------+------+
 |                 Ref Name                 | Used |
 +------------------------------------------+------+
+| lidar_arm_control_xbar_0                 |    1 |
 | lidar_arm_control_rst_ps7_0_100M_0       |    1 |
 | lidar_arm_control_processing_system7_0_0 |    1 |
 | lidar_arm_control_axi_uartlite_0_0       |    1 |
+| lidar_arm_control_axi_timer_3_0          |    1 |
+| lidar_arm_control_axi_timer_2_0          |    1 |
+| lidar_arm_control_axi_timer_1_0          |    1 |
+| lidar_arm_control_axi_timer_0_0          |    1 |
+| lidar_arm_control_axi_gpio_0_0           |    1 |
 | lidar_arm_control_auto_pc_0              |    1 |
 +------------------------------------------+------+
 

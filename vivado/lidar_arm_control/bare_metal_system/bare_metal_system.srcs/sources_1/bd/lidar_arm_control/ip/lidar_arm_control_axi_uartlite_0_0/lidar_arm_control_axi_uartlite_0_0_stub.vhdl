@@ -3,8 +3,8 @@
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
 -- Date        : Fri Feb  5 09:53:33 2021
 -- Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode synth_stub
---               /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_axi_uartlite_0_0/lidar_arm_control_axi_uartlite_0_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top lidar_arm_control_axi_uartlite_0_0 -prefix
+--               lidar_arm_control_axi_uartlite_0_0_ lidar_arm_control_axi_uartlite_0_0_stub.vhdl
 -- Design      : lidar_arm_control_axi_uartlite_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

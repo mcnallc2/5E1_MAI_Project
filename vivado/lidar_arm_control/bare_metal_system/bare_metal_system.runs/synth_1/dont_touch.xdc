@@ -18,6 +18,27 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_contr
 # IP: bd/lidar_arm_control/ip/lidar_arm_control_rst_ps7_0_100M_0/lidar_arm_control_rst_ps7_0_100M_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_rst_ps7_0_100M_0 || ORIG_REF_NAME==lidar_arm_control_rst_ps7_0_100M_0} -quiet] -quiet
 
+# IP: bd/lidar_arm_control/ip/lidar_arm_control_xbar_0_1/lidar_arm_control_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_xbar_0 || ORIG_REF_NAME==lidar_arm_control_xbar_0} -quiet] -quiet
+
+# IP: bd/lidar_arm_control/ip/lidar_arm_control_axi_timer_0_0_1/lidar_arm_control_axi_timer_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_axi_timer_0_0 || ORIG_REF_NAME==lidar_arm_control_axi_timer_0_0} -quiet] -quiet
+
+# IP: bd/lidar_arm_control/ip/lidar_arm_control_axi_timer_1_0_1/lidar_arm_control_axi_timer_1_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_axi_timer_1_0 || ORIG_REF_NAME==lidar_arm_control_axi_timer_1_0} -quiet] -quiet
+
+# IP: bd/lidar_arm_control/ip/lidar_arm_control_axi_timer_2_0_1/lidar_arm_control_axi_timer_2_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_axi_timer_2_0 || ORIG_REF_NAME==lidar_arm_control_axi_timer_2_0} -quiet] -quiet
+
+# IP: bd/lidar_arm_control/ip/lidar_arm_control_axi_timer_3_0_1/lidar_arm_control_axi_timer_3_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_axi_timer_3_0 || ORIG_REF_NAME==lidar_arm_control_axi_timer_3_0} -quiet] -quiet
+
+# IP: bd/lidar_arm_control/ip/lidar_arm_control_axi_gpio_0_0_1/lidar_arm_control_axi_gpio_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_axi_gpio_0_0 || ORIG_REF_NAME==lidar_arm_control_axi_gpio_0_0} -quiet] -quiet
+
+# IP: bd/lidar_arm_control/ip/lidar_arm_control_xlconcat_0_0_1/lidar_arm_control_xlconcat_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_xlconcat_0_0 || ORIG_REF_NAME==lidar_arm_control_xlconcat_0_0} -quiet] -quiet
+
 # IP: bd/lidar_arm_control/ip/lidar_arm_control_auto_pc_0/lidar_arm_control_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==lidar_arm_control_auto_pc_0 || ORIG_REF_NAME==lidar_arm_control_auto_pc_0} -quiet] -quiet
 

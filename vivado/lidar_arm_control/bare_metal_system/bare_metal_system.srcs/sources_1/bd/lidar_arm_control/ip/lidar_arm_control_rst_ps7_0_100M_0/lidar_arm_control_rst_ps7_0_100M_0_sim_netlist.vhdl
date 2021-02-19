@@ -1,10 +1,10 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Thu Feb  4 16:46:29 2021
+-- Date        : Thu Feb  4 16:46:28 2021
 -- Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
--- Command     : write_vhdl -force -mode funcsim
---               /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_rst_ps7_0_100M_0/lidar_arm_control_rst_ps7_0_100M_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top lidar_arm_control_rst_ps7_0_100M_0 -prefix
+--               lidar_arm_control_rst_ps7_0_100M_0_ lidar_arm_control_rst_ps7_0_100M_0_sim_netlist.vhdl
 -- Design      : lidar_arm_control_rst_ps7_0_100M_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -25,8 +25,6 @@ entity lidar_arm_control_rst_ps7_0_100M_0_cdc_sync is
     aux_reset_in : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_rst_ps7_0_100M_0_cdc_sync : entity is "cdc_sync";
 end lidar_arm_control_rst_ps7_0_100M_0_cdc_sync;
 
 architecture STRUCTURE of lidar_arm_control_rst_ps7_0_100M_0_cdc_sync is
@@ -235,8 +233,6 @@ entity lidar_arm_control_rst_ps7_0_100M_0_upcnt_n is
     seq_cnt_en : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_rst_ps7_0_100M_0_upcnt_n : entity is "upcnt_n";
 end lidar_arm_control_rst_ps7_0_100M_0_upcnt_n;
 
 architecture STRUCTURE of lidar_arm_control_rst_ps7_0_100M_0_upcnt_n is
@@ -401,8 +397,6 @@ entity lidar_arm_control_rst_ps7_0_100M_0_lpf is
     ext_reset_in : in STD_LOGIC;
     aux_reset_in : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_rst_ps7_0_100M_0_lpf : entity is "lpf";
 end lidar_arm_control_rst_ps7_0_100M_0_lpf;
 
 architecture STRUCTURE of lidar_arm_control_rst_ps7_0_100M_0_lpf is
@@ -584,8 +578,6 @@ entity lidar_arm_control_rst_ps7_0_100M_0_sequence_psr is
     lpf_int : in STD_LOGIC;
     slowest_sync_clk : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_rst_ps7_0_100M_0_sequence_psr : entity is "sequence_psr";
 end lidar_arm_control_rst_ps7_0_100M_0_sequence_psr;
 
 architecture STRUCTURE of lidar_arm_control_rst_ps7_0_100M_0_sequence_psr is
@@ -924,8 +916,6 @@ entity lidar_arm_control_rst_ps7_0_100M_0_proc_sys_reset is
   attribute C_NUM_PERP_ARESETN of lidar_arm_control_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
   attribute C_NUM_PERP_RST : integer;
   attribute C_NUM_PERP_RST of lidar_arm_control_rst_ps7_0_100M_0_proc_sys_reset : entity is 1;
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of lidar_arm_control_rst_ps7_0_100M_0_proc_sys_reset : entity is "proc_sys_reset";
 end lidar_arm_control_rst_ps7_0_100M_0_proc_sys_reset;
 
 architecture STRUCTURE of lidar_arm_control_rst_ps7_0_100M_0_proc_sys_reset is

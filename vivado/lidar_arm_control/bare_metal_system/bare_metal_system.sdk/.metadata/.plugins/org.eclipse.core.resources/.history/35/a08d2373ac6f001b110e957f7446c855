@@ -1,0 +1,712 @@
+/*
+ * RoboPeak RPLIDAR Driver for Arduino
+ * RoboPeak.com
+ *
+ * Copyright (c) 2014, RoboPeak
+ * All rights reserved.
+ *
+ * Redistribution and use in source and binary forms, with or without modification,
+ * are permitted provided that the following conditions are met:
+ *
+ * 1. Redistributions of source code must retain the above copyright notice,
+ *    this list of conditions and the following disclaimer.
+ *
+ * 2. Redistributions in binary form must reproduce the above copyright notice,
+ *    this list of conditions and the following disclaimer in the documentation
+ *    and/or other materials provided with the distribution.
+ *
+ * THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS "AS IS" AND ANY
+ * EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT LIMITED TO, THE IMPLIED WARRANTIES
+ * OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT
+ * SHALL THE COPYRIGHT HOLDER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+ * SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT LIMITED TO, PROCUREMENT
+ * OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE, DATA, OR PROFITS; OR BUSINESS INTERRUPTION)
+ * HOWEVER CAUSED AND ON ANY THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR
+ * TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE,
+ * EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+ *
+ */
+
+#include "RPLidar.h"
+
+RPLidarMeasurement _currentMeasurement;
+XGpio Gpio; /* The Instance of the GPIO Driver */
+XUartLite UartLite;            /* The instance of the UartLite Device */
+
+XIntc InterruptController;     /* The instance of the Interrupt Controller */
+
+static volatile int TotalReceivedCount;
+static volatile int TotalSentCount;
+
+void RPLidar(){
+    _currentMeasurement.distance = 0;
+    _currentMeasurement.angle = 0;
+    _currentMeasurement.quality = 0;
+    _currentMeasurement.startBit = 0;
+}
+
+
+void SendHandler(void *CallBackRef, unsigned int EventData)
+{
+	TotalSentCount = EventData;
+}
+
+void RecvHandler(void *CallBackRef, unsigned int EventData)
+{
+	TotalReceivedCount = EventData;
+	xil_printf("%i\n", TotalReceivedCount);
+}
+
+/****************************************************************************/
+/**
+*
+* This function setups the interrupt system such that interrupts can occur
+* for the UartLite device. This function is application specific since the
+* actual system may or may not have an interrupt controller. The UartLite
+* could be directly connected to a processor without an interrupt controller.
+* The user should modify this function to fit the application.
+*
+* @param    UartLitePtr contains a pointer to the instance of the UartLite
+*           component which is going to be connected to the interrupt
+*           controller.
+*
+* @return   XST_SUCCESS if successful, otherwise XST_FAILURE.
+*
+* @note     None.
+*
+****************************************************************************/
+int SetupInterruptSystem(XUartLite *UartLitePtr)
+{
+
+	int Status;
+
+
+	/*
+	 * Initialize the interrupt controller driver so that it is ready to
+	 * use.
+	 */
+	Status = XIntc_Initialize(&InterruptController, INTC_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+
+	/*
+	 * Connect a device driver handler that will be called when an interrupt
+	 * for the device occurs, the device driver handler performs the
+	 * specific interrupt processing for the device.
+	 */
+	Status = XIntc_Connect(&InterruptController, UARTLITE_INT_IRQ_ID,
+			   (XInterruptHandler)XUartLite_InterruptHandler,
+			   (void *)UartLitePtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Start the interrupt controller such that interrupts are enabled for
+	 * all devices that cause interrupts, specific real mode so that
+	 * the UartLite can cause interrupts through the interrupt controller.
+	 */
+	Status = XIntc_Start(&InterruptController, XIN_REAL_MODE);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	/*
+	 * Enable the interrupt for the UartLite device.
+	 */
+	XIntc_Enable(&InterruptController, UARTLITE_INT_IRQ_ID);
+
+	/*
+	 * Initialize the exception table.
+	 */
+	Xil_ExceptionInit();
+
+	/*
+	 * Register the interrupt controller handler with the exception table.
+	 */
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			 (Xil_ExceptionHandler)XIntc_InterruptHandler,
+			 &InterruptController);
+
+	/*
+	 * Enable exceptions.
+	 */
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+
+
+void _delay_(int useconds){
+
+	float delay;
+	XTime tStart, tNext;
+
+	/* get time at start of delay */
+	XTime_GetTime(&tStart);
+
+	while(1){
+		/* check time for each loop */
+		XTime_GetTime(&tNext);
+
+		/* calculate the delay in micro-seconds */
+		delay = 1.0 * (tNext - tStart) / (COUNTS_PER_SECOND/1000000);
+
+		/* if the delay is greater than or equal to the specified time, end delay */
+		if(delay >= useconds){
+			return;
+		}
+	}
+}
+
+u_result _waitResponseHeader(rplidar_ans_header_t * header){
+
+    _u8  recvPos = 0;
+
+	_u32 currentTs_ms, remainingtime_ms;
+	XTime currentTs, remainingtime;
+	XTime_GetTime(&currentTs);
+	XTime_GetTime(&remainingtime);
+	currentTs_ms = 1.0 * (currentTs) / (COUNTS_PER_SECOND/1000000);
+	remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+
+    _u8 *headerbuf = (_u8*)header;
+
+    while ((remainingtime_ms - currentTs_ms) <= TIMEOUT) {
+    	int currentbyte = XUartLite_RecvByte(UARTLITE_BASEADDR);
+//    	xil_printf("Time ms: %i\n", (remainingtime_ms - currentTs_ms));
+//    	xil_printf("Current Byte: 0x%x\n", currentbyte);
+
+        if (currentbyte<0) continue;
+        switch (recvPos) {
+        case 0:
+            if (currentbyte != RPLIDAR_ANS_SYNC_BYTE1) {
+                continue;
+            }
+            break;
+        case 1:
+            if (currentbyte != RPLIDAR_ANS_SYNC_BYTE2) {
+                recvPos = 0;
+                continue;
+            }
+            break;
+        }
+        headerbuf[recvPos++] = currentbyte;
+
+        if (recvPos == sizeof(rplidar_ans_header_t)) {
+            return RESULT_OK;
+        }
+
+        XTime_GetTime(&remainingtime);
+        remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+    }
+
+    print("\nTimeout in _waitResponseHeader()\n");
+    return RESULT_OPERATION_TIMEOUT;
+}
+
+u_result _sendCommand(_u8 cmd){
+
+	xil_printf("\nSending command...\n");
+	XUartLite_SendByte(UARTLITE_BASEADDR, RPLIDAR_CMD_SYNC_BYTE);
+	XUartLite_SendByte(UARTLITE_BASEADDR, cmd);
+
+    return RESULT_OK;
+}
+
+//u_result _sendCommand(_u8 cmd, const void * payload, size_t payloadsize){
+//
+//    rplidar_cmd_packet_t pkt_header;
+//    rplidar_cmd_packet_t * header = &pkt_header;
+//    _u8 checksum = 0;
+//
+//    if (payloadsize && payload) {
+//        cmd |= RPLIDAR_CMDFLAG_HAS_PAYLOAD;
+//    }
+//
+//    header->syncByte = RPLIDAR_CMD_SYNC_BYTE;
+//    header->cmd_flag = cmd;
+//
+//    // send header first
+//    XUartLite_SendByte(UARTLITE_BASEADDR, (uint8_t *)header);
+//
+//    if (cmd & RPLIDAR_CMDFLAG_HAS_PAYLOAD) {
+//        checksum ^= RPLIDAR_CMD_SYNC_BYTE;
+//        checksum ^= cmd;
+//        checksum ^= (payloadsize & 0xFF);
+//
+//        // calc checksum
+//        for (size_t pos = 0; pos < payloadsize; ++pos) {
+//            checksum ^= ((_u8 *)payload)[pos];
+//        }
+//
+//        // send size
+//        _u8 sizebyte = payloadsize;
+//        XUartLite_SendByte(UARTLITE_BASEADDR, (uint8_t *)&sizebyte);
+//
+//        // send payload
+//        XUartLite_SendByte(UARTLITE_BASEADDR, (uint8_t *)&payload);
+//
+//        // send checksum
+//        XUartLite_SendByte(UARTLITE_BASEADDR, (uint8_t *)&checksum);
+//    }
+//
+//    return RESULT_OK;
+//}
+
+
+
+u_result getHealth(rplidar_response_device_health_t *info){
+
+	_u32 currentTs_ms, remainingtime_ms;
+	XTime currentTs, remainingtime;
+	XTime_GetTime(&currentTs);
+	XTime_GetTime(&remainingtime);
+	currentTs_ms = 1.0 * (currentTs) / (COUNTS_PER_SECOND/1000000);
+	remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+
+    _u8 *infobuf = (_u8 *)&info;
+    _u8 recvPos = 0;
+
+    rplidar_ans_header_t response_header;
+    u_result  ans;
+
+	if (IS_FAIL(ans = _sendCommand(RPLIDAR_CMD_GET_DEVICE_HEALTH))) {
+		return ans;
+	}
+
+	if (IS_FAIL(ans = _waitResponseHeader(&response_header))) {
+		return ans;
+	}
+
+	// verify whether we got a correct header
+	if (response_header.type != RPLIDAR_ANS_TYPE_DEVHEALTH) {
+		return RESULT_INVALID_DATA;
+	}
+
+	if ((response_header.size) < sizeof(rplidar_response_device_health_t)) {
+		return RESULT_INVALID_DATA;
+	}
+
+	while ((remainingtime_ms - currentTs_ms) <= TIMEOUT) {
+
+		int currentbyte = XUartLite_RecvByte(UARTLITE_BASEADDR);
+
+		if (currentbyte < 0) continue;
+
+		infobuf[recvPos++] = currentbyte;
+
+		if (recvPos == sizeof(rplidar_response_device_health_t)) {
+//			xil_printf("\n~~ Health ~~\nStatus: 0x%x\nError_code: 0x%x\n\n", info.status, info.error_code);
+			return RESULT_OK;
+		}
+
+        XTime_GetTime(&remainingtime);
+        remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+	}
+
+    return RESULT_OPERATION_TIMEOUT;
+}
+
+
+u_result getDeviceInfo(rplidar_response_device_info_t *info){
+
+	_u32 currentTs_ms, remainingtime_ms;
+	XTime currentTs, remainingtime;
+	XTime_GetTime(&currentTs);
+	XTime_GetTime(&remainingtime);
+	currentTs_ms = 1.0 * (currentTs) / (COUNTS_PER_SECOND/1000000);
+	remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+
+    _u8 *infobuf = (_u8*)&info;
+    _u8 recvPos = 0;
+
+    rplidar_ans_header_t response_header;
+    u_result  ans;
+
+	if (IS_FAIL(ans = _sendCommand(RPLIDAR_CMD_GET_DEVICE_INFO))) {
+		return ans;
+	}
+
+	if (IS_FAIL(ans = _waitResponseHeader(&response_header))) {
+		return ans;
+	}
+
+	// verify whether we got a correct header
+	if (response_header.type != RPLIDAR_ANS_TYPE_DEVINFO) {
+		return RESULT_INVALID_DATA;
+	}
+
+	if (response_header.size < sizeof(rplidar_response_device_info_t)) {
+		return RESULT_INVALID_DATA;
+	}
+
+	while ((remainingtime_ms - currentTs_ms) <= TIMEOUT) {
+
+		int currentbyte = XUartLite_RecvByte(UARTLITE_BASEADDR);
+
+		if (currentbyte<0) continue;
+
+		infobuf[recvPos++] = currentbyte;
+
+		if (recvPos == sizeof(rplidar_response_device_info_t)) {
+//			xil_printf("\n~~ Device Info ~~\nFW: 0x%x\nHW: 0x%x\nModel: 0x%x\nSerialNo: 0x%x\n\n", info.firmware_version, info.hardware_version, info.model, info.serialnum[0]);
+			return RESULT_OK;
+		}
+
+        XTime_GetTime(&remainingtime);
+        remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+	}
+
+    return RESULT_OPERATION_TIMEOUT;
+}
+
+
+u_result startScan(){
+
+    u_result ans;
+    XGpio_DiscreteWrite(&Gpio, LIDAR_MOTOR_CHANNEL, LIDAR_MOTOR);
+    _delay_(1000000);
+
+	ans = _sendCommand(RPLIDAR_CMD_SCAN);
+	if (IS_FAIL(ans)) return ans;
+
+	// waiting for confirmation
+	rplidar_ans_header_t response_header;
+	if (IS_FAIL(ans = _waitResponseHeader(&response_header))) {
+		return ans;
+	}
+
+	// verify whether we got a correct header
+	if (response_header.type != RPLIDAR_ANS_TYPE_MEASUREMENT) {
+		return RESULT_INVALID_DATA;
+	}
+
+	if (response_header.size < sizeof(rplidar_response_measurement_node_t)) {
+		return RESULT_INVALID_DATA;
+	}
+
+    return RESULT_OK;
+}
+
+
+u_result stop(){
+    u_result ans = _sendCommand(RPLIDAR_CMD_STOP);
+    XGpio_DiscreteWrite(&Gpio, LIDAR_MOTOR_CHANNEL, 0);
+    return ans;
+}
+
+
+u_result waitPoint(){
+
+//	_u32 currentTs_ms, remainingtime_ms;
+//	XTime currentTs, remainingtime;
+//	XTime_GetTime(&currentTs);
+//	XTime_GetTime(&remainingtime);
+//	currentTs_ms = 1.0 * (currentTs) / (COUNTS_PER_SECOND/1000000);
+//	remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+//
+//	rplidar_response_measurement_node_t node;
+////	_u8 *nodebuf = (_u8*)&node;
+
+	int TEST_BUFFER_SIZE = 8000;
+	_u8 ReceiveBuffer[TEST_BUFFER_SIZE];
+
+
+//	_u8 recvPos = 0;
+
+	for (int Index = 0; Index < TEST_BUFFER_SIZE; Index++) {
+		ReceiveBuffer[Index] = 0;
+	}
+
+	XUartLite_Recv(&UartLite, ReceiveBuffer, TEST_BUFFER_SIZE);
+
+	while(TotalReceivedCount != TEST_BUFFER_SIZE){}
+
+//	while((remainingtime_ms - currentTs_ms) <= TIMEOUT){
+
+
+		//int currentbyte = XUartLite_RecvByte(UARTLITE_BASEADDR);
+//		xil_printf("0x%x\n", currentbyte);
+
+//		if (currentbyte<0) continue;
+//
+//		switch (recvPos) {
+//			case 0: // expect the sync bit and its reverse in this byte          {
+//				{
+//					_u8 tmp = (currentbyte>>1);
+//					if((tmp ^ currentbyte) & 0x1){
+//						// pass
+//					}
+//					else{
+//						continue;
+//					}
+//				}
+//				break;
+//
+//			case 1: // expect the highest bit to be 1
+//				{
+//					if(currentbyte & RPLIDAR_RESP_MEASUREMENT_CHECKBIT){
+//						// pass
+//					}
+//					else{
+//						recvPos = 0;
+//						continue;
+//					}
+//				}
+//				break;
+//		}
+//		nodebuf[recvPos++] = currentbyte;
+//
+//
+//		if(recvPos == sizeof(rplidar_response_measurement_node_t)) {
+//
+//			_currentMeasurement.distance	= (node.distance_q2) / 4.0f;
+//			_currentMeasurement.angle		= (node.angle_q6_checkbit >> RPLIDAR_RESP_MEASUREMENT_ANGLE_SHIFT) / 64.0f;
+//			_currentMeasurement.quality		= (node.sync_quality >> RPLIDAR_RESP_MEASUREMENT_QUALITY_SHIFT);
+//			_currentMeasurement.startBit	= (node.sync_quality & RPLIDAR_RESP_MEASUREMENT_SYNCBIT);
+//
+//
+////			xil_printf("0x%x - 0x%x - 0x%x\n", node.distance_q2, node.angle_q6_checkbit, node.sync_quality);
+//
+////			int distance		= (node.distance_q2) / 4.0f;
+////			int angle			= (node.angle_q6_checkbit >> RPLIDAR_RESP_MEASUREMENT_ANGLE_SHIFT) / 64.0f;
+////			uint8_t quality		= (node.sync_quality >> RPLIDAR_RESP_MEASUREMENT_QUALITY_SHIFT);
+////			bool startBit		= (node.sync_quality & RPLIDAR_RESP_MEASUREMENT_SYNCBIT);
+//
+////			xil_printf("0x%x - 0x%x - 0x%x - 0x%x - 0x%x\n", nodebuf[0], nodebuf[1], nodebuf[2], nodebuf[3], nodebuf[4]);
+////
+////			double distance		= ((nodebuf[3] | (nodebuf[4] << 8))*1.0) / 4.0;
+////			double angle		= (((nodebuf[1] >> 1) & 0x7F) | (nodebuf[2] << 7)) / 64.0;
+////			uint8_t quality		= (nodebuf[0] >> RPLIDAR_RESP_MEASUREMENT_QUALITY_SHIFT);
+////			bool startBit		= (nodebuf[0] & RPLIDAR_RESP_MEASUREMENT_SYNCBIT);
+//
+//			xil_printf("Angle: %d          Dist: %d               (0x%x - %d)\n", _currentMeasurement.angle, _currentMeasurement.distance, _currentMeasurement.quality, _currentMeasurement.startBit);
+//
+//			return RESULT_OK;
+//		}
+
+//		XTime_GetTime(&remainingtime);
+//		remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+//	}
+
+	return RESULT_OPERATION_TIMEOUT;
+}
+
+int main(){
+
+    init_platform();
+
+    _delay_(1000000);
+
+	int Status;
+
+	/*
+	 * Initialize the UartLite driver so that it's ready to use.
+	 */
+	Status = XUartLite_Initialize(&UartLite, UARTLITE_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		print("UART init failed\n");
+		return 0;
+	}
+
+	/*
+	 * Perform a self-test to ensure that the hardware was built correctly.
+	 */
+	Status = XUartLite_SelfTest(&UartLite);
+	if (Status != XST_SUCCESS) {
+		print("UART self test\n");
+		return 0;
+	}
+
+	/*
+	 * Connect the UartLite to the interrupt subsystem such that interrupts can
+	 * occur. This function is application specific.
+	 */
+	Status = SetupInterruptSystem(&UartLite);
+	if (Status != XST_SUCCESS) {
+		print("INPT self test\n");
+		return 0;
+	}
+
+    print("\n\n===\nHello World\n\r");
+
+//    rplidar_response_device_health_t healthinfo;
+//    if (IS_OK(getHealth(&healthinfo))){
+//    	print("IS_OK Health\n");
+//    }
+//    else{
+//    	print("IS_FAIL Health\n");
+//    }
+//
+//    rplidar_response_device_info_t devinfo;
+//    if (IS_OK(getDeviceInfo(&devinfo))){
+//    	print("IS_OK DeviceInfo\n");
+//    }
+//    else{
+//    	print("IS_FAIL DeviceInfo\n");
+//    }
+//
+//	xil_printf("\n===\nOpened LIDAR on UARTLITE_BASEADDR: 0x%x\n", UARTLITE_BASEADDR);
+//	xil_printf("Model ID: 0x%x\n",				devinfo.model);
+//	xil_printf("Firmware: 0x%x\n",				devinfo.firmware_version);
+//	xil_printf("Hardware: 0x%x\n",				devinfo.hardware_version);
+//	xil_printf("Serial Number: 0x%x\n",			devinfo.serialnum[0]);
+//	xil_printf("Device Health Status: 0x%x\n", 	healthinfo.status);
+//	xil_printf("Error Code: 0x%x\n===",			healthinfo.error_code);
+
+//    RPLidar();
+//	startScan();
+
+	int TEST_BUFFER_SIZE = 5;
+
+    u8 SendBuffer[TEST_BUFFER_SIZE];
+    u8 ReceiveBuffer[TEST_BUFFER_SIZE];
+
+	XUartLite_SetSendHandler(&UartLite, SendHandler, &UartLite);
+	XUartLite_SetRecvHandler(&UartLite, RecvHandler, &UartLite);
+	XUartLite_EnableInterrupt(&UartLite);
+
+
+	for (int Index = 0; Index < TEST_BUFFER_SIZE; Index++) {
+		ReceiveBuffer[Index] = 0;
+	}
+
+	print("Sending Bytes\n");
+	XUartLite_SendByte(UARTLITE_BASEADDR, RPLIDAR_CMD_SYNC_BYTE);
+	XUartLite_SendByte(UARTLITE_BASEADDR, 0x50);
+
+	XUartLite_Recv(&UartLite, ReceiveBuffer, TEST_BUFFER_SIZE);
+
+	while(TotalReceivedCount != TEST_BUFFER_SIZE){}
+
+	for (int Index = 0; Index < TEST_BUFFER_SIZE; Index++) {
+		xil_printf("0x%x\n", ReceiveBuffer[Index]);
+	}
+
+
+	u32 currentTs_ms, remainingtime_ms;
+	XTime currentTs, remainingtime;
+	XTime_GetTime(&currentTs);
+	XTime_GetTime(&remainingtime);
+	currentTs_ms = 1.0 * (currentTs) / (COUNTS_PER_SECOND/1000000);
+	remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+
+	while((remainingtime_ms - currentTs_ms) <= RUNTIME){
+
+		if(IS_OK(waitPoint())){
+//			float	distance = _currentMeasurement.distance; //distance value in mm unit
+//			float	angle    = _currentMeasurement.angle; //anglue value in degree
+//			bool	startBit = _currentMeasurement.startBit; //whether this point is belong to a new scan
+//			uint8_t	quality  = _currentMeasurement.quality; //quality of the current measurement
+
+//			xil_printf("0x%x - Angle: %f - Dist: %f\n\r", startBit, angle, distance);
+		}
+		else{
+			XGpio_DiscreteWrite(&Gpio, LIDAR_MOTOR_CHANNEL, 0);
+
+			rplidar_response_device_info_t info;
+			if (IS_OK(getDeviceInfo(&info))) {
+			   startScan();
+			   XGpio_DiscreteWrite(&Gpio, LIDAR_MOTOR_CHANNEL, LIDAR_MOTOR);
+			   _delay_(1000000);
+			}
+		}
+
+		XTime_GetTime(&remainingtime);
+		remainingtime_ms = 1.0 * (remainingtime) / (COUNTS_PER_SECOND/1000000);
+	}
+
+	stop();
+    cleanup_platform();
+    return 0;
+}
+
+//
+//int main(){
+//
+//	int Status;
+//	int Index;
+//
+//	/*
+//	 * Initialize the UartLite driver so that it's ready to use.
+//	 */
+//	Status = XUartLite_Initialize(&UartLite, DeviceId);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//
+//	/*
+//	 * Perform a self-test to ensure that the hardware was built correctly.
+//	 */
+//	Status = XUartLite_SelfTest(&UartLite);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//
+//	/*
+//	 * Connect the UartLite to the interrupt subsystem such that interrupts can
+//	 * occur. This function is application specific.
+//	 */
+//	Status = SetupInterruptSystem(&UartLite);
+//	if (Status != XST_SUCCESS) {
+//		return XST_FAILURE;
+//	}
+//
+//	/*
+//	 * Setup the handlers for the UartLite that will be called from the
+//	 * interrupt context when data has been sent and received, specify a
+//	 * pointer to the UartLite driver instance as the callback reference so
+//	 * that the handlers are able to access the instance data.
+//	 */
+//	XUartLite_SetSendHandler(&UartLite, SendHandler, &UartLite);
+//	XUartLite_SetRecvHandler(&UartLite, RecvHandler, &UartLite);
+//
+//	/*
+//	 * Enable the interrupt of the UartLite so that interrupts will occur.
+//	 */
+//	XUartLite_EnableInterrupt(&UartLite);
+//
+//	/*
+//	 * Initialize the send buffer bytes with a pattern to send and the
+//	 * the receive buffer bytes to zero to allow the receive data to be
+//	 * verified.
+//	 */
+//	for (Index = 0; Index < TEST_BUFFER_SIZE; Index++) {
+//		SendBuffer[Index] = Index;
+//		ReceiveBuffer[Index] = 0;
+//	}
+//
+//	/*
+//	 * Start receiving data before sending it since there is a loopback.
+//	 */
+//	XUartLite_Recv(&UartLite, ReceiveBuffer, TEST_BUFFER_SIZE);
+//
+//	/*
+//	 * Send the buffer using the UartLite.
+//	 */
+//	XUartLite_Send(&UartLite, SendBuffer, TEST_BUFFER_SIZE);
+//
+//	/*
+//	 * Wait for the entire buffer to be received, letting the interrupt
+//	 * processing work in the background, this function may get locked
+//	 * up in this loop if the interrupts are not working correctly.
+//	 */
+//	while ((TotalReceivedCount != TEST_BUFFER_SIZE) ||
+//		(TotalSentCount != TEST_BUFFER_SIZE)) {
+//	}
+//
+//	/*
+//	 * Verify the entire receive buffer was successfully received.
+//	 */
+//	for (Index = 0; Index < TEST_BUFFER_SIZE; Index++) {
+//		if (ReceiveBuffer[Index] != SendBuffer[Index]) {
+//			return XST_FAILURE;
+//		}
+//	}
+//
+//	return XST_SUCCESS;
+//}

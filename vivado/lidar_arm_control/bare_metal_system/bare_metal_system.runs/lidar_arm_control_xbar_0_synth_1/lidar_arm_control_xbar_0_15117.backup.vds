@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Wed Feb 17 22:58:13 2021
+# Process ID: 15117
+# Current directory: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1
+# Command line: vivado -log lidar_arm_control_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lidar_arm_control_xbar_0.tcl
+# Log file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/lidar_arm_control_xbar_0.vds
+# Journal file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/vivado.jou
+#-----------------------------------------------------------
+source lidar_arm_control_xbar_0.tcl -notrace
+Command: synth_design -top lidar_arm_control_xbar_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 15206 

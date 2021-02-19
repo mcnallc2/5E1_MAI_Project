@@ -1,0 +1,8 @@
+23:49:07 **** Auto Build of configuration Debug for project helloworld_bsp_xtmrctr_pwm_example_1 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+
+23:49:07 Build Finished (took 69ms)
+

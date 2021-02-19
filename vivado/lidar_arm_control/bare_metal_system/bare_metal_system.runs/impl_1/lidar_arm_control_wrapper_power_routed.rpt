@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Fri Feb  5 09:55:14 2021
+| Date             : Fri Feb 19 00:28:07 2021
 | Host             : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file lidar_arm_control_wrapper_power_routed.rpt -pb lidar_arm_control_wrapper_power_summary_routed.pb -rpx lidar_arm_control_wrapper_power_routed.rpx
 | Design           : lidar_arm_control_wrapper
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.399        |
+| Total On-Chip Power (W)  | 1.418        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.262        |
-| Device Static (W)        | 0.137        |
+| Dynamic (W)              | 1.280        |
+| Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 11.5         |
-| Max Ambient (C)          | 68.9         |
-| Junction Temperature (C) | 41.1         |
+| Max Ambient (C)          | 68.6         |
+| Junction Temperature (C) | 41.4         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,18 +52,18 @@ Table of Contents
 +-------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
-| Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     1232 |       --- |             --- |
-|   LUT as Logic          |     0.001 |      364 |     53200 |            0.68 |
-|   Register              |    <0.001 |      497 |    106400 |            0.47 |
-|   CARRY4                |    <0.001 |        6 |     13300 |            0.05 |
-|   LUT as Shift Register |    <0.001 |       47 |     17400 |            0.27 |
-|   Others                |     0.000 |      200 |       --- |             --- |
-| Signals                 |     0.001 |      806 |       --- |             --- |
-| I/O                     |    <0.001 |        2 |       125 |            1.60 |
+| Clocks                  |     0.008 |        3 |       --- |             --- |
+| Slice Logic             |     0.007 |     4884 |       --- |             --- |
+|   LUT as Logic          |     0.006 |     1881 |     53200 |            3.54 |
+|   CARRY4                |    <0.001 |      210 |     13300 |            1.58 |
+|   Register              |    <0.001 |     1873 |    106400 |            1.76 |
+|   LUT as Shift Register |    <0.001 |       72 |     17400 |            0.41 |
+|   Others                |     0.000 |      420 |       --- |             --- |
+| Signals                 |     0.007 |     3140 |       --- |             --- |
+| I/O                     |     0.003 |       12 |       125 |            9.60 |
 | PS7                     |     1.256 |        1 |       --- |             --- |
-| Static Power            |     0.137 |          |           |                 |
-| Total                   |     1.399 |          |           |                 |
+| Static Power            |     0.138 |          |           |                 |
+| Total                   |     1.418 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -73,9 +73,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.019 |       0.006 |      0.013 |
+| Vccint    |       1.000 |     0.034 |       0.021 |      0.013 |
 | Vccaux    |       1.800 |     0.014 |       0.000 |      0.014 |
-| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
+| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -149,13 +149,19 @@ Table of Contents
 +---------------------------+-----------+
 | Name                      | Power (W) |
 +---------------------------+-----------+
-| lidar_arm_control_wrapper |     1.262 |
-|   lidar_arm_control_i     |     1.262 |
-|     axi_uartlite_0        |     0.001 |
-|       U0                  |     0.001 |
-|     processing_system7_0  |     1.256 |
-|       inst                |     1.256 |
-|     ps7_0_axi_periph      |     0.004 |
+| lidar_arm_control_wrapper |     1.280 |
+|   lidar_arm_control_i     |     1.277 |
+|     axi_timer_0           |     0.004 |
+|       U0                  |     0.004 |
+|     axi_timer_1           |     0.004 |
+|       U0                  |     0.004 |
+|     axi_timer_2           |     0.003 |
+|       U0                  |     0.003 |
+|     axi_timer_3           |     0.003 |
+|       U0                  |     0.003 |
+|     processing_system7_0  |     1.257 |
+|       inst                |     1.257 |
+|     ps7_0_axi_periph      |     0.005 |
 |       s00_couplers        |     0.004 |
 +---------------------------+-----------+
 

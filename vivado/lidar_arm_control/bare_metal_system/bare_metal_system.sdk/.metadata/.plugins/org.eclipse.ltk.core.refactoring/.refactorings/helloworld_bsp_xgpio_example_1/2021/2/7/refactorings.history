@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;helloworld_bsp_xgpio_example_1/src/xgpio_example.c&apos; to &apos;arm_motor_control.c&apos;" description="Rename resource &apos;xgpio_example.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/xgpio_example.c" name="arm_motor_control.c" stamp="1613606540182" updateReferences="true"/>
+</session>
