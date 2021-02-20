@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;lidar_arm_control_bsp_xuartlite_intr_tapp_example_1/src/xuartlite_intr_tapp_example.c&apos; to &apos;xuartlite_lidar_example.c&apos;" description="Rename resource &apos;xuartlite_intr_tapp_example.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/xuartlite_intr_tapp_example.c" name="xuartlite_lidar_example.c" stamp="1613752204757" updateReferences="true"/>
+</session>

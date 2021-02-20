@@ -1,64 +1,8 @@
-09:55:14 **** Auto Build of configuration Debug for project lidar_arm_control_system ****
+17:24:28 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
-Building file: ../src/main.c
-Invoking: ARM v7 gcc compiler
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-In file included from ../src/main.c:45:0:
-../../lidar_arm_control_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
- #pragma message ("For the sleep routines, Global timer is being used")
-         ^~~~~~~
-../src/main.c: In function 'processUartLiteSample':
-../src/main.c:249:24: error: 'packet' undeclared (first use in this function); did you mean '__packed'?
-  int scan_start      = packet[0] & 1;
-                        ^~~~~~
-                        __packed
-../src/main.c:249:24: note: each undeclared identifier is reported only once for each function it appears in
-../src/main.c:257:18: warning: format '%f' expects argument of type 'double', but argument 2 has type 'int' [-Wformat=]
-  printf("Angle: %f - Distance: %f\n", scan_start, angle_q6, distance_q2);
-                 ~^
-                 %d
-../src/main.c:257:9: warning: too many arguments for format [-Wformat-extra-args]
-  printf("Angle: %f - Distance: %f\n", scan_start, angle_q6, distance_q2);
-         ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
-../src/main.c: In function 'UartLiteIntrExample':
-../src/main.c:264:6: warning: unused variable 'Index' [-Wunused-variable]
-  int Index;
-      ^~~~~
-../src/main.c: In function 'SetupInterruptSystem':
-../src/main.c:466:11: warning: implicit declaration of function 'XIntc_Initialize'; did you mean 'XGpio_Initialize'? [-Wimplicit-function-declaration]
-  Status = XIntc_Initialize(&InterruptController, INTC_DEVICE_ID);
-           ^~~~~~~~~~~~~~~~
-           XGpio_Initialize
-../src/main.c:477:11: warning: implicit declaration of function 'XIntc_Connect'; did you mean 'XScuGic_Connect'? [-Wimplicit-function-declaration]
-  Status = XIntc_Connect(&InterruptController, UARTLITE_INT_IRQ_ID,
-           ^~~~~~~~~~~~~
-           XScuGic_Connect
-../src/main.c:489:11: warning: implicit declaration of function 'XIntc_Start'; did you mean 'XTmrCtr_Start'? [-Wimplicit-function-declaration]
-  Status = XIntc_Start(&InterruptController, XIN_REAL_MODE);
-           ^~~~~~~~~~~
-           XTmrCtr_Start
-../src/main.c:489:45: error: 'XIN_REAL_MODE' undeclared (first use in this function)
-  Status = XIntc_Start(&InterruptController, XIN_REAL_MODE);
-                                             ^~~~~~~~~~~~~
-../src/main.c:497:2: warning: implicit declaration of function 'XIntc_Enable'; did you mean 'XScuGic_Enable'? [-Wimplicit-function-declaration]
-  XIntc_Enable(&InterruptController, UARTLITE_INT_IRQ_ID);
-  ^~~~~~~~~~~~
-  XScuGic_Enable
-../src/main.c:508:27: error: 'XIntc_InterruptHandler' undeclared (first use in this function); did you mean 'Xil_InterruptHandler'?
-     (Xil_ExceptionHandler)XIntc_InterruptHandler,
-                           ^~~~~~~~~~~~~~~~~~~~~~
-                           Xil_InterruptHandler
-../src/main.c: In function 'TmrCtrPwmExample':
-../src/main.c:541:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
-  u8  NoOfCycles;
-      ^~~~~~~~~~
-../src/main.c:540:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
-  u8  DutyCycle;
-      ^~~~~~~~~
-src/subdir.mk:21: recipe for target 'src/main.o' failed
-make: *** [src/main.o] Error 1
+make: Nothing to be done for 'main-build'.
 
-09:55:14 Build Finished (took 113ms)
+17:24:28 Build Finished (took 134ms)
 

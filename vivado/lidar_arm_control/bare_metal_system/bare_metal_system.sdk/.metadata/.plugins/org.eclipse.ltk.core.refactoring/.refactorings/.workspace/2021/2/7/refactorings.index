@@ -8,3 +8,4 @@
 1613695668076	Rename resource 'lidar_arm_control_bsp_xuartlite_low_level_example_1'
 1613728014740	Delete resource 'lidar_arm_control_bsp_xuartlite_intr_example_1'
 1613728019349	Delete resource 'lidar_arm_control_bsp_xuartlite_intr_example_2'
+1613752220504	Rename resource 'lidar_arm_control_bsp_xuartlite_intr_tapp_example_1'

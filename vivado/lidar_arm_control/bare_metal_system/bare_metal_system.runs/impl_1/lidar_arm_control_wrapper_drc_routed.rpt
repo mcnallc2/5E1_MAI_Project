@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Fri Feb 19 00:28:03 2021
+| Date         : Fri Feb 19 15:10:50 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_drc -file lidar_arm_control_wrapper_drc_routed.rpt -pb lidar_arm_control_wrapper_drc_routed.pb -rpx lidar_arm_control_wrapper_drc_routed.rpx
 | Design       : lidar_arm_control_wrapper

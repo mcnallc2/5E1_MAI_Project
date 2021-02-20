@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Feb 17 23:07:09 2021
-# Process ID: 3754
+# Start of session at: Fri Feb 19 15:07:36 2021
+# Process ID: 5556
 # Current directory: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1
 # Command line: vivado -log lidar_arm_control_xbar_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lidar_arm_control_xbar_0.tcl
 # Log file: /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/lidar_arm_control_xbar_0.vds
@@ -15,11 +15,11 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 3858 
+INFO: Helper process launched with PID 5654 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1391.789 ; gain = 34.898 ; free physical = 198 ; free virtual = 4654
+Starting RTL Elaboration : Time (s): cpu = 00:00:07 ; elapsed = 00:00:14 . Memory (MB): peak = 1390.051 ; gain = 5.898 ; free physical = 691 ; free virtual = 3162
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'lidar_arm_control_xbar_0' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_xbar_0/synth/lidar_arm_control_xbar_0.v:59]
+INFO: [Synth 8-6157] synthesizing module 'lidar_arm_control_xbar_0' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_xbar_0_1/synth/lidar_arm_control_xbar_0.v:59]
 INFO: [Synth 8-6157] synthesizing module 'axi_crossbar_v2_1_19_axi_crossbar' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_NUM_SLAVE_SLOTS bound to: 1 - type: integer 
@@ -254,7 +254,7 @@ WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_w_be
 WARNING: [Synth 8-6014] Unused sequential element gen_debug_trans_seq.debug_r_beat_cnt_i_reg was removed.  [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:2091]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_crossbar_sasd' (9#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:1240]
 INFO: [Synth 8-6155] done synthesizing module 'axi_crossbar_v2_1_19_axi_crossbar' (10#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:4884]
-INFO: [Synth 8-6155] done synthesizing module 'lidar_arm_control_xbar_0' (11#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_xbar_0/synth/lidar_arm_control_xbar_0.v:59]
+INFO: [Synth 8-6155] done synthesizing module 'lidar_arm_control_xbar_0' (11#1) [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_xbar_0_1/synth/lidar_arm_control_xbar_0.v:59]
 WARNING: [Synth 8-3331] design generic_baseblocks_v2_1_0_mux_enc__parameterized0 has unconnected port S[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_19_decerr_slave has unconnected port S_AXI_AWID[0]
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_19_decerr_slave has unconnected port S_AXI_WLAST
@@ -357,7 +357,7 @@ WARNING: [Synth 8-3331] design axi_crossbar_v2_1_19_axi_crossbar has unconnected
 WARNING: [Synth 8-3331] design axi_crossbar_v2_1_19_axi_crossbar has unconnected port m_axi_rlast[3]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1523.539 ; gain = 166.648 ; free physical = 872 ; free virtual = 5110
+Finished RTL Elaboration : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1521.801 ; gain = 137.648 ; free physical = 588 ; free virtual = 3060
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -370,44 +370,41 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.539 ; gain = 166.648 ; free physical = 865 ; free virtual = 5105
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1521.801 ; gain = 137.648 ; free physical = 588 ; free virtual = 3060
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:29 . Memory (MB): peak = 1523.539 ; gain = 166.648 ; free physical = 865 ; free virtual = 5105
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:28 . Memory (MB): peak = 1521.801 ; gain = 137.648 ; free physical = 588 ; free virtual = 3060
 ---------------------------------------------------------------------------------
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_xbar_0/lidar_arm_control_xbar_0_ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_xbar_0/lidar_arm_control_xbar_0_ooc.xdc] for cell 'inst'
-Parsing XDC File [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1784.836 ; gain = 0.000 ; free physical = 470 ; free virtual = 4711
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1772.074 ; gain = 0.000 ; free physical = 321 ; free virtual = 2794
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1784.836 ; gain = 0.000 ; free physical = 468 ; free virtual = 4708
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.07 . Memory (MB): peak = 1784.836 ; gain = 0.000 ; free physical = 459 ; free virtual = 4699
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1772.074 ; gain = 0.000 ; free physical = 321 ; free virtual = 2794
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1774.074 ; gain = 2.000 ; free physical = 318 ; free virtual = 2791
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 496 ; free virtual = 4739
+Finished Constraint Validation : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 392 ; free virtual = 2865
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 495 ; free virtual = 4739
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 392 ; free virtual = 2865
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:22 ; elapsed = 00:00:39 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 497 ; free virtual = 4741
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:21 ; elapsed = 00:00:36 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 394 ; free virtual = 2867
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-4471] merging register 'gen_axilite.s_axi_wready_i_reg' into 'gen_axilite.s_axi_awready_i_reg' [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ipshared/6c9d/hdl/axi_crossbar_v2_1_vl_rfs.v:3574]
 INFO: [Synth 8-5544] ROM "f_mux_return6" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -432,7 +429,7 @@ INFO: [Synth 8-5544] ROM "f_mux_return3" won't be mapped to Block RAM because ad
 INFO: [Synth 8-5544] ROM "f_mux_return2" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "f_mux_return1" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:23 ; elapsed = 00:00:39 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 677 ; free virtual = 4919
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:37 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 386 ; free virtual = 2859
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -536,9 +533,9 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-3936] Found unconnected internal register 'gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
+INFO: [Synth 8-3936] Found unconnected internal register 'inst/gen_sasd.crossbar_sasd_0/reg_slice_r/m_payload_i_reg' and it is trimmed from '36' to '35' bits. [/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ipshared/cc23/hdl/axi_register_slice_v2_1_vl_rfs.v:642]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:41 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 646 ; free virtual = 4890
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:23 ; elapsed = 00:00:38 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 368 ; free virtual = 2843
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -550,13 +547,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:49 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 358 ; free virtual = 4603
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 242 ; free virtual = 2718
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 316 ; free virtual = 4566
+Finished Timing Optimization : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 242 ; free virtual = 2717
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -568,7 +565,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:50 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 352 ; free virtual = 4601
+Finished Technology Mapping : Time (s): cpu = 00:00:29 ; elapsed = 00:00:44 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 240 ; free virtual = 2715
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -592,7 +589,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 522 ; free virtual = 4773
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:45 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 240 ; free virtual = 2716
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -605,7 +602,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 522 ; free virtual = 4773
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:45 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 240 ; free virtual = 2716
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -617,25 +614,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 521 ; free virtual = 4772
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:45 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 240 ; free virtual = 2716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 521 ; free virtual = 4772
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:45 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 240 ; free virtual = 2716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 521 ; free virtual = 4772
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:45 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 240 ; free virtual = 2716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 521 ; free virtual = 4772
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:45 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 240 ; free virtual = 2716
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -653,10 +650,10 @@ Report Cell Usage:
 +------+-----+------+
 |1     |LUT1 |     2|
 |2     |LUT2 |    14|
-|3     |LUT3 |    12|
-|4     |LUT4 |    64|
-|5     |LUT5 |    38|
-|6     |LUT6 |   129|
+|3     |LUT3 |    10|
+|4     |LUT4 |    69|
+|5     |LUT5 |    34|
+|6     |LUT6 |   150|
 |7     |FDRE |   135|
 +------+-----+------+
 
@@ -664,41 +661,41 @@ Report Instance Areas:
 +------+-------------------------------------+-----------------------------------------------+------+
 |      |Instance                             |Module                                         |Cells |
 +------+-------------------------------------+-----------------------------------------------+------+
-|1     |top                                  |                                               |   394|
-|2     |  inst                               |axi_crossbar_v2_1_19_axi_crossbar              |   394|
-|3     |    \gen_sasd.crossbar_sasd_0        |axi_crossbar_v2_1_19_crossbar_sasd             |   394|
-|4     |      addr_arbiter_inst              |axi_crossbar_v2_1_19_addr_arbiter_sasd         |   147|
-|5     |      \gen_decerr.decerr_slave_inst  |axi_crossbar_v2_1_19_decerr_slave              |    13|
-|6     |      reg_slice_r                    |axi_register_slice_v2_1_18_axic_register_slice |   193|
+|1     |top                                  |                                               |   414|
+|2     |  inst                               |axi_crossbar_v2_1_19_axi_crossbar              |   414|
+|3     |    \gen_sasd.crossbar_sasd_0        |axi_crossbar_v2_1_19_crossbar_sasd             |   414|
+|4     |      addr_arbiter_inst              |axi_crossbar_v2_1_19_addr_arbiter_sasd         |   151|
+|5     |      \gen_decerr.decerr_slave_inst  |axi_crossbar_v2_1_19_decerr_slave              |    15|
+|6     |      reg_slice_r                    |axi_register_slice_v2_1_18_axic_register_slice |   211|
 |7     |      splitter_ar                    |axi_crossbar_v2_1_19_splitter__parameterized0  |     6|
-|8     |      splitter_aw                    |axi_crossbar_v2_1_19_splitter                  |    18|
+|8     |      splitter_aw                    |axi_crossbar_v2_1_19_splitter                  |    12|
 +------+-------------------------------------+-----------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1784.836 ; gain = 427.945 ; free physical = 521 ; free virtual = 4772
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:45 . Memory (MB): peak = 1774.074 ; gain = 389.922 ; free physical = 240 ; free virtual = 2716
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 81 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:00:44 . Memory (MB): peak = 1784.836 ; gain = 166.648 ; free physical = 578 ; free virtual = 4829
-Synthesis Optimization Complete : Time (s): cpu = 00:00:34 ; elapsed = 00:00:51 . Memory (MB): peak = 1784.844 ; gain = 427.945 ; free physical = 578 ; free virtual = 4829
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:25 ; elapsed = 00:00:40 . Memory (MB): peak = 1774.074 ; gain = 137.648 ; free physical = 297 ; free virtual = 2773
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:45 . Memory (MB): peak = 1774.082 ; gain = 389.922 ; free physical = 297 ; free virtual = 2773
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1784.844 ; gain = 0.000 ; free physical = 513 ; free virtual = 4759
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1774.082 ; gain = 0.000 ; free physical = 236 ; free virtual = 2712
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-73 Infos, 104 Warnings, 0 Critical Warnings and 0 Errors encountered.
+73 Infos, 105 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:36 ; elapsed = 00:00:53 . Memory (MB): peak = 1784.844 ; gain = 428.055 ; free physical = 568 ; free virtual = 4814
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1784.844 ; gain = 0.000 ; free physical = 568 ; free virtual = 4814
+synth_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:46 . Memory (MB): peak = 1774.082 ; gain = 390.031 ; free physical = 291 ; free virtual = 2766
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1774.082 ; gain = 0.000 ; free physical = 291 ; free virtual = 2766
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/lidar_arm_control_xbar_0.dcp' has been generated.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP lidar_arm_control_xbar_0, cache-ID = 1b2c3d826addff1b
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP lidar_arm_control_xbar_0, cache-ID = dc9b83f47b5831a6
 INFO: [Coretcl 2-1174] Renamed 7 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1808.848 ; gain = 0.000 ; free physical = 567 ; free virtual = 4814
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1798.086 ; gain = 0.000 ; free physical = 290 ; free virtual = 2766
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/lidar_arm_control_xbar_0_synth_1/lidar_arm_control_xbar_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file lidar_arm_control_xbar_0_utilization_synth.rpt -pb lidar_arm_control_xbar_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Feb 17 23:08:13 2021...
+INFO: [Common 17-206] Exiting Vivado at Fri Feb 19 15:08:35 2021...

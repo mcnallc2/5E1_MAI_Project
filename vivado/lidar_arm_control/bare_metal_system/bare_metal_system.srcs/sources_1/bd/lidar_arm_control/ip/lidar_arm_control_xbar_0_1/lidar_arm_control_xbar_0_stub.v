@@ -1,10 +1,10 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Wed Feb 17 23:08:11 2021
+// Date        : Fri Feb 19 15:08:35 2021
 // Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
-// Command     : write_verilog -force -mode synth_stub -rename_top lidar_arm_control_xbar_0 -prefix
-//               lidar_arm_control_xbar_0_ lidar_arm_control_xbar_0_stub.v
+// Command     : write_verilog -force -mode synth_stub
+//               /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_xbar_0_1/lidar_arm_control_xbar_0_stub.v
 // Design      : lidar_arm_control_xbar_0
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z020clg400-1
