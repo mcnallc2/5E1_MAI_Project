@@ -1,4 +1,4 @@
-# robotic_arm_control_system_analysis
+# robotic-arm-control-system-analysis
 
 ## ultrasonic arm control system
 
