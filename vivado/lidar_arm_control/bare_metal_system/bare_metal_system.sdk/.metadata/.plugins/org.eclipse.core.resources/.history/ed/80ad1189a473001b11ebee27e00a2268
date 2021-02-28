@@ -1,0 +1,31 @@
+#include <stdio.h>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+#include "xtime_l.h"
+
+#include "xtmrctr.h"
+#include "xil_exception.h"
+#include "xscugic.h"
+
+
+
+
+int TmrCtrPwmInit(INTC *IntcInstancePtr,
+		XTmrCtr *TmrCtrInstancePtr,
+		u16 DeviceId,
+		u16 IntrId);
+int TmrCtrPwmConfig(INTC *IntcInstancePtr,
+		XTmrCtr *InstancePtr,
+		u16 DeviceId,
+		u16 IntrId,
+		u8 Angle);
+static void TimerCounterHandler(void *CallBackRef,
+		u8 TmrCtrNumber);
+static int TmrCtrSetupIntrSystem(INTC *IntcInstancePtr,
+		XTmrCtr *InstancePtr,
+		u16 DeviceId,
+		u16 IntrId);
+static void TmrCtrDisableIntr(INTC *IntcInstancePtr, u16 IntrId);
+

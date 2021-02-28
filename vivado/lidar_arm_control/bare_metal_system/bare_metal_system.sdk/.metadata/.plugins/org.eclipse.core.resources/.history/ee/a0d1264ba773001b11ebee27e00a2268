@@ -1,0 +1,917 @@
+/******************************************************************************
+*
+* Copyright (C) 2002 - 2015 Xilinx, Inc.  All rights reserved.
+*
+* Permission is hereby granted, free of charge, to any person obtaining a copy
+* of this software and associated documentation files (the "Software"), to deal
+* in the Software without restriction, including without limitation the rights
+* to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+* copies of the Software, and to permit persons to whom the Software is
+* furnished to do so, subject to the following conditions:
+*
+* The above copyright notice and this permission notice shall be included in
+* all copies or substantial portions of the Software.
+*
+* THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+* IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+* FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+* XILINX  BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+* WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF
+* OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+* SOFTWARE.
+*
+* Except as contained in this notice, the name of the Xilinx shall not be used
+* in advertising or otherwise to promote the sale, use or other dealings in
+* this Software without prior written authorization from Xilinx.
+*
+******************************************************************************/
+/*****************************************************************************/
+/**
+* @file ultrasonic_sensor_driver.c
+*
+* This file contains a design for an Ultrasonic Sensor (HC-SR04) driver using the AXI GPIO driver (XGpio) and
+* hardware device.  It only uses channel 1 of a GPIO device and assumes that
+* the bit 0 of the GPIO is connected to the sensor Trigger pin and bit 1 to the Echo pin on the HW board.
+*
+******************************************************************************/
+
+/***************************** Include Files *********************************/
+
+#include <stdio.h>
+#include "xparameters.h"
+#include "xgpio.h"
+#include "xuartlite.h"
+#include "xil_printf.h"
+#include "xtime_l.h"
+
+#include "xtmrctr.h"
+#include "xil_exception.h"
+
+#ifdef XPAR_INTC_0_DEVICE_ID
+#include "xintc.h"
+#include <stdio.h>
+#else
+#include "xscugic.h"
+#endif
+
+/************************** Constant Definitions *****************************/
+
+// The following constant is used to determine which channel of the GPIO is
+// used for the sensor pins if there are 2 channels supported.
+#define CHANNEL 1
+#define LIDAR_MOTOR 0x1   // Assumes bit 0 of GPIO is connected to an LIDAR_MOTOR pin
+
+// The following constant controls the length of the buffers to be sent
+// and received with the UartLite device.
+#define SEND_BUFFER_SIZE	2
+#define RECV_BUFFER_SIZE	2000
+#define PACKET_SIZE			5
+
+// The following buffers are used to send data and receive data with the UartLite.
+u8 SendBuffer[SEND_BUFFER_SIZE];
+u8 RecvBuffer[RECV_BUFFER_SIZE];
+
+// The following counters are used to determine when the entire buffer has
+// been sent.
+static volatile int TotalSentCount;
+static volatile int TotalRecvCount;
+
+int intrFlag = 0;
+
+// The following constants map to the XPAR parameters created in the
+// xparameters.h file. They are defined here such that a user can easily
+// change all the needed parameters in one place.
+#define GPIO_EXAMPLE_DEVICE_ID  XPAR_GPIO_0_DEVICE_ID
+#define UARTLITE_DEVICE_ID	    XPAR_UARTLITE_0_DEVICE_ID
+#define UARTLITE_IRPT_INTR	    XPAR_FABRIC_UARTLITE_0_VEC_ID
+#define INTC_DEVICE_ID          XPAR_SCUGIC_SINGLE_DEVICE_ID
+#define INTC                    XScuGic
+#define INTC_HANDLER            XScuGic_InterruptHandler
+
+// The following constants are used for the PWM pins.
+#define BASE_SERVO_DEVICE_ID		XPAR_TMRCTR_0_DEVICE_ID
+#define SHOULDER_SERVO_DEVICE_ID	XPAR_TMRCTR_1_DEVICE_ID
+#define ELBOW_SERVO_DEVICE_ID		XPAR_TMRCTR_2_DEVICE_ID
+#define CLAW_SERVO_DEVICE_ID		XPAR_TMRCTR_3_DEVICE_ID
+
+#define BASE_SERVO_INTERRUPT_ID		XPAR_FABRIC_TMRCTR_0_VEC_ID
+#define SHOULDER_SERVO_INTERRUPT_ID	XPAR_FABRIC_TMRCTR_1_VEC_ID
+#define ELBOW_SERVO_INTERRUPT_ID	XPAR_FABRIC_TMRCTR_2_VEC_ID
+#define CLAW_SERVO_INTERRUPT_ID		XPAR_FABRIC_TMRCTR_3_VEC_ID
+
+#define PWM_PERIOD              50000000		// PWM period in (.500 ms)
+#define PWM_MIN_HIGH            277777      	// PWM minimujm high time (.00278 ms)
+#define TMRCTR_0                0            	// Timer 0 ID
+#define TMRCTR_1                1            	// Timer 1 ID
+#define CYCLE_PER_DUTYCYCLE     10           	// Clock cycles per duty cycle
+#define MAX_DUTYCYCLE           100          	// Max duty cycle
+#define DUTYCYCLE_DIVISOR       4            	// Duty cycle Divisor
+#define WAIT_COUNT              PWM_PERIOD   	// Interrupt wait counter
+#define ANGLE_SHIFT				5				// degrees to shift angle
+
+/************************** Function Prototypes ******************************/
+
+int TmrCtrPwmInit(INTC *IntcInstancePtr,
+		XTmrCtr *TmrCtrInstancePtr,
+		u16 DeviceId,
+		u16 IntrId);
+int TmrCtrPwmConfig(INTC *IntcInstancePtr,
+		XTmrCtr *InstancePtr,
+		u16 DeviceId,
+		u16 IntrId,
+		u8 Angle);
+static void TimerCounterHandler(void *CallBackRef,
+		u8 TmrCtrNumber);
+static int TmrCtrSetupIntrSystem(INTC *IntcInstancePtr,
+		XTmrCtr *InstancePtr,
+		u16 DeviceId,
+		u16 IntrId);
+static void TmrCtrDisableIntr(INTC *IntcInstancePtr, u16 IntrId);
+
+
+int UartLiteStartScan(INTC *IntcInstancePtr,
+		XUartLite *UartLiteInstPtr,
+		u16 UartLiteDeviceId,
+		u16 UartLiteIntrId);
+int UartLiteSampleLidar(INTC *IntcInstancePtr,
+		XUartLite *UartLiteInstPtr,
+		u16 UartLiteDeviceId,
+		u16 UartLiteIntrId);
+static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData);
+static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData);
+int UartLiteSetupIntrSystem(INTC *IntcInstancePtr,
+		XUartLite *UartLiteInstPtr,
+		u16 UartLiteIntrId);
+static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr,
+		u16 UartLiteIntrId);
+
+void startLidarMotor();
+void test_delay(int delay_size);
+void _delay_(int useconds);
+
+/************************** Variable Definitions *****************************/
+
+XGpio Gpio; 						// The Instance of the GPIO Driver
+XUartLite UartLite;            		// The instance of the UartLite Device
+
+XScuGic_Config *IntcConfig;			// create GIC interrupt object
+
+INTC InterruptController;  			// The instance of the Interrupt Controller
+XTmrCtr TimerCounterInst;  			// The instance of the Timer Counter
+
+static INTC IntcInstance;			// The instance of the Interrupt Controller
+static XUartLite UartLiteInst;  	// The instance of the UartLite Device
+XScuGic_Config *IntcConfig;
+
+static int   PeriodTimerHit = FALSE;
+static int   HighTimerHit = FALSE;
+
+
+/*****************************************************************************/
+//////////
+// main //
+//////////
+int main(void){
+
+	xil_printf("\n>>> Start LIDAR object detection and ARM control\r\n\n");
+	// application health status
+	int Status;
+
+	int baseShift = 1;	// direction to rotate the base servo
+	int baseAngle = 0;	// start angle of the base servo
+
+	// Initialize the GPIO driver
+	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf(" GPIO: Gpio Initialization\r\n");
+
+	// Set the direction for all signals as inputs except the LIDAR_MOTOR output.
+	XGpio_SetDataDirection(&Gpio, CHANNEL, ~(LIDAR_MOTOR));
+
+	// Start rotating the LIDAR motor.
+	startLidarMotor();
+
+	// trigger the LIDAR to start scanning
+	Status = UartLiteStartScan(&IntcInstance,
+			&UartLiteInst,
+			UARTLITE_DEVICE_ID,
+			UARTLITE_IRPT_INTR);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf("LIDAR: Triggered Scanning\r\n");
+
+
+	///////////////
+	// main loop //
+	///////////////
+	while (1) {
+		// get sample from the LIDAR device
+		Status = UartLiteSampleLidar(&IntcInstance,
+				&UartLiteInst,
+				UARTLITE_DEVICE_ID,
+				UARTLITE_IRPT_INTR,
+				IntcConfig);
+		if (Status != XST_SUCCESS) {
+			xil_printf("LIDAR: Failed to obtain sample\r\n");
+			return XST_FAILURE;
+		}
+
+//		// Run the Timer Counter for BASE_SERVO PWM
+//		Status = TmrCtrPwmConfig(&InterruptController,
+//				&TimerCounterInst,
+//				BASE_SERVO_DEVICE_ID,
+//				BASE_SERVO_INTERRUPT_ID,
+//				baseAngle);
+//		if (Status != XST_SUCCESS) {
+//			xil_printf("PWM: BASE_SERVO PWM Failed\r\n");
+//			return XST_FAILURE;
+//		}
+
+//		// Run the Timer Counter for SHOULDER_SERVO PWM
+//		Status = TmrCtrPwmConfig(&InterruptController,
+//				&TimerCounterInst,
+//				SHOULDER_SERVO_DEVICE_ID,
+//				SHOULDER_SERVO_INTERRUPT_ID,
+//				72);
+//		if (Status != XST_SUCCESS) {
+//			xil_printf("SHOULDER_SERVO PWM Failed\r\n");
+//			return XST_FAILURE;
+//		}
+//
+//		// Run the Timer Counter for ELBOW_SERVO PWM
+//		Status = TmrCtrPwmConfig(&InterruptController,
+//				&TimerCounterInst,
+//				ELBOW_SERVO_DEVICE_ID,
+//				ELBOW_SERVO_INTERRUPT_ID,
+//				130);
+//		if (Status != XST_SUCCESS) {
+//			xil_printf("ELBOW_SERVO PWM Failed\r\n");
+//			return XST_FAILURE;
+//		}
+//
+//		// Run the Timer Counter for CLAW_SERVO PWM
+//		Status = TmrCtrPwmConfig(&InterruptController,
+//				&TimerCounterInst,
+//				CLAW_SERVO_DEVICE_ID,
+//				CLAW_SERVO_INTERRUPT_ID,
+//				150);
+//		if (Status != XST_SUCCESS) {
+//			xil_printf("CLAW_SERVO PWM Failed\r\n");
+//			return XST_FAILURE;
+//		}
+
+		if (baseAngle == 180){
+			baseShift = -ANGLE_SHIFT;
+		}
+		if (baseAngle == 0){
+			baseShift = ANGLE_SHIFT;
+		}
+		baseAngle = baseAngle + baseShift;
+//		xil_printf("PWM: SERVO_BASE Angle: %i", baseAngle);
+
+	}
+
+	xil_printf("UART: Disabling UartLite Intr System\r\n");
+	UartLiteDisableIntrSystem(&IntcInstance, UARTLITE_DEVICE_ID);
+
+	return XST_SUCCESS;
+}
+
+
+
+
+
+
+/****************************************************************************
+*
+* This function clears the GPIO channel before writing to the LIDAR MOTOR
+* bit on this channel. This will rotate the DC motor on the RPLIDAR device.
+*
+* @return	void.
+*
+* @note		None.
+*
+****************************************************************************/
+void startLidarMotor(void){
+	// Clear the LIDAR_MOTOR bit
+	XGpio_DiscreteClear(&Gpio, CHANNEL, LIDAR_MOTOR);
+
+	// Set the LIDAR_MOTOR to High
+	XGpio_DiscreteWrite(&Gpio, CHANNEL, LIDAR_MOTOR);
+}
+
+/****************************************************************************
+*
+* This function will initialize the UartLite driver and perform a self test.
+* It then sends a 2 byte word over the AXI-UartLite interface to the
+* RPLIDAR device. This word will trigger the scan operation on the device.
+*
+* This function sends data through the UartLite.
+*
+* This function uses the interrupt driver mode of the UartLite.  The calls to
+* the  UartLite driver in the interrupt handlers, should only use the
+* non-blocking calls.
+*
+* @param	IntcInstancePtr is a pointer to the instance of INTC driver.
+* @param	UartLiteInstPtr is a pointer to the instance of UartLite driver.
+* @param	UartLiteDeviceId is the Device ID of the UartLite Device and
+*		is the XPAR_<UARTLITE_instance>_DEVICE_ID value from
+*		xparameters.h.
+* @param	UartLiteIntrId is the Interrupt ID and is typically
+*		XPAR_<INTC_instance>_<UARTLITE_instance>_VEC_ID value from
+*		xparameters.h.
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
+*
+* @note		None.
+*
+****************************************************************************/
+int UartLiteStartScan(INTC *IntcInstancePtr,
+			XUartLite *UartLiteInstPtr,
+			u16 UartLiteDeviceId,
+			u16 UartLiteIntrId){
+
+	int Status;
+
+	// Initialize the UartLite driver so that it's ready to use.
+	Status = XUartLite_Initialize(UartLiteInstPtr, UartLiteDeviceId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf("UART: UartLite Initialize\n");
+
+
+	// Perform a self-test to ensure that the hardware was built correctly.
+	Status = XUartLite_SelfTest(UartLiteInstPtr);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf("UART: UartLite SelfTest\n");
+
+	// Connect the UartLite to the interrupt subsystem such that interrupts
+	// can occur. This function is application specific.
+	Status = UartLiteSetupIntrSystem(IntcInstancePtr,
+					 UartLiteInstPtr,
+					 UartLiteIntrId);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+	xil_printf("UART: UartLite Setup Intc\n");
+
+	// Setup the handlers for the UartLite that will be called from the
+	// interrupt context when data has been sent and received,
+	// specify a pointer to the UartLite driver instance as the callback
+	// reference so the handlers are able to access the instance data.
+	XUartLite_SetSendHandler(UartLiteInstPtr, UartLiteSendHandler,
+							 UartLiteInstPtr);
+	XUartLite_SetRecvHandler(UartLiteInstPtr, UartLiteRecvHandler,
+							 UartLiteInstPtr);
+
+	//Enable the interrupt of the UartLite so that the interrupts will occur.
+	XUartLite_EnableInterrupt(UartLiteInstPtr);
+
+	// Initialize the send buffer bytes with a pattern to send.
+	SendBuffer[0] = 0xA5;
+	SendBuffer[1] = 0x20;
+
+	// Send the buffer using the UartLite.
+	XUartLite_Send(UartLiteInstPtr, SendBuffer, SEND_BUFFER_SIZE);
+
+	return XST_SUCCESS;
+}
+
+
+
+/****************************************************************************
+*
+* This function does a minimal test on the UartLite device and driver as a
+* design example. The purpose of this function is to illustrate how to use
+* the XUartLite component.
+*
+* This function sends data through the UartLite.
+*
+* This function uses the interrupt driver mode of the UartLite.  The calls to
+* the  UartLite driver in the interrupt handlers, should only use the
+* non-blocking calls.
+*
+* @param	IntcInstancePtr is a pointer to the instance of INTC driver.
+* @param	UartLiteInstPtr is a pointer to the instance of UartLite driver.
+* @param	UartLiteDeviceId is the Device ID of the UartLite Device and
+*		is the XPAR_<UARTLITE_instance>_DEVICE_ID value from
+*		xparameters.h.
+* @param	UartLiteIntrId is the Interrupt ID and is typically
+*		XPAR_<INTC_instance>_<UARTLITE_instance>_VEC_ID value from
+*		xparameters.h.
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
+*
+* @note		None.
+*
+* This function contains an infinite loop such that if interrupts are not
+* working it may never return.
+*
+****************************************************************************/
+int UartLiteSampleLidar(INTC *IntcInstancePtr,
+			XUartLite *UartLiteInstPtr,
+			u16 UartLiteDeviceId,
+			u16 UartLiteIntrId){
+
+	// this a packet buffer used to form packets from the sampled data
+	u8 packet[PACKET_SIZE];
+
+	// this flag ensures the handler processes the interrupt
+	intrFlag = 1;
+
+	// fill the receive buffer with incoming data
+	XUartLite_Recv(UartLiteInstPtr, RecvBuffer, RECV_BUFFER_SIZE);
+
+	// Wait for the entire buffer to be filled,  the function may get
+	// locked up in this loop if the interrupts are not working correctly.
+	while(TotalRecvCount != RECV_BUFFER_SIZE){}
+
+	// reset the for next sample
+	TotalRecvCount = 0;
+
+	int measurements = 0;	// number of measurements in the sample
+	int firstAngle = 0;	// saves the angle of the first measurement
+	int minDist = 500;		// minimum distance in entire sample
+	int minDistAngle = 0;	// angle for the min distance
+	int objectFlag = 0;		// flags when an object has been found
+
+	// loop through entire received byte array
+	for(int j=0; j<RECV_BUFFER_SIZE; j++){
+
+		// the first byte of a packet containing information is either 0x3E or 0x2.
+		// So we wait for either form a packet.
+		if (RecvBuffer[j] == 0x3E || RecvBuffer[j] == 0x2) {
+
+			// fill packet buffer while incrementing loop
+			packet[0] = RecvBuffer[j++];
+			packet[1] = RecvBuffer[j++];
+			packet[2] = RecvBuffer[j++];
+			packet[3] = RecvBuffer[j++];
+			packet[4] = RecvBuffer[j];
+//			xil_printf("0x%x, 0x%x, 0x%x, 0x%x, 0x%x\n", packet[0], packet[1], packet[2], packet[3], packet[4]);
+
+			// form bits to verify the quality of the packet
+			int scan_start      = packet[0] & 1;	// start scan bit indicates if this is the first packet in a sample
+			int inv_scan_start  = packet[0] & 2;	// inverse of the start scan bit
+			int check_bit       = packet[1] & 1;	// quality check bit
+
+			// getting the angle in degrees
+			int angle_q6	= (((packet[1] >> 1) & 0x7F) | (packet[2] << 7)) / 64.0;
+			// getting the distance in millimeters
+			int distance_q2	= ((packet[3] | (packet[4] << 8)) * 1.0) / 4.0;
+
+			// quality check on the packet
+			// if corrupted move to next packet in buffer
+			if ((scan_start == inv_scan_start) || !check_bit){
+				continue;  // invalid packet
+			}
+
+			// if this is the first packet found in sample
+			// set the first angle variable
+			if (!measurements){
+				firstAngle = angle_q6;
+			}
+
+			// if packets found is over 300 and angle is greater than first angle
+			// we have completed 360 degree scan
+			if (measurements > 300 && firstAngle > angle_q6){
+				break;
+			}
+
+			// if distance is not 0
+			if (distance_q2){
+				// we only care about objects between 45 and 135 degrees
+				if (angle_q6 >= 45 && angle_q6 <= 135){
+					// if current distance is less than min distance
+					// we flag that an object was found and set min params
+					if(distance_q2 < minDist){
+						objectFlag = 1;
+						minDist = distance_q2;
+						minDistAngle = angle_q6;
+					}
+//					xil_printf("Angle: %d - Distance: %d\n", angle_q6, distance_q2);
+				}
+			}
+			// increment number of measurements
+			measurements++;
+		}
+	}
+	// if object was detected during scan
+	if (objectFlag){
+
+		xil_printf("OBJECT: Angle: %d - Distance: %d\n", minDistAngle, minDist);
+	}
+
+//	xil_printf("First Angle: %d\n", first_angle);
+//	xil_printf("Measurements per sample: %d\n\n", measurements);
+
+	return XST_SUCCESS;
+}
+
+
+/****************************************************************************
+*
+* This function is the handler which performs processing to send data to the
+* UartLite. It is called from an interrupt context such that the amount of
+* processing performed should be minimized. It is called when the transmit
+* FIFO of the UartLite is empty and more data can be sent through the UartLite.
+*
+* @param	CallBackRef contains a callback reference from the driver.
+*		In this case it is the instance pointer for the UartLite driver.
+* @param	EventData contains the number of bytes sent or received for sent
+*		and receive events.
+*
+* @return	None.
+*
+* @note		None.
+*
+****************************************************************************/
+static void UartLiteSendHandler(void *CallBackRef, unsigned int EventData){
+
+	// verifying the number of bytes sent to LIDAR
+	TotalSentCount = EventData;
+	xil_printf("UART: Send Buffer Length: %d\n\n", TotalSentCount);
+}
+
+
+/****************************************************************************
+*
+* This function is the handler which performs processing to receive data from
+* the UartLite. It is called from an interrupt context such that the amount of
+* processing performed should be minimized. It is called when any data is
+* present in the receive FIFO of the UartLite such that the data can be
+* retrieved from the UartLite. The amount of data present in the FIFO is not
+* known when this function is called.
+*
+* @param	CallBackRef contains a callback reference from the driver,
+*		in this case it is the instance pointer for the UartLite driver.
+* @param	EventData contains the number of bytes sent or received for sent
+*		and receive events.
+*
+* @return	None.
+*
+* @note		None.
+*
+****************************************************************************/
+static void UartLiteRecvHandler(void *CallBackRef, unsigned int EventData){
+
+	// if the flag is set be process the interrupt
+	// we set the total number of bytes currently in the buffer
+	if (intrFlag){
+		TotalRecvCount = EventData;
+//		xil_printf("Recv Buffer Length: %d\n", TotalRecvCount);
+		intrFlag=0;
+	}
+}
+
+
+/****************************************************************************
+*
+* This function setups the interrupt system such that interrupts can occur
+* for the UartLite.
+*
+* @param	IntcInstancePtr is a pointer to the instance of INTC driver.
+* @param	UartLiteInstPtr is a pointer to the instance of UartLite driver.
+*		XPAR_<UARTLITE_instance>_DEVICE_ID value from xparameters.h.
+* @param	UartLiteIntrId is the Interrupt ID and is typically
+*		XPAR_<INTC_instance>_<UARTLITE_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	XST_SUCCESS if successful, otherwise XST_FAILURE.
+*
+* @note		None.
+*
+****************************************************************************/
+int UartLiteSetupIntrSystem(INTC *IntcInstancePtr,
+		XUartLite *UartLiteInstPtr,
+		u16 UartLiteIntrId){
+
+	int Status;
+
+
+	// Initialize the interrupt controller driver so that it is ready to use.
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+	if (NULL == IntcConfig) {
+		return XST_FAILURE;
+	}
+
+	Status = XScuGic_CfgInitialize(IntcInstancePtr, IntcConfig,
+					IntcConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+		return XST_FAILURE;
+	}
+
+	XScuGic_SetPriorityTriggerType(IntcInstancePtr, UartLiteIntrId,
+					0xA0, 0x3);
+
+	// Connect the interrupt handler that will be called when an interrupt occurs for the device.
+	Status = XScuGic_Connect(IntcInstancePtr, UartLiteIntrId,
+				 (Xil_ExceptionHandler)XUartLite_InterruptHandler,
+				 UartLiteInstPtr);
+	if (Status != XST_SUCCESS) {
+		return Status;
+	}
+
+	// Enable the interrupt for the Timer device.
+	XScuGic_Enable(IntcInstancePtr, UartLiteIntrId);
+
+
+	// Initialize the exception table.
+	Xil_ExceptionInit();
+
+	// Register the interrupt controller handler with the exception table.
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+			(Xil_ExceptionHandler)INTC_HANDLER,
+			IntcInstancePtr);
+
+	// Enable exceptions.
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+
+/*****************************************************************************
+*
+* This function disables the interrupts that occur for the UartLite.
+*
+* @param	IntcInstancePtr is a pointer to the instance of the INTC driver.
+* @param	UartLiteIntrId is the Interrupt ID and is typically
+*		XPAR_<INTC_instance>_<UARTLITE_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+static void UartLiteDisableIntrSystem(INTC *IntcInstancePtr, u16 UartLiteIntrId){
+
+	// Disconnect and disable the interrupt for the UartLite.
+	XScuGic_Disable(IntcInstancePtr, UartLiteIntrId);
+	XScuGic_Disconnect(IntcInstancePtr, UartLiteIntrId);
+}
+
+
+/*****************************************************************************
+*
+* This function uses tmrctr PWM APIs to configure the
+* output PWM signal for the specified angle.
+*
+* @param	IntcInstancePtr is a pointer to the Interrupt Controller
+*		driver Instance
+* @param	TmrCtrInstancePtr is a pointer to the XTmrCtr driver Instance
+* @param	DeviceId is the XPAR_<TmrCtr_instance>_DEVICE_ID value from
+*		xparameters.h
+* @param	IntrId is XPAR_<INTC_instance>_<TmrCtr_instance>_INTERRUPT_INTR
+*		value from xparameters.h
+*
+* @return	XST_SUCCESS if the Test is successful, otherwise XST_FAILURE
+*
+* @note		none.
+*
+*****************************************************************************/
+int TmrCtrPwmConfig(INTC *IntcInstancePtr,
+		XTmrCtr *TmrCtrInstancePtr,
+		u16 DeviceId,
+		u16 IntrId,
+		u8 Angle){
+
+	int Status;
+
+	u8  DutyCycle;
+	u32 Period;
+	u32 HighTime;
+
+	// Initialize the timer counter so that it's ready to use,
+	// specify the device ID that is generated in xparameters.h
+	Status = XTmrCtr_Initialize(TmrCtrInstancePtr, DeviceId);
+	if (Status != XST_SUCCESS) {
+		xil_printf("PWM: Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+//	// Perform a self-test to ensure that the hardware was built
+//	// correctly. Timer0 is used for self test
+//	Status = XTmrCtr_SelfTest(TmrCtrInstancePtr, TMRCTR_0);
+//	if (Status != XST_SUCCESS) {
+//		xil_printf("PWM: SelfTest Failed\r\n");
+//		return XST_FAILURE;
+//	}
+
+	// Connect the timer counter to the interrupt subsystem such that
+	// interrupts can occur
+	Status = TmrCtrSetupIntrSystem(IntcInstancePtr, TmrCtrInstancePtr,
+							DeviceId, IntrId);
+	if (Status != XST_SUCCESS) {
+		xil_printf("PWM: Intc Setup Failed\r\n");
+		return XST_FAILURE;
+	}
+	// Setup the handler for the timer counter that will be called from the
+	// interrupt context when the timer expires
+	XTmrCtr_SetHandler(TmrCtrInstancePtr, TimerCounterHandler,
+							TmrCtrInstancePtr);
+
+	// Enable the interrupt of the timer counter
+	XTmrCtr_SetOptions(TmrCtrInstancePtr, TMRCTR_0, XTC_INT_MODE_OPTION);
+	XTmrCtr_SetOptions(TmrCtrInstancePtr, TMRCTR_1, XTC_INT_MODE_OPTION);
+
+	// Disable PWM for reconfiguration
+	XTmrCtr_PwmDisable(TmrCtrInstancePtr);
+
+	// Configure PWM
+	Period = PWM_PERIOD;
+	HighTime = PWM_MIN_HIGH + (Angle * 12345);
+	DutyCycle = XTmrCtr_PwmConfigure(TmrCtrInstancePtr, Period, HighTime);
+
+//	xil_printf("PWM: Angle = %d\r\n", Angle);
+//	xil_printf("PWM: PWM DutyCycle = %d\r\n", DutyCycle);
+
+	// Enable PWM
+	XTmrCtr_PwmEnable(TmrCtrInstancePtr);
+
+	for(volatile int i=0; i<(PWM_PERIOD/10); i++){}
+
+	/* Disable PWM */
+	XTmrCtr_PwmDisable(TmrCtrInstancePtr);
+
+	/* Disable interrupts */
+	TmrCtrDisableIntr(IntcInstancePtr, DeviceId);
+
+
+	return XST_SUCCESS;
+}
+
+
+/*****************************************************************************
+*
+* This function is the handler which performs processing for the timer counter.
+* It is called from an interrupt context.
+*
+* @param	CallBackRef is a pointer to the callback function
+* @param	TmrCtrNumber is the number of the timer to which this
+*		handler is associated with.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+static void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber){
+
+	/* Mark if period timer expired */
+	if (TmrCtrNumber == TMRCTR_0) {
+		PeriodTimerHit = TRUE;
+//		xil_printf("PWM: Period Timer hit\n");
+	}
+
+	/* Mark if high time timer expired */
+	if (TmrCtrNumber == TMRCTR_1) {
+		HighTimerHit = TRUE;
+//		xil_printf("PWM: High Timer hit\n");
+	}
+}
+
+
+/*****************************************************************************
+*
+* This function setups the interrupt system such that interrupts can occur
+* for the timer counter.
+*
+* @param	IntcInstancePtr is a pointer to the Interrupt Controller
+*		driver Instance.
+* @param	TmrCtrInstancePtr is a pointer to the XTmrCtr driver Instance.
+* @param	DeviceId is the XPAR_<TmrCtr_instance>_DEVICE_ID value from
+*		xparameters.h.
+* @param	IntrId is XPAR_<INTC_instance>_<TmrCtr_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	XST_SUCCESS if the Test is successful, otherwise XST_FAILURE.
+*
+* @note		none.
+*
+******************************************************************************/
+static int TmrCtrSetupIntrSystem(INTC *IntcInstancePtr,
+		XTmrCtr *TmrCtrInstancePtr,
+		u16 DeviceId,
+		u16 IntrId){
+
+	int Status;
+//
+//	// create GIC interrupt object
+//	XScuGic_Config *IntcConfig;
+
+	// Initialize the interrupt controller driver so that it is ready to use.
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+	if (NULL == IntcConfig) {
+	return XST_FAILURE;
+	}
+
+	Status = XScuGic_CfgInitialize(IntcInstancePtr, IntcConfig,
+				IntcConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+	return XST_FAILURE;
+	}
+
+	XScuGic_SetPriorityTriggerType(IntcInstancePtr, IntrId,
+				0xA0, 0x3);
+
+	// Connect the interrupt handler that will be called when an interrupt occurs for the device.
+	Status = XScuGic_Connect(IntcInstancePtr, IntrId,
+			 (Xil_ExceptionHandler)XTmrCtr_InterruptHandler,
+			 TmrCtrInstancePtr);
+	if (Status != XST_SUCCESS) {
+	return Status;
+	}
+
+	// Enable the interrupt for the Timer device
+	XScuGic_Enable(IntcInstancePtr, IntrId);
+
+	// Initialize the exception table
+	Xil_ExceptionInit();
+
+	// Register the interrupt controller handler with the exception table
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+				(Xil_ExceptionHandler)
+				INTC_HANDLER,
+				IntcInstancePtr);
+
+	// Enable non-critical exceptions
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+
+/******************************************************************************
+*
+* This function disconnects the interrupts for the Timer.
+*
+* @param	IntcInstancePtr is a reference to the Interrupt Controller
+*		driver Instance.
+* @param	IntrId is XPAR_<INTC_instance>_<Timer_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+void TmrCtrDisableIntr(INTC *IntcInstancePtr, u16 IntrId){
+
+	// Disable PWM and disconnect the interrupt for the timer counter
+	XScuGic_Disconnect(IntcInstancePtr, IntrId);
+}
+
+
+void test_delay(int delay_size){
+
+	printf("Testing Delay %i us\n", delay_size);
+
+	XTime tStart, tEnd;
+
+	/* get time before delay */
+	XTime_GetTime(&tStart);
+
+	/* run the delay */
+	_delay_(delay_size);
+
+	/* get time after the delay */
+	XTime_GetTime(&tEnd);
+
+	printf("Start %f us\n", (1.0 * tStart));
+	printf("End %f us\n", (1.0 * tEnd));
+
+	/* calculate delay length in useconds */
+	float delay = 1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000);
+	printf("Delay took %f us\n\n", delay);
+}
+
+void _delay_(int useconds){
+
+	float delay;
+	XTime tStart, tNext;
+
+	/* get time at start of delay */
+	XTime_GetTime(&tStart);
+
+	while(1){
+		/* check time for each loop */
+		XTime_GetTime(&tNext);
+
+		/* calculate the delay in micro-seconds */
+		delay = 1.0 * (tNext - tStart) / (COUNTS_PER_SECOND/1000000);
+
+		/* if the delay is greater than or equal to the specified time, end delay */
+		if(delay >= useconds){
+			return;
+		}
+	}
+}
+

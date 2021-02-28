@@ -9,3 +9,5 @@
 1613728014740	Delete resource 'lidar_arm_control_bsp_xuartlite_intr_example_1'
 1613728019349	Delete resource 'lidar_arm_control_bsp_xuartlite_intr_example_2'
 1613752220504	Rename resource 'lidar_arm_control_bsp_xuartlite_intr_tapp_example_1'
+1613843607647	Delete resource 'lidar_arm_control_system/src/pwm.h'
+1613843610785	Delete resource 'lidar_arm_control_system/src/pwm.c'

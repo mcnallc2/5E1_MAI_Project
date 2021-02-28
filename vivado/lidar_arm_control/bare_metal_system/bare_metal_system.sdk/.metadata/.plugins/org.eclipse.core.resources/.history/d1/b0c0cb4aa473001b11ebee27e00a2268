@@ -1,0 +1,211 @@
+
+
+/*****************************************************************************
+*
+* This function uses tmrctr PWM APIs to configure the
+* output PWM signal for the specified angle.
+*
+* @param	IntcInstancePtr is a pointer to the Interrupt Controller
+*		driver Instance
+* @param	TmrCtrInstancePtr is a pointer to the XTmrCtr driver Instance
+* @param	DeviceId is the XPAR_<TmrCtr_instance>_DEVICE_ID value from
+*		xparameters.h
+* @param	IntrId is XPAR_<INTC_instance>_<TmrCtr_instance>_INTERRUPT_INTR
+*		value from xparameters.h
+*
+* @return	XST_SUCCESS if the Test is successful, otherwise XST_FAILURE
+*
+* @note		none.
+*
+*****************************************************************************/
+int TmrCtrPwmConfig(INTC *IntcInstancePtr,
+		XTmrCtr *TmrCtrInstancePtr,
+		u16 DeviceId,
+		u16 IntrId,
+		u8 Angle){
+
+	int Status;
+
+	u8  DutyCycle;
+	u32 Period;
+	u32 HighTime;
+
+	// Initialize the timer counter so that it's ready to use,
+	// specify the device ID that is generated in xparameters.h
+	Status = XTmrCtr_Initialize(TmrCtrInstancePtr, DeviceId);
+	if (Status != XST_SUCCESS) {
+		xil_printf("PWM: Initialization Failed\r\n");
+		return XST_FAILURE;
+	}
+
+//	// Perform a self-test to ensure that the hardware was built
+//	// correctly. Timer0 is used for self test
+//	Status = XTmrCtr_SelfTest(TmrCtrInstancePtr, TMRCTR_0);
+//	if (Status != XST_SUCCESS) {
+//		xil_printf("PWM: SelfTest Failed\r\n");
+//		return XST_FAILURE;
+//	}
+
+	// Connect the timer counter to the interrupt subsystem such that
+	// interrupts can occur
+	Status = TmrCtrSetupIntrSystem(IntcInstancePtr, TmrCtrInstancePtr,
+							DeviceId, IntrId);
+	if (Status != XST_SUCCESS) {
+		xil_printf("PWM: Intc Setup Failed\r\n");
+		return XST_FAILURE;
+	}
+	// Setup the handler for the timer counter that will be called from the
+	// interrupt context when the timer expires
+	XTmrCtr_SetHandler(TmrCtrInstancePtr, TimerCounterHandler,
+							TmrCtrInstancePtr);
+
+	// Enable the interrupt of the timer counter
+	XTmrCtr_SetOptions(TmrCtrInstancePtr, TMRCTR_0, XTC_INT_MODE_OPTION);
+	XTmrCtr_SetOptions(TmrCtrInstancePtr, TMRCTR_1, XTC_INT_MODE_OPTION);
+
+	// Disable PWM for reconfiguration
+	XTmrCtr_PwmDisable(TmrCtrInstancePtr);
+
+	// Configure PWM
+	Period = PWM_PERIOD;
+	HighTime = PWM_MIN_HIGH + (Angle * 12345);
+	DutyCycle = XTmrCtr_PwmConfigure(TmrCtrInstancePtr, Period, HighTime);
+
+//	xil_printf("PWM: Angle = %d\r\n", Angle);
+//	xil_printf("PWM: PWM DutyCycle = %d\r\n", DutyCycle);
+
+	// Enable PWM
+	XTmrCtr_PwmEnable(TmrCtrInstancePtr);
+
+	for(volatile int i=0; i<(PWM_PERIOD/10); i++){}
+
+	/* Disable PWM */
+	XTmrCtr_PwmDisable(TmrCtrInstancePtr);
+
+	/* Disable interrupts */
+	TmrCtrDisableIntr(IntcInstancePtr, DeviceId);
+
+
+	return XST_SUCCESS;
+}
+
+
+/*****************************************************************************
+*
+* This function is the handler which performs processing for the timer counter.
+* It is called from an interrupt context.
+*
+* @param	CallBackRef is a pointer to the callback function
+* @param	TmrCtrNumber is the number of the timer to which this
+*		handler is associated with.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+static void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber){
+
+	/* Mark if period timer expired */
+	if (TmrCtrNumber == TMRCTR_0) {
+		PeriodTimerHit = TRUE;
+//		xil_printf("PWM: Period Timer hit\n");
+	}
+
+	/* Mark if high time timer expired */
+	if (TmrCtrNumber == TMRCTR_1) {
+		HighTimerHit = TRUE;
+//		xil_printf("PWM: High Timer hit\n");
+	}
+}
+
+
+/*****************************************************************************
+*
+* This function setups the interrupt system such that interrupts can occur
+* for the timer counter.
+*
+* @param	IntcInstancePtr is a pointer to the Interrupt Controller
+*		driver Instance.
+* @param	TmrCtrInstancePtr is a pointer to the XTmrCtr driver Instance.
+* @param	DeviceId is the XPAR_<TmrCtr_instance>_DEVICE_ID value from
+*		xparameters.h.
+* @param	IntrId is XPAR_<INTC_instance>_<TmrCtr_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	XST_SUCCESS if the Test is successful, otherwise XST_FAILURE.
+*
+* @note		none.
+*
+******************************************************************************/
+static int TmrCtrSetupIntrSystem(INTC *IntcInstancePtr,
+		XTmrCtr *TmrCtrInstancePtr,
+		u16 DeviceId,
+		u16 IntrId){
+
+	int Status;
+
+	// create GIC interrupt object
+	XScuGic_Config *IntcConfig;
+
+	// Initialize the interrupt controller driver so that it is ready to use.
+	IntcConfig = XScuGic_LookupConfig(INTC_DEVICE_ID);
+	if (NULL == IntcConfig) {
+	return XST_FAILURE;
+	}
+
+	Status = XScuGic_CfgInitialize(IntcInstancePtr, IntcConfig,
+				IntcConfig->CpuBaseAddress);
+	if (Status != XST_SUCCESS) {
+	return XST_FAILURE;
+	}
+
+	XScuGic_SetPriorityTriggerType(IntcInstancePtr, IntrId,
+				0xA0, 0x3);
+
+	// Connect the interrupt handler that will be called when an interrupt occurs for the device.
+	Status = XScuGic_Connect(IntcInstancePtr, IntrId,
+			 (Xil_ExceptionHandler)XTmrCtr_InterruptHandler,
+			 TmrCtrInstancePtr);
+	if (Status != XST_SUCCESS) {
+	return Status;
+	}
+
+	// Enable the interrupt for the Timer device
+	XScuGic_Enable(IntcInstancePtr, IntrId);
+
+	// Initialize the exception table
+	Xil_ExceptionInit();
+
+	// Register the interrupt controller handler with the exception table
+	Xil_ExceptionRegisterHandler(XIL_EXCEPTION_ID_INT,
+				(Xil_ExceptionHandler)
+				INTC_HANDLER,
+				IntcInstancePtr);
+
+	// Enable non-critical exceptions
+	Xil_ExceptionEnable();
+
+	return XST_SUCCESS;
+}
+
+
+/******************************************************************************
+*
+* This function disconnects the interrupts for the Timer.
+*
+* @param	IntcInstancePtr is a reference to the Interrupt Controller
+*		driver Instance.
+* @param	IntrId is XPAR_<INTC_instance>_<Timer_instance>_VEC_ID
+*		value from xparameters.h.
+*
+* @return	None.
+*
+* @note		None.
+*
+******************************************************************************/
+void TmrCtrDisableIntr(INTC *IntcInstancePtr, u16 IntrId){
+
+	// Disable PWM and disconnect the interrupt for the timer counter
+	XScuGic_Disconnect(IntcInstancePtr, IntrId);
+}
