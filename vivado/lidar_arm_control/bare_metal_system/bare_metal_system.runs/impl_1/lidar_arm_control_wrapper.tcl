@@ -69,17 +69,17 @@ set rc [catch {
   set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
   set_property design_mode GateLvl [current_fileset]
   set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.cache/wt [current_project]
-  set_property parent.project_path /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr [current_project]
-  set_property ip_output_repo /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.cache/ip [current_project]
+  set_property webtalk.parent_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.cache/wt [current_project]
+  set_property parent.project_path /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr [current_project]
+  set_property ip_output_repo /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
-  add_files -quiet /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/synth_1/lidar_arm_control_wrapper.dcp
+  add_files -quiet /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.runs/synth_1/lidar_arm_control_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd
+  add_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd
   set_param project.isImplRun false
-  read_xdc /home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/lidar_arm_control/bare_metal_system/pynq-z2_v1.0.xdc/PYNQ-Z2_v1.0.xdc
+  read_xdc /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/pynq-z2_v1.0.xdc/PYNQ-Z2_v1.0.xdc
   set_param project.isImplRun true
   link_design -top lidar_arm_control_wrapper -part xc7z020clg400-1
   set_param project.isImplRun false
