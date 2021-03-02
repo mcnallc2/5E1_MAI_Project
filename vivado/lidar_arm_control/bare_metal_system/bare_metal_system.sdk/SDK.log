@@ -8509,3 +8509,4 @@ con
 ----------------End of Script----------------
 
 12:58:34 INFO  : Launch script is exported to file '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_lidar_arm_control_system.elf_on_local.tcl'
+13:02:36 INFO  : Disconnected from the channel tcfchan#32.

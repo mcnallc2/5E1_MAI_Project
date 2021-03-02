@@ -2,15 +2,145 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Mar  1 09:39:46 2021
-# Process ID: 5868
+# Start of session at: Mon Mar  1 13:03:31 2021
+# Process ID: 1345
 # Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control
 # Command line: vivado
 # Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/vivado.log
 # Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr
+create_project freertos_system /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system -part xc7z020clg400-1
+set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
+create_bd_design "lidar_arm_control"
 update_compile_order -fileset sources_1
-launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk/lidar_arm_control_wrapper.hdf
-open_bd_design {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+connect_bd_net [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins processing_system7_0/FCLK_CLK0]
+regenerate_bd_layout
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_0
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_1
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_2
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_timer:2.0 axi_timer_3
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_0/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_timer_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_1/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_timer_1/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_2/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_timer_2/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_timer_3/S_AXI} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins axi_timer_3/S_AXI]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_uartlite_0/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_uartlite_0/UART]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+undo
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0
+endgroup
+set_property -dict [list CONFIG.NUM_PORTS {4}] [get_bd_cells xlconcat_0]
+set_property location {1 33 633} [get_bd_cells xlconcat_0]
+startgroup
+set_property -dict [list CONFIG.PCW_USE_FABRIC_INTERRUPT {1} CONFIG.PCW_IRQ_F2P_INTR {1}] [get_bd_cells processing_system7_0]
+endgroup
+connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P]
+connect_bd_net [get_bd_pins axi_timer_0/interrupt] [get_bd_pins xlconcat_0/In0]
+connect_bd_net [get_bd_pins axi_timer_1/interrupt] [get_bd_pins xlconcat_0/In1]
+connect_bd_net [get_bd_pins axi_timer_2/interrupt] [get_bd_pins xlconcat_0/In2]
+connect_bd_net [get_bd_pins axi_timer_3/interrupt] [get_bd_pins xlconcat_0/In3]
+save_bd_design
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_0/pwm0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_1/pwm0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_2/pwm0]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins axi_timer_3/pwm0]
+endgroup
+save_bd_design
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_0/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_0/S_AXI]
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {arduino_a0_a5 ( Arduino Pins A0 through A5 J1 ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_0/GPIO]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+startgroup
+set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE {Custom}] [get_bd_cells axi_gpio_0]
+endgroup
+set_property name gpio_0 [get_bd_intf_ports arduino_a0_a5]
+startgroup
+set_property -dict [list CONFIG.C_BAUDRATE {115200}] [get_bd_cells axi_uartlite_0]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout -routing
+save_bd_design
+add_files -fileset constrs_1 -norecurse /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/PYNQ-Z2_v1.0.xdc
+import_files -fileset constrs_1 /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/PYNQ-Z2_v1.0.xdc
+make_wrapper -files [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -top
+add_files -norecurse /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.srcs/sources_1/bd/lidar_arm_control/hdl/lidar_arm_control_wrapper.v
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.srcs/constrs_1/imports/freertos_system/PYNQ-Z2_v1.0.xdc] -no_script -reset -force -quiet
+remove_files  -fileset constrs_1 /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.srcs/constrs_1/imports/freertos_system/PYNQ-Z2_v1.0.xdc
+add_files -fileset constrs_1 -norecurse /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/PYNQ-Z2_v1.0.xdc
+import_files -fileset constrs_1 /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/PYNQ-Z2_v1.0.xdc
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file mkdir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.runs/impl_1/lidar_arm_control_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
+
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
+startgroup
+set_property -dict [list CONFIG.NUM_PORTS {5}] [get_bd_cells xlconcat_0]
+endgroup
+connect_bd_net [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins xlconcat_0/In4]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.runs/impl_1/lidar_arm_control_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
+
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.runs/impl_1/lidar_arm_control_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
+
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
