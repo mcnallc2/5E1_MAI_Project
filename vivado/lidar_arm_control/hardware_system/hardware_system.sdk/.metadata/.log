@@ -19972,3 +19972,9 @@ Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-25
 
 !ENTRY com.xilinx.sdk.utils 0 0 2021-03-03 22:46:39.347
 !MESSAGE XSCT command with result: [::hsi::utils::closesw /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/hardware_system.sdk/pwm_AXI_tutorial_bsp/system.mss], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-03 23:31:27.011
+!MESSAGE XSCT Command: [disconnect tcfchan#44], Thread: Thread-3745
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-03 23:31:27.018
+!MESSAGE XSCT command with result: [disconnect tcfchan#44], Result: [null, ]. Thread: Thread-3745

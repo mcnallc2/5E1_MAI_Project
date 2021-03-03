@@ -178,3 +178,28 @@ Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-syste
 launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:00:06 . Memory (MB): peak = 7142.883 ; gain = 36.820 ; free physical = 162 ; free virtual = 3955
 file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/hardware_system.runs/impl_1/lidar_arm_control_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf
 
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.

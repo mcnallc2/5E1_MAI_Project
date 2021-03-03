@@ -8349,3 +8349,562 @@ arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
  103312	   3468	  91728	 198508	  3076c	lidar_arm_control.elf
 Finished building: lidar_arm_control.elf.size
  
+23:33:08 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+23:34:34 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1083:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103312	   3468	  91728	 198508	  3076c	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:35:41 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1083:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103488	   3468	  91728	 198684	  3081c	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:35:45 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1083:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103512	   3468	  91728	 198708	  30834	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:36:41 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:276:5: error: 'xLidrScan' undeclared (first use in this function)
+    &xLidrScan );
+     ^~~~~~~~~
+../src/main.c:276:5: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1090:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+23:37:05 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1091:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103608	   3468	  91728	 198804	  30894	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:37:32 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:459:13: error: redefinition of 'baseControl'
+ static void baseControl( void *pvParameters ){
+             ^~~~~~~~~~~
+../src/main.c:426:13: note: previous definition of 'baseControl' was here
+ static void baseControl( void *pvParameters ){
+             ^~~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1124:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:459:13: warning: 'baseControl' defined but not used [-Wunused-function]
+ static void baseControl( void *pvParameters ){
+             ^~~~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+23:37:47 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1124:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:426:13: warning: 'lidarScanning' defined but not used [-Wunused-function]
+ static void lidarScanning( void *pvParameters ){
+             ^~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103736	   3468	  91728	 198932	  30914	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:37:58 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1125:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:427:13: warning: 'lidarScanning' defined but not used [-Wunused-function]
+ static void lidarScanning( void *pvParameters ){
+             ^~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103736	   3468	  91728	 198932	  30914	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:39:01 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'lidarScanning':
+../src/main.c:433:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1122:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103672	   3468	  91728	 198868	  308d4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:39:25 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:335:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1118:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103672	   3468	  91728	 198868	  308d4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:40:11 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:335:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1118:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:40:28 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:335:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1118:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:41:13 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:335:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1121:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:41:47 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:335:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1122:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:42:08 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:335:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1125:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:42:16 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:335:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1126:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:43:54 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:337:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1128:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:44:12 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'testProcedure':
+../src/main.c:337:6: warning: unused variable 'Status' [-Wunused-variable]
+  int Status;
+      ^~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1128:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:44:22 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1127:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:44:24 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:1126:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:44:57 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+23:46:12 **** Clean-only build of configuration Debug for project lidar_arm_control ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  lidar_arm_control.elf.size  lidar_arm_control.elf
+ 
+23:46:13 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/freertos_main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_main.d" -MT"src/freertos_main.o" -o "src/freertos_main.o" "../src/freertos_main.c"
+../src/freertos_main.c: In function 'TmrCtrPwmConfig':
+../src/freertos_main.c:1126:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/freertos_main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/freertos_main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
