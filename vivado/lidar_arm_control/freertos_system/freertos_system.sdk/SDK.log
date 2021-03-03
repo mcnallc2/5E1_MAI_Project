@@ -2815,3 +2815,4 @@ con
 ----------------End of Script----------------
 
 15:02:39 INFO  : Launch script is exported to file '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/.sdk/launch_scripts/xilinx_c-c++_application_(system_debugger)/system_debugger_using_debug_lidar_arm_control.elf_on_local.tcl'
+15:32:08 INFO  : Disconnected from the channel tcfchan#53.

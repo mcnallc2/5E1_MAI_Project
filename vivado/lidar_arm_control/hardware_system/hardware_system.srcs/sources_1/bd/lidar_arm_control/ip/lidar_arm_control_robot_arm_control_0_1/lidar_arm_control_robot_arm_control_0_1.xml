@@ -1,0 +1,1527 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <spirit:vendor>user.org</spirit:vendor>
+  <spirit:library>customized_ip</spirit:library>
+  <spirit:name>lidar_arm_control_robot_arm_control_0_1</spirit:name>
+  <spirit:version>1.0</spirit:version>
+  <spirit:busInterfaces>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="interface" spirit:name="aximm_rtl" spirit:version="1.0"/>
+      <spirit:slave>
+        <spirit:memoryMapRef spirit:memoryMapRef="S00_AXI"/>
+      </spirit:slave>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awaddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>AWREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_awready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WSTRB</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wstrb</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>WREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_wready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>BREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_bready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARADDR</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_araddr</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARPROT</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arprot</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>ARREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_arready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RDATA</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rdata</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RRESP</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rresp</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RVALID</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rvalid</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RREADY</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_rready</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>WIZ_DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197">32</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WIZ_NUM_REG</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WIZ_NUM_REG" spirit:minimum="4" spirit:maximum="512" spirit:rangeType="long">4</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>SUPPORTS_NARROW_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:id="BUSIFPARAM_VALUE.S00_AXI.SUPPORTS_NARROW_BURST" spirit:choiceRef="choice_pairs_ce1226b1">0</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>DATA_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.DATA_WIDTH">32</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PROTOCOL</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.PROTOCOL">AXI4LITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ID_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.ID_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ADDR_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH">4</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>AWUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.AWUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ARUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.RUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>BUSER_WIDTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.BUSER_WIDTH">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>READ_WRITE_MODE</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.READ_WRITE_MODE">READ_WRITE</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BURST</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_BURST">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_LOCK</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_LOCK">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_PROT</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_PROT">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_CACHE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_CACHE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_QOS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_QOS">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_REGION</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_REGION">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_WSTRB</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_WSTRB">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_BRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_BRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>HAS_RRESP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.HAS_RRESP">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING">2</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_OUTSTANDING</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING">2</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>MAX_BURST_LENGTH</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.MAX_BURST_LENGTH">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.CLK_DOMAIN">lidar_arm_control_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_READ_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>NUM_WRITE_THREADS</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_THREADS">1</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>RUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.RUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>WUSER_BITS_PER_BYTE</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI.WUSER_BITS_PER_BYTE">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_RST</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="reset_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>RST</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aresetn</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>POLARITY</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.POLARITY" spirit:choiceRef="choice_list_9d8b0d81">ACTIVE_LOW</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI_RST.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>S00_AXI_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>s00_axi_aclk</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_BUSIF">S00_AXI</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.ASSOCIATED_RESET">s00_axi_aresetn</spirit:value>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.CLK_DOMAIN">lidar_arm_control_processing_system7_0_0_FCLK_CLK0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.S00_AXI_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>PWM_CLK</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="clock_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+      <spirit:portMaps>
+        <spirit:portMap>
+          <spirit:logicalPort>
+            <spirit:name>CLK</spirit:name>
+          </spirit:logicalPort>
+          <spirit:physicalPort>
+            <spirit:name>PWM_CLK</spirit:name>
+          </spirit:physicalPort>
+        </spirit:portMap>
+      </spirit:portMaps>
+      <spirit:parameters>
+        <spirit:parameter>
+          <spirit:name>FREQ_HZ</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PWM_CLK.FREQ_HZ">100000000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>PHASE</spirit:name>
+          <spirit:value spirit:format="float" spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PWM_CLK.PHASE">0.000</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>CLK_DOMAIN</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PWM_CLK.CLK_DOMAIN">lidar_arm_control_PWM_CLK_0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_BUSIF</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PWM_CLK.ASSOCIATED_BUSIF"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>ASSOCIATED_RESET</spirit:name>
+          <spirit:value spirit:resolve="generated" spirit:id="BUSIFPARAM_VALUE.PWM_CLK.ASSOCIATED_RESET"/>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>none</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+        <spirit:parameter>
+          <spirit:name>INSERT_VIP</spirit:name>
+          <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="BUSIFPARAM_VALUE.PWM_CLK.INSERT_VIP">0</spirit:value>
+          <spirit:vendorExtensions>
+            <xilinx:parameterInfo>
+              <xilinx:parameterUsage>simulation.rtl</xilinx:parameterUsage>
+            </xilinx:parameterInfo>
+          </spirit:vendorExtensions>
+        </spirit:parameter>
+      </spirit:parameters>
+    </spirit:busInterface>
+  </spirit:busInterfaces>
+  <spirit:memoryMaps>
+    <spirit:memoryMap>
+      <spirit:name>S00_AXI</spirit:name>
+      <spirit:addressBlock>
+        <spirit:name>S00_AXI_reg</spirit:name>
+        <spirit:baseAddress spirit:format="long" spirit:resolve="user">0</spirit:baseAddress>
+        <spirit:range spirit:format="long">4096</spirit:range>
+        <spirit:width spirit:format="long">32</spirit:width>
+        <spirit:usage>register</spirit:usage>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>OFFSET_BASE_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_BASE_PARAM">C_S00_AXI_BASEADDR</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>OFFSET_HIGH_PARAM</spirit:name>
+            <spirit:value spirit:id="ADDRBLOCKPARAM_VALUE.S00_AXI.S00_AXI_REG.OFFSET_HIGH_PARAM">C_S00_AXI_HIGHADDR</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:addressBlock>
+    </spirit:memoryMap>
+  </spirit:memoryMaps>
+  <spirit:model>
+    <spirit:views>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesis</spirit:name>
+        <spirit:displayName>Verilog Synthesis</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>robot_arm_control_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Mar 03 18:01:48 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:75a90cf8</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsynthesiswrapper</spirit:name>
+        <spirit:displayName>Verilog Synthesis Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>lidar_arm_control_robot_arm_control_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsynthesiswrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Mar 03 18:01:48 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:75a90cf8</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogbehavioralsimulation</spirit:name>
+        <spirit:displayName>Verilog Simulation</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>robot_arm_control_v1_0</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogbehavioralsimulation_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Mar 03 18:01:48 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:3386e263</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_verilogsimulationwrapper</spirit:name>
+        <spirit:displayName>Verilog Simulation Wrapper</spirit:displayName>
+        <spirit:envIdentifier>verilogSource:vivado.xilinx.com:simulation.wrapper</spirit:envIdentifier>
+        <spirit:language>verilog</spirit:language>
+        <spirit:modelName>lidar_arm_control_robot_arm_control_0_1</spirit:modelName>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_verilogsimulationwrapper_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Mar 03 18:01:48 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:3386e263</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+      <spirit:view>
+        <spirit:name>xilinx_externalfiles</spirit:name>
+        <spirit:displayName>External Files</spirit:displayName>
+        <spirit:envIdentifier>:vivado.xilinx.com:external.files</spirit:envIdentifier>
+        <spirit:fileSetRef>
+          <spirit:localName>xilinx_externalfiles_view_fileset</spirit:localName>
+        </spirit:fileSetRef>
+        <spirit:parameters>
+          <spirit:parameter>
+            <spirit:name>GENtimestamp</spirit:name>
+            <spirit:value>Wed Mar 03 18:02:54 UTC 2021</spirit:value>
+          </spirit:parameter>
+          <spirit:parameter>
+            <spirit:name>outputProductCRC</spirit:name>
+            <spirit:value>9:75a90cf8</spirit:value>
+          </spirit:parameter>
+        </spirit:parameters>
+      </spirit:view>
+    </spirit:views>
+    <spirit:ports>
+      <spirit:port>
+        <spirit:name>PWM_CLK</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>PWM0</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>PWM1</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>PWM2</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>PWM3</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awaddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_awready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wstrb</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="((spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) / 8) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_wready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_bready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_araddr</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH&apos;)) - 1)">3</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arprot</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">2</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_arready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rdata</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long" spirit:resolve="dependent" spirit:dependency="(spirit:decode(id(&apos;MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH&apos;)) - 1)">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rresp</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">1</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rvalid</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_rready</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aclk</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>s00_axi_aresetn</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>wire</spirit:typeName>
+              <spirit:viewNameRef>xilinx_verilogsynthesis</spirit:viewNameRef>
+              <spirit:viewNameRef>xilinx_verilogbehavioralsimulation</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+    </spirit:ports>
+    <spirit:modelParameters>
+      <spirit:modelParameter xsi:type="spirit:nameValueTypeType" spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI data bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:order="3" spirit:rangeType="long">32</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+        <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+        <spirit:description>Width of S_AXI address bus</spirit:description>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">4</spirit:value>
+      </spirit:modelParameter>
+      <spirit:modelParameter spirit:dataType="integer">
+        <spirit:name>PWM_COUNTER_MAX</spirit:name>
+        <spirit:displayName>Pwm Counter Max</spirit:displayName>
+        <spirit:value spirit:format="long" spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.PWM_COUNTER_MAX">2000000</spirit:value>
+      </spirit:modelParameter>
+    </spirit:modelParameters>
+  </spirit:model>
+  <spirit:choices>
+    <spirit:choice>
+      <spirit:name>choice_list_6fc15197</spirit:name>
+      <spirit:enumeration>32</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_list_9d8b0d81</spirit:name>
+      <spirit:enumeration>ACTIVE_HIGH</spirit:enumeration>
+      <spirit:enumeration>ACTIVE_LOW</spirit:enumeration>
+    </spirit:choice>
+    <spirit:choice>
+      <spirit:name>choice_pairs_ce1226b1</spirit:name>
+      <spirit:enumeration spirit:text="true">1</spirit:enumeration>
+      <spirit:enumeration spirit:text="false">0</spirit:enumeration>
+    </spirit:choice>
+  </spirit:choices>
+  <spirit:fileSets>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesis_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/f632/hdl/robot_arm_control_v1_0_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/f632/hdl/robot_arm_control_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsynthesiswrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>synth/lidar_arm_control_robot_arm_control_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogbehavioralsimulation_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>../../ipshared/f632/hdl/robot_arm_control_v1_0_S00_AXI.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>../../ipshared/f632/hdl/robot_arm_control_v1_0.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_verilogsimulationwrapper_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>sim/lidar_arm_control_robot_arm_control_0_1.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+    <spirit:fileSet>
+      <spirit:name>xilinx_externalfiles_view_fileset</spirit:name>
+      <spirit:file>
+        <spirit:name>lidar_arm_control_robot_arm_control_0_1.dcp</spirit:name>
+        <spirit:userFileType>dcp</spirit:userFileType>
+        <spirit:userFileType>USED_IN_implementation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_synthesis</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>lidar_arm_control_robot_arm_control_0_1_stub.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>lidar_arm_control_robot_arm_control_0_1_stub.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_synth_blackbox_stub</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>lidar_arm_control_robot_arm_control_0_1_sim_netlist.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>lidar_arm_control_robot_arm_control_0_1_sim_netlist.vhdl</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:userFileType>USED_IN_simulation</spirit:userFileType>
+        <spirit:userFileType>USED_IN_single_language</spirit:userFileType>
+        <spirit:logicalName>xil_defaultlib</spirit:logicalName>
+      </spirit:file>
+    </spirit:fileSet>
+  </spirit:fileSets>
+  <spirit:description>My AXI IP robotic arm servo control using PWM signals</spirit:description>
+  <spirit:parameters>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_DATA_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI DATA WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI data bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_DATA_WIDTH" spirit:choiceRef="choice_list_6fc15197" spirit:order="3">32</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_DATA_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_ADDR_WIDTH</spirit:name>
+      <spirit:displayName>C S00 AXI ADDR WIDTH</spirit:displayName>
+      <spirit:description>Width of S_AXI address bus</spirit:description>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_ADDR_WIDTH" spirit:order="4" spirit:rangeType="long">4</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_ADDR_WIDTH">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_BASEADDR</spirit:name>
+      <spirit:displayName>C S00 AXI BASEADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_BASEADDR" spirit:order="5" spirit:bitStringLength="32">0xFFFFFFFF</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_BASEADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>C_S00_AXI_HIGHADDR</spirit:name>
+      <spirit:displayName>C S00 AXI HIGHADDR</spirit:displayName>
+      <spirit:value spirit:format="bitString" spirit:resolve="user" spirit:id="PARAM_VALUE.C_S00_AXI_HIGHADDR" spirit:order="6" spirit:bitStringLength="32">0x00000000</spirit:value>
+      <spirit:vendorExtensions>
+        <xilinx:parameterInfo>
+          <xilinx:enablement>
+            <xilinx:isEnabled xilinx:id="PARAM_ENABLEMENT.C_S00_AXI_HIGHADDR">false</xilinx:isEnabled>
+          </xilinx:enablement>
+        </xilinx:parameterInfo>
+      </spirit:vendorExtensions>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>Component_Name</spirit:name>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">lidar_arm_control_robot_arm_control_0_1</spirit:value>
+    </spirit:parameter>
+    <spirit:parameter>
+      <spirit:name>PWM_COUNTER_MAX</spirit:name>
+      <spirit:displayName>Pwm Counter Max</spirit:displayName>
+      <spirit:value spirit:format="long" spirit:resolve="user" spirit:id="PARAM_VALUE.PWM_COUNTER_MAX" spirit:minimum="0" spirit:maximum="2000000" spirit:rangeType="long">2000000</spirit:value>
+    </spirit:parameter>
+  </spirit:parameters>
+  <spirit:vendorExtensions>
+    <xilinx:coreExtensions>
+      <xilinx:displayName>robot_arm_control_v1.0</xilinx:displayName>
+      <xilinx:coreRevision>10</xilinx:coreRevision>
+      <xilinx:tags>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f1684de_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@276c8d52_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4495b804_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51ad584e_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@29982faf_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b303499_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@37a4cf7a_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1035d88b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cd9dc7a_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@ef099f3_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@526429a3_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5f8189fb_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6ab4c808_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@67cb4abd_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@61a56e7e_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@236ec04b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c30288c_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@34213617_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bf698c9_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ed8fd99_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e336085_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@709913e1_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3264a487_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f600da2_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@70932107_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15413f7b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7f5e3941_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@56ed8bfb_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@d32d9ad_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@44078fa_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7699429f_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74b61fc5_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@46b26e66_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2ba797f3_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3046fe2a_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ab2541e_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b1bf173_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3eaa6e66_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55dc175c_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4e8e6ad2_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@437815e3_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@42d03e8b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c83291f_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a53693b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5199c099_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9071744_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55809cc2_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@47d6f4ec_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@35cd3eb3_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf011d4_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@179403ee_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24ce2f5_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1920b4d6_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2bd10c65_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@604ec80b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6da5a014_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@774b13dd_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73038301_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43ea67a2_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6026b757_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e556edc_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2816efdf_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@23ddbefe_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5e6a1e33_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41a8e613_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@209ec62f_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@41a7ebff_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1c3e59d5_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5552c581_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15668a1d_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@760a4f14_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@54a92523_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f71aeab_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3169bab1_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5702ef32_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@602511d_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c43a124_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7fec1ac7_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3f6e6d5c_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@76249a9a_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f0f4a35_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7de4f9a6_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@f022ef5_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6b61dc82_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aa6e0dc_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@74a26812_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@116b6597_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@140f1159_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@66fcc303_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@758c4deb_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6f20221a_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2c48ef44_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@461d134_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b84f857_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3b65d232_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@529f1c69_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2eaf6b6_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@415fc200_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3cf669a4_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6cb04f53_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79820875_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@601d978d_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@57a3f9e3_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@51063513_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@577a0e4c_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e16273_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@e036bcf_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e829c29_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3843930c_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5990e88d_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@626a4f27_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fe940a1_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4fa161fc_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@789e37b9_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@73e2e95a_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@101caeaf_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2611ac04_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36356048_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4b49f909_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@182b2143_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ce7bf6b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@9bc17ac_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff2616f_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@551c7a85_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7084e682_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7ff7d387_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@233df33d_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4ed5fade_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5bad21cf_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@201e5a17_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@48333fe5_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1a3a511e_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@19f45a5b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71aa5fcb_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@dbce4cd_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@36eb753_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7058abab_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@bbdd878_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@55b045e8_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@578b0101_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2652f9bf_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@454f2e1d_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6c18bdfe_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1bff3d3b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2b1230c1_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3595ac5b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@79cf4ba6_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@3ff1f5bf_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1cf77124_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@4c1734ec_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@526c0e92_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2e7dcd36_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8bf9685_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62d34b4e_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@53c7a213_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@613e4a88_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@24c67283_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5ddc2a3e_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@15891330_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7c4c8718_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1ded043_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7b5ec2d1_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@397b9320_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@62f9279e_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1adda91d_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b638a43_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@436d4713_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7313a08a_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@78b71489_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@b4bc9dc_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@40403f0d_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7aedf161_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@8ad4e45_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1b723f9a_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@250f2451_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@6d2d2c4b_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5c0dad04_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@69d580fc_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@7a8df9c0_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@43fabc85_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@5fa3b98_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@1e2862bc_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@26ef18c2_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@71257ca8_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+        <xilinx:tag xilinx:name="ui.data.coregen.dd@2d8564f6_ARCHIVE_LOCATION">/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0</xilinx:tag>
+      </xilinx:tags>
+      <xilinx:configElementInfos>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.PWM_CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ADDR_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ARUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.AWUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.BUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.DATA_WIDTH" xilinx:valueSource="auto" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_BRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_BURST" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_CACHE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_LOCK" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_PROT" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_QOS" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_REGION" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_RRESP" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.HAS_WSTRB" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.ID_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.MAX_BURST_LENGTH" xilinx:valueSource="ip_propagated" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_READ_THREADS" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_OUTSTANDING" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.NUM_WRITE_THREADS" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.PROTOCOL" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.READ_WRITE_MODE" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.RUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI.WUSER_WIDTH" xilinx:valueSource="constant" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_CLK.CLK_DOMAIN" xilinx:valueSource="default_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="BUSIFPARAM_VALUE.S00_AXI_CLK.FREQ_HZ" xilinx:valueSource="user_prop" xilinx:valuePermission="bd"/>
+        <xilinx:configElementInfo xilinx:referenceId="PARAM_VALUE.PWM_COUNTER_MAX" xilinx:valueSource="user"/>
+      </xilinx:configElementInfos>
+    </xilinx:coreExtensions>
+    <xilinx:packagingInfo>
+      <xilinx:xilinxVersion>2018.3</xilinx:xilinxVersion>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="bb428303"/>
+      <xilinx:checksum xilinx:scope="memoryMaps" xilinx:value="ed1368d5"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="f1f3f4a1"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="782a6d6d"/>
+      <xilinx:checksum xilinx:scope="hdlParameters" xilinx:value="4e07cddb"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="f933aa49"/>
+    </xilinx:packagingInfo>
+  </spirit:vendorExtensions>
+</spirit:component>

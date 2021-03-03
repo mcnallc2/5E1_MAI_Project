@@ -1,0 +1,23 @@
+#include "xparameters.h"
+#include "xil_io.h"
+
+#define PWM_BASEADDR XPAR_ROBOT_ARM_CONTROL_0_S00_AXI_BASEADDR
+
+int main(){
+    int num=0;
+    int i;
+
+    while(1){
+        if(num == 1024)
+             num = 0;
+        else
+             num++;
+
+        Xil_Out32((PWM_BASEADDR     ), num);
+        Xil_Out32((PWM_BASEADDR + 4 ), num);
+        Xil_Out32((PWM_BASEADDR + 8 ), num);
+        Xil_Out32((PWM_BASEADDR + 12), num);
+
+        for(i=0;i<300000; i++);
+    }
+}

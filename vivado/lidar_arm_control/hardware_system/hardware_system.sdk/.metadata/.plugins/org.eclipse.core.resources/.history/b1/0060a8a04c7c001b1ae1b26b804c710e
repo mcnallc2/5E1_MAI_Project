@@ -1,0 +1,32 @@
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+
+#define PWM_BASEADDR XPAR_ROBOT_ARM_CONTROL_0_S00_AXI_BASEADDR
+#define CLK_FREQ XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ
+
+int main(){
+    int num=35000;
+    int i;
+
+    xil_printf("PWM LEDS\n");
+
+    while(1){
+//    	if (num == 310000){
+//            num = 30000;
+//    	}
+//    	else{
+//    		num = num + 10000;
+//    	}
+
+        Xil_Out32((PWM_BASEADDR     ), num);
+//        Xil_Out32((PWM_BASEADDR + 4 ), num);
+//        Xil_Out32((PWM_BASEADDR + 8 ), num);
+        Xil_Out32((PWM_BASEADDR + 12), num);
+
+        for(i=0;i<10000000; i++);
+
+        xil_printf("duty_cycle - %d\n", num);
+
+    }
+}
