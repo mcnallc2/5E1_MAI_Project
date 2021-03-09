@@ -1,0 +1,321 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Mar  8 19:20:21 2021
+# Process ID: 21529
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.xpr
+INFO: [Project 1-313] Project file moved from '/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/SW_based_control/us_arm_control_system' since last save.
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-2] IPUserFilesDir: Could not find the directory '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.ip_user_files', nor could it be found using path '/home/cmcnally/Repos/robotic_arm_control_system_analysis/vivado/SW_based_control/us_arm_control_system/us_arm_control_system.ip_user_files'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:07 . Memory (MB): peak = 6486.805 ; gain = 83.629 ; free physical = 797 ; free virtual = 4899
+update_compile_order -fileset sources_1
+open_bd_design {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/us_arm_module.bd}
+Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_0
+Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding cell -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding cell -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding cell -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_100M
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_1
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_2
+Adding cell -- xilinx.com:ip:axi_timer:2.0 - axi_timer_3
+Adding cell -- xilinx.com:ip:xlconcat:2.1 - xlconcat_0
+Adding cell -- xilinx.com:ip:axi_gpio:2.0 - axi_gpio_0
+Successfully read diagram <us_arm_module> from BD file </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/us_arm_module.bd>
+set_property name us_pins0 [get_bd_intf_ports us_pins]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_uartlite_0/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]
+</axi_uartlite_0/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x42C00000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_uartlite_0/UART]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:uart_rtl:1.0 uart_rtl
+INFO: [board_rule 100-100] connect_bd_intf_net /uart_rtl /axi_uartlite_0/UART
+WARNING: [board_rule 100-100] Board automation did not generate location constraint for /axi_uartlite_0/UART. Users may need to specify the location constraint manually.
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+undo
+INFO: [Common 17-17] undo 'regenerate_bd_layout -routing'
+undo
+INFO: [Common 17-17] undo 'regenerate_bd_layout'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:board -config { Manual_Source {Auto}}  [get_bd_intf_pins axi_uartlite_0/UART]'
+INFO: [Common 17-17] undo 'apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_uartlite_0/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_uartlite_0/S_AXI]'
+INFO: [Common 17-17] undo 'startgroup'
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0'
+INFO: [Common 17-17] undo 'startgroup'
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_1
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_2
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_3
+endgroup
+startgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_1/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_1/S_AXI]
+</axi_gpio_1/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41210000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {arduino_a0_a5 ( Arduino Pins A0 through A5 J1 ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_1/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_1]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE arduino_a0_a5 [get_bd_cells /axi_gpio_1]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 arduino_a0_a5
+INFO: [board_rule 100-100] connect_bd_intf_net /arduino_a0_a5 /axi_gpio_1/GPIO
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_2/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_2/S_AXI]
+</axi_gpio_2/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41220000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {arduino_a0_a5 ( Arduino Pins A0 through A5 J1 ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_2/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_2]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE arduino_a0_a5 [get_bd_cells /axi_gpio_2]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 arduino_a0_a5_0
+INFO: [board_rule 100-100] connect_bd_intf_net /arduino_a0_a5_0 /axi_gpio_2/GPIO
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (100 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (100 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/axi_gpio_3/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_3/S_AXI]
+</axi_gpio_3/S_AXI/Reg> is being mapped into </processing_system7_0/Data> at <0x41230000 [ 64K ]>
+apply_bd_automation -rule xilinx.com:bd_rule:board -config { Board_Interface {arduino_a0_a5 ( Arduino Pins A0 through A5 J1 ) } Manual_Source {Auto}}  [get_bd_intf_pins axi_gpio_3/GPIO]
+INFO: [board_rule 100-100] set_property CONFIG.USE_BOARD_FLOW true [get_bd_cells /axi_gpio_3]
+INFO: [board_rule 100-100] set_property CONFIG.GPIO_BOARD_INTERFACE arduino_a0_a5 [get_bd_cells /axi_gpio_3]
+INFO: [board_rule 100-100] create_bd_intf_port -mode Master -vlnv xilinx.com:interface:gpio_rtl:1.0 arduino_a0_a5_1
+INFO: [board_rule 100-100] connect_bd_intf_net /arduino_a0_a5_1 /axi_gpio_3/GPIO
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+startgroup
+set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE {Custom}] [get_bd_cells axi_gpio_2]
+endgroup
+set_property name us_pins2 [get_bd_intf_ports arduino_a0_a5_0]
+set_property name us_pins1 [get_bd_intf_ports arduino_a0_a5]
+set_property name us_pins3 [get_bd_intf_ports arduino_a0_a5_1]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+set_property location {4 1180 926} [get_bd_cells axi_gpio_0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+startgroup
+set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE {Custom}] [get_bd_cells axi_gpio_1]
+endgroup
+startgroup
+set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE {Custom}] [get_bd_cells axi_gpio_0]
+endgroup
+startgroup
+set_property -dict [list CONFIG.GPIO_BOARD_INTERFACE {Custom}] [get_bd_cells axi_gpio_3]
+endgroup
+regenerate_bd_layout
+regenerate_bd_layout -routing
+reset_run us_arm_module_xbar_0_synth_1
+reset_run us_arm_module_axi_gpio_0_1_synth_1
+save_bd_design
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/us_arm_module.bd> 
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/ui/bd_939f7f30.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/us_arm_module.bd> 
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/synth/us_arm_module.v
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/sim/us_arm_module.v
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_3 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/ip/us_arm_module_auto_pc_0/us_arm_module_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hw_handoff/us_arm_module.hwh
+Generated Block Design Tcl file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hw_handoff/us_arm_module_bd.tcl
+Generated Hardware Definition File /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/synth/us_arm_module.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP us_arm_module_auto_pc_0, cache-ID = 68168676865e6a57; cache size = 3.759 MB.
+[Mon Mar  8 19:43:27 2021] Launched us_arm_module_xbar_0_synth_1, us_arm_module_axi_gpio_0_1_synth_1, us_arm_module_axi_gpio_3_0_synth_1, us_arm_module_axi_gpio_2_0_synth_1, us_arm_module_axi_gpio_1_0_synth_1...
+Run output will be captured here:
+us_arm_module_xbar_0_synth_1: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/us_arm_module_xbar_0_synth_1/runme.log
+us_arm_module_axi_gpio_0_1_synth_1: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/us_arm_module_axi_gpio_0_1_synth_1/runme.log
+us_arm_module_axi_gpio_3_0_synth_1: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/us_arm_module_axi_gpio_3_0_synth_1/runme.log
+us_arm_module_axi_gpio_2_0_synth_1: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/us_arm_module_axi_gpio_2_0_synth_1/runme.log
+us_arm_module_axi_gpio_1_0_synth_1: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/us_arm_module_axi_gpio_1_0_synth_1/runme.log
+[Mon Mar  8 19:43:27 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:14 ; elapsed = 00:00:08 . Memory (MB): peak = 7147.820 ; gain = 233.742 ; free physical = 170 ; free virtual = 4386
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/ui/bd_939f7f30.ui> 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Mar  8 19:59:49 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/synth_1/runme.log
+[Mon Mar  8 19:59:49 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/impl_1/runme.log
+delete_bd_objs [get_bd_intf_nets axi_gpio_2_GPIO] [get_bd_intf_nets ps7_0_axi_periph_M06_AXI] [get_bd_cells axi_gpio_2]
+delete_bd_objs [get_bd_intf_ports us_pins2]
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M07_AXI] [get_bd_intf_nets axi_gpio_3_GPIO] [get_bd_cells axi_gpio_3]
+delete_bd_objs [get_bd_intf_ports us_pins3]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/us_arm_module.bd> 
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/ui/bd_939f7f30.ui> 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-1284] Cannot set parameter SUGGESTED_PRIORITY on port /processing_system7_0/IRQ_F2P
+WARNING: [BD 41-702] Propagation TCL tries to overwrite USER strength parameter PCW_M_AXI_GP0_FREQMHZ(10) on '/processing_system7_0' with propagated value(100). Command ignored
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/us_arm_module.bd> 
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/synth/us_arm_module.v
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/sim/us_arm_module.v
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/ip/us_arm_module_auto_pc_0/us_arm_module_auto_pc_0_ooc.xdc'
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hw_handoff/us_arm_module.hwh
+Generated Block Design Tcl file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hw_handoff/us_arm_module_bd.tcl
+Generated Hardware Definition File /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/synth/us_arm_module.hwdef
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP us_arm_module_auto_pc_0, cache-ID = 68168676865e6a57; cache size = 4.776 MB.
+[Mon Mar  8 20:12:20 2021] Launched us_arm_module_xbar_0_synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/us_arm_module_xbar_0_synth_1/runme.log
+[Mon Mar  8 20:12:20 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 7231.305 ; gain = 0.000 ; free physical = 1153 ; free virtual = 4493
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Mon Mar  8 20:18:22 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/synth_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Mar  8 20:37:59 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Mon Mar  8 20:57:11 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/synth_1/runme.log
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v] -no_script -reset -force -quiet
+remove_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v
+make_wrapper -files [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/us_arm_module.bd] -top
+INFO: [BD 41-1662] The design 'us_arm_module.bd' is already validated. Therefore parameter propagation will not be re-run.
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/synth/us_arm_module.v
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/sim/us_arm_module.v
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v
+add_files -norecurse /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+INFO: [BD 41-1662] The design 'us_arm_module.bd' is already validated. Therefore parameter propagation will not be re-run.
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/ui/bd_939f7f30.ui> 
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/synth/us_arm_module.v
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/sim/us_arm_module.v
+VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_2 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_timer_3 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconcat_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_1 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hw_handoff/us_arm_module.hwh
+Generated Block Design Tcl file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/hw_handoff/us_arm_module_bd.tcl
+Generated Hardware Definition File /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/synth/us_arm_module.hwdef
+[Mon Mar  8 20:59:12 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/synth_1/runme.log
+[Mon Mar  8 20:59:12 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Mar  8 21:03:43 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/synth_1/runme.log
+[Mon Mar  8 21:03:43 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/impl_1/runme.log
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/impl_1/us_arm_module_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/impl_1/us_arm_module_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/impl_1/us_arm_module_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.runs/impl_1/us_arm_module_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_module_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
