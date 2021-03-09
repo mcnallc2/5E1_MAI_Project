@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Fri Jan 29 10:46:09 2021
+| Date             : Tue Mar  9 11:32:45 2021
 | Host             : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file us_arm_control_system_wrapper_power_routed.rpt -pb us_arm_control_system_wrapper_power_summary_routed.pb -rpx us_arm_control_system_wrapper_power_routed.rpx
 | Design           : us_arm_control_system_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 1.416        |
+| Total On-Chip Power (W)  | 1.417        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 1.278        |
+| Dynamic (W)              | 1.279        |
 | Device Static (W)        | 0.138        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 68.7         |
@@ -53,17 +53,17 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.007 |        3 |       --- |             --- |
-| Slice Logic             |     0.007 |     4615 |       --- |             --- |
-|   LUT as Logic          |     0.006 |     1784 |     53200 |            3.35 |
+| Slice Logic             |     0.007 |     4645 |       --- |             --- |
+|   LUT as Logic          |     0.006 |     1790 |     53200 |            3.36 |
 |   CARRY4                |    <0.001 |      210 |     13300 |            1.58 |
-|   Register              |    <0.001 |     1762 |    106400 |            1.66 |
+|   Register              |    <0.001 |     1784 |    106400 |            1.68 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
 |   Others                |     0.000 |      403 |       --- |             --- |
-| Signals                 |     0.007 |     2951 |       --- |             --- |
-| I/O                     |     0.002 |       10 |       125 |            8.00 |
+| Signals                 |     0.006 |     2988 |       --- |             --- |
+| I/O                     |     0.003 |       12 |       125 |            9.60 |
 | PS7                     |     1.256 |        1 |       --- |             --- |
 | Static Power            |     0.138 |          |           |                 |
-| Total                   |     1.416 |          |           |                 |
+| Total                   |     1.417 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -149,12 +149,12 @@ Table of Contents
 +-------------------------------+-----------+
 | Name                          | Power (W) |
 +-------------------------------+-----------+
-| us_arm_control_system_wrapper |     1.278 |
+| us_arm_control_system_wrapper |     1.279 |
 |   us_arm_control_system_i     |     1.276 |
-|     axi_timer_0               |     0.003 |
-|       U0                      |     0.003 |
-|     axi_timer_1               |     0.004 |
+|     axi_timer_0               |     0.004 |
 |       U0                      |     0.004 |
+|     axi_timer_1               |     0.003 |
+|       U0                      |     0.003 |
 |     axi_timer_2               |     0.003 |
 |       U0                      |     0.003 |
 |     axi_timer_3               |     0.003 |

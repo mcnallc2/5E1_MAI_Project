@@ -18,28 +18,28 @@ preplace inst axi_timer_3 -pg 1 -lvl 4 -y 940 -defaultsOSRD
 preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y 580 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -y 1070 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -y 860 -defaultsOSRD
-preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 1030
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 1040
 preplace netloc processing_system7_0_DDR 1 2 3 NJ 810 NJ 810 NJ
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 650
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 680
 preplace netloc axi_timer_3_pwm0 1 4 1 NJ
 preplace netloc axi_timer_2_pwm0 1 4 1 NJ
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 690 840 1020
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 690 380 1030
 preplace netloc axi_timer_0_pwm0 1 4 1 NJ
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 250 970 660
-preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1000
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1010
 preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 990
-preplace netloc axi_timer_3_interrupt 1 0 5 30 740 NJ 740 660J 800 NJ 800 1300
+preplace netloc axi_timer_3_interrupt 1 0 5 30 740 NJ 740 660J 780 990J 800 1310
 preplace netloc xlconcat_0_dout 1 1 1 230
 preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 830 NJ 830 NJ
 preplace netloc axi_gpio_0_GPIO 1 4 1 NJ
-preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 990
+preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 1000
 preplace netloc axi_timer_1_pwm0 1 4 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 240 750 670 780 1010
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 240 750 650 370 1020
 preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1000
-preplace netloc axi_timer_1_interrupt 1 0 5 30 380 NJ 380 NJ 380 1000J 430 1300
-preplace netloc axi_timer_2_interrupt 1 0 5 20 730 NJ 730 680J 790 NJ 790 1300
-preplace netloc axi_timer_0_interrupt 1 0 5 20 370 NJ 370 NJ 370 1040J 420 1310
-levelinfo -pg 1 0 130 450 840 1170 1330 -top 0 -bot 1170
+preplace netloc axi_timer_1_interrupt 1 0 5 30 360 NJ 360 NJ 360 1000J 430 1310
+preplace netloc axi_timer_2_interrupt 1 0 5 20 730 NJ 730 670J 790 NJ 790 1310
+preplace netloc axi_timer_0_interrupt 1 0 5 20 350 NJ 350 NJ 350 1050J 420 1320
+levelinfo -pg 1 0 130 450 840 1180 1340 -top 0 -bot 1170
 "
 }
 {

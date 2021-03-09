@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Fri Jan 29 10:35:27 2021
+//Date        : Tue Mar  9 11:30:07 2021
 //Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target us_arm_control_system.bd
 //Design      : us_arm_control_system
@@ -1029,13 +1029,13 @@ module us_arm_control_system
   output pwm0_1;
   output pwm0_2;
   output pwm0_3;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 us_pins " *) input [5:0]us_pins_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 us_pins " *) output [5:0]us_pins_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 us_pins " *) output [5:0]us_pins_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 us_pins TRI_I" *) input [7:0]us_pins_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 us_pins TRI_O" *) output [7:0]us_pins_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 us_pins TRI_T" *) output [7:0]us_pins_tri_t;
 
-  wire [5:0]axi_gpio_0_GPIO_TRI_I;
-  wire [5:0]axi_gpio_0_GPIO_TRI_O;
-  wire [5:0]axi_gpio_0_GPIO_TRI_T;
+  wire [7:0]axi_gpio_0_GPIO_TRI_I;
+  wire [7:0]axi_gpio_0_GPIO_TRI_O;
+  wire [7:0]axi_gpio_0_GPIO_TRI_T;
   wire axi_timer_0_interrupt;
   wire axi_timer_0_pwm0;
   wire axi_timer_1_interrupt;
@@ -1193,13 +1193,13 @@ module us_arm_control_system
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
   wire [3:0]xlconcat_0_dout;
 
-  assign axi_gpio_0_GPIO_TRI_I = us_pins_tri_i[5:0];
+  assign axi_gpio_0_GPIO_TRI_I = us_pins_tri_i[7:0];
   assign pwm0_0 = axi_timer_0_pwm0;
   assign pwm0_1 = axi_timer_1_pwm0;
   assign pwm0_2 = axi_timer_2_pwm0;
   assign pwm0_3 = axi_timer_3_pwm0;
-  assign us_pins_tri_o[5:0] = axi_gpio_0_GPIO_TRI_O;
-  assign us_pins_tri_t[5:0] = axi_gpio_0_GPIO_TRI_T;
+  assign us_pins_tri_o[7:0] = axi_gpio_0_GPIO_TRI_O;
+  assign us_pins_tri_t[7:0] = axi_gpio_0_GPIO_TRI_T;
   us_arm_control_system_axi_gpio_0_0 axi_gpio_0
        (.gpio_io_i(axi_gpio_0_GPIO_TRI_I),
         .gpio_io_o(axi_gpio_0_GPIO_TRI_O),

@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Fri Jan 29 10:35:27 2021
+//Date        : Tue Mar  9 11:30:07 2021
 //Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target us_arm_control_system_wrapper.bd
 //Design      : us_arm_control_system_wrapper
@@ -61,7 +61,7 @@ module us_arm_control_system_wrapper
   output pwm0_1;
   output pwm0_2;
   output pwm0_3;
-  inout [5:0]us_pins_tri_io;
+  inout [7:0]us_pins_tri_io;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -94,24 +94,32 @@ module us_arm_control_system_wrapper
   wire [3:3]us_pins_tri_i_3;
   wire [4:4]us_pins_tri_i_4;
   wire [5:5]us_pins_tri_i_5;
+  wire [6:6]us_pins_tri_i_6;
+  wire [7:7]us_pins_tri_i_7;
   wire [0:0]us_pins_tri_io_0;
   wire [1:1]us_pins_tri_io_1;
   wire [2:2]us_pins_tri_io_2;
   wire [3:3]us_pins_tri_io_3;
   wire [4:4]us_pins_tri_io_4;
   wire [5:5]us_pins_tri_io_5;
+  wire [6:6]us_pins_tri_io_6;
+  wire [7:7]us_pins_tri_io_7;
   wire [0:0]us_pins_tri_o_0;
   wire [1:1]us_pins_tri_o_1;
   wire [2:2]us_pins_tri_o_2;
   wire [3:3]us_pins_tri_o_3;
   wire [4:4]us_pins_tri_o_4;
   wire [5:5]us_pins_tri_o_5;
+  wire [6:6]us_pins_tri_o_6;
+  wire [7:7]us_pins_tri_o_7;
   wire [0:0]us_pins_tri_t_0;
   wire [1:1]us_pins_tri_t_1;
   wire [2:2]us_pins_tri_t_2;
   wire [3:3]us_pins_tri_t_3;
   wire [4:4]us_pins_tri_t_4;
   wire [5:5]us_pins_tri_t_5;
+  wire [6:6]us_pins_tri_t_6;
+  wire [7:7]us_pins_tri_t_7;
 
   us_arm_control_system us_arm_control_system_i
        (.DDR_addr(DDR_addr),
@@ -139,9 +147,9 @@ module us_arm_control_system_wrapper
         .pwm0_1(pwm0_1),
         .pwm0_2(pwm0_2),
         .pwm0_3(pwm0_3),
-        .us_pins_tri_i({us_pins_tri_i_5,us_pins_tri_i_4,us_pins_tri_i_3,us_pins_tri_i_2,us_pins_tri_i_1,us_pins_tri_i_0}),
-        .us_pins_tri_o({us_pins_tri_o_5,us_pins_tri_o_4,us_pins_tri_o_3,us_pins_tri_o_2,us_pins_tri_o_1,us_pins_tri_o_0}),
-        .us_pins_tri_t({us_pins_tri_t_5,us_pins_tri_t_4,us_pins_tri_t_3,us_pins_tri_t_2,us_pins_tri_t_1,us_pins_tri_t_0}));
+        .us_pins_tri_i({us_pins_tri_i_7,us_pins_tri_i_6,us_pins_tri_i_5,us_pins_tri_i_4,us_pins_tri_i_3,us_pins_tri_i_2,us_pins_tri_i_1,us_pins_tri_i_0}),
+        .us_pins_tri_o({us_pins_tri_o_7,us_pins_tri_o_6,us_pins_tri_o_5,us_pins_tri_o_4,us_pins_tri_o_3,us_pins_tri_o_2,us_pins_tri_o_1,us_pins_tri_o_0}),
+        .us_pins_tri_t({us_pins_tri_t_7,us_pins_tri_t_6,us_pins_tri_t_5,us_pins_tri_t_4,us_pins_tri_t_3,us_pins_tri_t_2,us_pins_tri_t_1,us_pins_tri_t_0}));
   IOBUF us_pins_tri_iobuf_0
        (.I(us_pins_tri_o_0),
         .IO(us_pins_tri_io[0]),
@@ -172,4 +180,14 @@ module us_arm_control_system_wrapper
         .IO(us_pins_tri_io[5]),
         .O(us_pins_tri_i_5),
         .T(us_pins_tri_t_5));
+  IOBUF us_pins_tri_iobuf_6
+       (.I(us_pins_tri_o_6),
+        .IO(us_pins_tri_io[6]),
+        .O(us_pins_tri_i_6),
+        .T(us_pins_tri_t_6));
+  IOBUF us_pins_tri_iobuf_7
+       (.I(us_pins_tri_o_7),
+        .IO(us_pins_tri_io[7]),
+        .O(us_pins_tri_i_7),
+        .T(us_pins_tri_t_7));
 endmodule
