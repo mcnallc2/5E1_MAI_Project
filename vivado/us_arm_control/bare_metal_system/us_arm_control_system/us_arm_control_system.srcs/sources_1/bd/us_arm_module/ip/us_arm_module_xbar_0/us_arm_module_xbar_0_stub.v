@@ -1,7 +1,7 @@
 // Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-// Date        : Mon Mar  8 20:13:19 2021
+// Date        : Tue Mar  9 10:06:23 2021
 // Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 // Command     : write_verilog -force -mode synth_stub
 //               /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/ip/us_arm_module_xbar_0/us_arm_module_xbar_0_stub.v

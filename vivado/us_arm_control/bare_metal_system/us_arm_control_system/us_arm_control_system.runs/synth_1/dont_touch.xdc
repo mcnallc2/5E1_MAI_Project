@@ -36,9 +36,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_module_x
 # IP: bd/us_arm_module/ip/us_arm_module_axi_gpio_0_1/us_arm_module_axi_gpio_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_module_axi_gpio_0_1 || ORIG_REF_NAME==us_arm_module_axi_gpio_0_1} -quiet] -quiet
 
-# IP: bd/us_arm_module/ip/us_arm_module_axi_gpio_1_0/us_arm_module_axi_gpio_1_0.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_module_axi_gpio_1_0 || ORIG_REF_NAME==us_arm_module_axi_gpio_1_0} -quiet] -quiet
-
 # IP: bd/us_arm_module/ip/us_arm_module_auto_pc_0/us_arm_module_auto_pc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==us_arm_module_auto_pc_0 || ORIG_REF_NAME==us_arm_module_auto_pc_0} -quiet] -quiet
 
