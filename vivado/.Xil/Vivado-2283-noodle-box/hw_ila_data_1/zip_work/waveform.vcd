@@ -1,0 +1,30 @@
+$date
+        2021-Mar-11 15:41:52
+$end
+$version
+        Vivado v2018.3 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 1 " object_det_OBUF $end
+$var reg 1 # clk_IBUF $end
+$var reg 1 $ reset_IBUF $end
+$var reg 1 % _TRIGGER $end
+$var reg 1 & _WINDOW $end
+$var reg 1 ' _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0"
+0#
+0$
+0%
+1&
+0'
+$end
+#8191
+1"
+1%

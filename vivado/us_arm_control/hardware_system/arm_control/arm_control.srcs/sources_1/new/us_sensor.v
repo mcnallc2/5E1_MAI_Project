@@ -4,7 +4,7 @@ module us_sensor
     input  wire echo,
     output reg trig,
     output reg [63:0] echo_pulse_out_ff,
-    //sim
+    // sim
     output reg [63:0] delay_ff,
     output reg [63:0] counter_ff,
     output reg [1:0] state_ff);
@@ -16,16 +16,21 @@ module us_sensor
     reg [63:0] max_echo_pulse_ff, max_echo_pulse_nxt;
     reg [63:0] echo_pulse_out_nxt;
     reg [1:0]  state_nxt;
+    // eval
+    (* dont_touch = "true" *) reg [63:0] after_echo_count_ff, after_echo_count_nxt;
 
     parameter MAX_SEQ_LEN = 500000; // cycles until next trigger (5ms)
     parameter TRIG_LEN    = 1000;   // cycles per trigger (10us)
     parameter PULSES      = 50;     // number of pulses to measure
     
-    localparam A = 2'b00,
-               B = 2'b01,
-               C = 2'b10,
-               D = 2'b11;
-               
+    parameter A = 2'b00,
+              B = 2'b01,
+              C = 2'b10,
+              D = 2'b11;
+
+    
+    //main
+     
     // syncronous block
     always @(posedge clk, posedge reset) begin
         //if there is a reset, go back the FSM A
@@ -37,6 +42,8 @@ module us_sensor
             max_echo_pulse_ff <= 'h0;
             echo_pulse_out_ff <= 'h0;
             state_ff <= A;
+            //eval
+            after_echo_count_ff <= 'h0;
         end
         else begin
             delay_ff <= delay_nxt;
@@ -46,6 +53,8 @@ module us_sensor
             max_echo_pulse_ff <= max_echo_pulse_nxt;
             echo_pulse_out_ff <= echo_pulse_out_nxt;
             state_ff <= state_nxt;
+            //eval
+            after_echo_count_ff <= after_echo_count_nxt;
         end
     end
         
@@ -54,6 +63,8 @@ module us_sensor
         case(state_ff)
             // state A: trigger US pulse
             A: begin
+                //eval
+                after_echo_count_nxt = after_echo_count_ff + 1;
                 // increment delay 
                 delay_nxt = delay_ff + 1;
                 counter_nxt = counter_ff;
@@ -71,6 +82,8 @@ module us_sensor
             
             // state B: wait for echo pulse rising edge
             B: begin
+                //eval
+                after_echo_count_nxt = after_echo_count_ff + 1;
                 // increment delay
                 delay_nxt = delay_ff + 1;
                 counter_nxt = counter_ff;
@@ -89,10 +102,14 @@ module us_sensor
                 delay_nxt = delay_ff + 1;
                 // increment counter while echo is high         
                 if(echo) begin
+                    //eval
+                    after_echo_count_nxt = after_echo_count_ff + 1;
                     counter_nxt = counter_ff + 1;
                     state_nxt = C;
                 end
                 else begin
+                    //eval
+                    after_echo_count_nxt = 'h0;
                     counter_nxt = counter_ff;
                     state_nxt = D;
                 end 
@@ -102,6 +119,8 @@ module us_sensor
             
             // state D: wait for total delay to end and assign final pulse length
             D: begin
+                //eval
+                after_echo_count_nxt = after_echo_count_ff + 1;
                 // increment delay until max sequence lenght is reached
                 if(delay_ff < MAX_SEQ_LEN) begin
                     delay_nxt = delay_ff + 1;

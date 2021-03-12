@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date                      : Thu Feb  4 16:04:17 2021
+| Date                      : Fri Mar 12 10:37:53 2021
 | Host                      : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command                   : report_io -file us_arm_control_wrapper_io_placed.rpt
 | Design                    : us_arm_control_wrapper
@@ -408,7 +408,7 @@ Table of Contents
 | W11        |             | High Range | IO_L18P_T2_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W12        |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | W13        |             | High Range | IO_L4N_T0_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| W14        | trig        | High Range | IO_L8P_T1_34            | OUTPUT      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| W14        | trig_0      | High Range | IO_L8P_T1_34            | OUTPUT      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W15        |             | High Range | IO_L10N_T1_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W16        |             | High Range | IO_L18N_T2_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W17        |             | High Range | VCCO_34                 | VCCO        |             |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
@@ -428,7 +428,7 @@ Table of Contents
 | Y11        |             | High Range | IO_L18N_T2_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y12        |             | High Range | IO_L20P_T3_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | Y13        |             | High Range | IO_L20N_T3_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| Y14        | echo        | High Range | IO_L8N_T1_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| Y14        | echo_0      | High Range | IO_L8N_T1_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | Y15        |             |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | Y16        | pwm_out[2]  | High Range | IO_L7P_T1_34            | OUTPUT      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | Y17        | pwm_out[3]  | High Range | IO_L7N_T1_34            | OUTPUT      | LVCMOS33    |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |

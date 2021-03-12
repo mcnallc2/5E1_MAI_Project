@@ -1,0 +1,638 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 11 16:30:30 2021
+# Process ID: 2411
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.xpr
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 60 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {us_sensor_0_i/echo_pulse_ff_0[4]} {us_sensor_0_i/echo_pulse_ff_0[5]} {us_sensor_0_i/echo_pulse_ff_0[6]} {us_sensor_0_i/echo_pulse_ff_0[7]} {us_sensor_0_i/echo_pulse_ff_0[8]} {us_sensor_0_i/echo_pulse_ff_0[9]} {us_sensor_0_i/echo_pulse_ff_0[10]} {us_sensor_0_i/echo_pulse_ff_0[11]} {us_sensor_0_i/echo_pulse_ff_0[12]} {us_sensor_0_i/echo_pulse_ff_0[13]} {us_sensor_0_i/echo_pulse_ff_0[14]} {us_sensor_0_i/echo_pulse_ff_0[15]} {us_sensor_0_i/echo_pulse_ff_0[16]} {us_sensor_0_i/echo_pulse_ff_0[17]} {us_sensor_0_i/echo_pulse_ff_0[18]} {us_sensor_0_i/echo_pulse_ff_0[19]} {us_sensor_0_i/echo_pulse_ff_0[20]} {us_sensor_0_i/echo_pulse_ff_0[21]} {us_sensor_0_i/echo_pulse_ff_0[22]} {us_sensor_0_i/echo_pulse_ff_0[23]} {us_sensor_0_i/echo_pulse_ff_0[24]} {us_sensor_0_i/echo_pulse_ff_0[25]} {us_sensor_0_i/echo_pulse_ff_0[26]} {us_sensor_0_i/echo_pulse_ff_0[27]} {us_sensor_0_i/echo_pulse_ff_0[28]} {us_sensor_0_i/echo_pulse_ff_0[29]} {us_sensor_0_i/echo_pulse_ff_0[30]} {us_sensor_0_i/echo_pulse_ff_0[31]} {us_sensor_0_i/echo_pulse_ff_0[32]} {us_sensor_0_i/echo_pulse_ff_0[33]} {us_sensor_0_i/echo_pulse_ff_0[34]} {us_sensor_0_i/echo_pulse_ff_0[35]} {us_sensor_0_i/echo_pulse_ff_0[36]} {us_sensor_0_i/echo_pulse_ff_0[37]} {us_sensor_0_i/echo_pulse_ff_0[38]} {us_sensor_0_i/echo_pulse_ff_0[39]} {us_sensor_0_i/echo_pulse_ff_0[40]} {us_sensor_0_i/echo_pulse_ff_0[41]} {us_sensor_0_i/echo_pulse_ff_0[42]} {us_sensor_0_i/echo_pulse_ff_0[43]} {us_sensor_0_i/echo_pulse_ff_0[44]} {us_sensor_0_i/echo_pulse_ff_0[45]} {us_sensor_0_i/echo_pulse_ff_0[46]} {us_sensor_0_i/echo_pulse_ff_0[47]} {us_sensor_0_i/echo_pulse_ff_0[48]} {us_sensor_0_i/echo_pulse_ff_0[49]} {us_sensor_0_i/echo_pulse_ff_0[50]} {us_sensor_0_i/echo_pulse_ff_0[51]} {us_sensor_0_i/echo_pulse_ff_0[52]} {us_sensor_0_i/echo_pulse_ff_0[53]} {us_sensor_0_i/echo_pulse_ff_0[54]} {us_sensor_0_i/echo_pulse_ff_0[55]} {us_sensor_0_i/echo_pulse_ff_0[56]} {us_sensor_0_i/echo_pulse_ff_0[57]} {us_sensor_0_i/echo_pulse_ff_0[58]} {us_sensor_0_i/echo_pulse_ff_0[59]} {us_sensor_0_i/echo_pulse_ff_0[60]} {us_sensor_0_i/echo_pulse_ff_0[61]} {us_sensor_0_i/echo_pulse_ff_0[62]} {us_sensor_0_i/echo_pulse_ff_0[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list clk_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list object_det_OBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list reset_IBUF ]]
+save_constraints
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list object_det_OBUF ]]
+refresh_design
+reset_run synth_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list object_det_OBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_hw_sysmon  [get_hw_sysmons localhost:3121/xilinx_tcf/Xilinx/1234-tulA/xc7z020_1/SYSMON]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+set_property CONTROL.TRIGGER_POSITION 65536 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+delete_debug_core [get_debug_cores {u_ila_0 }]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pulse*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 60 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {us_sensor_0_i/echo_pulse_ff_0[4]} {us_sensor_0_i/echo_pulse_ff_0[5]} {us_sensor_0_i/echo_pulse_ff_0[6]} {us_sensor_0_i/echo_pulse_ff_0[7]} {us_sensor_0_i/echo_pulse_ff_0[8]} {us_sensor_0_i/echo_pulse_ff_0[9]} {us_sensor_0_i/echo_pulse_ff_0[10]} {us_sensor_0_i/echo_pulse_ff_0[11]} {us_sensor_0_i/echo_pulse_ff_0[12]} {us_sensor_0_i/echo_pulse_ff_0[13]} {us_sensor_0_i/echo_pulse_ff_0[14]} {us_sensor_0_i/echo_pulse_ff_0[15]} {us_sensor_0_i/echo_pulse_ff_0[16]} {us_sensor_0_i/echo_pulse_ff_0[17]} {us_sensor_0_i/echo_pulse_ff_0[18]} {us_sensor_0_i/echo_pulse_ff_0[19]} {us_sensor_0_i/echo_pulse_ff_0[20]} {us_sensor_0_i/echo_pulse_ff_0[21]} {us_sensor_0_i/echo_pulse_ff_0[22]} {us_sensor_0_i/echo_pulse_ff_0[23]} {us_sensor_0_i/echo_pulse_ff_0[24]} {us_sensor_0_i/echo_pulse_ff_0[25]} {us_sensor_0_i/echo_pulse_ff_0[26]} {us_sensor_0_i/echo_pulse_ff_0[27]} {us_sensor_0_i/echo_pulse_ff_0[28]} {us_sensor_0_i/echo_pulse_ff_0[29]} {us_sensor_0_i/echo_pulse_ff_0[30]} {us_sensor_0_i/echo_pulse_ff_0[31]} {us_sensor_0_i/echo_pulse_ff_0[32]} {us_sensor_0_i/echo_pulse_ff_0[33]} {us_sensor_0_i/echo_pulse_ff_0[34]} {us_sensor_0_i/echo_pulse_ff_0[35]} {us_sensor_0_i/echo_pulse_ff_0[36]} {us_sensor_0_i/echo_pulse_ff_0[37]} {us_sensor_0_i/echo_pulse_ff_0[38]} {us_sensor_0_i/echo_pulse_ff_0[39]} {us_sensor_0_i/echo_pulse_ff_0[40]} {us_sensor_0_i/echo_pulse_ff_0[41]} {us_sensor_0_i/echo_pulse_ff_0[42]} {us_sensor_0_i/echo_pulse_ff_0[43]} {us_sensor_0_i/echo_pulse_ff_0[44]} {us_sensor_0_i/echo_pulse_ff_0[45]} {us_sensor_0_i/echo_pulse_ff_0[46]} {us_sensor_0_i/echo_pulse_ff_0[47]} {us_sensor_0_i/echo_pulse_ff_0[48]} {us_sensor_0_i/echo_pulse_ff_0[49]} {us_sensor_0_i/echo_pulse_ff_0[50]} {us_sensor_0_i/echo_pulse_ff_0[51]} {us_sensor_0_i/echo_pulse_ff_0[52]} {us_sensor_0_i/echo_pulse_ff_0[53]} {us_sensor_0_i/echo_pulse_ff_0[54]} {us_sensor_0_i/echo_pulse_ff_0[55]} {us_sensor_0_i/echo_pulse_ff_0[56]} {us_sensor_0_i/echo_pulse_ff_0[57]} {us_sensor_0_i/echo_pulse_ff_0[58]} {us_sensor_0_i/echo_pulse_ff_0[59]} {us_sensor_0_i/echo_pulse_ff_0[60]} {us_sensor_0_i/echo_pulse_ff_0[61]} {us_sensor_0_i/echo_pulse_ff_0[62]} {us_sensor_0_i/echo_pulse_ff_0[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list object_det_OBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+reset_run synth_1
+close_design
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 64 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {us_sensor_0_i/echo_pulse_ff[0]} {us_sensor_0_i/echo_pulse_ff[1]} {us_sensor_0_i/echo_pulse_ff[2]} {us_sensor_0_i/echo_pulse_ff[3]} {us_sensor_0_i/echo_pulse_ff[4]} {us_sensor_0_i/echo_pulse_ff[5]} {us_sensor_0_i/echo_pulse_ff[6]} {us_sensor_0_i/echo_pulse_ff[7]} {us_sensor_0_i/echo_pulse_ff[8]} {us_sensor_0_i/echo_pulse_ff[9]} {us_sensor_0_i/echo_pulse_ff[10]} {us_sensor_0_i/echo_pulse_ff[11]} {us_sensor_0_i/echo_pulse_ff[12]} {us_sensor_0_i/echo_pulse_ff[13]} {us_sensor_0_i/echo_pulse_ff[14]} {us_sensor_0_i/echo_pulse_ff[15]} {us_sensor_0_i/echo_pulse_ff[16]} {us_sensor_0_i/echo_pulse_ff[17]} {us_sensor_0_i/echo_pulse_ff[18]} {us_sensor_0_i/echo_pulse_ff[19]} {us_sensor_0_i/echo_pulse_ff[20]} {us_sensor_0_i/echo_pulse_ff[21]} {us_sensor_0_i/echo_pulse_ff[22]} {us_sensor_0_i/echo_pulse_ff[23]} {us_sensor_0_i/echo_pulse_ff[24]} {us_sensor_0_i/echo_pulse_ff[25]} {us_sensor_0_i/echo_pulse_ff[26]} {us_sensor_0_i/echo_pulse_ff[27]} {us_sensor_0_i/echo_pulse_ff[28]} {us_sensor_0_i/echo_pulse_ff[29]} {us_sensor_0_i/echo_pulse_ff[30]} {us_sensor_0_i/echo_pulse_ff[31]} {us_sensor_0_i/echo_pulse_ff[32]} {us_sensor_0_i/echo_pulse_ff[33]} {us_sensor_0_i/echo_pulse_ff[34]} {us_sensor_0_i/echo_pulse_ff[35]} {us_sensor_0_i/echo_pulse_ff[36]} {us_sensor_0_i/echo_pulse_ff[37]} {us_sensor_0_i/echo_pulse_ff[38]} {us_sensor_0_i/echo_pulse_ff[39]} {us_sensor_0_i/echo_pulse_ff[40]} {us_sensor_0_i/echo_pulse_ff[41]} {us_sensor_0_i/echo_pulse_ff[42]} {us_sensor_0_i/echo_pulse_ff[43]} {us_sensor_0_i/echo_pulse_ff[44]} {us_sensor_0_i/echo_pulse_ff[45]} {us_sensor_0_i/echo_pulse_ff[46]} {us_sensor_0_i/echo_pulse_ff[47]} {us_sensor_0_i/echo_pulse_ff[48]} {us_sensor_0_i/echo_pulse_ff[49]} {us_sensor_0_i/echo_pulse_ff[50]} {us_sensor_0_i/echo_pulse_ff[51]} {us_sensor_0_i/echo_pulse_ff[52]} {us_sensor_0_i/echo_pulse_ff[53]} {us_sensor_0_i/echo_pulse_ff[54]} {us_sensor_0_i/echo_pulse_ff[55]} {us_sensor_0_i/echo_pulse_ff[56]} {us_sensor_0_i/echo_pulse_ff[57]} {us_sensor_0_i/echo_pulse_ff[58]} {us_sensor_0_i/echo_pulse_ff[59]} {us_sensor_0_i/echo_pulse_ff[60]} {us_sensor_0_i/echo_pulse_ff[61]} {us_sensor_0_i/echo_pulse_ff[62]} {us_sensor_0_i/echo_pulse_ff[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list object_det_OBUF ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+reset_run synth_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {test_proc_i/pwm_hightime_base_servo} }
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+reset_run synth_1
+close_design
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 31 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {us_sensor_0_i/echo_pulse_ff[0]} {us_sensor_0_i/echo_pulse_ff[1]} {us_sensor_0_i/echo_pulse_ff[2]} {us_sensor_0_i/echo_pulse_ff[3]} {us_sensor_0_i/echo_pulse_ff[4]} {us_sensor_0_i/echo_pulse_ff[5]} {us_sensor_0_i/echo_pulse_ff[6]} {us_sensor_0_i/echo_pulse_ff[7]} {us_sensor_0_i/echo_pulse_ff[8]} {us_sensor_0_i/echo_pulse_ff[9]} {us_sensor_0_i/echo_pulse_ff[10]} {us_sensor_0_i/echo_pulse_ff[11]} {us_sensor_0_i/echo_pulse_ff[12]} {us_sensor_0_i/echo_pulse_ff[13]} {us_sensor_0_i/echo_pulse_ff[14]} {us_sensor_0_i/echo_pulse_ff[15]} {us_sensor_0_i/echo_pulse_ff[16]} {us_sensor_0_i/echo_pulse_ff[17]} {us_sensor_0_i/echo_pulse_ff[18]} {us_sensor_0_i/echo_pulse_ff[19]} {us_sensor_0_i/echo_pulse_ff[20]} {us_sensor_0_i/echo_pulse_ff[21]} {us_sensor_0_i/echo_pulse_ff[22]} {us_sensor_0_i/echo_pulse_ff[23]} {us_sensor_0_i/echo_pulse_ff[24]} {us_sensor_0_i/echo_pulse_ff[25]} {us_sensor_0_i/echo_pulse_ff[26]} {us_sensor_0_i/echo_pulse_ff[27]} {us_sensor_0_i/echo_pulse_ff[28]} {us_sensor_0_i/echo_pulse_ff[29]} {us_sensor_0_i/echo_pulse_ff[30]} {us_sensor_0_i/echo_pulse_ff[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes object_det_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {us_sensor_0_i/echo_pulse_ff} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints -force
+close_design
+open_run synth_1 -name synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+refresh_design
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*p*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 31 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 31 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+close_design
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 62 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 62 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1

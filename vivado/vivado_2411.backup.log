@@ -1,0 +1,1089 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Thu Mar 11 16:30:30 2021
+# Process ID: 2411
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 344 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6701.520 ; gain = 0.000 ; free physical = 2943 ; free virtual = 6617
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 6820.742 ; gain = 387.633 ; free physical = 2812 ; free virtual = 6497
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Attempt to kill process failed
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 6891.504 ; gain = 0.000 ; free physical = 2771 ; free virtual = 6467
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.23 ; elapsed = 00:00:00.07 . Memory (MB): peak = 6915.516 ; gain = 0.000 ; free physical = 2761 ; free virtual = 6459
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6915.516 ; gain = 0.000 ; free physical = 2765 ; free virtual = 6464
+[Thu Mar 11 16:31:54 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 60 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {us_sensor_0_i/echo_pulse_ff_0[4]} {us_sensor_0_i/echo_pulse_ff_0[5]} {us_sensor_0_i/echo_pulse_ff_0[6]} {us_sensor_0_i/echo_pulse_ff_0[7]} {us_sensor_0_i/echo_pulse_ff_0[8]} {us_sensor_0_i/echo_pulse_ff_0[9]} {us_sensor_0_i/echo_pulse_ff_0[10]} {us_sensor_0_i/echo_pulse_ff_0[11]} {us_sensor_0_i/echo_pulse_ff_0[12]} {us_sensor_0_i/echo_pulse_ff_0[13]} {us_sensor_0_i/echo_pulse_ff_0[14]} {us_sensor_0_i/echo_pulse_ff_0[15]} {us_sensor_0_i/echo_pulse_ff_0[16]} {us_sensor_0_i/echo_pulse_ff_0[17]} {us_sensor_0_i/echo_pulse_ff_0[18]} {us_sensor_0_i/echo_pulse_ff_0[19]} {us_sensor_0_i/echo_pulse_ff_0[20]} {us_sensor_0_i/echo_pulse_ff_0[21]} {us_sensor_0_i/echo_pulse_ff_0[22]} {us_sensor_0_i/echo_pulse_ff_0[23]} {us_sensor_0_i/echo_pulse_ff_0[24]} {us_sensor_0_i/echo_pulse_ff_0[25]} {us_sensor_0_i/echo_pulse_ff_0[26]} {us_sensor_0_i/echo_pulse_ff_0[27]} {us_sensor_0_i/echo_pulse_ff_0[28]} {us_sensor_0_i/echo_pulse_ff_0[29]} {us_sensor_0_i/echo_pulse_ff_0[30]} {us_sensor_0_i/echo_pulse_ff_0[31]} {us_sensor_0_i/echo_pulse_ff_0[32]} {us_sensor_0_i/echo_pulse_ff_0[33]} {us_sensor_0_i/echo_pulse_ff_0[34]} {us_sensor_0_i/echo_pulse_ff_0[35]} {us_sensor_0_i/echo_pulse_ff_0[36]} {us_sensor_0_i/echo_pulse_ff_0[37]} {us_sensor_0_i/echo_pulse_ff_0[38]} {us_sensor_0_i/echo_pulse_ff_0[39]} {us_sensor_0_i/echo_pulse_ff_0[40]} {us_sensor_0_i/echo_pulse_ff_0[41]} {us_sensor_0_i/echo_pulse_ff_0[42]} {us_sensor_0_i/echo_pulse_ff_0[43]} {us_sensor_0_i/echo_pulse_ff_0[44]} {us_sensor_0_i/echo_pulse_ff_0[45]} {us_sensor_0_i/echo_pulse_ff_0[46]} {us_sensor_0_i/echo_pulse_ff_0[47]} {us_sensor_0_i/echo_pulse_ff_0[48]} {us_sensor_0_i/echo_pulse_ff_0[49]} {us_sensor_0_i/echo_pulse_ff_0[50]} {us_sensor_0_i/echo_pulse_ff_0[51]} {us_sensor_0_i/echo_pulse_ff_0[52]} {us_sensor_0_i/echo_pulse_ff_0[53]} {us_sensor_0_i/echo_pulse_ff_0[54]} {us_sensor_0_i/echo_pulse_ff_0[55]} {us_sensor_0_i/echo_pulse_ff_0[56]} {us_sensor_0_i/echo_pulse_ff_0[57]} {us_sensor_0_i/echo_pulse_ff_0[58]} {us_sensor_0_i/echo_pulse_ff_0[59]} {us_sensor_0_i/echo_pulse_ff_0[60]} {us_sensor_0_i/echo_pulse_ff_0[61]} {us_sensor_0_i/echo_pulse_ff_0[62]} {us_sensor_0_i/echo_pulse_ff_0[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list clk_IBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe3]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list object_det_OBUF ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+set_property PROBE_TYPE DATA [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list reset_IBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 6915.516 ; gain = 0.000 ; free physical = 2560 ; free virtual = 6354
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Thu Mar 11 16:40:59 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 2
+[Thu Mar 11 16:41:39 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 344 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6915.516 ; gain = 0.000 ; free physical = 2595 ; free virtual = 6374
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list object_det_OBUF ]]
+refresh_design
+INFO: [Netlist 29-17] Analyzing 344 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+reset_run synth_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Mar 11 16:52:11 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/runme.log
+[Thu Mar 11 16:52:11 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 212 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6973.426 ; gain = 0.000 ; free physical = 2324 ; free virtual = 5930
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+delete_debug_core [get_debug_cores {u_ila_0 }]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 1 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 6973.426 ; gain = 0.000 ; free physical = 2275 ; free virtual = 5881
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6973.426 ; gain = 0.000 ; free physical = 2271 ; free virtual = 5877
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.03 . Memory (MB): peak = 6973.426 ; gain = 0.000 ; free physical = 2266 ; free virtual = 5874
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 6973.426 ; gain = 0.000 ; free physical = 2266 ; free virtual = 5874
+[Thu Mar 11 17:02:25 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1973] Mismatch between the design programmed into the device xc7z020 (JTAG device index = 1) and the probes file(s) /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx.
+ The device core at location uuid_23E7D65A79BC59F7BC47406C1714DFAE, has 3 ILA Input port(s), but the core in the probes file(s) have 1 ILA Input port(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+close_hw
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1973] Mismatch between the design programmed into the device xc7z020 (JTAG device index = 1) and the probes file(s) /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx.
+ The device core at location uuid_23E7D65A79BC59F7BC47406C1714DFAE, has 3 ILA Input port(s), but the core in the probes file(s) have 1 ILA Input port(s).
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+refresh_hw_sysmon  [get_hw_sysmons localhost:3121/xilinx_tcf/Xilinx/1234-tulA/xc7z020_1/SYSMON]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+WARNING: Simulation object clk_IBUF was not found in the design.
+WARNING: Simulation object reset_IBUF was not found in the design.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 17:09:51
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-11 17:09:58
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+set_property CONTROL.TRIGGER_POSITION 65536 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 17:10:37
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Mar-11 17:10:44
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 17:10:45
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-11 17:10:49
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+delete_debug_core [get_debug_cores {u_ila_0 }]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pulse*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 60 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {us_sensor_0_i/echo_pulse_ff_0[4]} {us_sensor_0_i/echo_pulse_ff_0[5]} {us_sensor_0_i/echo_pulse_ff_0[6]} {us_sensor_0_i/echo_pulse_ff_0[7]} {us_sensor_0_i/echo_pulse_ff_0[8]} {us_sensor_0_i/echo_pulse_ff_0[9]} {us_sensor_0_i/echo_pulse_ff_0[10]} {us_sensor_0_i/echo_pulse_ff_0[11]} {us_sensor_0_i/echo_pulse_ff_0[12]} {us_sensor_0_i/echo_pulse_ff_0[13]} {us_sensor_0_i/echo_pulse_ff_0[14]} {us_sensor_0_i/echo_pulse_ff_0[15]} {us_sensor_0_i/echo_pulse_ff_0[16]} {us_sensor_0_i/echo_pulse_ff_0[17]} {us_sensor_0_i/echo_pulse_ff_0[18]} {us_sensor_0_i/echo_pulse_ff_0[19]} {us_sensor_0_i/echo_pulse_ff_0[20]} {us_sensor_0_i/echo_pulse_ff_0[21]} {us_sensor_0_i/echo_pulse_ff_0[22]} {us_sensor_0_i/echo_pulse_ff_0[23]} {us_sensor_0_i/echo_pulse_ff_0[24]} {us_sensor_0_i/echo_pulse_ff_0[25]} {us_sensor_0_i/echo_pulse_ff_0[26]} {us_sensor_0_i/echo_pulse_ff_0[27]} {us_sensor_0_i/echo_pulse_ff_0[28]} {us_sensor_0_i/echo_pulse_ff_0[29]} {us_sensor_0_i/echo_pulse_ff_0[30]} {us_sensor_0_i/echo_pulse_ff_0[31]} {us_sensor_0_i/echo_pulse_ff_0[32]} {us_sensor_0_i/echo_pulse_ff_0[33]} {us_sensor_0_i/echo_pulse_ff_0[34]} {us_sensor_0_i/echo_pulse_ff_0[35]} {us_sensor_0_i/echo_pulse_ff_0[36]} {us_sensor_0_i/echo_pulse_ff_0[37]} {us_sensor_0_i/echo_pulse_ff_0[38]} {us_sensor_0_i/echo_pulse_ff_0[39]} {us_sensor_0_i/echo_pulse_ff_0[40]} {us_sensor_0_i/echo_pulse_ff_0[41]} {us_sensor_0_i/echo_pulse_ff_0[42]} {us_sensor_0_i/echo_pulse_ff_0[43]} {us_sensor_0_i/echo_pulse_ff_0[44]} {us_sensor_0_i/echo_pulse_ff_0[45]} {us_sensor_0_i/echo_pulse_ff_0[46]} {us_sensor_0_i/echo_pulse_ff_0[47]} {us_sensor_0_i/echo_pulse_ff_0[48]} {us_sensor_0_i/echo_pulse_ff_0[49]} {us_sensor_0_i/echo_pulse_ff_0[50]} {us_sensor_0_i/echo_pulse_ff_0[51]} {us_sensor_0_i/echo_pulse_ff_0[52]} {us_sensor_0_i/echo_pulse_ff_0[53]} {us_sensor_0_i/echo_pulse_ff_0[54]} {us_sensor_0_i/echo_pulse_ff_0[55]} {us_sensor_0_i/echo_pulse_ff_0[56]} {us_sensor_0_i/echo_pulse_ff_0[57]} {us_sensor_0_i/echo_pulse_ff_0[58]} {us_sensor_0_i/echo_pulse_ff_0[59]} {us_sensor_0_i/echo_pulse_ff_0[60]} {us_sensor_0_i/echo_pulse_ff_0[61]} {us_sensor_0_i/echo_pulse_ff_0[62]} {us_sensor_0_i/echo_pulse_ff_0[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 913 ; free virtual = 4174
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 882 ; free virtual = 4152
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.06 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 878 ; free virtual = 4149
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 876 ; free virtual = 4147
+[Thu Mar 11 17:13:23 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1944 ; free virtual = 3743
+reset_run synth_1
+close_design
+launch_runs synth_1 -jobs 2
+[Thu Mar 11 17:26:56 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 212 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1617 ; free virtual = 3849
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 64 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {us_sensor_0_i/echo_pulse_ff[0]} {us_sensor_0_i/echo_pulse_ff[1]} {us_sensor_0_i/echo_pulse_ff[2]} {us_sensor_0_i/echo_pulse_ff[3]} {us_sensor_0_i/echo_pulse_ff[4]} {us_sensor_0_i/echo_pulse_ff[5]} {us_sensor_0_i/echo_pulse_ff[6]} {us_sensor_0_i/echo_pulse_ff[7]} {us_sensor_0_i/echo_pulse_ff[8]} {us_sensor_0_i/echo_pulse_ff[9]} {us_sensor_0_i/echo_pulse_ff[10]} {us_sensor_0_i/echo_pulse_ff[11]} {us_sensor_0_i/echo_pulse_ff[12]} {us_sensor_0_i/echo_pulse_ff[13]} {us_sensor_0_i/echo_pulse_ff[14]} {us_sensor_0_i/echo_pulse_ff[15]} {us_sensor_0_i/echo_pulse_ff[16]} {us_sensor_0_i/echo_pulse_ff[17]} {us_sensor_0_i/echo_pulse_ff[18]} {us_sensor_0_i/echo_pulse_ff[19]} {us_sensor_0_i/echo_pulse_ff[20]} {us_sensor_0_i/echo_pulse_ff[21]} {us_sensor_0_i/echo_pulse_ff[22]} {us_sensor_0_i/echo_pulse_ff[23]} {us_sensor_0_i/echo_pulse_ff[24]} {us_sensor_0_i/echo_pulse_ff[25]} {us_sensor_0_i/echo_pulse_ff[26]} {us_sensor_0_i/echo_pulse_ff[27]} {us_sensor_0_i/echo_pulse_ff[28]} {us_sensor_0_i/echo_pulse_ff[29]} {us_sensor_0_i/echo_pulse_ff[30]} {us_sensor_0_i/echo_pulse_ff[31]} {us_sensor_0_i/echo_pulse_ff[32]} {us_sensor_0_i/echo_pulse_ff[33]} {us_sensor_0_i/echo_pulse_ff[34]} {us_sensor_0_i/echo_pulse_ff[35]} {us_sensor_0_i/echo_pulse_ff[36]} {us_sensor_0_i/echo_pulse_ff[37]} {us_sensor_0_i/echo_pulse_ff[38]} {us_sensor_0_i/echo_pulse_ff[39]} {us_sensor_0_i/echo_pulse_ff[40]} {us_sensor_0_i/echo_pulse_ff[41]} {us_sensor_0_i/echo_pulse_ff[42]} {us_sensor_0_i/echo_pulse_ff[43]} {us_sensor_0_i/echo_pulse_ff[44]} {us_sensor_0_i/echo_pulse_ff[45]} {us_sensor_0_i/echo_pulse_ff[46]} {us_sensor_0_i/echo_pulse_ff[47]} {us_sensor_0_i/echo_pulse_ff[48]} {us_sensor_0_i/echo_pulse_ff[49]} {us_sensor_0_i/echo_pulse_ff[50]} {us_sensor_0_i/echo_pulse_ff[51]} {us_sensor_0_i/echo_pulse_ff[52]} {us_sensor_0_i/echo_pulse_ff[53]} {us_sensor_0_i/echo_pulse_ff[54]} {us_sensor_0_i/echo_pulse_ff[55]} {us_sensor_0_i/echo_pulse_ff[56]} {us_sensor_0_i/echo_pulse_ff[57]} {us_sensor_0_i/echo_pulse_ff[58]} {us_sensor_0_i/echo_pulse_ff[59]} {us_sensor_0_i/echo_pulse_ff[60]} {us_sensor_0_i/echo_pulse_ff[61]} {us_sensor_0_i/echo_pulse_ff[62]} {us_sensor_0_i/echo_pulse_ff[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe2]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1447 ; free virtual = 3719
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1439 ; free virtual = 3711
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1434 ; free virtual = 3708
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1433 ; free virtual = 3708
+[Thu Mar 11 17:30:48 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1788 ; free virtual = 3621
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1705 ; free virtual = 3620
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.03 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1700 ; free virtual = 3618
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1698 ; free virtual = 3617
+[Thu Mar 11 18:20:36 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.02 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1639 ; free virtual = 3629
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1608 ; free virtual = 3619
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.04 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1607 ; free virtual = 3614
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1607 ; free virtual = 3614
+[Thu Mar 11 18:23:06 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1823 ; free virtual = 3567
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1818 ; free virtual = 3572
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1711 ; free virtual = 3520
+reset_run synth_1
+close_design
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Mar 11 18:29:40 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/runme.log
+[Thu Mar 11 18:29:40 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 212 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7850.949 ; gain = 0.000 ; free physical = 1562 ; free virtual = 3584
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7854.996 ; gain = 0.000 ; free physical = 1532 ; free virtual = 3568
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7854.996 ; gain = 0.000 ; free physical = 1403 ; free virtual = 3507
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7854.996 ; gain = 0.000 ; free physical = 1387 ; free virtual = 3497
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.11 ; elapsed = 00:00:00.04 . Memory (MB): peak = 7854.996 ; gain = 0.000 ; free physical = 1383 ; free virtual = 3495
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7854.996 ; gain = 0.000 ; free physical = 1383 ; free virtual = 3495
+[Thu Mar 11 18:33:58 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Mar 11 18:37:38 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-3222] Mismatch between the design programmed into the device xc7z020 (JTAG device index = 1) and the probes file(s) /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx.
+ The hw_probe  in the probes file has port index 1. This port does not exist in the ILA core at location (uuid_23E7D65A79BC59F7BC47406C1714DFAE).
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 18:39:10
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-11 18:39:22
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {test_proc_i/pwm_hightime_base_servo} }
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 1197 ; free virtual = 3289
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 930 ; free virtual = 3174
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 929 ; free virtual = 3175
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 927 ; free virtual = 3173
+[Thu Mar 11 18:43:21 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 1024 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 64 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} {test_proc_i/pwm_hightime_base_servo[62]} {test_proc_i/pwm_hightime_base_servo[63]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 1440 ; free virtual = 3340
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 1423 ; free virtual = 3343
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.09 ; elapsed = 00:00:00.03 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 1417 ; free virtual = 3341
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 1414 ; free virtual = 3340
+[Thu Mar 11 19:11:15 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 1419 ; free virtual = 3344
+reset_run synth_1
+close_design
+launch_runs synth_1 -jobs 2
+[Thu Mar 11 19:15:25 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/runme.log
+launch_runs impl_1 -jobs 2
+[Thu Mar 11 19:16:35 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 119 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7876.008 ; gain = 0.000 ; free physical = 1047 ; free virtual = 3147
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 31 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7901.035 ; gain = 0.000 ; free physical = 1151 ; free virtual = 3252
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*echo*" ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {us_sensor_0_i/echo_pulse_ff[0]} {us_sensor_0_i/echo_pulse_ff[1]} {us_sensor_0_i/echo_pulse_ff[2]} {us_sensor_0_i/echo_pulse_ff[3]} {us_sensor_0_i/echo_pulse_ff[4]} {us_sensor_0_i/echo_pulse_ff[5]} {us_sensor_0_i/echo_pulse_ff[6]} {us_sensor_0_i/echo_pulse_ff[7]} {us_sensor_0_i/echo_pulse_ff[8]} {us_sensor_0_i/echo_pulse_ff[9]} {us_sensor_0_i/echo_pulse_ff[10]} {us_sensor_0_i/echo_pulse_ff[11]} {us_sensor_0_i/echo_pulse_ff[12]} {us_sensor_0_i/echo_pulse_ff[13]} {us_sensor_0_i/echo_pulse_ff[14]} {us_sensor_0_i/echo_pulse_ff[15]} {us_sensor_0_i/echo_pulse_ff[16]} {us_sensor_0_i/echo_pulse_ff[17]} {us_sensor_0_i/echo_pulse_ff[18]} {us_sensor_0_i/echo_pulse_ff[19]} {us_sensor_0_i/echo_pulse_ff[20]} {us_sensor_0_i/echo_pulse_ff[21]} {us_sensor_0_i/echo_pulse_ff[22]} {us_sensor_0_i/echo_pulse_ff[23]} {us_sensor_0_i/echo_pulse_ff[24]} {us_sensor_0_i/echo_pulse_ff[25]} {us_sensor_0_i/echo_pulse_ff[26]} {us_sensor_0_i/echo_pulse_ff[27]} {us_sensor_0_i/echo_pulse_ff[28]} {us_sensor_0_i/echo_pulse_ff[29]} {us_sensor_0_i/echo_pulse_ff[30]} {us_sensor_0_i/echo_pulse_ff[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7901.035 ; gain = 0.000 ; free physical = 1143 ; free virtual = 3249
+launch_runs impl_1 -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7901.035 ; gain = 0.000 ; free physical = 1127 ; free virtual = 3253
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7902.781 ; gain = 0.000 ; free physical = 1125 ; free virtual = 3252
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 7902.781 ; gain = 0.000 ; free physical = 1131 ; free virtual = 3251
+[Thu Mar 11 19:19:28 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Thu Mar 11 19:25:29 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+WARNING: [Labtools 27-1972] Mismatch between the design programmed into the device xc7z020 (JTAG device index = 1) and the probes file(s) /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx.
+ The core at location uuid_23E7D65A79BC59F7BC47406C1714DFAE has different widths for ILA input port 0. Port width in the device core is 64, but port width in the probes file is 32.
+Resolution: 
+1. Reprogram device with the correct programming file and associated probes file(s) OR
+2. Goto device properties and associate the correct probes file(s) with the programming file already programmed in the device.
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+WARNING: Simulation object test_proc_i/pwm_hightime_base_servo was not found in the design.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 19:27:31
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+ERROR: [Xicom 50-38] xicom: Unable to connect to debug core(s) on the target device. Check cable connectivity and that the target board is powered up then use the disconnect_hw_server and connect_hw_server to re-initialize the hardware target. Use open_hw_target to re-register the hardware device.
+ERROR: [Labtools 27-3176] hw_server failed during internal command.
+Resolution: Check that the hw_server is running and the hardware connectivity to the target
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+WARNING: Simulation object test_proc_i/pwm_hightime_base_servo was not found in the design.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 19:34:12
+set_property TRIGGER_COMPARE_VALUE eq1'b1 [get_hw_probes object_det_OBUF -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+wait_on_hw_ila -timeout 0 [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1965] The ILA core 'hw_ila_1' trigger was stopped by user at 2021-Mar-11 19:35:10
+WARNING: [Labtools 27-157] hw_ila [hw_ila_1] stopped. No data to upload.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 19:35:13
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-11 19:35:13
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {us_sensor_0_i/echo_pulse_ff} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 19:36:17
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-11 19:36:17
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 19:36:22
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-11 19:36:22
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-11 19:37:00
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-11 19:37:00
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Thu Mar 11 19:39:09 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/runme.log
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints -force
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8025.836 ; gain = 0.000 ; free physical = 1243 ; free virtual = 3560
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 212 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8025.836 ; gain = 0.000 ; free physical = 1294 ; free virtual = 3613
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8065.855 ; gain = 0.000 ; free physical = 1131 ; free virtual = 3469
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8065.855 ; gain = 0.000 ; free physical = 1127 ; free virtual = 3467
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8065.855 ; gain = 0.000 ; free physical = 1127 ; free virtual = 3467
+[Thu Mar 11 19:40:41 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Mar 11 19:44:50 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/runme.log
+[Thu Mar 11 19:44:50 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+refresh_design
+INFO: [Netlist 29-17] Analyzing 119 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+refresh_design: Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 8158.902 ; gain = 50.020 ; free physical = 1473 ; free virtual = 3209
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*p*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 31 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 31 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8158.902 ; gain = 0.000 ; free physical = 860 ; free virtual = 3243
+reset_run impl_1
+launch_runs impl_1 -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8158.902 ; gain = 0.000 ; free physical = 867 ; free virtual = 3244
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8158.902 ; gain = 0.000 ; free physical = 860 ; free virtual = 3240
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8158.902 ; gain = 0.000 ; free physical = 860 ; free virtual = 3240
+[Thu Mar 11 19:55:08 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+reset_run impl_1
+delete_debug_core [get_debug_cores {u_ila_0 }]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8158.902 ; gain = 0.000 ; free physical = 1703 ; free virtual = 3296
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8158.902 ; gain = 0.000 ; free physical = 1702 ; free virtual = 3296
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.07 ; elapsed = 00:00:00.03 . Memory (MB): peak = 8158.902 ; gain = 0.000 ; free physical = 1692 ; free virtual = 3293
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8158.902 ; gain = 0.000 ; free physical = 1690 ; free virtual = 3294
+[Thu Mar 11 19:58:22 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Thu Mar 11 20:02:40 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/runme.log
+[Thu Mar 11 20:02:40 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+close_design
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 212 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8188.922 ; gain = 0.000 ; free physical = 1505 ; free virtual = 3294
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*pwm*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 62 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 62 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {test_proc_i/pwm_hightime_base_servo[0]} {test_proc_i/pwm_hightime_base_servo[1]} {test_proc_i/pwm_hightime_base_servo[2]} {test_proc_i/pwm_hightime_base_servo[3]} {test_proc_i/pwm_hightime_base_servo[4]} {test_proc_i/pwm_hightime_base_servo[5]} {test_proc_i/pwm_hightime_base_servo[6]} {test_proc_i/pwm_hightime_base_servo[7]} {test_proc_i/pwm_hightime_base_servo[8]} {test_proc_i/pwm_hightime_base_servo[9]} {test_proc_i/pwm_hightime_base_servo[10]} {test_proc_i/pwm_hightime_base_servo[11]} {test_proc_i/pwm_hightime_base_servo[12]} {test_proc_i/pwm_hightime_base_servo[13]} {test_proc_i/pwm_hightime_base_servo[14]} {test_proc_i/pwm_hightime_base_servo[15]} {test_proc_i/pwm_hightime_base_servo[16]} {test_proc_i/pwm_hightime_base_servo[17]} {test_proc_i/pwm_hightime_base_servo[18]} {test_proc_i/pwm_hightime_base_servo[19]} {test_proc_i/pwm_hightime_base_servo[20]} {test_proc_i/pwm_hightime_base_servo[21]} {test_proc_i/pwm_hightime_base_servo[22]} {test_proc_i/pwm_hightime_base_servo[23]} {test_proc_i/pwm_hightime_base_servo[24]} {test_proc_i/pwm_hightime_base_servo[25]} {test_proc_i/pwm_hightime_base_servo[26]} {test_proc_i/pwm_hightime_base_servo[27]} {test_proc_i/pwm_hightime_base_servo[28]} {test_proc_i/pwm_hightime_base_servo[29]} {test_proc_i/pwm_hightime_base_servo[30]} {test_proc_i/pwm_hightime_base_servo[31]} {test_proc_i/pwm_hightime_base_servo[32]} {test_proc_i/pwm_hightime_base_servo[33]} {test_proc_i/pwm_hightime_base_servo[34]} {test_proc_i/pwm_hightime_base_servo[35]} {test_proc_i/pwm_hightime_base_servo[36]} {test_proc_i/pwm_hightime_base_servo[37]} {test_proc_i/pwm_hightime_base_servo[38]} {test_proc_i/pwm_hightime_base_servo[39]} {test_proc_i/pwm_hightime_base_servo[40]} {test_proc_i/pwm_hightime_base_servo[41]} {test_proc_i/pwm_hightime_base_servo[42]} {test_proc_i/pwm_hightime_base_servo[43]} {test_proc_i/pwm_hightime_base_servo[44]} {test_proc_i/pwm_hightime_base_servo[45]} {test_proc_i/pwm_hightime_base_servo[46]} {test_proc_i/pwm_hightime_base_servo[47]} {test_proc_i/pwm_hightime_base_servo[48]} {test_proc_i/pwm_hightime_base_servo[49]} {test_proc_i/pwm_hightime_base_servo[50]} {test_proc_i/pwm_hightime_base_servo[51]} {test_proc_i/pwm_hightime_base_servo[52]} {test_proc_i/pwm_hightime_base_servo[53]} {test_proc_i/pwm_hightime_base_servo[54]} {test_proc_i/pwm_hightime_base_servo[55]} {test_proc_i/pwm_hightime_base_servo[56]} {test_proc_i/pwm_hightime_base_servo[57]} {test_proc_i/pwm_hightime_base_servo[58]} {test_proc_i/pwm_hightime_base_servo[59]} {test_proc_i/pwm_hightime_base_servo[60]} {test_proc_i/pwm_hightime_base_servo[61]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8211.926 ; gain = 0.000 ; free physical = 1367 ; free virtual = 3321
+reset_run impl_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8211.926 ; gain = 0.000 ; free physical = 1354 ; free virtual = 3317
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8211.926 ; gain = 0.000 ; free physical = 1351 ; free virtual = 3314
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8211.926 ; gain = 0.000 ; free physical = 1351 ; free virtual = 3314
+[Thu Mar 11 20:09:41 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/impl_1/runme.log

@@ -2,8 +2,8 @@
 # Webtalk v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # 
-# Start of session at: Tue Mar  9 11:36:16 2021
-# Process ID: 1947
+# Start of session at: Tue Mar  9 14:30:43 2021
+# Process ID: 21352
 # Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/freertos_system/us_arm_control_system/us_arm_control_system.sdk/webtalk
 # Command line: wbtcv -mode batch -source sdk_webtalk.tcl
 # Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/freertos_system/us_arm_control_system/us_arm_control_system.sdk/webtalk/webtalk.log

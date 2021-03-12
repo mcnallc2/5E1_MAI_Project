@@ -169,6 +169,7 @@ void _delay_();
 // Test Procedure Tasks
 void home_position(void);
 void rotate_arm(void);
+void endOfTestHandler(void);
 
 
 /************************** Variable Definitions *****************************/
@@ -218,38 +219,38 @@ int main(void){
 	/////////////////////
 	xTaskCreate( testProcedure,
 			"Test Procedure",
-			2048,
+			1024,
 			NULL,
 			tskIDLE_PRIORITY,
 			&xTestProc );
 
 	xTaskCreate( ultrasonicDetection0,
 			"Ultrasonic Detection",
-			2048,
+			1024,
 			NULL,
 			tskIDLE_PRIORITY,
 			&xUltrDetc0 );
 
-	xTaskCreate( ultrasonicDetection1,
-			"Ultrasonic Detection",
-			2048,
-			NULL,
-			tskIDLE_PRIORITY,
-			&xUltrDetc1 );
-
-	xTaskCreate( ultrasonicDetection2,
-			"Ultrasonic Detection",
-			2048,
-			NULL,
-			tskIDLE_PRIORITY,
-			&xUltrDetc2 );
-
-	xTaskCreate( ultrasonicDetection3,
-			"Ultrasonic Detection",
-			2048,
-			NULL,
-			tskIDLE_PRIORITY,
-			&xUltrDetc3 );
+//	xTaskCreate( ultrasonicDetection1,
+//			"Ultrasonic Detection",
+//			1024,
+//			NULL,
+//			tskIDLE_PRIORITY,
+//			&xUltrDetc1 );
+//
+//	xTaskCreate( ultrasonicDetection2,
+//			"Ultrasonic Detection",
+//			1024,
+//			NULL,
+//			tskIDLE_PRIORITY,
+//			&xUltrDetc2 );
+//
+//	xTaskCreate( ultrasonicDetection3,
+//			"Ultrasonic Detection",
+//			1024,
+//			NULL,
+//			tskIDLE_PRIORITY,
+//			&xUltrDetc3 );
 
 	xTaskCreate( baseControl,
 			"Base Control",
@@ -331,9 +332,12 @@ void testProcedure( void *pvParameters ){
 
 		case 2:
 			if(!inPos){
-				_delay_(3000000);
+				_delay_(1000000);
 				home_position();
+			} else {
 				FINISHED = 1;
+				inPos = 0;
+				endOfTestHandler();
 			}
 			break;
 		}
@@ -1059,5 +1063,34 @@ void _delay_(int useconds){
 			return;
 		}
 	}
+}
+
+/****************************************************************************
+*
+* This function is run when the test has completed. It will delete all
+* scheduler tasks. This will stop rotation of the DC motor on the RPLIDAR device.
+*
+* @return	void.
+*
+* @note		None.
+*
+****************************************************************************/
+void endOfTestHandler(void){
+
+	xil_printf("FREERTOS: Stopping all TASKS\r\n");
+
+	// deleting tasks
+	vTaskDelete( xTestProc );
+	vTaskDelete( xUltrDetc0 );
+//	vTaskDelete( xUltrDetc1 );
+//	vTaskDelete( xUltrDetc2 );
+//	vTaskDelete( xUltrDetc3 );
+	vTaskDelete( xBaseCont );
+	vTaskDelete( xShouCont );
+	vTaskDelete( xElboCont );
+	vTaskDelete( xClawCont );
+
+	xil_printf("TEST: Ended Test !!!\r\n");
+
 }
 

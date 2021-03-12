@@ -36,11 +36,11 @@ module counter
     
     always @(posedge clk) begin
         if(reset) begin
-            counter_out <= 64'h0;
+            counter_out <= 'h0;
         end
         else begin
             if (counter_out == FULL_PERIOD)
-                counter_out <= 64'h0;
+                counter_out <= 'h0;
             else
                 counter_out <= counter_out + 1;
         end

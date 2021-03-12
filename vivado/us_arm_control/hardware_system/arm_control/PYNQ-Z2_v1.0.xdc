@@ -10,7 +10,7 @@ create_clock -period 10.000 -name sys_clk_pin -waveform {0.000 5.000} -add [get_
 
 ##Switches
 
-set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L7N_T1_AD2N_35 Sch=sw[0]
+set_property -dict {PACKAGE_PIN M20 IOSTANDARD LVCMOS33} [get_ports reset]
 #set_property -dict { PACKAGE_PIN M19   IOSTANDARD LVCMOS33 } [get_ports { sel_hightime[1] }]; #IO_L7P_T1_AD2P_35 Sch=sw[1]
 
 ##RGB LEDs
@@ -24,7 +24,7 @@ set_property -dict { PACKAGE_PIN M20   IOSTANDARD LVCMOS33 } [get_ports { reset 
 
 ##LEDs
 
-set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { object_det }]; #IO_L6N_T0_VREF_34 Sch=led[0]
+set_property -dict {PACKAGE_PIN R14 IOSTANDARD LVCMOS33} [get_ports object_det]
 #set_property -dict { PACKAGE_PIN P14   IOSTANDARD LVCMOS33 } [get_ports { pulse_LED[1] }]; #IO_L6P_T0_34 Sch=led[1]
 #set_property -dict { PACKAGE_PIN N16   IOSTANDARD LVCMOS33 } [get_ports { pulse_LED[2] }]; #IO_L21N_T3_DQS_AD14N_35 Sch=led[2]
 #set_property -dict { PACKAGE_PIN M14   IOSTANDARD LVCMOS33 } [get_ports { pulse_LED[3] }]; #IO_L23P_T3_35 Sch=led[3]
@@ -38,10 +38,10 @@ set_property -dict { PACKAGE_PIN R14   IOSTANDARD LVCMOS33 } [get_ports { object
 
 ##PmodA
 
-set_property -dict { PACKAGE_PIN Y18   IOSTANDARD LVCMOS33 } [get_ports { pwm_out[0] }]
-set_property -dict { PACKAGE_PIN Y19   IOSTANDARD LVCMOS33 } [get_ports { pwm_out[1] }]; #IO_L17N_T2_34 Sch=ja_n[1]
-set_property -dict { PACKAGE_PIN Y16   IOSTANDARD LVCMOS33 } [get_ports { pwm_out[2] }]; #IO_L7P_T1_34 Sch=ja_p[2]
-set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { pwm_out[3] }]; #IO_L7N_T1_34 Sch=ja_n[2]
+set_property -dict {PACKAGE_PIN Y18 IOSTANDARD LVCMOS33} [get_ports {pwm_out[0]}]
+set_property -dict {PACKAGE_PIN Y19 IOSTANDARD LVCMOS33} [get_ports {pwm_out[1]}]
+set_property -dict {PACKAGE_PIN Y16 IOSTANDARD LVCMOS33} [get_ports {pwm_out[2]}]
+set_property -dict {PACKAGE_PIN Y17 IOSTANDARD LVCMOS33} [get_ports {pwm_out[3]}]
 #set_property -dict { PACKAGE_PIN U18   IOSTANDARD LVCMOS33 } [get_ports { ja[4] }]; #IO_L12P_T1_MRCC_34 Sch=ja_p[3]
 #set_property -dict { PACKAGE_PIN U19   IOSTANDARD LVCMOS33 } [get_ports { ja[5] }]; #IO_L12N_T1_MRCC_34 Sch=ja_n[3]
 #set_property -dict { PACKAGE_PIN W18   IOSTANDARD LVCMOS33 } [get_ports { ja[6] }]; #IO_L22P_T3_34 Sch=ja_p[4]
@@ -49,14 +49,14 @@ set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { pwm_ou
 
 ##PmodB
 
-set_property -dict {PACKAGE_PIN W14 IOSTANDARD LVCMOS33} [get_ports trig]
-set_property -dict {PACKAGE_PIN Y14 IOSTANDARD LVCMOS33} [get_ports echo]
-#set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { jb[2] }]; #IO_L1P_T0_34 Sch=jb_p[2]
-#set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { jb[3] }]; #IO_L1N_T0_34 Sch=jb_n[2]
-#set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { jb[4] }]; #IO_L18P_T2_34 Sch=jb_p[3]
-#set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { jb[5] }]; #IO_L18N_T2_34 Sch=jb_n[3]
-#set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { jb[6] }]; #IO_L4P_T0_34 Sch=jb_p[4]
-#set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { jb[7] }]; #IO_L4N_T0_34 Sch=jb_n[4]
+set_property -dict {PACKAGE_PIN W14 IOSTANDARD LVCMOS33} [get_ports trig_0]
+set_property -dict {PACKAGE_PIN Y14 IOSTANDARD LVCMOS33} [get_ports echo_0]
+#set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports trig_1]
+#set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports echo_1]
+#set_property -dict {PACKAGE_PIN V16 IOSTANDARD LVCMOS33} [get_ports trig_2]
+#set_property -dict {PACKAGE_PIN W16 IOSTANDARD LVCMOS33} [get_ports echo_2]
+#set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports trig_3]
+#set_property -dict {PACKAGE_PIN W13 IOSTANDARD LVCMOS33} [get_ports echo_3]
 
 ##Audio
 
@@ -192,3 +192,39 @@ set_property -dict {PACKAGE_PIN Y14 IOSTANDARD LVCMOS33} [get_ports echo]
 
 #set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { crypto_sda }]; #IO_25_35 Sch=crypto_sda
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {us_sensor_0_i/after_echo_count_ff[0]} {us_sensor_0_i/after_echo_count_ff[1]} {us_sensor_0_i/after_echo_count_ff[2]} {us_sensor_0_i/after_echo_count_ff[3]} {us_sensor_0_i/after_echo_count_ff[4]} {us_sensor_0_i/after_echo_count_ff[5]} {us_sensor_0_i/after_echo_count_ff[6]} {us_sensor_0_i/after_echo_count_ff[7]} {us_sensor_0_i/after_echo_count_ff[8]} {us_sensor_0_i/after_echo_count_ff[9]} {us_sensor_0_i/after_echo_count_ff[10]} {us_sensor_0_i/after_echo_count_ff[11]} {us_sensor_0_i/after_echo_count_ff[12]} {us_sensor_0_i/after_echo_count_ff[13]} {us_sensor_0_i/after_echo_count_ff[14]} {us_sensor_0_i/after_echo_count_ff[15]} {us_sensor_0_i/after_echo_count_ff[16]} {us_sensor_0_i/after_echo_count_ff[17]} {us_sensor_0_i/after_echo_count_ff[18]} {us_sensor_0_i/after_echo_count_ff[19]} {us_sensor_0_i/after_echo_count_ff[20]} {us_sensor_0_i/after_echo_count_ff[21]} {us_sensor_0_i/after_echo_count_ff[22]} {us_sensor_0_i/after_echo_count_ff[23]} {us_sensor_0_i/after_echo_count_ff[24]} {us_sensor_0_i/after_echo_count_ff[25]} {us_sensor_0_i/after_echo_count_ff[26]} {us_sensor_0_i/after_echo_count_ff[27]} {us_sensor_0_i/after_echo_count_ff[28]} {us_sensor_0_i/after_echo_count_ff[29]} {us_sensor_0_i/after_echo_count_ff[30]} {us_sensor_0_i/after_echo_count_ff[31]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets clk_IBUF_BUFG]
