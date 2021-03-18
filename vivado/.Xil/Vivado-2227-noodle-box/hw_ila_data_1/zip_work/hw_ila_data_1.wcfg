@@ -10,18 +10,28 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="132397635fs"></ZoomEndTime>
-      <Cursor1Time time="73931000fs"></Cursor1Time>
+      <ZoomEndTime time="131072001fs"></ZoomEndTime>
+      <Cursor1Time time="65572000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="182"></NameColumnWidth>
-      <ValueColumnWidth column_width="132"></ValueColumnWidth>
+      <NameColumnWidth column_width="214"></NameColumnWidth>
+      <ValueColumnWidth column_width="124"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="1" />
+   <WVObjectSize size="2" />
+   <wave_markers>
+   </wave_markers>
    <wvobject type="logic" fp_name="object_det_OBUF">
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">object_det_OBUF</obj_property>
       <obj_property name="ObjectShortName">object_det_OBUF</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject type="array" fp_name="us_sensor_0_i/after_echo_count_ff">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">us_sensor_0_i/after_echo_count_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">after_echo_count_ff[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

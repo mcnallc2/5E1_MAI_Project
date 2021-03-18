@@ -1,0 +1,197 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Fri Mar 12 16:56:32 2021
+# Process ID: 21420
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project FIR_Filter /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter -part xc7a35tcpg236-1
+set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+create_ip -name fir_compiler -vendor xilinx.com -library ip -version 7.2 -module_name fir_compiler_0
+set_property -dict [list CONFIG.Sample_Frequency {100} CONFIG.Clock_Frequency {100} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Structure {Inferred} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {11}] [get_ips fir_compiler_0]
+generate_target {instantiation_template} [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+launch_runs -jobs 2 fir_compiler_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+add_files -norecurse -scan_for_includes {/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/sig_gen.sv /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/measure_sine_peak.sv /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/fir_filter_test.sv}
+import_files -norecurse {/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/sig_gen.sv /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/measure_sine_peak.sv /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/fir_filter_test.sv}
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.CoefficientVector {0.008504686, -1.81366E-05, -0.011693625, 7.98143E-07, 0.019430789, -2.89953E-05, -0.03058495, 6.3898E-06, 0.046659575, -2.75159E-05, -0.07108406, 1.11987E-05, 0.112461926, -3.19411E-05, -0.203034939, 1.46767E-05, 0.633502936, 0.999968889, 0.633502936, 1.46767E-05, -0.203034939, -3.19411E-05, 0.112461926, 1.11987E-05, -0.07108406, -2.75159E-05, 0.046659575, 6.3898E-06, -0.03058495, -2.89953E-05, 0.019430789, 7.98143E-07, -0.011693625, -1.81366E-05, 0.008504686} CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Sets {1} CONFIG.Coefficient_Sign {Signed} CONFIG.Quantization {Quantize_Only} CONFIG.Coefficient_Fractional_Bits {15} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Rounding_Mode {Full_Precision} CONFIG.Output_Width {33} CONFIG.ColumnConfig {18}] [get_ips fir_compiler_0]
+reset_run fir_compiler_0_synth_1
+set_property -dict [list CONFIG.Passband_Max {0.48} CONFIG.Stopband_Min {0.48} CONFIG.Stopband_Max {1.0}] [get_ips fir_compiler_0]
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+add_files -fileset sim_1 -norecurse -scan_for_includes /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/tb_fir_filter_test.sv
+import_files -fileset sim_1 -norecurse /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/tb_fir_filter_test.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+generate_target Simulation [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+set_property -dict [list CONFIG.Passband_Max {0.5} CONFIG.Stopband_Min {0.5} CONFIG.Stopband_Max {1.0}] [get_ips fir_compiler_0]
+create_ip -name cordic -vendor xilinx.com -library ip -version 6.0 -module_name cordic_0
+set_property -dict [list CONFIG.Functional_Selection {Sin_and_Cos} CONFIG.Phase_Format {Scaled_Radians} CONFIG.Input_Width {18} CONFIG.Output_Width {17} CONFIG.Round_Mode {Nearest_Even} CONFIG.Iterations {15} CONFIG.Data_Format {SignedFraction}] [get_ips cordic_0]
+generate_target {instantiation_template} [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/cordic_0/cordic_0.xci]
+update_compile_order -fileset sources_1
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/cordic_0/cordic_0.xci]
+catch { config_ip_cache -export [get_ips -all cordic_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/cordic_0/cordic_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/cordic_0/cordic_0.xci]
+launch_runs -jobs 2 cordic_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/cordic_0/cordic_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+generate_target Simulation [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -no_script -sync -force -quiet
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+set_property -dict [list CONFIG.Passband_Max {0.38} CONFIG.Stopband_Min {0.38} CONFIG.Stopband_Max {1.0}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -no_script -sync -force -quiet
+launch_runs -jobs 2 fir_compiler_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+set_property -dict [list CONFIG.Coefficient_Width {32} CONFIG.Passband_Max {0.47} CONFIG.Stopband_Min {0.49} CONFIG.Coefficient_Fractional_Bits {31} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Rounding_Mode {Full_Precision} CONFIG.Output_Width {49} CONFIG.Stopband_Max {1.0}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci]
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -no_script -sync -force -quiet
+reset_run fir_compiler_0_synth_1
+launch_runs -jobs 2 fir_compiler_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset fir_compiler_0 /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0/fir_compiler_0.xci
+create_ip -name fir_compiler -vendor xilinx.com -library ip -version 7.2 -module_name fir_compiler_0
+set_property -dict [list CONFIG.CoefficientVector {0.004252343, -9.07E-06, -0.005846813, 3.99E-07, 0.009715395, -1.45E-05, -0.015292475, 3.19E-06, 0.023329788, -1.38E-05, -0.03554203, 5.60E-06, 0.056230963, -1.60E-05, -0.10151747, 7.34E-06, 0.316751468, 0.499984445, 0.316751468, 7.34E-06, -0.10151747, -1.60E-05, 0.056230963, 5.60E-06, -0.03554203, -1.38E-05, 0.023329788, 3.19E-06, -0.015292475, -1.45E-05, 0.009715395, 3.99E-07, -0.005846813, -9.07E-06, 0.004252343} CONFIG.Sample_Frequency {100} CONFIG.Clock_Frequency {100} CONFIG.Coefficient_Width {10} CONFIG.Passband_Max {0.38} CONFIG.Stopband_Min {0.58} CONFIG.Coefficient_Sets {1} CONFIG.Coefficient_Sign {Signed} CONFIG.Quantization {Quantize_Only} CONFIG.Coefficient_Fractional_Bits {9} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Rounding_Mode {Full_Precision} CONFIG.Output_Width {26} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {9} CONFIG.Stopband_Max {1.0}] [get_ips fir_compiler_0]
+generate_target {instantiation_template} [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+launch_runs -jobs 2 fir_compiler_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+launch_simulation
+source tb_fir_filter_test.tcl
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+set_property -name {xsim.simulate.runtime} -value {1000000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+launch_simulation
+source tb_fir_filter_test.tcl
+set_property -name {xsim.simulate.runtime} -value {100000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+close_sim
+launch_simulation
+launch_simulation
+source tb_fir_filter_test.tcl
+set_property -name {xsim.simulate.runtime} -value {100000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+set_property -dict [list CONFIG.Coefficient_Width {16} CONFIG.Coefficient_Fractional_Bits {16} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Rounding_Mode {Full_Precision} CONFIG.Output_Width {33} CONFIG.ColumnConfig {18}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+reset_run fir_compiler_0_synth_1
+launch_runs -jobs 2 fir_compiler_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+set_property -dict [list CONFIG.Coefficient_Width {10} CONFIG.Coefficient_Structure {Inferred} CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Output_Width {16} CONFIG.Coefficient_Fractional_Bits {9} CONFIG.Data_Width {16} CONFIG.Filter_Architecture {Systolic_Multiply_Accumulate} CONFIG.ColumnConfig {9}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+reset_run fir_compiler_0_synth_1
+launch_runs -jobs 2 fir_compiler_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+set_property -name {xsim.simulate.runtime} -value {60000ns} -objects [get_filesets sim_1]
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+close_sim
+launch_simulation
+source tb_fir_filter_test.tcl
+save_wave_config {/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/tb_fir_filter_test_behav.wcfg}
+add_files -fileset sim_1 -norecurse /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/tb_fir_filter_test_behav.wcfg
+set_property xsim.view /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/tb_fir_filter_test_behav.wcfg [get_filesets sim_1]
+set_property -dict [list CONFIG.Output_Rounding_Mode {Symmetric_Rounding_to_Zero} CONFIG.Output_Width {16}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+reset_run fir_compiler_0_synth_1
+launch_runs -jobs 2 fir_compiler_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+open_wave_config /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/tb_fir_filter_test_behav.wcfg
+source tb_fir_filter_test.tcl
+set_property -dict [list CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Output_Width {16}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+catch { [ delete_ip_run [get_ips -all fir_compiler_0] ] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+launch_simulation
+open_wave_config /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/tb_fir_filter_test_behav.wcfg
+source tb_fir_filter_test.tcl
+update_compile_order -fileset sources_1
+save_wave_config {/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab4/FIR_Filter/tb_fir_filter_test_behav.wcfg}
+close_sim
+close_project
+open_project /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter/FIR_Filter.xpr
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/Basys3_Master.xdc
+import_files -fileset constrs_1 /home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/Basys3_Master.xdc
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+close_design
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+refresh_design
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.xpr
+update_compile_order -fileset sources_1
+open_bd_design {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.srcs/sources_1/bd/us_arm_module/us_arm_module.bd}

@@ -1,5 +1,5 @@
 
-`define ONE_SENSORS
+`define TWO_SENSORS
 
 module us_arm_control_wrapper
    (input  wire clk,
@@ -135,7 +135,7 @@ module us_arm_control_wrapper
         .delay_ff(delay_ff),
         .state_ff(state_ff),
         .counter_ff(counter_ff));
-                
+
 `endif
     
 

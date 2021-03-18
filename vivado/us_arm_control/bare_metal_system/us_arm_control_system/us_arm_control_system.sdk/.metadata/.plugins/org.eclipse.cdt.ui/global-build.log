@@ -11741,3 +11741,2686 @@ arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.si
   85152	   3432	  23456	 112040	  1b5a8	us_arm_control_system.elf
 Finished building: us_arm_control_system.elf.size
  
+11:06:06 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:35:46 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:37:31 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:39:33 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:39:53 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:44:00 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:45:50 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:46:16 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+11:50:56 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:05:53 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:06:47 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:07:46 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:10:33 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:11:06 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:12:28 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:13:38 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:14:00 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:16:43 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:536:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:535:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85184	   3432	  23456	 112072	  1b5c8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:17:29 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:536:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:535:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85184	   3432	  23456	 112072	  1b5c8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:17:40 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:23:44 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:536:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:535:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85184	   3432	  23456	 112072	  1b5c8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:23:45 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:26:41 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:28:54 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85368	   3432	  23456	 112256	  1b680	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:28:56 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:29:22 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85304	   3432	  23456	 112192	  1b640	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:29:28 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:338:2: warning: 'mode1_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:339:2: warning: 'mode2_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:340:2: warning: 'mode3_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85240	   3432	  23456	 112128	  1b600	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:29:31 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:338:2: warning: 'mode1_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:339:2: warning: 'mode2_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:340:2: warning: 'mode3_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85240	   3432	  23456	 112128	  1b600	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:29:34 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:343:23: warning: 'mode1_dist' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  if (mode0_dist < 100 || mode1_dist < 100 || mode2_dist < 100 || mode3_dist < 100){
+      ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../src/main.c:343:43: warning: 'mode2_dist' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  if (mode0_dist < 100 || mode1_dist < 100 || mode2_dist < 100 || mode3_dist < 100){
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+../src/main.c:343:63: warning: 'mode3_dist' may be used uninitialized in this function [-Wmaybe-uninitialized]
+  if (mode0_dist < 100 || mode1_dist < 100 || mode2_dist < 100 || mode3_dist < 100){
+      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:29:44 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:318:44: warning: unused variable 'mode3_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                            ^~~~~~~~~~
+../src/main.c:318:32: warning: unused variable 'mode2_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                ^~~~~~~~~~
+../src/main.c:318:20: warning: unused variable 'mode1_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                    ^~~~~~~~~~
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85040	   3432	  23456	 111928	  1b538	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:29:49 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:30:24 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:30:55 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:318:44: warning: unused variable 'mode3_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                            ^~~~~~~~~~
+../src/main.c:318:32: warning: unused variable 'mode2_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                ^~~~~~~~~~
+../src/main.c:318:20: warning: unused variable 'mode1_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                    ^~~~~~~~~~
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85040	   3432	  23456	 111928	  1b538	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:30:57 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:31:39 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:318:44: warning: unused variable 'mode3_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                            ^~~~~~~~~~
+../src/main.c:318:32: warning: unused variable 'mode2_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                ^~~~~~~~~~
+../src/main.c:318:20: warning: unused variable 'mode1_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                    ^~~~~~~~~~
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85040	   3432	  23456	 111928	  1b538	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:31:40 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:52:55 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:318:44: warning: unused variable 'mode3_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                            ^~~~~~~~~~
+../src/main.c:318:32: warning: unused variable 'mode2_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                ^~~~~~~~~~
+../src/main.c:318:20: warning: unused variable 'mode1_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                    ^~~~~~~~~~
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85040	   3432	  23456	 111928	  1b538	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:53:00 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:318:44: warning: unused variable 'mode3_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                            ^~~~~~~~~~
+../src/main.c:318:32: warning: unused variable 'mode2_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                ^~~~~~~~~~
+../src/main.c:318:20: warning: unused variable 'mode1_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                    ^~~~~~~~~~
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84976	   3432	  23456	 111864	  1b4f8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:53:03 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:318:44: warning: unused variable 'mode3_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                            ^~~~~~~~~~
+../src/main.c:318:32: warning: unused variable 'mode2_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                                ^~~~~~~~~~
+../src/main.c:318:20: warning: unused variable 'mode1_dist' [-Wunused-variable]
+  float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+                    ^~~~~~~~~~
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: unused variable 'dist0_list' [-Wunused-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84912	   3432	  23456	 111800	  1b4b8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:53:09 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:54:12 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:316:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:315:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: unused variable 'dist0_list' [-Wunused-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84912	   3432	  23456	 111800	  1b4b8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:54:16 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:313:8: warning: unused variable 'dist0_list' [-Wunused-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84912	   3432	  23456	 111800	  1b4b8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:54:21 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84912	   3432	  23456	 111800	  1b4b8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:54:29 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:55:06 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:313:8: warning: unused variable 'dist0_list' [-Wunused-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84912	   3432	  23456	 111800	  1b4b8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:55:10 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:313:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84976	   3432	  23456	 111864	  1b4f8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:55:16 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:313:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85040	   3432	  23456	 111928	  1b538	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:55:37 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:56:07 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:313:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85040	   3432	  23456	 111928	  1b538	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:56:09 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:56:46 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:59:43 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:313:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:538:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:537:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85048	   3432	  23456	 111936	  1b540	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+12:59:46 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:01:03 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:313:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:540:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:539:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85096	   3432	  23456	 111984	  1b570	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+13:01:04 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:01:45 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:39:46 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:40:16 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:41:46 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:313:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:537:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:536:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85040	   3432	  23456	 111928	  1b538	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+13:42:15 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:42:47 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:536:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:535:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84856	   3432	  23456	 111744	  1b480	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+13:43:57 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:45:32 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:535:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:534:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84760	   3432	  23456	 111648	  1b420	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+13:45:35 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:46:02 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:535:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:534:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84824	   3432	  23456	 111712	  1b460	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+13:46:04 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:46:35 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:535:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:534:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84824	   3432	  23456	 111712	  1b460	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+13:46:41 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:47:19 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:49:24 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:535:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:534:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84760	   3432	  23456	 111648	  1b420	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+13:49:46 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:51:59 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:535:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:534:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84760	   3432	  23456	 111648	  1b420	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+13:52:04 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:535:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:534:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  84760	   3432	  23456	 111648	  1b420	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:12:49 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:543:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:542:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85032	   3432	  23456	 111920	  1b530	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:12:54 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:545:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:544:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85032	   3432	  23456	 111920	  1b530	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:13:03 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:545:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:544:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85056	   3432	  23456	 111944	  1b548	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:13:05 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:311:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:545:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:544:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85056	   3432	  23456	 111944	  1b548	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:13:12 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:17:42 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:18:25 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:19:22 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:546:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:545:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85064	   3432	  23456	 111952	  1b550	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:19:23 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:20:34 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:20:57 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:21:19 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:22:19 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:25:20 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:26:47 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85144	   3432	  23456	 112032	  1b5a0	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:26:49 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:31:16 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:315:8: warning: unused variable 'dist3_list' [-Wunused-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: unused variable 'dist2_list' [-Wunused-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: unused variable 'dist1_list' [-Wunused-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85144	   3432	  23456	 112032	  1b5a0	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:31:20 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:315:8: warning: variable 'dist3_list' set but not used [-Wunused-but-set-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: variable 'dist2_list' set but not used [-Wunused-but-set-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: variable 'dist1_list' set but not used [-Wunused-but-set-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85272	   3432	  23456	 112160	  1b620	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:31:31 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:337:34: error: 'mode1_dist' undeclared (first use in this function); did you mean 'mode0_dist'?
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+                                  ^~~~~~~~~~
+                                  mode0_dist
+../src/main.c:337:34: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:338:34: error: 'mode2_dist' undeclared (first use in this function); did you mean 'mode1_dist'?
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+                                  ^~~~~~~~~~
+                                  mode1_dist
+../src/main.c:339:34: error: 'mode3_dist' undeclared (first use in this function); did you mean 'mode2_dist'?
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+                                  ^~~~~~~~~~
+                                  mode2_dist
+../src/main.c:315:8: warning: variable 'dist3_list' set but not used [-Wunused-but-set-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: variable 'dist2_list' set but not used [-Wunused-but-set-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: variable 'dist1_list' set but not used [-Wunused-but-set-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+14:31:33 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:315:8: warning: variable 'dist3_list' set but not used [-Wunused-but-set-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: variable 'dist2_list' set but not used [-Wunused-but-set-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: variable 'dist1_list' set but not used [-Wunused-but-set-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:337:2: warning: 'mode1_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:338:2: warning: 'mode2_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:339:2: warning: 'mode3_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85408	   3432	  23456	 112296	  1b6a8	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:31:42 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+14:45:41 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:315:8: warning: variable 'dist3_list' set but not used [-Wunused-but-set-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: variable 'dist2_list' set but not used [-Wunused-but-set-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: variable 'dist1_list' set but not used [-Wunused-but-set-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:337:2: warning: 'mode1_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:338:2: warning: 'mode2_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:339:2: warning: 'mode3_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85280	   3432	  23456	 112168	  1b628	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+14:45:45 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+15:20:11 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:20:37 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:20:50 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:22:30 **** Build of project us_test_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/tmrctr_v4_5/src
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/tmrctr_v4_5/src
+make -C ps7_cortexa9_0/libsrc/tmrctr_v4_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling tmrctr
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpiops
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpio
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+15:22:44 **** Build of configuration Debug for project us_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: us_test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_test_bsp/ps7_cortexa9_0/lib -o "us_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_test.elf  |tee "us_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19348	   1144	  22568	  43060	   a834	us_test.elf
+Finished building: us_test.elf.size
+ 
+15:22:45 **** Auto Build of configuration Debug for project us_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:22:59 **** Auto Build of configuration Debug for project us_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:44:0:
+../../us_test_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'ultrasonicDetection':
+../src/helloworld.c:315:8: warning: variable 'dist3_list' set but not used [-Wunused-but-set-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:314:8: warning: variable 'dist2_list' set but not used [-Wunused-but-set-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:313:8: warning: variable 'dist1_list' set but not used [-Wunused-but-set-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:312:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c: In function 'TmrCtrPwmConfig':
+../src/helloworld.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/helloworld.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+../src/helloworld.c: In function 'ultrasonicDetection':
+../src/helloworld.c:337:2: warning: 'mode1_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:338:2: warning: 'mode2_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:339:2: warning: 'mode3_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: us_test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_test_bsp/ps7_cortexa9_0/lib -o "us_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_test.elf  |tee "us_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85040	   3432	  23456	 111928	  1b538	us_test.elf
+Finished building: us_test.elf.size
+ 
+15:23:08 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:24:14 **** Auto Build of configuration Debug for project us_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:44:0:
+../../us_test_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'ultrasonicDetection':
+../src/helloworld.c:209:8: warning: variable 'dist3_list' set but not used [-Wunused-but-set-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:208:8: warning: variable 'dist2_list' set but not used [-Wunused-but-set-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:207:8: warning: variable 'dist1_list' set but not used [-Wunused-but-set-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:206:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:133:13: warning: 'TimerCounterHandler' declared 'static' but never defined [-Wunused-function]
+ static void TimerCounterHandler(
+             ^~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:137:12: warning: 'TmrCtrSetupIntrSystem' declared 'static' but never defined [-Wunused-function]
+ static int TmrCtrSetupIntrSystem(
+            ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:143:13: warning: 'TmrCtrDisableIntr' declared 'static' but never defined [-Wunused-function]
+ static void TmrCtrDisableIntr(
+             ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:111:14: warning: 'HighTimerHit' defined but not used [-Wunused-variable]
+ static int   HighTimerHit = FALSE;
+              ^~~~~~~~~~~~
+../src/helloworld.c:110:14: warning: 'PeriodTimerHit' defined but not used [-Wunused-variable]
+ static int   PeriodTimerHit = FALSE;
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'ultrasonicDetection':
+../src/helloworld.c:231:2: warning: 'mode1_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:232:2: warning: 'mode2_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:233:2: warning: 'mode3_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: us_test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_test_bsp/ps7_cortexa9_0/lib -o "us_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_test.elf  |tee "us_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  75972	   2608	  23440	 102020	  18e84	us_test.elf
+Finished building: us_test.elf.size
+ 
+15:25:26 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:315:8: warning: variable 'dist3_list' set but not used [-Wunused-but-set-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:314:8: warning: variable 'dist2_list' set but not used [-Wunused-but-set-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c:313:8: warning: variable 'dist1_list' set but not used [-Wunused-but-set-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+../src/main.c: In function 'ultrasonicDetection':
+../src/main.c:337:2: warning: 'mode1_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:338:2: warning: 'mode2_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/main.c:339:2: warning: 'mode3_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:25:27 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:25:32 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:25:36 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:26:54 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:26:56 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:28:12 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:28:15 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:28:56 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:29:37 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:29:38 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:32:02 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:32:40 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:32:45 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:32:47 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:49:02 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:50:58 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:52:39 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:53:40 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:53:45 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:54:15 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+15:54:16 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:57:42 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:58:08 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+18:59:33 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:551:6: warning: unused variable 'WaitCount' [-Wunused-variable]
+  u64 WaitCount;
+      ^~~~~~~~~
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+18:59:38 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:00:24 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:00:57 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:02:10 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:04:48 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:05:11 **** Auto Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:44:0:
+../../us_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:548:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:547:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system.elf  |tee "us_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  85104	   3432	  23456	 111992	  1b578	us_arm_control_system.elf
+Finished building: us_arm_control_system.elf.size
+ 
+19:05:13 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+19:12:39 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

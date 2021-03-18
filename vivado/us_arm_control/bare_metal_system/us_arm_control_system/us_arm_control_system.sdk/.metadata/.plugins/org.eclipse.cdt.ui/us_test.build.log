@@ -1,0 +1,66 @@
+15:24:14 **** Auto Build of configuration Debug for project us_test ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_test_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:44:0:
+../../us_test_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'ultrasonicDetection':
+../src/helloworld.c:209:8: warning: variable 'dist3_list' set but not used [-Wunused-but-set-variable]
+  float dist3_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:208:8: warning: variable 'dist2_list' set but not used [-Wunused-but-set-variable]
+  float dist2_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:207:8: warning: variable 'dist1_list' set but not used [-Wunused-but-set-variable]
+  float dist1_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c:206:8: warning: variable 'dist0_list' set but not used [-Wunused-but-set-variable]
+  float dist0_list[TOTAL_CALC];
+        ^~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:133:13: warning: 'TimerCounterHandler' declared 'static' but never defined [-Wunused-function]
+ static void TimerCounterHandler(
+             ^~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:137:12: warning: 'TmrCtrSetupIntrSystem' declared 'static' but never defined [-Wunused-function]
+ static int TmrCtrSetupIntrSystem(
+            ^~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:143:13: warning: 'TmrCtrDisableIntr' declared 'static' but never defined [-Wunused-function]
+ static void TmrCtrDisableIntr(
+             ^~~~~~~~~~~~~~~~~
+../src/helloworld.c:111:14: warning: 'HighTimerHit' defined but not used [-Wunused-variable]
+ static int   HighTimerHit = FALSE;
+              ^~~~~~~~~~~~
+../src/helloworld.c:110:14: warning: 'PeriodTimerHit' defined but not used [-Wunused-variable]
+ static int   PeriodTimerHit = FALSE;
+              ^~~~~~~~~~~~~~
+../src/helloworld.c: In function 'ultrasonicDetection':
+../src/helloworld.c:231:2: warning: 'mode1_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS1_Distance: %f mm", mode1_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:232:2: warning: 'mode2_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS2_Distance: %f mm", mode2_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:233:2: warning: 'mode3_dist' is used uninitialized in this function [-Wuninitialized]
+  printf("\nUS3_Distance: %f mm", mode3_dist);
+  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: us_test.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_test_bsp/ps7_cortexa9_0/lib -o "us_test.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: us_test.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_test.elf  |tee "us_test.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  75972	   2608	  23440	 102020	  18e84	us_test.elf
+Finished building: us_test.elf.size
+ 
+
+15:24:14 Build Finished (took 272ms)
+

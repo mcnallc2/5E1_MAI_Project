@@ -51,8 +51,8 @@ set_property -dict {PACKAGE_PIN Y17 IOSTANDARD LVCMOS33} [get_ports {pwm_out[3]}
 
 set_property -dict {PACKAGE_PIN W14 IOSTANDARD LVCMOS33} [get_ports trig_0]
 set_property -dict {PACKAGE_PIN Y14 IOSTANDARD LVCMOS33} [get_ports echo_0]
-#set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports trig_1]
-#set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports echo_1]
+set_property -dict {PACKAGE_PIN T11 IOSTANDARD LVCMOS33} [get_ports trig_1]
+set_property -dict {PACKAGE_PIN T10 IOSTANDARD LVCMOS33} [get_ports echo_1]
 #set_property -dict {PACKAGE_PIN V16 IOSTANDARD LVCMOS33} [get_ports trig_2]
 #set_property -dict {PACKAGE_PIN W16 IOSTANDARD LVCMOS33} [get_ports echo_2]
 #set_property -dict {PACKAGE_PIN V12 IOSTANDARD LVCMOS33} [get_ports trig_3]
@@ -206,25 +206,4 @@ set_property -dict {PACKAGE_PIN Y14 IOSTANDARD LVCMOS33} [get_ports echo_0]
 
 
 
-create_debug_core u_ila_0 ila
-set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
-set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
-set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
-set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
-set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
-set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
-set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
-set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
-set_property port_width 1 [get_debug_ports u_ila_0/clk]
-connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG]]
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
-set_property port_width 32 [get_debug_ports u_ila_0/probe0]
-connect_debug_port u_ila_0/probe0 [get_nets [list {us_sensor_0_i/after_echo_count_ff[0]} {us_sensor_0_i/after_echo_count_ff[1]} {us_sensor_0_i/after_echo_count_ff[2]} {us_sensor_0_i/after_echo_count_ff[3]} {us_sensor_0_i/after_echo_count_ff[4]} {us_sensor_0_i/after_echo_count_ff[5]} {us_sensor_0_i/after_echo_count_ff[6]} {us_sensor_0_i/after_echo_count_ff[7]} {us_sensor_0_i/after_echo_count_ff[8]} {us_sensor_0_i/after_echo_count_ff[9]} {us_sensor_0_i/after_echo_count_ff[10]} {us_sensor_0_i/after_echo_count_ff[11]} {us_sensor_0_i/after_echo_count_ff[12]} {us_sensor_0_i/after_echo_count_ff[13]} {us_sensor_0_i/after_echo_count_ff[14]} {us_sensor_0_i/after_echo_count_ff[15]} {us_sensor_0_i/after_echo_count_ff[16]} {us_sensor_0_i/after_echo_count_ff[17]} {us_sensor_0_i/after_echo_count_ff[18]} {us_sensor_0_i/after_echo_count_ff[19]} {us_sensor_0_i/after_echo_count_ff[20]} {us_sensor_0_i/after_echo_count_ff[21]} {us_sensor_0_i/after_echo_count_ff[22]} {us_sensor_0_i/after_echo_count_ff[23]} {us_sensor_0_i/after_echo_count_ff[24]} {us_sensor_0_i/after_echo_count_ff[25]} {us_sensor_0_i/after_echo_count_ff[26]} {us_sensor_0_i/after_echo_count_ff[27]} {us_sensor_0_i/after_echo_count_ff[28]} {us_sensor_0_i/after_echo_count_ff[29]} {us_sensor_0_i/after_echo_count_ff[30]} {us_sensor_0_i/after_echo_count_ff[31]}]]
-create_debug_port u_ila_0 probe
-set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
-set_property port_width 1 [get_debug_ports u_ila_0/probe1]
-connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF]]
-set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
-set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
-set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
-connect_debug_port dbg_hub/clk [get_nets clk_IBUF_BUFG]
+
