@@ -18,3 +18,386 @@ INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
 update_compile_order -fileset sources_1
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.xpr
+INFO: [Project 1-313] Project file moved from '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 227 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'trig_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'echo_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6665.984 ; gain = 0.000 ; free physical = 793 ; free virtual = 4199
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+open_run: Time (s): cpu = 00:00:13 ; elapsed = 00:00:08 . Memory (MB): peak = 6800.539 ; gain = 389.238 ; free physical = 822 ; free virtual = 4171
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+WARNING: [Project 1-478] Design 'synth_1' is stale and will not be used when launching 'impl_1'
+[Sun Mar 21 17:05:43 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/synth_1/runme.log
+[Sun Mar 21 17:05:43 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/runme.log
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 243 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'trig_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'echo_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 6951.645 ; gain = 0.000 ; free physical = 1504 ; free virtual = 4116
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Mar 21 17:10:55 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/synth_1/runme.log
+close_design
+launch_runs impl_1 -jobs 2
+[Sun Mar 21 17:11:35 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 243 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'trig_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'echo_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7000.477 ; gain = 0.000 ; free physical = 1319 ; free virtual = 4013
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*us_det*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {us_sensor_0_i/us_det_timer_ff[0]} {us_sensor_0_i/us_det_timer_ff[1]} {us_sensor_0_i/us_det_timer_ff[2]} {us_sensor_0_i/us_det_timer_ff[3]} {us_sensor_0_i/us_det_timer_ff[4]} {us_sensor_0_i/us_det_timer_ff[5]} {us_sensor_0_i/us_det_timer_ff[6]} {us_sensor_0_i/us_det_timer_ff[7]} {us_sensor_0_i/us_det_timer_ff[8]} {us_sensor_0_i/us_det_timer_ff[9]} {us_sensor_0_i/us_det_timer_ff[10]} {us_sensor_0_i/us_det_timer_ff[11]} {us_sensor_0_i/us_det_timer_ff[12]} {us_sensor_0_i/us_det_timer_ff[13]} {us_sensor_0_i/us_det_timer_ff[14]} {us_sensor_0_i/us_det_timer_ff[15]} {us_sensor_0_i/us_det_timer_ff[16]} {us_sensor_0_i/us_det_timer_ff[17]} {us_sensor_0_i/us_det_timer_ff[18]} {us_sensor_0_i/us_det_timer_ff[19]} {us_sensor_0_i/us_det_timer_ff[20]} {us_sensor_0_i/us_det_timer_ff[21]} {us_sensor_0_i/us_det_timer_ff[22]} {us_sensor_0_i/us_det_timer_ff[23]} {us_sensor_0_i/us_det_timer_ff[24]} {us_sensor_0_i/us_det_timer_ff[25]} {us_sensor_0_i/us_det_timer_ff[26]} {us_sensor_0_i/us_det_timer_ff[27]} {us_sensor_0_i/us_det_timer_ff[28]} {us_sensor_0_i/us_det_timer_ff[29]} {us_sensor_0_i/us_det_timer_ff[30]} {us_sensor_0_i/us_det_timer_ff[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 7030.504 ; gain = 0.000 ; free physical = 1168 ; free virtual = 3924
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7030.504 ; gain = 0.000 ; free physical = 1172 ; free virtual = 3928
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 7030.504 ; gain = 0.000 ; free physical = 1168 ; free virtual = 3925
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 7030.504 ; gain = 0.000 ; free physical = 1168 ; free virtual = 3925
+[Sun Mar 21 17:13:51 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+WARNING: [Labtools 27-3361] The debug hub core was not detected.
+Resolution: 
+1. Make sure the clock connected to the debug hub (dbg_hub) core is a free running clock and is active.
+2. Make sure the BSCAN_SWITCH_USER_MASK device property in Vivado Hardware Manager reflects the user scan chain setting in the design and refresh the device.  To determine the user scan chain setting in the design, open the implemented design and use 'get_property C_USER_SCAN_CHAIN [get_debug_cores dbg_hub]'.
+For more details on setting the scan chain property, consult the Vivado Debug and Programming User Guide (UG908).
+WARNING: [Labtools 27-3413] Dropping logic core with cellname:'u_ila_0' at location 'uuid_23E7D65A79BC59F7BC47406C1714DFAE' from probes file, since it cannot be found on the programmed device.
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+WARNING: Simulation object us_sensor_0_i/after_echo_count_ff was not found in the design.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {object_det_OBUF} {us_sensor_0_i/us_det_timer_ff} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-21 17:20:32
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-21 17:20:36
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+[Sun Mar 21 17:32:30 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/synth_1/runme.log
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+close_design
+open_run synth_1 -name synth_1
+Design is defaulting to impl run constrset: constrs_1
+Design is defaulting to synth run part: xc7z020clg400-1
+INFO: [Netlist 29-17] Analyzing 243 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2018.3
+INFO: [Project 1-570] Preparing netlist for logic optimization
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'trig_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'echo_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8044.758 ; gain = 0.000 ; free physical = 710 ; free virtual = 3310
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*us_det*" ]
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[14]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[16]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[23]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[31]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[20]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[17]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[19]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[10]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[18]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[21]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[12]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[0]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[1]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[27]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[29]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[11]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[22]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[6]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[24]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[4]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[28]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[2]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[30]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[7]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[8]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[13]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[3]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[15]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[26]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[25]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[9]'; it was auto-generated for Vivado debug.
+CRITICAL WARNING: [Chipscope 16-3] Cannot debug net 'u_ila_0_us_det_timer_ff[5]'; it was auto-generated for Vivado debug.
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {us_sensor_0_i/us_det_timer_out_ff[0]} {us_sensor_0_i/us_det_timer_out_ff[1]} {us_sensor_0_i/us_det_timer_out_ff[2]} {us_sensor_0_i/us_det_timer_out_ff[3]} {us_sensor_0_i/us_det_timer_out_ff[4]} {us_sensor_0_i/us_det_timer_out_ff[5]} {us_sensor_0_i/us_det_timer_out_ff[6]} {us_sensor_0_i/us_det_timer_out_ff[7]} {us_sensor_0_i/us_det_timer_out_ff[8]} {us_sensor_0_i/us_det_timer_out_ff[9]} {us_sensor_0_i/us_det_timer_out_ff[10]} {us_sensor_0_i/us_det_timer_out_ff[11]} {us_sensor_0_i/us_det_timer_out_ff[12]} {us_sensor_0_i/us_det_timer_out_ff[13]} {us_sensor_0_i/us_det_timer_out_ff[14]} {us_sensor_0_i/us_det_timer_out_ff[15]} {us_sensor_0_i/us_det_timer_out_ff[16]} {us_sensor_0_i/us_det_timer_out_ff[17]} {us_sensor_0_i/us_det_timer_out_ff[18]} {us_sensor_0_i/us_det_timer_out_ff[19]} {us_sensor_0_i/us_det_timer_out_ff[20]} {us_sensor_0_i/us_det_timer_out_ff[21]} {us_sensor_0_i/us_det_timer_out_ff[22]} {us_sensor_0_i/us_det_timer_out_ff[23]} {us_sensor_0_i/us_det_timer_out_ff[24]} {us_sensor_0_i/us_det_timer_out_ff[25]} {us_sensor_0_i/us_det_timer_out_ff[26]} {us_sensor_0_i/us_det_timer_out_ff[27]} {us_sensor_0_i/us_det_timer_out_ff[28]} {us_sensor_0_i/us_det_timer_out_ff[29]} {us_sensor_0_i/us_det_timer_out_ff[30]} {us_sensor_0_i/us_det_timer_out_ff[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 8044.758 ; gain = 0.000 ; free physical = 596 ; free virtual = 3202
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8044.758 ; gain = 0.000 ; free physical = 581 ; free virtual = 3198
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.02 . Memory (MB): peak = 8044.758 ; gain = 0.000 ; free physical = 576 ; free virtual = 3194
+Netlist sorting complete. Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00 . Memory (MB): peak = 8044.758 ; gain = 0.000 ; free physical = 576 ; free virtual = 3194
+[Sun Mar 21 17:34:37 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+WARNING: Simulation object us_sensor_0_i/us_det_timer_ff was not found in the design.
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {us_sensor_0_i/us_det_timer_out_ff} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-21 17:38:02
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2021-Mar-21 17:38:17
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2021-Mar-21 17:38:18
+INFO: [Labtools 27-3304] ILA Waveform data saved to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+synth_design -rtl -name rtl_1
+Command: synth_design -rtl -name rtl_1
+Starting synth_design
+Using part: xc7z020clg400-1
+Top: us_arm_control_wrapper
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 8074.758 ; gain = 0.000 ; free physical = 746 ; free virtual = 2725
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'us_arm_control_wrapper' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:4]
+	Parameter THRESHOLD bound to: 60000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'test_proc' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/test_proc.v:1]
+	Parameter DELAY_30MS bound to: 64'b0000000000000000000000000000000000000000000000000000011111010000 
+	Parameter DELAY_3S bound to: 64'b0000000000000000000000000000000000000000000000110000110101000000 
+	Parameter ANGLE_0 bound to: 64'b0000000000000000000000000000000000000000000000001001110001000000 
+	Parameter ANGLE_90 bound to: 64'b0000000000000000000000000000000000000000000000101010101110011000 
+	Parameter ANGLE_180 bound to: 64'b0000000000000000000000000000000000000000000001001011101011110000 
+	Parameter A bound to: 2'b00 
+	Parameter B bound to: 2'b01 
+	Parameter C bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/test_proc.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'test_proc' (1#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/test_proc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'us_sensor' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/us_sensor.v:1]
+	Parameter MAX_SEQ_LEN bound to: 500000 - type: integer 
+	Parameter TRIG_LEN bound to: 1000 - type: integer 
+	Parameter PULSES bound to: 10 - type: integer 
+	Parameter A bound to: 2'b00 
+	Parameter B bound to: 2'b01 
+	Parameter C bound to: 2'b10 
+	Parameter D bound to: 2'b11 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/us_sensor.v:20]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/us_sensor.v:21]
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/us_sensor.v:22]
+INFO: [Synth 8-6155] done synthesizing module 'us_sensor' (2#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/us_sensor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'arm_controller' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/arm_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/arm_controller.v:29]
+	Parameter FULL_PERIOD bound to: 64'b0000000000000000000000000000000000000000000111101000010010000000 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (3#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/arm_controller.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'arm_controller' (4#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/new/arm_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'us_arm_control_wrapper' (5#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8089.980 ; gain = 15.223 ; free physical = 752 ; free virtual = 2737
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8089.980 ; gain = 15.223 ; free physical = 750 ; free virtual = 2736
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 8089.980 ; gain = 15.223 ; free physical = 750 ; free virtual = 2736
+---------------------------------------------------------------------------------
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'trig_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'echo_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/PYNQ-Z2_v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/us_arm_control_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/us_arm_control_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8235.023 ; gain = 0.000 ; free physical = 641 ; free virtual = 2647
+Completed Processing XDC Constraints
+
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 8235.023 ; gain = 0.000 ; free physical = 643 ; free virtual = 2650
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+RTL Elaboration Complete:  : Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8266.039 ; gain = 191.281 ; free physical = 641 ; free virtual = 2671
+18 Infos, 2 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 8266.039 ; gain = 191.281 ; free physical = 641 ; free virtual = 2671
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+current_design synth_1

@@ -12,3 +12,114 @@
 start_gui
 open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control/arm_control.xpr
 update_compile_order -fileset sources_1
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.xpr
+update_compile_order -fileset sources_1
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close_design
+open_run synth_1 -name synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+close_design
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
+reset_run impl_1
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*us_det*" ]
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*object*" ]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {us_sensor_0_i/us_det_timer_ff[0]} {us_sensor_0_i/us_det_timer_ff[1]} {us_sensor_0_i/us_det_timer_ff[2]} {us_sensor_0_i/us_det_timer_ff[3]} {us_sensor_0_i/us_det_timer_ff[4]} {us_sensor_0_i/us_det_timer_ff[5]} {us_sensor_0_i/us_det_timer_ff[6]} {us_sensor_0_i/us_det_timer_ff[7]} {us_sensor_0_i/us_det_timer_ff[8]} {us_sensor_0_i/us_det_timer_ff[9]} {us_sensor_0_i/us_det_timer_ff[10]} {us_sensor_0_i/us_det_timer_ff[11]} {us_sensor_0_i/us_det_timer_ff[12]} {us_sensor_0_i/us_det_timer_ff[13]} {us_sensor_0_i/us_det_timer_ff[14]} {us_sensor_0_i/us_det_timer_ff[15]} {us_sensor_0_i/us_det_timer_ff[16]} {us_sensor_0_i/us_det_timer_ff[17]} {us_sensor_0_i/us_det_timer_ff[18]} {us_sensor_0_i/us_det_timer_ff[19]} {us_sensor_0_i/us_det_timer_ff[20]} {us_sensor_0_i/us_det_timer_ff[21]} {us_sensor_0_i/us_det_timer_ff[22]} {us_sensor_0_i/us_det_timer_ff[23]} {us_sensor_0_i/us_det_timer_ff[24]} {us_sensor_0_i/us_det_timer_ff[25]} {us_sensor_0_i/us_det_timer_ff[26]} {us_sensor_0_i/us_det_timer_ff[27]} {us_sensor_0_i/us_det_timer_ff[28]} {us_sensor_0_i/us_det_timer_ff[29]} {us_sensor_0_i/us_det_timer_ff[30]} {us_sensor_0_i/us_det_timer_ff[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {object_det_OBUF} {us_sensor_0_i/us_det_timer_ff} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+close_design
+open_run synth_1 -name synth_1
+show_objects -name NET_ONLY [get_nets -hierarchical -top_net_of_hierarchical_group "*us_det*" ]
+delete_debug_core [get_debug_cores {u_ila_0 }]
+create_debug_core u_ila_0 ila
+set_property C_DATA_DEPTH 131072 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list clk_IBUF_BUFG ]]
+set_property port_width 32 [get_debug_ports u_ila_0/probe0]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {us_sensor_0_i/us_det_timer_out_ff[0]} {us_sensor_0_i/us_det_timer_out_ff[1]} {us_sensor_0_i/us_det_timer_out_ff[2]} {us_sensor_0_i/us_det_timer_out_ff[3]} {us_sensor_0_i/us_det_timer_out_ff[4]} {us_sensor_0_i/us_det_timer_out_ff[5]} {us_sensor_0_i/us_det_timer_out_ff[6]} {us_sensor_0_i/us_det_timer_out_ff[7]} {us_sensor_0_i/us_det_timer_out_ff[8]} {us_sensor_0_i/us_det_timer_out_ff[9]} {us_sensor_0_i/us_det_timer_out_ff[10]} {us_sensor_0_i/us_det_timer_out_ff[11]} {us_sensor_0_i/us_det_timer_out_ff[12]} {us_sensor_0_i/us_det_timer_out_ff[13]} {us_sensor_0_i/us_det_timer_out_ff[14]} {us_sensor_0_i/us_det_timer_out_ff[15]} {us_sensor_0_i/us_det_timer_out_ff[16]} {us_sensor_0_i/us_det_timer_out_ff[17]} {us_sensor_0_i/us_det_timer_out_ff[18]} {us_sensor_0_i/us_det_timer_out_ff[19]} {us_sensor_0_i/us_det_timer_out_ff[20]} {us_sensor_0_i/us_det_timer_out_ff[21]} {us_sensor_0_i/us_det_timer_out_ff[22]} {us_sensor_0_i/us_det_timer_out_ff[23]} {us_sensor_0_i/us_det_timer_out_ff[24]} {us_sensor_0_i/us_det_timer_out_ff[25]} {us_sensor_0_i/us_det_timer_out_ff[26]} {us_sensor_0_i/us_det_timer_out_ff[27]} {us_sensor_0_i/us_det_timer_out_ff[28]} {us_sensor_0_i/us_det_timer_out_ff[29]} {us_sensor_0_i/us_det_timer_out_ff[30]} {us_sensor_0_i/us_det_timer_out_ff[31]} ]]
+create_debug_port u_ila_0 probe
+set_property port_width 1 [get_debug_ports u_ila_0/probe1]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list object_det_OBUF ]]
+save_constraints
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+add_wave -into {hw_ila_data_1.wcfg} -radix hex { {us_sensor_0_i/us_det_timer_out_ff} }
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+set_property PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"u_ila_0"}]]
+save_wave_config {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wcfg}
+close_hw
+synth_design -rtl -name rtl_1
+current_design synth_1

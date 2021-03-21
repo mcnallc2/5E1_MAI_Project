@@ -18,10 +18,13 @@ module us_sensor
     reg [1:0]  state_nxt;
     // eval
     (* dont_touch = "true" *) reg [63:0] after_echo_count_ff, after_echo_count_nxt;
+    (* dont_touch = "true" *) reg [63:0] us_det_timer_ff, us_det_timer_nxt;
+    (* dont_touch = "true" *) reg [63:0] us_det_timer_out_ff, us_det_timer_out_nxt;
+
 
     parameter MAX_SEQ_LEN = 500000; // cycles until next trigger (5ms)
     parameter TRIG_LEN    = 1000;   // cycles per trigger (10us)
-    parameter PULSES      = 50;     // number of pulses to measure
+    parameter PULSES      = 10;     // number of pulses to measure
     
     parameter A = 2'b00,
               B = 2'b01,
@@ -44,6 +47,8 @@ module us_sensor
             state_ff <= A;
             //eval
             after_echo_count_ff <= 'h0;
+            us_det_timer_ff <= 'h0;
+            us_det_timer_out_ff <= 'h0;
         end
         else begin
             delay_ff <= delay_nxt;
@@ -55,6 +60,8 @@ module us_sensor
             state_ff <= state_nxt;
             //eval
             after_echo_count_ff <= after_echo_count_nxt;
+            us_det_timer_ff <= us_det_timer_nxt;
+            us_det_timer_out_ff <= us_det_timer_out_nxt;
         end
     end
         
@@ -65,6 +72,8 @@ module us_sensor
             A: begin
                 //eval
                 after_echo_count_nxt = after_echo_count_ff + 1;
+                us_det_timer_nxt = us_det_timer_ff + 1;
+                us_det_timer_out_nxt = us_det_timer_out_ff;
                 // increment delay 
                 delay_nxt = delay_ff + 1;
                 counter_nxt = counter_ff;
@@ -84,6 +93,8 @@ module us_sensor
             B: begin
                 //eval
                 after_echo_count_nxt = after_echo_count_ff + 1;
+                us_det_timer_nxt = us_det_timer_ff + 1;     
+                us_det_timer_out_nxt = us_det_timer_out_ff;        
                 // increment delay
                 delay_nxt = delay_ff + 1;
                 counter_nxt = counter_ff;
@@ -100,6 +111,8 @@ module us_sensor
             C: begin
                 // increment delay
                 delay_nxt = delay_ff + 1;
+                us_det_timer_nxt = us_det_timer_ff + 1;
+                us_det_timer_out_nxt = us_det_timer_out_ff;
                 // increment counter while echo is high         
                 if(echo) begin
                     //eval
@@ -123,6 +136,8 @@ module us_sensor
                 after_echo_count_nxt = after_echo_count_ff + 1;
                 // increment delay until max sequence lenght is reached
                 if(delay_ff < MAX_SEQ_LEN) begin
+                    us_det_timer_nxt = us_det_timer_ff + 1;
+                    us_det_timer_out_nxt = us_det_timer_out_ff;
                     delay_nxt = delay_ff + 1;
                     counter_nxt = counter_ff;
                     echo_pulse_nxt = counter_ff;
@@ -136,6 +151,8 @@ module us_sensor
                     state_nxt = A;
                     // if max pulses is not reached 
                     if(pulse_count_ff < PULSES) begin
+                        us_det_timer_nxt = us_det_timer_ff + 1;
+                        us_det_timer_out_nxt = us_det_timer_out_ff;
                         //increment number of pulses
                         pulse_count_nxt = pulse_count_ff + 1;
                         echo_pulse_out_nxt = echo_pulse_out_ff;
@@ -150,6 +167,8 @@ module us_sensor
                     end
                     // reset max pulse size to first pulse in the next range of pulses
                     else begin
+                        us_det_timer_out_nxt = us_det_timer_ff;
+                        us_det_timer_nxt = 'h0;
                         pulse_count_nxt = 'b0;
                         echo_pulse_out_nxt = max_echo_pulse_ff;
                         max_echo_pulse_nxt = echo_pulse_ff;

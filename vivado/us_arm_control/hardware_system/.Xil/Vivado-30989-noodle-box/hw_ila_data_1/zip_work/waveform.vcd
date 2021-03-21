@@ -1,0 +1,28 @@
+$date
+        2021-Mar-21 17:38:20
+$end
+$version
+        Vivado v2018.3 (64-bit)
+$end
+$timescale
+        1ps
+$end
+$scope module dut $end
+$var reg 32 " us_sensor_0_i/us_det_timer_out_ff [31:0] $end
+$var reg 1 B object_det_OBUF $end
+$var reg 1 C _TRIGGER $end
+$var reg 1 D _WINDOW $end
+$var reg 1 E _GAP $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b10100111110110001101010 "
+0B
+0C
+1D
+0E
+$end
+#65568
+1B
+1C

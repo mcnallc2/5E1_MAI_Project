@@ -3,19 +3,19 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+      <db_ref path="/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="65565130fs"></ZoomStartTime>
-      <ZoomEndTime time="65572881fs"></ZoomEndTime>
-      <Cursor1Time time="65572000fs"></Cursor1Time>
+      <ZoomStartTime time="64790000fs"></ZoomStartTime>
+      <ZoomEndTime time="66198001fs"></ZoomEndTime>
+      <Cursor1Time time="64902000fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="214"></NameColumnWidth>
-      <ValueColumnWidth column_width="124"></ValueColumnWidth>
+      <NameColumnWidth column_width="293"></NameColumnWidth>
+      <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="2" />
    <wave_markers>
@@ -27,10 +27,10 @@
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject type="array" fp_name="us_sensor_0_i/after_echo_count_ff">
+   <wvobject type="array" fp_name="us_sensor_0_i/us_det_timer_out_ff">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">us_sensor_0_i/after_echo_count_ff[31:0]</obj_property>
-      <obj_property name="ObjectShortName">after_echo_count_ff[31:0]</obj_property>
+      <obj_property name="ElementShortName">us_sensor_0_i/us_det_timer_out_ff[31:0]</obj_property>
+      <obj_property name="ObjectShortName">us_det_timer_out_ff[31:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

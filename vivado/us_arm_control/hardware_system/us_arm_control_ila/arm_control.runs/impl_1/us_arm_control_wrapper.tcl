@@ -65,17 +65,14 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  create_project -in_memory -part xc7z020clg400-1
-  set_property board_part tul.com.tw:pynq-z2:part0:1.0 [current_project]
-  set_property design_mode GateLvl [current_fileset]
-  set_param project.singleFileAddWarning.threshold 0
-  set_property webtalk.parent_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.cache/wt [current_project]
-  set_property parent.project_path /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.xpr [current_project]
-  set_property ip_output_repo /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.cache/ip [current_project]
+  set_param xicom.use_bs_reader 1
+  set_param tcl.collectionResultDisplayLimit 0
+  reset_param project.defaultXPMLibraries 
+  open_checkpoint /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.dcp
+  set_property webtalk.parent_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.cache/wt [current_project]
+  set_property parent.project_path /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.xpr [current_project]
+  set_property ip_output_repo /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
-  add_files -quiet /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/us_arm_control_wrapper.dcp
-  read_xdc /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc
-  link_design -top us_arm_control_wrapper -part xc7z020clg400-1
   close_msg_db -file init_design.pb
 } RESULT]
 if {$rc} {

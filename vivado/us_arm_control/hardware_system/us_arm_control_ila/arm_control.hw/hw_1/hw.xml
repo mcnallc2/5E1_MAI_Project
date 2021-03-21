@@ -7,8 +7,8 @@
   <device name="xc7z020_1" gui_info="dashboard1=hw_ila_1[xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_1/Settings=ILA_SETTINGS_1;]"/>
   <ObjectList object_type="hw_device" gui_info="">
     <Object name="xc7z020_1" gui_info="">
-      <Properties Property="FULL_PROBES.FILE" value=""/>
-      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="FULL_PROBES.FILE" value="$_project_name_.runs/impl_1/us_$_project_name__wrapper.ltx"/>
+      <Properties Property="PROBES.FILE" value="$_project_name_.runs/impl_1/us_$_project_name__wrapper.ltx"/>
       <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/us_$_project_name__wrapper.bit"/>
       <Properties Property="SLR.COUNT" value="1"/>
     </Object>
@@ -1303,6 +1303,110 @@
       </probeOptions>
       <nets>
         <net name="us_sensor_0_i/echo_pulse_ff_9[32]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="u_ila_0"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="us_sensor_0_i/us_det_timer_ff[31]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[30]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[29]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[28]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[27]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[26]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[25]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[24]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[23]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[22]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[21]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[20]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[19]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[18]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[17]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[16]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[15]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[14]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[13]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[12]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[11]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[10]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[9]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[8]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[7]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[6]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[5]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[4]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[3]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[2]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[1]"/>
+        <net name="us_sensor_0_i/us_det_timer_ff[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="bus" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[31:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq32&apos;hXXXX_XXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[31]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[30]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[29]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[28]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[27]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[26]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[25]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[24]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[23]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[22]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[21]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[20]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[19]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[18]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[17]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[16]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[15]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[14]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[13]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[12]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[11]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[10]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[9]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[8]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[7]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[6]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[5]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[4]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[3]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[2]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[1]"/>
+        <net name="us_sensor_0_i/us_det_timer_out_ff[0]"/>
       </nets>
     </probe>
   </probeset>
