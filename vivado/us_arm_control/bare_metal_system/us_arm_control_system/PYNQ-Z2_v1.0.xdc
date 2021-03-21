@@ -51,12 +51,16 @@ set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { pwm0_3
 
 set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33 } [get_ports { us_pins_tri_io[0] }]; #IO_L8P_T1_34 Sch=jb_p[1]
 set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33 } [get_ports { us_pins_tri_io[1] }]; #IO_L8N_T1_34 Sch=jb_n[1]
+
 set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33 } [get_ports { us_pins_tri_io[2] }]; #IO_L1P_T0_34 Sch=jb_p[2]
 set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33 } [get_ports { us_pins_tri_io[3] }]; #IO_L1N_T0_34 Sch=jb_n[2]
+
 set_property -dict { PACKAGE_PIN V16   IOSTANDARD LVCMOS33 } [get_ports { us_pins_tri_io[4] }]; #IO_L18P_T2_34 Sch=jb_p[3]
 set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { us_pins_tri_io[5] }]; #IO_L18N_T2_34 Sch=jb_n[3]
+
 set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { us_pins_tri_io[6] }]; #IO_L4P_T0_34 Sch=jb_p[4]
 set_property -dict { PACKAGE_PIN W13   IOSTANDARD LVCMOS33 } [get_ports { us_pins_tri_io[7] }]; #IO_L4N_T0_34 Sch=jb_n[4]
+
 
 ##Audio 
 

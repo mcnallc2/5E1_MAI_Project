@@ -69,26 +69,26 @@
         <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_rst_ps7_0_100M_0/us_arm_module_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="us_arm_module_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_timer_1_0/us_arm_module_axi_timer_1_0.xci">
-          <Proxy FileSetName="us_arm_module_axi_timer_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_timer_2_0/us_arm_module_axi_timer_2_0.xci">
-          <Proxy FileSetName="us_arm_module_axi_timer_2_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_timer_3_0/us_arm_module_axi_timer_3_0.xci">
-          <Proxy FileSetName="us_arm_module_axi_timer_3_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_gpio_0_1/us_arm_module_axi_gpio_0_1.xci">
-          <Proxy FileSetName="us_arm_module_axi_gpio_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_xbar_0/us_arm_module_xbar_0.xci">
-          <Proxy FileSetName="us_arm_module_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_processing_system7_0_0/us_arm_module_processing_system7_0_0.xci">
+          <Proxy FileSetName="us_arm_module_processing_system7_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_timer_0_0/us_arm_module_axi_timer_0_0.xci">
           <Proxy FileSetName="us_arm_module_axi_timer_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_processing_system7_0_0/us_arm_module_processing_system7_0_0.xci">
-          <Proxy FileSetName="us_arm_module_processing_system7_0_0"/>
+        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_xbar_0/us_arm_module_xbar_0.xci">
+          <Proxy FileSetName="us_arm_module_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_gpio_0_1/us_arm_module_axi_gpio_0_1.xci">
+          <Proxy FileSetName="us_arm_module_axi_gpio_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_timer_3_0/us_arm_module_axi_timer_3_0.xci">
+          <Proxy FileSetName="us_arm_module_axi_timer_3_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_timer_2_0/us_arm_module_axi_timer_2_0.xci">
+          <Proxy FileSetName="us_arm_module_axi_timer_2_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="us_arm_module.bd" FileRelPathName="ip/us_arm_module_axi_timer_1_0/us_arm_module_axi_timer_1_0.xci">
+          <Proxy FileSetName="us_arm_module_axi_timer_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/us_arm_module/hdl/us_arm_module_wrapper.v">

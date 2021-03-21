@@ -144,7 +144,6 @@ module us_arm_control_wrapper
        (.clk(clk),
         .reset(reset),
         .pwm_hightime(pwm_hightime_base_servo),
-        .object_det(object_det),
         .pwm_out(pwm_out[0]));
 
     // shoulder servo motor driver
@@ -152,7 +151,6 @@ module us_arm_control_wrapper
        (.clk(clk),
         .reset(reset),
         .pwm_hightime(pwm_hightime_shoulder_servo),
-        .object_det(object_det),
         .pwm_out(pwm_out[1]));
 
     // elbow servo motor driver
@@ -160,7 +158,6 @@ module us_arm_control_wrapper
        (.clk(clk),
         .reset(reset),
         .pwm_hightime(pwm_hightime_elbow_servo),
-        .object_det(object_det),
         .pwm_out(pwm_out[2]));
 
     // claw servo motor driver
@@ -168,7 +165,6 @@ module us_arm_control_wrapper
        (.clk(clk),
         .reset(reset),
         .pwm_hightime(pwm_hightime_claw_servo),
-        .object_det(object_det),
         .pwm_out(pwm_out[3]));
            
 endmodule

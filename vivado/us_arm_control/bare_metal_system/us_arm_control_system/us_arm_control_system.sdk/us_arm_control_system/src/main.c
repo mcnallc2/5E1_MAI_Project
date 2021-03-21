@@ -122,6 +122,9 @@ int shoulderAngle	= 0;	// start angle of the shoulder servo
 int elbowAngle		= 90;	// start angle of the elbow servo
 int clawAngle		= 90;	// start angle of the claw servo
 
+XTime tStart_React, tEnd_React;
+float us_reaction;
+
 /************************** Function Definitions *****************************/
 int TmrCtrPwmConfig(
 		INTC *IntcInstancePtr,
@@ -164,6 +167,7 @@ void _delay_();
 int main(void){
 
 	int Status;
+	XTime tStart_CL, tEnd_CL;
 
 	// Initialize the GPIO driver
 	Status = XGpio_Initialize(&Gpio, GPIO_0_DEVICE_ID);
@@ -181,9 +185,17 @@ int main(void){
 	///////////////
 	while (1) {
 
+		XTime_GetTime(&tStart_CL);
+
 		armControl();
 		testProcedure();
 		ultrasonicDetection();
+
+		XTime_GetTime(&tEnd_CL);
+
+		float us_process_len = 1.0 * (tEnd_CL - tStart_CL) / (COUNTS_PER_SECOND/1000000);
+		printf("\nClosed Loop Time: %f us", us_process_len);
+		printf("\nReaction Time: %f us", us_reaction);
 
 	}
 
@@ -262,6 +274,12 @@ void armControl(void){
 		xil_printf("BASE_SERVO PWM Failed\r\n");
 	}
 
+	XTime_GetTime(&tEnd_React);
+	// calculate pulse length in micro-seconds
+	if(TEST_STATE == 1){
+		us_reaction = 1.0 * (tEnd_React - tStart_React) / (COUNTS_PER_SECOND/1000000);
+	}
+
 	// Run the Timer Counter for SHOULDER_SERVO PWM
 	Status = TmrCtrPwmConfig(
 			&InterruptController,
@@ -308,43 +326,59 @@ void armControl(void){
 ****************************************************************************/
 void ultrasonicDetection(void){
 
+	XTime tStart, tEnd;
+	XTime_GetTime(&tStart);
+
 	// list of distance measurements
 	float dist0_list[TOTAL_CALC];
-	float dist1_list[TOTAL_CALC];
-	float dist2_list[TOTAL_CALC];
-	float dist3_list[TOTAL_CALC];
+//	float dist1_list[TOTAL_CALC];
+//	float dist2_list[TOTAL_CALC];
+//	float dist3_list[TOTAL_CALC];
+//	float dist4_list[TOTAL_CALC];
+//	float dist5_list[TOTAL_CALC];
 	// init vars for mode values
-	float mode0_dist, mode1_dist, mode2_dist, mode3_dist;
+	float mode0_dist, mode1_dist, mode2_dist, mode3_dist, mode4_dist, mode5_dist;
 
 	// take several measurements
 	for(int i = 0; i < TOTAL_CALC; i++){
 		// add readings to lists
 		dist0_list[i] = get_distance(0);
-		dist1_list[i] = get_distance(0);
-		dist2_list[i] = get_distance(0);
-		dist3_list[i] = get_distance(0);
+//		dist1_list[i] = get_distance(1);
+//		dist2_list[i] = get_distance(0);
+//		dist3_list[i] = get_distance(1);
+//		dist4_list[i] = get_distance(0);
+//		dist5_list[i] = get_distance(1);
 		// sensor hardware requires 2ms delay between measurements
-		//_delay_(2000);
+//		_delay_(2000);
 	}
 
 	// find the model value from all readings
 	mode0_dist = get_mode(dist0_list);
-	mode1_dist = get_mode(dist1_list);
-	mode2_dist = get_mode(dist2_list);
-	mode3_dist = get_mode(dist3_list);
+//	mode1_dist = get_mode(dist1_list);
+//	mode2_dist = get_mode(dist2_list);
+//	mode3_dist = get_mode(dist3_list);
+//	mode4_dist = get_mode(dist4_list);
+//	mode5_dist = get_mode(dist5_list);
 
 	printf("\n\nUS0_Distance: %f mm", mode0_dist);
-	printf("\nUS1_Distance: %f mm", mode1_dist);
-	printf("\nUS2_Distance: %f mm", mode2_dist);
-	printf("\nUS3_Distance: %f mm", mode3_dist);
+//	printf("\nUS1_Distance: %f mm", mode1_dist);
+//	printf("\nUS2_Distance: %f mm", mode2_dist);
+//	printf("\nUS3_Distance: %f mm", mode3_dist);
+//	printf("\nUS4_Distance: %f mm", mode4_dist);
+//	printf("\nUS5_Distance: %f mm", mode5_dist);
 
 	// if any measurements are less than 100 mm mask is 0
-	if (mode0_dist < 100){// || mode1_dist < 100 || mode2_dist < 100 || mode3_dist < 100){
+	if (mode0_dist < 100){// || mode1_dist < 100 || mode2_dist < 100 || mode3_dist < 100 || mode4_dist < 100 || mode5_dist < 100){
 		US_MASK = 0;
+		XTime_GetTime(&tStart_React);
 	}
 	else{
 		US_MASK = 1;
 	}
+	XTime_GetTime(&tEnd);
+	// calculate pulse length in micro-seconds
+	float us_process_len = 1.0 * (tEnd - tStart) / (COUNTS_PER_SECOND/1000000);
+	printf("\n\nUS Process Time: %f us", us_process_len);
 }
 
 
@@ -398,6 +432,8 @@ float get_mode(float list[]) {
 *
 ******************************************************************************/
 float get_distance(int SENSOR){
+
+//	printf("US: SENSOR %d us\n", SENSOR);
 
 	XTime tStart, tEnd;
 	int TRIG, ECHO, BOTH;

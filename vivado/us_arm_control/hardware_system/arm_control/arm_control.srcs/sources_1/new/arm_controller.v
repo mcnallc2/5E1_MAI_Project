@@ -2,7 +2,6 @@ module arm_controller
    (input  wire clk,
     input  wire reset,
     input  wire [63:0] pwm_hightime,
-    input  wire object_det,
     output reg pwm_out);
     
     wire [63:0] counter_out;

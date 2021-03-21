@@ -193,6 +193,7 @@ int shoulderAngle	= 0;	// start angle of the shoulder servo
 int elbowAngle		= 90;	// start angle of the elbow servo
 int clawAngle		= 90;	// start angle of the claw servo
 
+XTime tStart_React, tEnd_React;
 
 /*****************************************************************************/
 //////////
@@ -525,6 +526,7 @@ void ultrasonicDetection3( void *pvParameters ){
 		// if any measurements are less than 100 mm mask is 0
 		if (mode3_dist < 100){
 			US_MASK = 0;
+			XTime_GetTime(&tStart_React);
 		}
 		else{
 			US_MASK = 1;
@@ -562,6 +564,10 @@ static void baseControl( void *pvParameters ){
 				baseAngle);
 		if (Status != XST_SUCCESS) {
 			xil_printf("PWM: BASE_SERVO PWM Failed\r\n");
+		}
+		XTime_GetTime(&tEnd_React);
+		if(TEST_STATE == 1){
+
 		}
 		// Scheduler Delay
 		vTaskDelay(x1msecond);

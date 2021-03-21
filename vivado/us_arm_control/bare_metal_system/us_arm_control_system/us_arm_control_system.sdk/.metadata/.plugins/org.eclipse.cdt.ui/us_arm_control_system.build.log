@@ -1,8 +1,8 @@
-19:12:39 **** Incremental Build of configuration Debug for project us_arm_control_system ****
+14:51:00 **** Incremental Build of configuration Debug for project us_arm_control_system ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 
-19:12:39 Build Finished (took 81ms)
+14:51:00 Build Finished (took 67ms)
 

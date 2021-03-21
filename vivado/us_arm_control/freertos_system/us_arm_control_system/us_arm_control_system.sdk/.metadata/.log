@@ -1419,3 +1419,43 @@ java.io.FileNotFoundException: /home/cmcnally/Repos/robotic-arm-control-system-a
 	at org.eclipse.core.internal.resources.Workspace.save(Workspace.java:2283)
 	at org.eclipse.ui.internal.ide.application.IDEWorkbenchAdvisor$4.run(IDEWorkbenchAdvisor.java:456)
 	at org.eclipse.jface.operation.ModalContext$ModalContextThread.run(ModalContext.java:119)
+!SESSION 2021-03-21 14:59:34.181 -----------------------------------------------
+eclipse.buildId=2018.3
+java.version=1.8.0_112
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_IE
+Command-line arguments:  -os linux -ws gtk -arch x86_64 -data /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/freertos_system/us_arm_control_system/us_arm_control_system.sdk
+
+!ENTRY org.eclipse.ui 2 0 2021-03-21 14:59:36.226
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-03-21 14:59:36.226
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY org.eclipse.ui 2 0 2021-03-21 14:59:37.142
+!MESSAGE Warnings while parsing the commands from the 'org.eclipse.ui.commands' and 'org.eclipse.ui.actionDefinitions' extension points.
+!SUBENTRY 1 org.eclipse.ui 2 0 2021-03-21 14:59:37.143
+!MESSAGE Commands should really have a category: plug-in='com.xilinx.sdk.appwiz', id='com.xilinx.sdk.app.commands.ChangeAtfBuiltReferences', categoryId='com.xilinx.sdk.app.commands.category'
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-21 14:59:45.471
+!MESSAGE XSCT Command: [set sdk::sdk_chan tcfchan#0], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-21 14:59:45.473
+!MESSAGE XSCT Command: [::hsi::utils::init_repo], Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-21 14:59:45.881
+!MESSAGE XSCT command with result: [::hsi::utils::init_repo], Result: [null, ]. Thread: Worker-3
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-21 14:59:45.882
+!MESSAGE XSCT command with result: [set sdk::sdk_chan tcfchan#0], Result: [null, tcfchan#0]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-21 14:59:45.883
+!MESSAGE XSCT Command: [setws /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/freertos_system/us_arm_control_system/us_arm_control_system.sdk], Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-21 14:59:45.884
+!MESSAGE XSCT command with result: [setws /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/freertos_system/us_arm_control_system/us_arm_control_system.sdk], Result: [null, ]. Thread: Thread-17
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-21 14:59:45.911
+!MESSAGE XSCT Command: [::hsi::utils::openhw /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/freertos_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_control_system_wrapper_hw_platform_0/system.hdf], Thread: Worker-2
+
+!ENTRY com.xilinx.sdk.utils 0 0 2021-03-21 14:59:48.700
+!MESSAGE XSCT command with result: [::hsi::utils::openhw /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/freertos_system/us_arm_control_system/us_arm_control_system.sdk/us_arm_control_system_wrapper_hw_platform_0/system.hdf], Result: [null, ]. Thread: Worker-2
