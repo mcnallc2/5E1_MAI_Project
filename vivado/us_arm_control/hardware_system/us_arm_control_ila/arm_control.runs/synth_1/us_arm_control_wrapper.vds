@@ -1,0 +1,669 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Sun Mar 21 16:22:59 2021
+# Process ID: 29010
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1
+# Command line: vivado -log us_arm_control_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source us_arm_control_wrapper.tcl
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/us_arm_control_wrapper.vds
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source us_arm_control_wrapper.tcl -notrace
+Command: synth_design -top us_arm_control_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 29026 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1384.152 ; gain = 0.000 ; free physical = 124 ; free virtual = 4165
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'us_arm_control_wrapper' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:4]
+	Parameter THRESHOLD bound to: 60000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'test_proc' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/test_proc.v:1]
+	Parameter DELAY_30MS bound to: 64'b0000000000000000000000000000000000000000000000000000011111010000 
+	Parameter DELAY_3S bound to: 64'b0000000000000000000000000000000000000000000000110000110101000000 
+	Parameter ANGLE_0 bound to: 64'b0000000000000000000000000000000000000000000000001001110001000000 
+	Parameter ANGLE_90 bound to: 64'b0000000000000000000000000000000000000000000000101010101110011000 
+	Parameter ANGLE_180 bound to: 64'b0000000000000000000000000000000000000000000001001011101011110000 
+	Parameter A bound to: 2'b00 
+	Parameter B bound to: 2'b01 
+	Parameter C bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/test_proc.v:58]
+INFO: [Synth 8-6155] done synthesizing module 'test_proc' (1#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/test_proc.v:1]
+INFO: [Synth 8-6157] synthesizing module 'us_sensor' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:1]
+	Parameter MAX_SEQ_LEN bound to: 500000 - type: integer 
+	Parameter TRIG_LEN bound to: 1000 - type: integer 
+	Parameter PULSES bound to: 50 - type: integer 
+	Parameter A bound to: 2'b00 
+	Parameter B bound to: 2'b01 
+	Parameter C bound to: 2'b10 
+	Parameter D bound to: 2'b11 
+INFO: [Synth 8-5534] Detected attribute (* dont_touch = "true" *) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:20]
+INFO: [Synth 8-6155] done synthesizing module 'us_sensor' (2#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'arm_controller' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'counter' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:29]
+	Parameter FULL_PERIOD bound to: 64'b0000000000000000000000000000000000000000000111101000010010000000 
+INFO: [Synth 8-6155] done synthesizing module 'counter' (3#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:29]
+INFO: [Synth 8-6155] done synthesizing module 'arm_controller' (4#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/arm_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'us_arm_control_wrapper' (5#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/bd/us_arm_control/hdl/us_arm_control_wrapper.v:4]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 185 ; free virtual = 4161
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 185 ; free virtual = 4161
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.551 ; gain = 16.398 ; free physical = 185 ; free virtual = 4161
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+WARNING: [Vivado 12-584] No ports matched 'trig_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc:54]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc:54]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+WARNING: [Vivado 12-584] No ports matched 'echo_1'. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc:55]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc:55]
+Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/us_arm_control_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/us_arm_control_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1753.605 ; gain = 0.000 ; free physical = 127 ; free virtual = 3887
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1753.605 ; gain = 0.000 ; free physical = 127 ; free virtual = 3888
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1753.605 ; gain = 0.000 ; free physical = 127 ; free virtual = 3888
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1753.605 ; gain = 0.000 ; free physical = 127 ; free virtual = 3888
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1753.605 ; gain = 369.453 ; free physical = 209 ; free virtual = 3970
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1753.605 ; gain = 369.453 ; free physical = 209 ; free virtual = 3970
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1753.605 ; gain = 369.453 ; free physical = 210 ; free virtual = 3971
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'test_proc'
+INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'us_sensor'
+INFO: [Synth 8-5544] ROM "echo_pulse_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "trig" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "state_nxt" won't be mapped to Block RAM because address size (1) smaller than threshold (5)
+INFO: [Synth 8-5545] ROM "counter_out" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+WARNING: [Synth 8-327] inferring latch for variable 'pwm_hightime_base_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/test_proc.v:62]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                       A |                                0 |                               00
+                       B |                                1 |                               01
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encoding 'sequential' in module 'test_proc'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/test_proc.v:64]
+WARNING: [Synth 8-327] inferring latch for variable 'delay_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/test_proc.v:63]
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                       A |                               00 |                               00
+                       B |                               01 |                               01
+                       C |                               10 |                               10
+                       D |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encoding 'sequential' in module 'us_sensor'
+WARNING: [Synth 8-327] inferring latch for variable 'trig_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:74]
+WARNING: [Synth 8-327] inferring latch for variable 'echo_pulse_out_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:141]
+WARNING: [Synth 8-327] inferring latch for variable 'echo_pulse_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:71]
+WARNING: [Synth 8-327] inferring latch for variable 'pulse_count_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:140]
+WARNING: [Synth 8-327] inferring latch for variable 'max_echo_pulse_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.srcs/sources_1/new/us_sensor.v:144]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1753.605 ; gain = 369.453 ; free physical = 197 ; free virtual = 3958
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 8     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 16    
+	                1 Bit    Registers := 4     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 12    
+	   4 Input     64 Bit        Muxes := 4     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
+	   4 Input      1 Bit        Muxes := 4     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module test_proc 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
+	   3 Input     64 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 5     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+Module us_sensor 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 3     
+	   2 Input      6 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 7     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 6     
+	   4 Input     64 Bit        Muxes := 4     
+	   2 Input      6 Bit        Muxes := 1     
+	   4 Input      2 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 4     
+	   4 Input      1 Bit        Muxes := 4     
+Module counter 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input     64 Bit       Adders := 1     
++---Registers : 
+	               64 Bit    Registers := 1     
++---Muxes : 
+	   2 Input     64 Bit        Muxes := 1     
+Module arm_controller 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 1     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-5545] ROM "counter_i/counter_out" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter_i/counter_out" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter_i/counter_out" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-5545] ROM "counter_i/counter_out" won't be mapped to RAM because address size (64) is larger than maximum supported(25)
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[45] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[46] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[47] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[48] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[49] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[50] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[51] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[52] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[53] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[54] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[55] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[56] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[57] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[58] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[59] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[60] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[61] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[62] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[63] )
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[6]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[7]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[7]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[8]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[8]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[9]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[9]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[10]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[10]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[11]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[11]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[12]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[12]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[13]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[13]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[14]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[14]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[15]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[15]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[16]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[16]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[17]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[17]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[18]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[18]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[19]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[19]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[20]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[20]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[21]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[21]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[22]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[22]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[23]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[23]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[24]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[24]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[25]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[25]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[26]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[26]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[27]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[27]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[28]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[28]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[29]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[29]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[30]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[30]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[31]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[31]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[32]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[32]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[33]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[33]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[34]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[34]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[35]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[35]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[36]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[36]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[37]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[37]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[38]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[38]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[39]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[39]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[40]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[40]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[41]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[41]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[42]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[42]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[43]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[43]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[44]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[44]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[45]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[45]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[46]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[46]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[47]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[47]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[48]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[48]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[49]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[49]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[50]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[50]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[51]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[51]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[52]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[52]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[53]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[53]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[54]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[54]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[55]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[55]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[56]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[56]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[57]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[57]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[58]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[58]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[59]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[59]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[60]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[60]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[61]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[61]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[62]'
+INFO: [Synth 8-3886] merging instance 'us_sensor_0_i/pulse_count_nxt_reg[62]' (LD) to 'us_sensor_0_i/pulse_count_nxt_reg[63]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\us_sensor_0_i/pulse_count_nxt_reg[63] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[5] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[9] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[10] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[14] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[32] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[33] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[34] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[35] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[36] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[37] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[38] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[39] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[40] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[41] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[42] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[43] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[44] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[45] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[63]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[62]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[61]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[60]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[59]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[58]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[57]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[56]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[55]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[54]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[53]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[52]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[51]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[50]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[49]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[48]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[47]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[46]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[45]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[44]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[43]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[42]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[41]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[40]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[39]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[38]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[37]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[36]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[35]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[34]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[33]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[32]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[31]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[30]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[29]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[28]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[27]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[26]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[25]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[24]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[23]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[22]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[21]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[20]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[19]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[18]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[17]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[16]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[15]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[14]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[13]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[12]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[11]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[10]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[9]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[8]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[7]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[6]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[5]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[4]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[3]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[2]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[1]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[0]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/FSM_sequential_state_nxt_reg) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[63]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[62]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[61]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[60]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[59]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[58]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[57]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[56]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[55]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[54]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[53]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[52]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[51]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[50]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[49]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[48]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[47]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[46]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[45]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[44]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[43]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[42]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[41]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[40]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[39]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[38]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[37]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[36]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[35]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[34]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[33]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[32]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[31]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[30]) is unused and will be removed from module us_arm_control_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[29]) is unused and will be removed from module us_arm_control_wrapper.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1753.605 ; gain = 369.453 ; free physical = 171 ; free virtual = 3922
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1753.605 ; gain = 369.453 ; free physical = 153 ; free virtual = 3804
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 172 ; free virtual = 3780
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 169 ; free virtual = 3777
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 172 ; free virtual = 3780
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 172 ; free virtual = 3780
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 172 ; free virtual = 3780
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 172 ; free virtual = 3780
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 172 ; free virtual = 3780
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 172 ; free virtual = 3780
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     3|
+|2     |CARRY4 |   227|
+|3     |LUT1   |    28|
+|4     |LUT2   |   434|
+|5     |LUT3   |   134|
+|6     |LUT4   |   426|
+|7     |LUT5   |   280|
+|8     |LUT6   |    20|
+|9     |FDCE   |   462|
+|10    |FDPE   |     5|
+|11    |FDRE   |   260|
+|12    |LD     |   195|
+|13    |IBUF   |     3|
+|14    |OBUF   |     6|
++------+-------+------+
+
+Report Instance Areas: 
++------+----------------------------------+-----------------+------+
+|      |Instance                          |Module           |Cells |
++------+----------------------------------+-----------------+------+
+|1     |top                               |                 |  2483|
+|2     |  arm_controller_i_base_servo     |arm_controller   |   201|
+|3     |    counter_i                     |counter_5        |   192|
+|4     |  arm_controller_i_claw_servo     |arm_controller_0 |   208|
+|5     |    counter_i                     |counter_4        |   199|
+|6     |  arm_controller_i_elbow_servo    |arm_controller_1 |   208|
+|7     |    counter_i                     |counter_3        |   199|
+|8     |  arm_controller_i_shoulder_servo |arm_controller_2 |   202|
+|9     |    counter_i                     |counter          |   193|
+|10    |  test_proc_i                     |test_proc        |   411|
+|11    |  us_sensor_0_i                   |us_sensor        |  1241|
++------+----------------------------------+-----------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1799.629 ; gain = 415.477 ; free physical = 172 ; free virtual = 3780
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 142 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1799.629 ; gain = 62.422 ; free physical = 227 ; free virtual = 3835
+Synthesis Optimization Complete : Time (s): cpu = 00:00:23 ; elapsed = 00:00:25 . Memory (MB): peak = 1799.637 ; gain = 415.477 ; free physical = 227 ; free virtual = 3835
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 422 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1799.637 ; gain = 0.000 ; free physical = 171 ; free virtual = 3779
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 195 instances were transformed.
+  LD => LDCE: 195 instances
+
+INFO: [Common 17-83] Releasing license: Synthesis
+199 Infos, 110 Warnings, 2 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1799.637 ; gain = 415.586 ; free physical = 230 ; free virtual = 3838
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1799.637 ; gain = 0.000 ; free physical = 230 ; free virtual = 3838
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.runs/synth_1/us_arm_control_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file us_arm_control_wrapper_utilization_synth.rpt -pb us_arm_control_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 21 16:23:32 2021...
