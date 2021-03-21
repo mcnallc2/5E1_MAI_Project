@@ -20875,3 +20875,1085 @@ arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_syst
  123472	   3444	  89584	 216500	  34db4	us_arm_control_system_freertos.elf
 Finished building: us_arm_control_system_freertos.elf.size
  
+15:08:46 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'baseControl':
+../src/main.c:571:4: error: 'us_reaction' undeclared (first use in this function); did you mean '__section'?
+    us_reaction = 1.0 * (tEnd_React - tStart_React) / (COUNTS_PER_SECOND/1000000);
+    ^~~~~~~~~~~
+    __section
+../src/main.c:571:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:820:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:819:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:502:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:455:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:408:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:09:04 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:821:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:820:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:503:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:456:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:409:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123536	   3444	  89584	 216564	  34df4	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:10:16 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:822:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:821:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:504:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:457:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:410:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123624	   3444	  89584	 216652	  34e4c	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:10:30 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:11:22 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:822:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:821:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:504:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:457:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:410:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123624	   3444	  89584	 216652	  34e4c	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:11:23 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:14:36 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'ultrasonicDetection0':
+../src/main.c:375:36: error: 'us_reaction' undeclared (first use in this function); did you mean '__section'?
+   printf("\nReaction Time: %f us", us_reaction);
+                                    ^~~~~~~~~~~
+                                    __section
+../src/main.c:375:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'baseControl':
+../src/main.c:574:4: error: 'us_reaction' undeclared (first use in this function); did you mean '__section'?
+    us_reaction = 1.0 * (tEnd_React - tStart_React) / (COUNTS_PER_SECOND/1000000);
+    ^~~~~~~~~~~
+    __section
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:823:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:822:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:505:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:458:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:411:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:15:35 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:823:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:822:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:505:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:458:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:411:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123624	   3444	  89600	 216668	  34e5c	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:16:19 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:829:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:828:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:511:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:464:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:417:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123752	   3444	  89600	 216796	  34edc	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:16:28 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:829:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:828:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:511:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:464:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:417:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123752	   3444	  89600	 216796	  34edc	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:16:35 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:829:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:828:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:511:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:464:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:417:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123752	   3444	  89600	 216796	  34edc	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:16:49 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:830:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:829:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:512:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:465:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:418:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123752	   3444	  89600	 216796	  34edc	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:17:13 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:828:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:827:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:510:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:463:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:416:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123776	   3444	  89600	 216820	  34ef4	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:17:20 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:19:05 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'ultrasonicDetection0':
+../src/main.c:375:14: error: lvalue required as left operand of assignment
+   &tStart_CL = tEnd_CL;
+              ^
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:828:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:827:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:510:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:463:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:416:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:19:08 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:828:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:827:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:510:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:463:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:416:6: warning: 'ultrasonicDetection1' defined but not used [-Wunused-function]
+ void ultrasonicDetection1( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+../src/main.c:65:21: warning: 'xUltrDetc1' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc1;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123776	   3444	  89600	 216820	  34ef4	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:19:17 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:27:01 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:828:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:827:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:510:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:463:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123840	   3444	  89600	 216884	  34f34	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:27:10 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:828:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:827:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:510:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:463:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:67:21: warning: 'xUltrDetc3' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc3;
+                     ^~~~~~~~~~
+../src/main.c:66:21: warning: 'xUltrDetc2' defined but not used [-Wunused-variable]
+ static TaskHandle_t xUltrDetc2;
+                     ^~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123840	   3444	  89600	 216884	  34f34	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:27:12 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:27:55 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:828:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:827:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+At top level:
+../src/main.c:510:6: warning: 'ultrasonicDetection3' defined but not used [-Wunused-function]
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:463:6: warning: 'ultrasonicDetection2' defined but not used [-Wunused-function]
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123904	   3444	  89600	 216948	  34f74	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:28:04 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:828:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:827:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 123968	   3444	  89600	 217012	  34fb4	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:28:08 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:29:34 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:842:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:841:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124096	   3444	  89600	 217140	  35034	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:29:40 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:258:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:258:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:265:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:842:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:841:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+15:30:01 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:258:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:258:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:265:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: At top level:
+../src/main.c:572:6: error: redefinition of 'ultrasonicDetection2'
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:477:6: note: previous definition of 'ultrasonicDetection2' was here
+ void ultrasonicDetection2( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:619:6: error: redefinition of 'ultrasonicDetection3'
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c:524:6: note: previous definition of 'ultrasonicDetection3' was here
+ void ultrasonicDetection3( void *pvParameters ){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:937:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:936:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:30:09 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:258:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:258:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:265:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:937:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:936:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+15:30:27 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:258:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:258:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:265:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:937:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:936:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:30:42 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:258:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:258:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:265:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:937:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:936:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:30:53 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:258:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:258:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:265:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:937:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:936:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+../src/main.c: In function 'endOfTestHandler':
+../src/main.c:1213:15: error: 'xUltrDetc4' undeclared (first use in this function); did you mean 'xUltrDetc3'?
+  vTaskDelete( xUltrDetc4 );
+               ^~~~~~~~~~
+               xUltrDetc3
+../src/main.c:1214:15: error: 'xUltrDetc5' undeclared (first use in this function); did you mean 'xUltrDetc4'?
+  vTaskDelete( xUltrDetc5 );
+               ^~~~~~~~~~
+               xUltrDetc4
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:31:17 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:260:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:260:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:267:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:939:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:938:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:31:46 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:260:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:260:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:267:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:939:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:938:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+15:32:17 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'main':
+../src/main.c:260:15: error: 'ultrasonicDetection4' undeclared (first use in this function); did you mean 'ultrasonicDetection3'?
+  xTaskCreate( ultrasonicDetection4,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection3
+../src/main.c:260:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:267:15: error: 'ultrasonicDetection5' undeclared (first use in this function); did you mean 'ultrasonicDetection4'?
+  xTaskCreate( ultrasonicDetection5,
+               ^~~~~~~~~~~~~~~~~~~~
+               ultrasonicDetection4
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:938:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:937:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:32:49 **** Auto Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:940:6: warning: unused variable 'NoOfCycles' [-Wunused-variable]
+  u8  NoOfCycles;
+      ^~~~~~~~~~
+../src/main.c:939:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: us_arm_control_system_freertos.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../us_arm_control_system_freertos_bsp/ps7_cortexa9_0/lib -o "us_arm_control_system_freertos.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: us_arm_control_system_freertos.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size us_arm_control_system_freertos.elf  |tee "us_arm_control_system_freertos.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+ 124672	   3444	  89616	 217732	  35284	us_arm_control_system_freertos.elf
+Finished building: us_arm_control_system_freertos.elf.size
+ 
+15:32:52 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:07:44 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+16:08:23 **** Incremental Build of configuration Debug for project us_arm_control_system_freertos ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

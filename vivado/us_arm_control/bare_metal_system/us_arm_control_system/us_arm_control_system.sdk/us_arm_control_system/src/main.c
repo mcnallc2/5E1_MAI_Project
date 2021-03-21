@@ -331,7 +331,7 @@ void ultrasonicDetection(void){
 
 	// list of distance measurements
 	float dist0_list[TOTAL_CALC];
-//	float dist1_list[TOTAL_CALC];
+	float dist1_list[TOTAL_CALC];
 //	float dist2_list[TOTAL_CALC];
 //	float dist3_list[TOTAL_CALC];
 //	float dist4_list[TOTAL_CALC];
@@ -343,25 +343,25 @@ void ultrasonicDetection(void){
 	for(int i = 0; i < TOTAL_CALC; i++){
 		// add readings to lists
 		dist0_list[i] = get_distance(0);
-//		dist1_list[i] = get_distance(1);
+		dist1_list[i] = get_distance(0);
 //		dist2_list[i] = get_distance(0);
-//		dist3_list[i] = get_distance(1);
+//		dist3_list[i] = get_distance(0);
 //		dist4_list[i] = get_distance(0);
-//		dist5_list[i] = get_distance(1);
+//		dist5_list[i] = get_distance(0);
 		// sensor hardware requires 2ms delay between measurements
 //		_delay_(2000);
 	}
 
 	// find the model value from all readings
 	mode0_dist = get_mode(dist0_list);
-//	mode1_dist = get_mode(dist1_list);
+	mode1_dist = get_mode(dist1_list);
 //	mode2_dist = get_mode(dist2_list);
 //	mode3_dist = get_mode(dist3_list);
 //	mode4_dist = get_mode(dist4_list);
 //	mode5_dist = get_mode(dist5_list);
 
 	printf("\n\nUS0_Distance: %f mm", mode0_dist);
-//	printf("\nUS1_Distance: %f mm", mode1_dist);
+	printf("\nUS1_Distance: %f mm", mode1_dist);
 //	printf("\nUS2_Distance: %f mm", mode2_dist);
 //	printf("\nUS3_Distance: %f mm", mode3_dist);
 //	printf("\nUS4_Distance: %f mm", mode4_dist);

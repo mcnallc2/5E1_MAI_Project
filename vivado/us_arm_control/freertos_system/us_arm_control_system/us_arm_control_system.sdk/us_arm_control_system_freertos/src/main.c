@@ -65,6 +65,8 @@ static TaskHandle_t xUltrDetc0;
 static TaskHandle_t xUltrDetc1;
 static TaskHandle_t xUltrDetc2;
 static TaskHandle_t xUltrDetc3;
+static TaskHandle_t xUltrDetc4;
+static TaskHandle_t xUltrDetc5;
 static TaskHandle_t xBaseCont;
 static TaskHandle_t xShouCont;
 static TaskHandle_t xElboCont;
@@ -156,6 +158,8 @@ static void ultrasonicDetection0( void *pvParameters );
 static void ultrasonicDetection1( void *pvParameters );
 static void ultrasonicDetection2( void *pvParameters );
 static void ultrasonicDetection3( void *pvParameters );
+static void ultrasonicDetection4( void *pvParameters );
+static void ultrasonicDetection5( void *pvParameters );
 static void baseControl( void *pvParameters );
 static void shoulderControl( void *pvParameters );
 static void elbowControl( void *pvParameters );
@@ -194,6 +198,8 @@ int elbowAngle		= 90;	// start angle of the elbow servo
 int clawAngle		= 90;	// start angle of the claw servo
 
 XTime tStart_React, tEnd_React;
+XTime tStart_CL, tEnd_CL;
+float us_reaction, us_closed_loop;
 
 /*****************************************************************************/
 //////////
@@ -232,26 +238,40 @@ int main(void){
 			tskIDLE_PRIORITY,
 			&xUltrDetc0 );
 
-//	xTaskCreate( ultrasonicDetection1,
-//			"Ultrasonic Detection",
-//			1024,
-//			NULL,
-//			tskIDLE_PRIORITY,
-//			&xUltrDetc1 );
-//
-//	xTaskCreate( ultrasonicDetection2,
-//			"Ultrasonic Detection",
-//			1024,
-//			NULL,
-//			tskIDLE_PRIORITY,
-//			&xUltrDetc2 );
-//
-//	xTaskCreate( ultrasonicDetection3,
-//			"Ultrasonic Detection",
-//			1024,
-//			NULL,
-//			tskIDLE_PRIORITY,
-//			&xUltrDetc3 );
+	xTaskCreate( ultrasonicDetection1,
+			"Ultrasonic Detection",
+			1024,
+			NULL,
+			tskIDLE_PRIORITY,
+			&xUltrDetc1 );
+
+	xTaskCreate( ultrasonicDetection2,
+			"Ultrasonic Detection",
+			1024,
+			NULL,
+			tskIDLE_PRIORITY,
+			&xUltrDetc2 );
+
+	xTaskCreate( ultrasonicDetection3,
+			"Ultrasonic Detection",
+			1024,
+			NULL,
+			tskIDLE_PRIORITY,
+			&xUltrDetc3 );
+
+	xTaskCreate( ultrasonicDetection4,
+			"Ultrasonic Detection",
+			1024,
+			NULL,
+			tskIDLE_PRIORITY,
+			&xUltrDetc4 );
+
+	xTaskCreate( ultrasonicDetection5,
+			"Ultrasonic Detection",
+			1024,
+			NULL,
+			tskIDLE_PRIORITY,
+			&xUltrDetc5 );
 
 	xTaskCreate( baseControl,
 			"Base Control",
@@ -370,6 +390,12 @@ void ultrasonicDetection0( void *pvParameters ){
 	float mode0_dist;
 
 	while(1){
+		tStart_CL = tEnd_CL;
+		XTime_GetTime(&tEnd_CL);
+		us_closed_loop = 1.0 * (tEnd_CL - tStart_CL) / (COUNTS_PER_SECOND/1000000);
+
+		printf("\nClosed Loop Time: %f us", us_closed_loop);
+		printf("\nReaction Time: %f us", us_reaction);
 		// take several measurements
 		for(int i = 0; i < TOTAL_CALC; i++){
 			// add readings to lists
@@ -540,6 +566,100 @@ void ultrasonicDetection3( void *pvParameters ){
 
 /****************************************************************************
 *
+* This function controls the ultrasonic sampling
+*
+* @return	void.
+*
+* @note		None.
+*
+****************************************************************************/
+void ultrasonicDetection4( void *pvParameters ){
+
+
+	xil_printf("TASK 6: ULTRASONIC SCANNING\r\n");
+	const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
+
+	// list of distance measurements
+	float dist2_list[TOTAL_CALC];
+	// init vars for mode values
+	float mode2_dist;
+
+	while(1){
+		// take several measurements
+		for(int i = 0; i < TOTAL_CALC; i++){
+			// add readings to lists
+			dist2_list[i] = get_distance(0);
+			// sensor hardware requires 2ms delay between measurements
+			//_delay_(2000);
+		}
+
+		// find the model value from all readings
+		mode2_dist = get_mode(dist2_list);
+		printf("\nUS2_Distance: %f mm", mode2_dist);
+
+		// if any measurements are less than 100 mm mask is 0
+		if (mode2_dist < 100){
+			US_MASK = 0;
+		}
+		else{
+			US_MASK = 1;
+		}
+		// Scheduler Delay
+		vTaskDelay(x1msecond);
+	}
+}
+
+
+
+/****************************************************************************
+*
+* This function controls the ultrasonic sampling
+*
+* @return	void.
+*
+* @note		None.
+*
+****************************************************************************/
+void ultrasonicDetection5( void *pvParameters ){
+
+	xil_printf("TASK 7: ULTRASONIC SCANNING\r\n");
+	const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
+
+	// list of distance measurements
+	float dist3_list[TOTAL_CALC];
+	// init vars for mode values
+	float mode3_dist;
+
+	while(1){
+		// take several measurements
+		for(int i = 0; i < TOTAL_CALC; i++){
+			// add readings to lists
+			dist3_list[i] = get_distance(0);
+			// sensor hardware requires 2ms delay between measurements
+			//_delay_(2000);
+		}
+
+		// find the model value from all readings
+		mode3_dist = get_mode(dist3_list);
+		printf("\nUS3_Distance: %f mm", mode3_dist);
+
+		// if any measurements are less than 100 mm mask is 0
+		if (mode3_dist < 100){
+			US_MASK = 0;
+			XTime_GetTime(&tStart_React);
+		}
+		else{
+			US_MASK = 1;
+		}
+		// Scheduler Delay
+		vTaskDelay(x1msecond);
+	}
+}
+
+
+
+/****************************************************************************
+*
 * This function controls the behaviour of the base servo
 *
 * @return	void.
@@ -550,7 +670,7 @@ void ultrasonicDetection3( void *pvParameters ){
 static void baseControl( void *pvParameters ){
 //void armControl(){
 
-	xil_printf("TASK 6: BASE_SERVO PWM\r\n");
+	xil_printf("TASK 8: BASE_SERVO PWM\r\n");
 	const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
 
 	int Status;
@@ -566,9 +686,11 @@ static void baseControl( void *pvParameters ){
 			xil_printf("PWM: BASE_SERVO PWM Failed\r\n");
 		}
 		XTime_GetTime(&tEnd_React);
+		// calculate pulse length in micro-seconds
 		if(TEST_STATE == 1){
-
+			us_reaction = 1.0 * (tEnd_React - tStart_React) / (COUNTS_PER_SECOND/1000000);
 		}
+
 		// Scheduler Delay
 		vTaskDelay(x1msecond);
 	}
@@ -586,7 +708,7 @@ static void baseControl( void *pvParameters ){
 static void shoulderControl( void *pvParameters ){
 //void armControl(){
 
-	xil_printf("TASK 7: SHOULDER_SERVO PWM\r\n");
+	xil_printf("TASK 8: SHOULDER_SERVO PWM\r\n");
 	const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
 
 	int Status;
@@ -618,7 +740,7 @@ static void shoulderControl( void *pvParameters ){
 static void elbowControl( void *pvParameters ){
 //void armControl(){
 
-	xil_printf("TASK 8: ELBOW_SERVO PWM\r\n");
+	xil_printf("TASK 10: ELBOW_SERVO PWM\r\n");
 	const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
 
 	int Status;
@@ -650,7 +772,7 @@ static void elbowControl( void *pvParameters ){
 static void clawControl( void *pvParameters ){
 //void armControl(){
 
-	xil_printf("TASK 9: CLAW_SERVO PWM\r\n");
+	xil_printf("TASK 11: CLAW_SERVO PWM\r\n");
 	const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
 
 	int Status;
@@ -1088,9 +1210,11 @@ void endOfTestHandler(void){
 	// deleting tasks
 	vTaskDelete( xTestProc );
 	vTaskDelete( xUltrDetc0 );
-//	vTaskDelete( xUltrDetc1 );
-//	vTaskDelete( xUltrDetc2 );
-//	vTaskDelete( xUltrDetc3 );
+	vTaskDelete( xUltrDetc1 );
+	vTaskDelete( xUltrDetc2 );
+	vTaskDelete( xUltrDetc3 );
+	vTaskDelete( xUltrDetc4 );
+	vTaskDelete( xUltrDetc5 );
 	vTaskDelete( xBaseCont );
 	vTaskDelete( xShouCont );
 	vTaskDelete( xElboCont );
