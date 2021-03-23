@@ -401,3 +401,5 @@ synth_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak 
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
 current_design synth_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Sun Mar 21 19:29:44 2021...

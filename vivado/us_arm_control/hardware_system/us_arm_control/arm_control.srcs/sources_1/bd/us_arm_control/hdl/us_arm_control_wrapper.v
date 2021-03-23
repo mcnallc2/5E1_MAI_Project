@@ -1,5 +1,5 @@
 
-`define ONE_SENSORS
+`define SIX_SENSORS
 
 module us_arm_control_wrapper
    (input  wire clk,

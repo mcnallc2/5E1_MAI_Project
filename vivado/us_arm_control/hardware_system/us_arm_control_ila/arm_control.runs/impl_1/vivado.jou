@@ -2,8 +2,8 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Sun Mar 21 17:34:38 2021
-# Process ID: 7977
+# Start of session at: Sun Mar 21 20:23:40 2021
+# Process ID: 24902
 # Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1
 # Command line: vivado -log us_arm_control_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source us_arm_control_wrapper.tcl -notrace
 # Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.vdi

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Sun Mar 21 17:36:52 2021
+| Date             : Sun Mar 21 20:27:05 2021
 | Host             : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file us_arm_control_wrapper_power_routed.rpt -pb us_arm_control_wrapper_power_summary_routed.pb -rpx us_arm_control_wrapper_power_routed.rpx
 | Design           : us_arm_control_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.154        |
+| Total On-Chip Power (W)  | 0.158        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.041        |
+| Dynamic (W)              | 0.045        |
 | Device Static (W)        | 0.113        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.2         |
@@ -54,19 +54,19 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.017 |        4 |       --- |             --- |
 | Slice Logic              |     0.007 |     7582 |       --- |             --- |
-|   LUT as Logic           |     0.006 |     2716 |     53200 |            5.11 |
+|   LUT as Logic           |     0.006 |     2715 |     53200 |            5.10 |
 |   CARRY4                 |    <0.001 |      290 |     13300 |            2.18 |
 |   Register               |    <0.001 |     3217 |    106400 |            3.02 |
-|   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   LUT as Shift Register  |    <0.001 |      106 |     17400 |            0.61 |
+|   BUFG                   |    <0.001 |        2 |        32 |            6.25 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   F7/F8 Muxes            |    <0.001 |      110 |     53200 |            0.21 |
 |   Others                 |     0.000 |      574 |       --- |             --- |
-| Signals                  |     0.008 |     6264 |       --- |             --- |
+| Signals                  |     0.012 |     6256 |       --- |             --- |
 | Block RAM                |     0.006 |      124 |       140 |           88.57 |
 | I/O                      |     0.002 |        9 |       125 |            7.20 |
 | Static Power             |     0.113 |          |           |                 |
-| Total                    |     0.154 |          |           |                 |
+| Total                    |     0.158 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -76,7 +76,7 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.048 |       0.039 |      0.010 |
+| Vccint    |       1.000 |     0.052 |       0.042 |      0.010 |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
 | Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
@@ -153,14 +153,14 @@ Table of Contents
 +--------------------------+-----------+
 | Name                     | Power (W) |
 +--------------------------+-----------+
-| us_arm_control_wrapper   |     0.041 |
+| us_arm_control_wrapper   |     0.045 |
 |   dbg_hub                |     0.003 |
 |     inst                 |     0.003 |
 |       BSCANID.u_xsdbm_id |     0.003 |
 |   test_proc_i            |     0.004 |
-|   u_ila_0                |     0.019 |
-|     inst                 |     0.019 |
-|       ila_core_inst      |     0.019 |
+|   u_ila_0                |     0.023 |
+|     inst                 |     0.023 |
+|       ila_core_inst      |     0.023 |
 |   us_sensor_0_i          |     0.008 |
 +--------------------------+-----------+
 

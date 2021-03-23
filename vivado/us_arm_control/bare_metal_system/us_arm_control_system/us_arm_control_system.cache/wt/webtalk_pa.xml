@@ -3,7 +3,7 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Sun Mar 21 16:06:43 2021">
+<application name="pa" timeStamp="Mon Mar 22 19:19:56 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="60b9bc9fc8d5491e90f0d30a5bf43691" type="ProjectID"/>
 <property name="ProjectIteration" value="12" type="ProjectIteration"/>
@@ -33,7 +33,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="NewProject" value="1" type="JavaHandler"/>
 <property name="OpenBlockDesign" value="2" type="JavaHandler"/>
 <property name="OpenHardwareManager" value="2" type="JavaHandler"/>
-<property name="OpenProject" value="9" type="JavaHandler"/>
+<property name="OpenProject" value="10" type="JavaHandler"/>
 <property name="OpenRecentTarget" value="1" type="JavaHandler"/>
 <property name="RegenerateRSBLayout" value="24" type="JavaHandler"/>
 <property name="RunBitgen" value="14" type="JavaHandler"/>
@@ -60,13 +60,13 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="GettingStartedView_CLEAR_LIST" value="1" type="GuiHandlerData"/>
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="GettingStartedView_OPEN_PROJECT" value="3" type="GuiHandlerData"/>
-<property name="MainMenuMgr_CHECKPOINT" value="28" type="GuiHandlerData"/>
+<property name="MainMenuMgr_CHECKPOINT" value="30" type="GuiHandlerData"/>
 <property name="MainMenuMgr_EDIT" value="2" type="GuiHandlerData"/>
 <property name="MainMenuMgr_EXPORT" value="38" type="GuiHandlerData"/>
-<property name="MainMenuMgr_FILE" value="70" type="GuiHandlerData"/>
-<property name="MainMenuMgr_IP" value="30" type="GuiHandlerData"/>
-<property name="MainMenuMgr_PROJECT" value="38" type="GuiHandlerData"/>
-<property name="MainMenuMgr_TEXT_EDITOR" value="28" type="GuiHandlerData"/>
+<property name="MainMenuMgr_FILE" value="72" type="GuiHandlerData"/>
+<property name="MainMenuMgr_IP" value="32" type="GuiHandlerData"/>
+<property name="MainMenuMgr_PROJECT" value="41" type="GuiHandlerData"/>
+<property name="MainMenuMgr_TEXT_EDITOR" value="29" type="GuiHandlerData"/>
 <property name="NewExportHardwareDialog_INCLUDE_BITSTREAM" value="3" type="GuiHandlerData"/>
 <property name="PACommandNames_ADD_SOURCES" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_AUTO_CONNECT_PORTS" value="4" type="GuiHandlerData"/>
@@ -76,7 +76,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="PACommandNames_EXPORT_BD_TCL" value="1" type="GuiHandlerData"/>
 <property name="PACommandNames_EXPORT_HARDWARE" value="13" type="GuiHandlerData"/>
 <property name="PACommandNames_LAUNCH_HARDWARE" value="12" type="GuiHandlerData"/>
-<property name="PACommandNames_OPEN_PROJECT" value="6" type="GuiHandlerData"/>
+<property name="PACommandNames_OPEN_PROJECT" value="7" type="GuiHandlerData"/>
 <property name="PACommandNames_REGENERATE_LAYOUT" value="22" type="GuiHandlerData"/>
 <property name="PAViews_CODE" value="2" type="GuiHandlerData"/>
 <property name="PAViews_PROJECT_SUMMARY" value="4" type="GuiHandlerData"/>
@@ -95,16 +95,16 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="SrcMenu_IP_HIERARCHY" value="4" type="GuiHandlerData"/>
 <property name="SrcMenu_REFRESH_HIERARCHY" value="2" type="GuiHandlerData"/>
 <property name="StateMonitor_RESET_RUN" value="1" type="GuiHandlerData"/>
-<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="4" type="GuiHandlerData"/>
+<property name="SyntheticaGettingStartedView_RECENT_PROJECTS" value="5" type="GuiHandlerData"/>
 <property name="SyntheticaStateMonitor_CANCEL" value="2" type="GuiHandlerData"/>
 <property name="SystemBuilderView_ADD_IP" value="13" type="GuiHandlerData"/>
 <property name="SystemBuilderView_OPTIMIZE_ROUTING" value="18" type="GuiHandlerData"/>
 <property name="SystemBuilderView_PINNING" value="7" type="GuiHandlerData"/>
 </item>
 <item name="Other">
-<property name="GuiMode" value="137" type="GuiMode"/>
+<property name="GuiMode" value="142" type="GuiMode"/>
 <property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="74" type="TclMode"/>
+<property name="TclMode" value="77" type="TclMode"/>
 </item>
 </section>
 </application>

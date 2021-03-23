@@ -65,8 +65,6 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param xicom.use_bs_reader 1
-  set_param tcl.collectionResultDisplayLimit 0
   reset_param project.defaultXPMLibraries 
   open_checkpoint /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.runs/impl_1/us_arm_control_wrapper.dcp
   set_property webtalk.parent_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control_ila/arm_control.cache/wt [current_project]

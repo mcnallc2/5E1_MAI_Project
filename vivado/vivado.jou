@@ -2,16 +2,28 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Thu Mar 18 11:56:19 2021
-# Process ID: 32478
+# Start of session at: Mon Mar 22 19:16:13 2021
+# Process ID: 3619
 # Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
 # Command line: vivado
 # Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
 # Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/arm_control.xpr
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.xpr
 update_compile_order -fileset sources_1
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control/arm_control.xpr
 update_compile_order -fileset sources_1
-update_compile_order -fileset sources_1
-synth_design -rtl -name rtl_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1

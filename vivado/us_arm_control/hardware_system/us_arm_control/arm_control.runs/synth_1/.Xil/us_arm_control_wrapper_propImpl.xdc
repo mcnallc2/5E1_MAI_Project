@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/arm_control/PYNQ-Z2_v1.0.xdc rfile:../../../PYNQ-Z2_v1.0.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/hardware_system/us_arm_control/PYNQ-Z2_v1.0.xdc rfile:../../../PYNQ-Z2_v1.0.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN H16 IOSTANDARD LVCMOS33} [get_ports clk]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]
