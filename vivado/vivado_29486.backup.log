@@ -1,0 +1,1532 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar 23 20:24:36 2021
+# Process ID: 29486
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.xpr
+INFO: [Project 1-313] Project file moved from '/home/cmcnally/Repos/digital-design-intro/integrated-systems-desgin/Lab3/FIR_Filter' since last save.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 6401.133 ; gain = 92.422 ; free physical = 143 ; free virtual = 3355
+update_compile_order -fileset sources_1
+set_property -dict [list CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Output_Width {16}] [get_ips fir_compiler_0]
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir_filter_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_fir_filter_test_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/imports/Lab4/fir_filter_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module fir_filter_test
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/imports/Lab4/measure_sine_peak.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module measure_sine_peak
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/imports/Lab4/sig_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sig_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sim_1/imports/Lab4/tb_fir_filter_test.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module tb_fir_filter_test
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl --incr --relax -prj tb_fir_filter_test_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/sim/fir_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_compiler_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/cordic_0/sim/cordic_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'cordic_0'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 9526b5903ba040a5b237f7fb69f3d67e --incr --debug typical --relax --mt 8 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L fir_compiler_v7_2_11 -L xil_defaultlib -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L cordic_v6_0_14 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_filter_test_behav xil_defaultlib.tb_fir_filter_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package cordic_v6_0_14.cordic_v6_0_14_viv_comp
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_5.global_util_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_comps
+Compiling package mult_gen_v12_0_14.mult_gen_v12_0_14_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package cordic_v6_0_14.cordic_pack
+Compiling package cordic_v6_0_14.cordic_hdl_comps
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_viv_comp
+Compiling package xbip_addsub_v3_0_5.xbip_addsub_v3_0_5_viv_comp
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg_legacy
+Compiling package c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv_comp
+Compiling package unisim.vcomponents
+Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_11.globals_pkg
+Compiling package fir_compiler_v7_2_11.components
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=2,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_inp_config [\cordic_inp_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_pha_acc_slice_par [\cordic_pha_acc_slice_par(p_xdev...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=1,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_ctrl_slice_par [\cordic_ctrl_slice_par(p_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng [\cordic_eng(p_xdevicefamily="art...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_round [\cordic_round(p_xdevicefamily="a...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=0,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_out_config [\cordic_out_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_synth [\cordic_v6_0_14_synth(c_architec...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_viv [\cordic_v6_0_14_viv(c_architectu...]
+Compiling architecture xilinx of entity cordic_v6_0_14.cordic_v6_0_14 [\cordic_v6_0_14(c_architecture=2...]
+Compiling architecture cordic_0_arch of entity xil_defaultlib.cordic_0 [cordic_0_default]
+Compiling module xil_defaultlib.sig_gen_default
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=8,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=9,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=14,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate_hb_hilb_ipol [\single_rate_hb_hilb_ipol(c_xdev...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.measure_sine_peak
+Compiling module xil_defaultlib.fir_filter_test
+Compiling module xil_defaultlib.tb_fir_filter_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_filter_test_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim/xsim.dir/tb_fir_filter_test_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00.78 ; elapsed = 00:00:06 . Memory (MB): peak = 388.422 ; gain = 0.000 ; free physical = 144 ; free virtual = 2994
+INFO: [Common 17-206] Exiting Webtalk at Tue Mar 23 22:10:14 2021...
+run_program: Time (s): cpu = 00:02:36 ; elapsed = 00:02:34 . Memory (MB): peak = 6535.074 ; gain = 0.000 ; free physical = 418 ; free virtual = 3268
+INFO: [USF-XSim-69] 'elaborate' step finished in '154' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_filter_test_behav -key {Behavioral:sim_1:Functional:tb_fir_filter_test} -tclbatch {tb_fir_filter_test.tcl} -view {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg
+source tb_fir_filter_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 60000ns
+
+Case: FCW =   6554
+Amplitude Sample:  15594
+
+Case: FCW =  12434
+Amplitude Sample:  15409
+
+Case: FCW =  15697
+Amplitude Sample:  10979
+
+Case: FCW =  18996
+Amplitude Sample:      0
+
+Case: FCW =  26214
+Amplitude Sample:      8
+xsim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:07 . Memory (MB): peak = 6584.926 ; gain = 40.836 ; free physical = 332 ; free virtual = 3200
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_filter_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 60000ns
+launch_simulation: Time (s): cpu = 00:02:50 ; elapsed = 00:02:45 . Memory (MB): peak = 6584.926 ; gain = 51.852 ; free physical = 332 ; free virtual = 3200
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 6602.770 ; gain = 0.000 ; free physical = 259 ; free virtual = 3189
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir_filter_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_fir_filter_test_vlog.prj
+xvhdl --incr --relax -prj tb_fir_filter_test_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 9526b5903ba040a5b237f7fb69f3d67e --incr --debug typical --relax --mt 8 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L fir_compiler_v7_2_11 -L xil_defaultlib -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L cordic_v6_0_14 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_filter_test_behav xil_defaultlib.tb_fir_filter_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+run_program: Time (s): cpu = 00:00:31 ; elapsed = 00:00:30 . Memory (MB): peak = 6602.770 ; gain = 0.000 ; free physical = 276 ; free virtual = 3200
+INFO: [USF-XSim-69] 'elaborate' step finished in '30' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_filter_test_behav -key {Behavioral:sim_1:Functional:tb_fir_filter_test} -tclbatch {tb_fir_filter_test.tcl} -view {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg
+source tb_fir_filter_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 60000ns
+
+Case: FCW =   6554
+Amplitude Sample:  15594
+
+Case: FCW =  12434
+Amplitude Sample:  15409
+
+Case: FCW =  15697
+Amplitude Sample:  10979
+
+Case: FCW =  18996
+Amplitude Sample:      0
+
+Case: FCW =  26214
+Amplitude Sample:      8
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_filter_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 60000ns
+launch_simulation: Time (s): cpu = 00:00:38 ; elapsed = 00:00:37 . Memory (MB): peak = 6602.770 ; gain = 0.000 ; free physical = 253 ; free virtual = 3178
+set_property -dict [list CONFIG.Coefficient_Width {11} CONFIG.Coefficient_Fractional_Bits {10} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Output_Width {16} CONFIG.ColumnConfig {9}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir_compiler_0'...
+INFO: [xilinx.com:ip:fir_compiler:7.2-1] fir_compiler_0: Coefficient Reload not selected, no files generated
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fir_compiler_0'...
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+launch_runs -jobs 2 fir_compiler_0_synth_1
+[Tue Mar 23 22:14:08 2021] Launched fir_compiler_0_synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.runs/fir_compiler_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -jobs 2
+[Tue Mar 23 22:15:57 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.runs/synth_1/runme.log
+[Tue Mar 23 22:15:57 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir_filter_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_fir_filter_test_vlog.prj
+xvhdl --incr --relax -prj tb_fir_filter_test_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/sim/fir_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_compiler_0'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 9526b5903ba040a5b237f7fb69f3d67e --incr --debug typical --relax --mt 8 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L fir_compiler_v7_2_11 -L xil_defaultlib -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L cordic_v6_0_14 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_filter_test_behav xil_defaultlib.tb_fir_filter_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package cordic_v6_0_14.cordic_v6_0_14_viv_comp
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_5.global_util_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_comps
+Compiling package mult_gen_v12_0_14.mult_gen_v12_0_14_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package cordic_v6_0_14.cordic_pack
+Compiling package cordic_v6_0_14.cordic_hdl_comps
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_viv_comp
+Compiling package xbip_addsub_v3_0_5.xbip_addsub_v3_0_5_viv_comp
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg_legacy
+Compiling package c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv_comp
+Compiling package unisim.vcomponents
+Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_11.globals_pkg
+Compiling package fir_compiler_v7_2_11.components
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=2,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_inp_config [\cordic_inp_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_pha_acc_slice_par [\cordic_pha_acc_slice_par(p_xdev...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=1,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_ctrl_slice_par [\cordic_ctrl_slice_par(p_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng [\cordic_eng(p_xdevicefamily="art...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_round [\cordic_round(p_xdevicefamily="a...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=0,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_out_config [\cordic_out_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_synth [\cordic_v6_0_14_synth(c_architec...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_viv [\cordic_v6_0_14_viv(c_architectu...]
+Compiling architecture xilinx of entity cordic_v6_0_14.cordic_v6_0_14 [\cordic_v6_0_14(c_architecture=2...]
+Compiling architecture cordic_0_arch of entity xil_defaultlib.cordic_0 [cordic_0_default]
+Compiling module xil_defaultlib.sig_gen_default
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=8,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=9,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=14,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate_hb_hilb_ipol [\single_rate_hb_hilb_ipol(c_xdev...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.measure_sine_peak
+Compiling module xil_defaultlib.fir_filter_test
+Compiling module xil_defaultlib.tb_fir_filter_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_filter_test_behav
+run_program: Time (s): cpu = 00:02:31 ; elapsed = 00:02:27 . Memory (MB): peak = 6753.441 ; gain = 0.000 ; free physical = 466 ; free virtual = 2538
+INFO: [USF-XSim-69] 'elaborate' step finished in '147' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_filter_test_behav -key {Behavioral:sim_1:Functional:tb_fir_filter_test} -tclbatch {tb_fir_filter_test.tcl} -view {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg
+source tb_fir_filter_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 60000ns
+
+Case: FCW =   6554
+Amplitude Sample:  15594
+
+Case: FCW =  12434
+Amplitude Sample:  15409
+
+Case: FCW =  15697
+Amplitude Sample:  10979
+
+Case: FCW =  18996
+Amplitude Sample:      0
+
+Case: FCW =  26214
+Amplitude Sample:      8
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_filter_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 60000ns
+launch_simulation: Time (s): cpu = 00:02:36 ; elapsed = 00:02:35 . Memory (MB): peak = 6753.441 ; gain = 0.000 ; free physical = 456 ; free virtual = 2529
+set_property -dict [list CONFIG.Coefficient_Width {12} CONFIG.Coefficient_Fractional_Bits {11} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Output_Width {16}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir_compiler_0'...
+INFO: [xilinx.com:ip:fir_compiler:7.2-1] fir_compiler_0: Coefficient Reload not selected, no files generated
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fir_compiler_0'...
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+reset_run fir_compiler_0_synth_1
+launch_runs -jobs 2 fir_compiler_0_synth_1
+[Tue Mar 23 22:29:02 2021] Launched fir_compiler_0_synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.runs/fir_compiler_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir_filter_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_fir_filter_test_vlog.prj
+xvhdl --incr --relax -prj tb_fir_filter_test_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/sim/fir_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_compiler_0'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 9526b5903ba040a5b237f7fb69f3d67e --incr --debug typical --relax --mt 8 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L fir_compiler_v7_2_11 -L xil_defaultlib -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L cordic_v6_0_14 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_filter_test_behav xil_defaultlib.tb_fir_filter_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package cordic_v6_0_14.cordic_v6_0_14_viv_comp
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_5.global_util_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_comps
+Compiling package mult_gen_v12_0_14.mult_gen_v12_0_14_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package cordic_v6_0_14.cordic_pack
+Compiling package cordic_v6_0_14.cordic_hdl_comps
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_viv_comp
+Compiling package xbip_addsub_v3_0_5.xbip_addsub_v3_0_5_viv_comp
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg_legacy
+Compiling package c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv_comp
+Compiling package unisim.vcomponents
+Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_11.globals_pkg
+Compiling package fir_compiler_v7_2_11.components
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=2,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_inp_config [\cordic_inp_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_pha_acc_slice_par [\cordic_pha_acc_slice_par(p_xdev...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=1,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_ctrl_slice_par [\cordic_ctrl_slice_par(p_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng [\cordic_eng(p_xdevicefamily="art...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_round [\cordic_round(p_xdevicefamily="a...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=0,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_out_config [\cordic_out_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_synth [\cordic_v6_0_14_synth(c_architec...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_viv [\cordic_v6_0_14_viv(c_architectu...]
+Compiling architecture xilinx of entity cordic_v6_0_14.cordic_v6_0_14 [\cordic_v6_0_14(c_architecture=2...]
+Compiling architecture cordic_0_arch of entity xil_defaultlib.cordic_0 [cordic_0_default]
+Compiling module xil_defaultlib.sig_gen_default
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=8,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=9,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=14,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate_hb_hilb_ipol [\single_rate_hb_hilb_ipol(c_xdev...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.measure_sine_peak
+Compiling module xil_defaultlib.fir_filter_test
+Compiling module xil_defaultlib.tb_fir_filter_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_filter_test_behav
+run_program: Time (s): cpu = 00:03:34 ; elapsed = 00:02:37 . Memory (MB): peak = 6789.457 ; gain = 0.000 ; free physical = 582 ; free virtual = 2931
+INFO: [USF-XSim-69] 'elaborate' step finished in '157' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_filter_test_behav -key {Behavioral:sim_1:Functional:tb_fir_filter_test} -tclbatch {tb_fir_filter_test.tcl} -view {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg
+source tb_fir_filter_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 60000ns
+
+Case: FCW =   6554
+Amplitude Sample:  15634
+
+Case: FCW =  12434
+Amplitude Sample:  15423
+
+Case: FCW =  15697
+Amplitude Sample:  10985
+
+Case: FCW =  18996
+Amplitude Sample:      0
+
+Case: FCW =  26214
+Amplitude Sample:      0
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 6789.457 ; gain = 0.000 ; free physical = 555 ; free virtual = 2917
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_filter_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 60000ns
+launch_simulation: Time (s): cpu = 00:03:40 ; elapsed = 00:02:45 . Memory (MB): peak = 6789.457 ; gain = 0.000 ; free physical = 555 ; free virtual = 2917
+set_property -dict [list CONFIG.Coefficient_Width {10} CONFIG.Output_Rounding_Mode {Non_Symmetric_Rounding_Down} CONFIG.Coefficient_Fractional_Bits {9} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Width {16} CONFIG.ColumnConfig {9}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir_compiler_0'...
+INFO: [xilinx.com:ip:fir_compiler:7.2-1] fir_compiler_0: Coefficient Reload not selected, no files generated
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fir_compiler_0'...
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+reset_run fir_compiler_0_synth_1
+launch_runs -jobs 2 fir_compiler_0_synth_1
+[Tue Mar 23 22:54:50 2021] Launched fir_compiler_0_synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.runs/fir_compiler_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir_filter_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_fir_filter_test_vlog.prj
+xvhdl --incr --relax -prj tb_fir_filter_test_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/sim/fir_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_compiler_0'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 9526b5903ba040a5b237f7fb69f3d67e --incr --debug typical --relax --mt 8 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L fir_compiler_v7_2_11 -L xil_defaultlib -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L cordic_v6_0_14 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_filter_test_behav xil_defaultlib.tb_fir_filter_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package cordic_v6_0_14.cordic_v6_0_14_viv_comp
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_5.global_util_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_comps
+Compiling package mult_gen_v12_0_14.mult_gen_v12_0_14_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package cordic_v6_0_14.cordic_pack
+Compiling package cordic_v6_0_14.cordic_hdl_comps
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_viv_comp
+Compiling package xbip_addsub_v3_0_5.xbip_addsub_v3_0_5_viv_comp
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg_legacy
+Compiling package c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv_comp
+Compiling package unisim.vcomponents
+Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_11.globals_pkg
+Compiling package fir_compiler_v7_2_11.components
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=2,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_inp_config [\cordic_inp_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_pha_acc_slice_par [\cordic_pha_acc_slice_par(p_xdev...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=1,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_ctrl_slice_par [\cordic_ctrl_slice_par(p_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng [\cordic_eng(p_xdevicefamily="art...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_round [\cordic_round(p_xdevicefamily="a...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=0,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_out_config [\cordic_out_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_synth [\cordic_v6_0_14_synth(c_architec...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_viv [\cordic_v6_0_14_viv(c_architectu...]
+Compiling architecture xilinx of entity cordic_v6_0_14.cordic_v6_0_14 [\cordic_v6_0_14(c_architecture=2...]
+Compiling architecture cordic_0_arch of entity xil_defaultlib.cordic_0 [cordic_0_default]
+Compiling module xil_defaultlib.sig_gen_default
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=8,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=9,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=14,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate_hb_hilb_ipol [\single_rate_hb_hilb_ipol(c_xdev...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.measure_sine_peak
+Compiling module xil_defaultlib.fir_filter_test
+Compiling module xil_defaultlib.tb_fir_filter_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_filter_test_behav
+run_program: Time (s): cpu = 00:03:29 ; elapsed = 00:02:34 . Memory (MB): peak = 6847.574 ; gain = 0.000 ; free physical = 548 ; free virtual = 2758
+INFO: [USF-XSim-69] 'elaborate' step finished in '154' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_filter_test_behav -key {Behavioral:sim_1:Functional:tb_fir_filter_test} -tclbatch {tb_fir_filter_test.tcl} -view {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg
+source tb_fir_filter_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 60000ns
+
+Case: FCW =   6554
+Amplitude Sample:  15594
+
+Case: FCW =  12434
+Amplitude Sample:  15410
+
+Case: FCW =  15697
+Amplitude Sample:  10979
+
+Case: FCW =  18996
+Amplitude Sample:      0
+
+Case: FCW =  26214
+Amplitude Sample:      9
+xsim: Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 6847.574 ; gain = 0.000 ; free physical = 536 ; free virtual = 2770
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_filter_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 60000ns
+launch_simulation: Time (s): cpu = 00:03:36 ; elapsed = 00:02:43 . Memory (MB): peak = 6847.574 ; gain = 0.000 ; free physical = 536 ; free virtual = 2770
+set_property -dict [list CONFIG.Coefficient_Width {16} CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Coefficient_Fractional_Bits {16} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Output_Width {16} CONFIG.ColumnConfig {18}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir_compiler_0'...
+INFO: [xilinx.com:ip:fir_compiler:7.2-1] fir_compiler_0: Coefficient Reload not selected, no files generated
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fir_compiler_0'...
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+reset_run fir_compiler_0_synth_1
+launch_runs -jobs 2 fir_compiler_0_synth_1
+[Tue Mar 23 23:00:55 2021] Launched fir_compiler_0_synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.runs/fir_compiler_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'tb_fir_filter_test' in fileset 'sim_1'...
+INFO: [SIM-utils-43] Exported '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim/fir_compiler_0.mif'
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj tb_fir_filter_test_vlog.prj
+xvhdl --incr --relax -prj tb_fir_filter_test_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/sim/fir_compiler_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'fir_compiler_0'
+INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 9526b5903ba040a5b237f7fb69f3d67e --incr --debug typical --relax --mt 8 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L fir_compiler_v7_2_11 -L xil_defaultlib -L c_reg_fd_v12_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_pipe_v3_0_5 -L xbip_dsp48_addsub_v3_0_5 -L xbip_addsub_v3_0_5 -L c_addsub_v12_0_12 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L cordic_v6_0_14 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_fir_filter_test_behav xil_defaultlib.tb_fir_filter_test xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package cordic_v6_0_14.cordic_v6_0_14_viv_comp
+Compiling package xbip_utils_v3_0_9.xbip_utils_v3_0_9_pkg
+Compiling package xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv_comp
+Compiling package axi_utils_v2_0_5.axi_utils_v2_0_5_pkg
+Compiling package ieee.math_real
+Compiling package axi_utils_v2_0_5.global_util_pkg
+Compiling package axi_utils_v2_0_5.axi_utils_comps
+Compiling package mult_gen_v12_0_14.mult_gen_v12_0_14_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package cordic_v6_0_14.cordic_pack
+Compiling package cordic_v6_0_14.cordic_hdl_comps
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_viv_comp
+Compiling package xbip_addsub_v3_0_5.xbip_addsub_v3_0_5_viv_comp
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg
+Compiling package c_addsub_v12_0_12.c_addsub_v12_0_12_pkg_legacy
+Compiling package c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv_comp
+Compiling package unisim.vcomponents
+Compiling package fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv_comp
+Compiling package ieee.std_logic_textio
+Compiling package fir_compiler_v7_2_11.globals_pkg
+Compiling package fir_compiler_v7_2_11.components
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling architecture synth of entity xbip_pipe_v3_0_5.xbip_pipe_v3_0_5_viv [\xbip_pipe_v3_0_5_viv(c_latency=...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=2,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_inp_config [\cordic_inp_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_pha_acc_slice_par [\cordic_pha_acc_slice_par(p_xdev...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=1,family="artix...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=1,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_ctrl_slice_par [\cordic_ctrl_slice_par(p_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_dat_acc_slice_par [\cordic_dat_acc_slice_par(p_xdev...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng_slice_par [\cordic_eng_slice_par(p_xdevicef...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_eng [\cordic_eng(p_xdevicefamily="art...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay [\delay(delay_len=0,family="artix...]
+Compiling architecture structural of entity c_reg_fd_v12_0_5.c_reg_fd_v12_0_5_viv [\c_reg_fd_v12_0_5_viv(c_width=22...]
+Compiling architecture rtl of entity c_addsub_v12_0_12.c_addsub_v12_0_12_lut6_legacy [\c_addsub_v12_0_12_lut6_legacy(c...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_fabric_legacy [\c_addsub_v12_0_12_fabric_legacy...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_legacy [\c_addsub_v12_0_12_legacy(c_fami...]
+Compiling architecture synth of entity c_addsub_v12_0_12.c_addsub_v12_0_12_viv [\c_addsub_v12_0_12_viv(c_xdevice...]
+Compiling architecture synth of entity cordic_v6_0_14.addsub [\addsub(family="artix7",add_mode...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_round [\cordic_round(p_xdevicefamily="a...]
+Compiling architecture struct_all of entity cordic_v6_0_14.delay_bit [\delay_bit(delay_len=0,family="a...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_out_config [\cordic_out_config(p_xdevicefami...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_synth [\cordic_v6_0_14_synth(c_architec...]
+Compiling architecture synth of entity cordic_v6_0_14.cordic_v6_0_14_viv [\cordic_v6_0_14_viv(c_architectu...]
+Compiling architecture xilinx of entity cordic_v6_0_14.cordic_v6_0_14 [\cordic_v6_0_14(c_architecture=2...]
+Compiling architecture cordic_0_arch of entity xil_defaultlib.cordic_0 [cordic_0_default]
+Compiling module xil_defaultlib.sig_gen_default
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_srl_fifo [\glb_srl_fifo(width=16,has_ifx=t...]
+Compiling architecture xilinx of entity axi_utils_v2_0_5.glb_ifx_slave [\glb_ifx_slave(width=16,has_ifx=...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.cntrl_delay [\cntrl_delay(c_delay_len=0,c_mem...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.sp_mem [\sp_mem(c_xdevicefamily="artix7"...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.filt_mem [\filt_mem(c_xdevicefamily="artix...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=17,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=16,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=15,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=14,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=13,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=12,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=11,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=10,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=9,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=8,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=7,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=6,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=5,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=4,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=3,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=2,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.buff [\buff(c_xdevicefamily="artix7",c...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture dsp48e1_v of entity unisim.DSP48E1 [\DSP48E1(mask="11111111111111111...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.calc [\calc(c_xdevicefamily="artix7",c...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=0,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.addsub_mult_add [\addsub_mult_add(c_xdevicefamily...]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2056]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2057]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2058]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2059]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2045]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2046]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2047]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2048]
+WARNING: [VRFC 10-516] comparison between unequal length arrays always returns FALSE [/wrk/2018.3/nightly/2018_12_06_2405991/packages/customer/vivado/data/ip/xilinx/xbip_utils_v3_0/hdl/xbip_utils_v3_0_vh_rfs.vhd:2049]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=1,c_xdevicefa...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.delay [\delay(c_delay_len=22,c_xdevicef...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.single_rate [\single_rate(c_xdevicefamily="ar...]
+Compiling architecture synth of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11_viv [\fir_compiler_v7_2_11_viv(c_xdev...]
+Compiling architecture xilinx of entity fir_compiler_v7_2_11.fir_compiler_v7_2_11 [\fir_compiler_v7_2_11(c_xdevicef...]
+Compiling architecture fir_compiler_0_arch of entity xil_defaultlib.fir_compiler_0 [fir_compiler_0_default]
+Compiling module xil_defaultlib.measure_sine_peak
+Compiling module xil_defaultlib.fir_filter_test
+Compiling module xil_defaultlib.tb_fir_filter_test
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot tb_fir_filter_test_behav
+run_program: Time (s): cpu = 00:04:02 ; elapsed = 00:02:59 . Memory (MB): peak = 6879.590 ; gain = 0.000 ; free physical = 628 ; free virtual = 2676
+INFO: [USF-XSim-69] 'elaborate' step finished in '179' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "tb_fir_filter_test_behav -key {Behavioral:sim_1:Functional:tb_fir_filter_test} -tclbatch {tb_fir_filter_test.tcl} -view {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+open_wave_config /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/tb_fir_filter_test_behav.wcfg
+source tb_fir_filter_test.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 60000ns
+
+Case: FCW =   6554
+Amplitude Sample:  15620
+
+Case: FCW =  12434
+Amplitude Sample:  15943
+
+Case: FCW =  15697
+Amplitude Sample:   9996
+
+Case: FCW =  18996
+Amplitude Sample:     35
+
+Case: FCW =  26214
+Amplitude Sample:      7
+xsim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 6879.590 ; gain = 0.000 ; free physical = 618 ; free virtual = 2672
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_fir_filter_test_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 60000ns
+launch_simulation: Time (s): cpu = 00:04:08 ; elapsed = 00:03:09 . Memory (MB): peak = 6879.590 ; gain = 0.000 ; free physical = 618 ; free virtual = 2672
+set_property -dict [list CONFIG.Coefficient_Width {10} CONFIG.Coefficient_Fractional_Bits {9} CONFIG.Coefficient_Structure {Inferred} CONFIG.Data_Width {16} CONFIG.Output_Rounding_Mode {Truncate_LSBs} CONFIG.Output_Width {16} CONFIG.ColumnConfig {9}] [get_ips fir_compiler_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'fir_compiler_0'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'fir_compiler_0'...
+INFO: [xilinx.com:ip:fir_compiler:7.2-1] fir_compiler_0: Coefficient Reload not selected, no files generated
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'fir_compiler_0'...
+catch { config_ip_cache -export [get_ips -all fir_compiler_0] }
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP fir_compiler_0, cache-ID = fe03eacbcef79757; cache size = 42.185 MB.
+catch { [ delete_ip_run [get_ips -all fir_compiler_0] ] }
+INFO: [Project 1-386] Moving file '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci' from fileset 'fir_compiler_0' to fileset 'sources_1'.
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci]
+INFO: [Vivado 12-3453] The given sub-design is up-to-date, no action was taken.  If a run is still desired, use the '-force' option for the file:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci'
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.srcs/sources_1/ip/fir_compiler_0_1/fir_compiler_0.xci] -directory /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/FIR_Filter_Implimentation/FIR_Filter/FIR_Filter.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+update_compile_order -fileset sources_1
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Mar 24 10:18:23 2021...
