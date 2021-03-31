@@ -1,0 +1,280 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar 30 09:40:13 2021
+# Process ID: 30301
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+create_project hex_calculator /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator -part xc7a35tcpg236-1
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+create_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:06 . Memory (MB): peak = 6362.953 ; gain = 38.043 ; free physical = 1361 ; free virtual = 4954
+set_property board_part digilentinc.com:basys3:part0:1.1 [current_project]
+file mkdir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new
+close [ open /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv w ]
+add_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv
+update_compile_order -fileset sources_1
+add_files -fileset constrs_1 -norecurse /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/Basys3_Master.xdc
+import_files -fileset constrs_1 /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/Basys3_Master.xdc
+add_files -norecurse -scan_for_includes /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/seven_seg_ctrl.sv
+import_files -norecurse /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/seven_seg_ctrl.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 10:04:46 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 10:04:46 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+disconnect_hw_server localhost:3121
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75E24A
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+close_hw
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 14:46:29 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 14:46:29 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 14:48:33 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 14:48:33 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 14:55:44 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 14:55:44 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 14:57:51 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 14:57:51 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 15:00:39 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 15:00:39 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 15:02:30 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 15:02:30 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 15:10:32 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 15:10:32 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 15:12:07 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 15:12:07 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75E24A
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 15:38:48 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 15:38:48 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:07 ; elapsed = 00:02:58 . Memory (MB): peak = 12418.719 ; gain = 0.000 ; free physical = 1160 ; free virtual = 3498
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 16:04:19 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 16:04:19 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+close_hw
+close [ open /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv w ]
+add_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv
+update_compile_order -fileset sources_1
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75E24A
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+close_hw
+close [ open /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv w ]
+add_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+close [ open /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv w ]
+add_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 16:43:47 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 16:43:47 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75E24A
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 17:04:30 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 17:04:30 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 17:27:54 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 17:27:54 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it.
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Tue Mar 30 21:22:00 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Tue Mar 30 21:22:00 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log

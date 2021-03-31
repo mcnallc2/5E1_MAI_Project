@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date             : Thu Mar 25 19:42:36 2021
+| Date             : Mon Mar 29 16:06:06 2021
 | Host             : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command          : report_power -file arm_control_system_power_routed.rpt -pb arm_control_system_power_summary_routed.pb -rpx arm_control_system_power_routed.rpx
 | Design           : arm_control_system
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.111        |
+| Total On-Chip Power (W)  | 0.110        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.005        |
+| Dynamic (W)              | 0.004        |
 | Device Static (W)        | 0.106        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 83.7         |
@@ -53,16 +53,16 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.002 |        3 |       --- |             --- |
-| Slice Logic             |    <0.001 |      150 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |       66 |     53200 |            0.12 |
+| Slice Logic             |    <0.001 |      186 |       --- |             --- |
+|   LUT as Logic          |    <0.001 |       76 |     53200 |            0.14 |
+|   CARRY4                |    <0.001 |       14 |     13300 |            0.11 |
+|   Register              |    <0.001 |       66 |    106400 |            0.06 |
 |   LUT as Shift Register |    <0.001 |        5 |     17400 |            0.03 |
-|   CARRY4                |    <0.001 |       10 |     13300 |            0.08 |
-|   Register              |    <0.001 |       52 |    106400 |            0.05 |
 |   Others                |     0.000 |       11 |       --- |             --- |
-| Signals                 |    <0.001 |      116 |       --- |             --- |
-| I/O                     |     0.002 |        8 |       125 |            6.40 |
+| Signals                 |    <0.001 |      148 |       --- |             --- |
+| I/O                     |     0.001 |        8 |       125 |            6.40 |
 | Static Power            |     0.106 |          |           |                 |
-| Total                   |     0.111 |          |           |                 |
+| Total                   |     0.110 |          |           |                 |
 +-------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,9 +72,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.010 |       0.003 |      0.007 |
+| Vccint    |       1.000 |     0.010 |       0.002 |      0.007 |
 | Vccaux    |       1.800 |     0.010 |       0.000 |      0.010 |
-| Vcco33    |       3.300 |     0.002 |       0.001 |      0.001 |
+| Vcco33    |       3.300 |     0.001 |       0.000 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -148,8 +148,8 @@ Table of Contents
 +--------------------+-----------+
 | Name               | Power (W) |
 +--------------------+-----------+
-| arm_control_system |     0.005 |
-|   uart_top_i       |     0.003 |
+| arm_control_system |     0.004 |
+|   uart_top_i       |     0.002 |
 +--------------------+-----------+
 
 

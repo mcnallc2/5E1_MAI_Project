@@ -47473,3 +47473,53 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
+17:16:21 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:17:28 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:18:07 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:18:53 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:19:25 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:19:58 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+17:21:54 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:36:09 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:36:57 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:41:43 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

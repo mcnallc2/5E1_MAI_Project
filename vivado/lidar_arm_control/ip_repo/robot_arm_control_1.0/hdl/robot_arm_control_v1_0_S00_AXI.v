@@ -1,8 +1,7 @@
 
 `timescale 1 ns / 1 ps
 
-	module robot_arm_control_v1_0_S00_AXI #
-	(
+module robot_arm_control_v1_0_S00_AXI #(
 		// Users to add parameters here
         parameter integer PWM_COUNTER_MAX       = 2000000,
 		// User parameters ends
@@ -16,7 +15,7 @@
 	(
 		// Users to add ports here
 		input  wire PWM_CLK,
-        output wire PWM0,
+		output wire PWM0,
         output wire PWM1,
         output wire PWM2,
         output wire PWM3,
@@ -401,21 +400,36 @@
 	end    
 
 	// Add user logic here
-    reg [31:0] counter = 0;
+	wire [23:0] angle, distance;
+	wire [31:0] hightime0, hightime1, hightime2, hightime3;
+	
+	// need to add co-ordinate calc
+    lidar_packet_parser #(
+        .C_S_AXI_DATA_WIDTH(C_S_AXI_DATA_WIDTH))
+    lidar_packet_parser_i(
+        .PWM_CLK(PWM_CLK),
+        .S_AXI_WVALID(S_AXI_WVALID),
+        .S_AXI_WDATA(S_AXI_WDATA),
+        .angle(angle),
+        .distance(distance)
+        );
 
-    //simple counter
-    always @(posedge PWM_CLK) begin
-        if(counter < PWM_COUNTER_MAX-1)
-            counter <= counter + 1;
-        else
-            counter <= 0;
-    end
+    pwm_controller #(
+        .PWM_COUNTER_MAX(PWM_COUNTER_MAX))
+    pwm_controller_i (
+        .PWM_CLK(PWM_CLK),
+        .hightime0(hightime0),
+        .hightime1(hightime1),    
+        .hightime2(hightime2),    
+        .hightime3(hightime3),
+        .PWM0(PWM0),
+        .PWM1(PWM1),    
+        .PWM2(PWM2),    
+        .PWM3(PWM3)
+    );
+    
+    // need to add the test procedure
 
-    //comparator statements that drive the PWM signal
-    assign PWM0 = slv_reg0 < counter ? 1'b0 : 1'b1;
-    assign PWM1 = slv_reg1 < counter ? 1'b0 : 1'b1;
-    assign PWM2 = slv_reg2 < counter ? 1'b0 : 1'b1;
-    assign PWM3 = slv_reg3 < counter ? 1'b0 : 1'b1;
 	// User logic ends
 
-	endmodule
+endmodule

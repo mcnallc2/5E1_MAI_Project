@@ -13897,3 +13897,98 @@ arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
   98488	   3420	  91664	 193572	  2f424	lidar_arm_control.elf
 Finished building: lidar_arm_control.elf.size
  
+12:52:36 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:53:21 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:54:01 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:54:29 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:56:30 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:57:27 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/freertos_main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_main.d" -MT"src/freertos_main.o" -o "src/freertos_main.o" "../src/freertos_main.c"
+Finished building: ../src/freertos_main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/freertos_main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  98424	   3420	  91664	 193508	  2f3e4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+12:57:36 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:59:03 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/freertos_main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_main.d" -MT"src/freertos_main.o" -o "src/freertos_main.o" "../src/freertos_main.c"
+Finished building: ../src/freertos_main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/freertos_main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  98424	   3420	  91664	 193508	  2f3e4	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+12:59:04 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:59:31 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:00:17 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:00:29 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+13:00:41 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

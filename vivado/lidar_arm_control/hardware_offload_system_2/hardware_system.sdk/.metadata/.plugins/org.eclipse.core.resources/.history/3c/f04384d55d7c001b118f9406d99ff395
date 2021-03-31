@@ -1,0 +1,56 @@
+#include "xparameters.h"
+#include "xil_printf.h"
+#include "xil_io.h"
+
+#define PWM_BASEADDR XPAR_ROBOT_ARM_CONTROL_0_S00_AXI_BASEADDR
+#define CLK_FREQ XPAR_CPU_CORTEXA9_0_CPU_CLK_FREQ_HZ
+
+
+void pwm_servo_control(int angle){
+
+	int duty_cycle;
+	duty_cycle = 35000 + (angle * 1583);
+
+    Xil_Out32((PWM_BASEADDR     ), duty_cycle);
+//        Xil_Out32((PWM_BASEADDR + 4 ), num);
+//        Xil_Out32((PWM_BASEADDR + 8 ), num);
+    Xil_Out32((PWM_BASEADDR + 12), duty_cycle);
+
+
+}
+
+
+
+
+
+int main(){
+//  int num=35000; // 0 degs
+//	int num=320000; // 180 degs
+	int duty_cycle = 35000;
+	int angle;
+	int shift = 1;
+    int i;
+
+    xil_printf("PWM LEDS\n");
+
+    while(1){
+    	if (num == 320000){
+    		shift = -200;
+    	}
+    	else if (num == 35000){
+    		shift = 200;
+    	}
+    	num = num + shift;
+
+    	angle = (duty_cycle - 35000) / 1583;
+
+
+        Xil_Out32((PWM_BASEADDR     ), num);
+//        Xil_Out32((PWM_BASEADDR + 4 ), num);
+//        Xil_Out32((PWM_BASEADDR + 8 ), num);
+        Xil_Out32((PWM_BASEADDR + 12), num);
+
+//        xil_printf("duty_cycle - %d\n", num);
+
+    }
+}

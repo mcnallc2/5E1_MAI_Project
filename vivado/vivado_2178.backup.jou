@@ -1,0 +1,97 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Tue Mar 30 21:26:05 2021
+# Process ID: 2178
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.xpr
+update_compile_order -fileset sources_1
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+create_ip -name div_gen -vendor xilinx.com -library ip -version 5.1 -module_name div_gen_0
+set_property -dict [list CONFIG.remainder_type {Fractional} CONFIG.fractional_width {16} CONFIG.divide_by_zero_detect {true} CONFIG.latency {36}] [get_ips div_gen_0]
+generate_target {instantiation_template} [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all div_gen_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+launch_runs -jobs 2 div_gen_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] -directory /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+create_ip -name mult_gen -vendor xilinx.com -library ip -version 12.0 -module_name mult_gen_0
+set_property -dict [list CONFIG.MultType {Parallel_Multiplier} CONFIG.PortAWidth {16} CONFIG.PortBWidth {16} CONFIG.Use_Custom_Output_Width {true} CONFIG.OutputWidthHigh {31} CONFIG.PipeStages {4} CONFIG.ClockEnable {false}] [get_ips mult_gen_0]
+generate_target {instantiation_template} [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all mult_gen_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci]
+launch_runs -jobs 2 mult_gen_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/mult_gen_0/mult_gen_0.xci] -directory /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+open_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+wait_on_run impl_1
+close_design
+close_hw
+open_hw
+connect_hw_server
+open_hw_target
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+current_hw_device [get_hw_devices xc7a35t_0]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0]
+program_hw_devices [get_hw_devices xc7a35t_0]
+refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0]
+close_hw
+set_property -dict [list CONFIG.algorithm_type {Radix2} CONFIG.divisor_width {16} CONFIG.remainder_type {Fractional} CONFIG.fractional_width {17} CONFIG.clocks_per_division {1} CONFIG.divide_by_zero_detect {false} CONFIG.FlowControl {NonBlocking} CONFIG.dividend_and_quotient_width {16} CONFIG.latency {37}] [get_ips div_gen_0]
+generate_target all [get_files  /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+catch { config_ip_cache -export [get_ips -all div_gen_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] -no_script -sync -force -quiet
+reset_run div_gen_0_synth_1
+launch_runs -jobs 2 div_gen_0_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] -directory /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet

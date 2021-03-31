@@ -75,7 +75,7 @@
 		.S_AXI_RVALID(s00_axi_rvalid),
 		.S_AXI_RREADY(s00_axi_rready),
 		.PWM_CLK(PWM_CLK),
-	    .PWM0(PWM0),
+        .PWM0(PWM0),
         .PWM1(PWM1),
         .PWM2(PWM2),
         .PWM3(PWM3)

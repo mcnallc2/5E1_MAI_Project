@@ -8908,3 +8908,38 @@ arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
  103704	   3468	  91728	 198900	  308f4	lidar_arm_control.elf
 Finished building: lidar_arm_control.elf.size
  
+12:43:56 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:45:27 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:46:13 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:47:10 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:48:16 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:49:04 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+12:49:36 **** Incremental Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

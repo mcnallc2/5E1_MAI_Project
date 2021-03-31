@@ -19,58 +19,135 @@
 // 
 //////////////////////////////////////////////////////////////////////////////////
 
+`define SIM
 
 module arm_control_system(
     input  clk,
     input  reset,
-    input  uart_rtl_rxd,
-    output uart_rtl_txd,
+    input  rx,
+    output tx,
     output lidar_motor,
-    output pwm0_0,    
-    output pwm0_1,
-    output pwm0_2,
-    output pwm0_3
+    //
+    output [2:0]  state,
+    output [31:0] delay,
+    //
+    output        tx_valid,
+    output [31:0] tx_data,
+    output        tx_ready
     );
     
-    wire [7:0] rx_byte_read;
-    reg  [7:0] tx_byte_send;
-    wire o_rx_data_valid;
-    reg  i_tx_data_valid;
-    reg  i_rx_data_read;
+
+    wire        interrupt;        // OUT STD_LOGIC;
     
+    reg  [7:0] bus2ip_data;  // in  std_logic_vector(0 to 7);
+    reg  [3:0] bus2ip_rdce;  // in  std_logic_vector(0 to 3);
+    reg  [3:0] bus2ip_wrce;  // in  std_logic_vector(0 to 3);
+    wire bus2ip_cs;    // in  std_logic;
+    wire ip2bus_rdack; // out std_logic;
+    wire ip2bus_wrack; // out std_logic;
+    wire ip2bus_error; // out std_logic;
+    wire [7:0] SIn_DBus;     // out std_logic_vector(0 to 7);
+
+    
+//    wire        rx;               // IN STD_LOGIC;
+//    wire        tx;               // OUT STD_LOGIC
+        
+    
+    reg [2:0]  state_ff;
+    reg [31:0] delay_ff; 
+     
+       
+    assign delay = delay_ff;
+    assign state = state_ff;  
+    
+//    assign tx_valid = s_axi_wvalid;
+    assign tx_data  = bus2ip_data;
+    assign tx_ready = ip2bus_wrack;
     assign lidar_motor = 1'b1;
     
-    uart_top uart_top_i(
-        .i_clk(clk),
-        .i_rst(reset),
-        .i_rx_data(uart_rtl_rxd),
-        .o_tx_data(uart_rtl_txd),
-        .o_rx_data(rx_byte_read), // [7:0]
-        .i_tx_data(tx_byte_send), // [7:0]
-        .o_rx_data_valid(o_rx_data_valid),
-        .i_tx_data_valid(i_tx_data_valid),
-        .i_rx_data_read(i_rx_data_read)
-    );
     
-    reg [1:0] state_ff;
+    
+    uartlite_core #(
+        .C_FAMILY("zynq"),
+        .C_S_AXI_ACLK_FREQ_HZ(100_000_000),
+        .C_BAUDRATE(115200),
+        .C_DATA_BITS(8),
+        .C_USE_PARITY(0),
+        .C_ODD_PARITY(0)
+    )(
+    uartlite_core_i(
+        .Clk(clk), //          : in  std_logic;
+        .Reset(reset),   //     : in  std_logic;
+        // IPIF signals
+        .bus2ip_data(bus2ip_data),//  : in  std_logic_vector(0 to 7);
+        .bus2ip_rdce(bus2ip_rdce), // : in  std_logic_vector(0 to 3);
+        .bus2ip_wrce(bus2ip_wrce), // : in  std_logic_vector(0 to 3);
+        .bus2ip_cs(bus2ip_cs),  //  : in  std_logic;
+        .ip2bus_rdack(ip2bus_rdack), //: out std_logic;
+        .ip2bus_wrack(ip2bus_wrack), //: out std_logic;
+        .ip2bus_error(ip2bus_error), // : out std_logic;
+        .SIn_DBus(SIn_DBus), //     : out std_logic_vector(0 to 7);
+        // UART signals
+        .RX(rx),         // : in  std_logic;
+        .TX(tx),        //  : out std_logic;
+        .Interrupt(interrupt) //   : out std_logic
+    );
     
     
     always @ (posedge clk) begin
         if (reset) begin
-            i_tx_data_valid <= 'h0;
-            tx_byte_send <= 'h0;
-            state_ff <= 'h0; 
+            s_axi_wvalid <= 'b0;
+            s_axi_wdata  <= 'h0;
+            state_ff     <= 'b0;
+            delay_ff     <= 'b0;
         end
         else begin
-            i_tx_data_valid <= 'h1;
-            if (state_ff) begin
-                tx_byte_send <= 8'hA5;
-                state_ff <= 'h0;
-            end
-            else begin
-                tx_byte_send <= 8'h20;
-                state_ff <= 'h1;
-            end
+            case (state_ff)
+                3'b000: begin
+                    if (delay_ff < 1000) begin
+                        s_axi_wvalid <= 'b0;
+                        s_axi_wdata  <= 'h0;
+                        state_ff     <= 3'b000;
+                        delay_ff     <= delay_ff + 1;
+                    end
+                    else begin
+                        s_axi_wvalid <= 'b0;
+                        s_axi_wdata  <= 'h0;
+                        state_ff     <= 3'b001;
+                        delay_ff     <= 'h0; 
+                    end
+                end
+            
+                3'b001: begin
+                    if (!s_axi_wready) begin 
+                        s_axi_wvalid <= 'b1;
+                        s_axi_wdata  <= 'hA5;
+                    end
+                    else begin
+                        state_ff     <= 3'b010;
+                        delay_ff     <= 'h0;
+                    end
+                end
+    
+                3'b010: begin
+                    if (!s_axi_wready) begin 
+                        s_axi_wvalid <= 'b1;
+                        s_axi_wdata  <= 'h20;
+                    end
+                    else begin
+                        state_ff     <= 3'b011;
+                        delay_ff     <= 'h0;
+                    end
+                end
+                
+                3'b011: begin
+                    s_axi_wvalid <= 'b0;
+                    s_axi_wdata  <= 'h0;
+                    state_ff     <= 3'b011;
+                    delay_ff     <= 'h0;
+                end
+    
+            endcase
         end
     end
 
