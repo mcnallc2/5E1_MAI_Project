@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Fri Apr  2 00:21:23 2021
+//Date        : Mon Apr 12 18:14:53 2021
 //Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target lidar_arm_control.bd
 //Design      : lidar_arm_control
@@ -9,7 +9,7 @@
 //--------------------------------------------------------------------------------
 `timescale 1 ps / 1 ps
 
-(* CORE_GENERATION_INFO = "lidar_arm_control,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=lidar_arm_control,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=12,numReposBlks=7,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "lidar_arm_control.hwdef" *) 
+(* CORE_GENERATION_INFO = "lidar_arm_control,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=lidar_arm_control,x_ipVersion=1.00.a,x_ipLanguage=VERILOG,numBlks=14,numReposBlks=9,numNonXlnxBlks=1,numHierBlks=5,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=0,numPkgbdBlks=0,bdsource=USER,da_axi4_cnt=5,da_board_cnt=2,da_ps7_cnt=1,synth_mode=OOC_per_IP}" *) (* HW_HANDOFF = "lidar_arm_control.hwdef" *) 
 module lidar_arm_control
    (DDR_addr,
     DDR_ba,
@@ -81,6 +81,10 @@ module lidar_arm_control
   wire axi_uartlite_0_UART_RxD;
   wire axi_uartlite_0_UART_TxD;
   wire axi_uartlite_0_interrupt;
+  wire [31:0]div_gen_0_m_axis_dout_tdata;
+  wire div_gen_0_m_axis_dout_tvalid;
+  wire [31:0]div_gen_1_m_axis_dout_tdata;
+  wire div_gen_1_m_axis_dout_tvalid;
   wire [14:0]processing_system7_0_DDR_ADDR;
   wire [2:0]processing_system7_0_DDR_BA;
   wire processing_system7_0_DDR_CAS_N;
@@ -199,6 +203,14 @@ module lidar_arm_control
   wire robot_arm_control_0_PWM1;
   wire robot_arm_control_0_PWM2;
   wire robot_arm_control_0_PWM3;
+  wire [15:0]robot_arm_control_0_s_axis_dividend_tdata_0;
+  wire [15:0]robot_arm_control_0_s_axis_dividend_tdata_1;
+  wire robot_arm_control_0_s_axis_dividend_tvalid_0;
+  wire robot_arm_control_0_s_axis_dividend_tvalid_1;
+  wire [7:0]robot_arm_control_0_s_axis_divisor_tdata_0;
+  wire [7:0]robot_arm_control_0_s_axis_divisor_tdata_1;
+  wire robot_arm_control_0_s_axis_divisor_tvalid_0;
+  wire robot_arm_control_0_s_axis_divisor_tvalid_1;
   wire [0:0]rst_ps7_0_100M_peripheral_aresetn;
 
   assign PWM_0 = robot_arm_control_0_PWM0;
@@ -257,6 +269,22 @@ module lidar_arm_control
         .s_axi_wstrb(ps7_0_axi_periph_M01_AXI_WSTRB),
         .s_axi_wvalid(ps7_0_axi_periph_M01_AXI_WVALID),
         .tx(axi_uartlite_0_UART_TxD));
+  lidar_arm_control_div_gen_0_0 div_gen_0
+       (.aclk(PWM_CLK_0_1),
+        .m_axis_dout_tdata(div_gen_0_m_axis_dout_tdata),
+        .m_axis_dout_tvalid(div_gen_0_m_axis_dout_tvalid),
+        .s_axis_dividend_tdata(robot_arm_control_0_s_axis_dividend_tdata_0),
+        .s_axis_dividend_tvalid(robot_arm_control_0_s_axis_dividend_tvalid_0),
+        .s_axis_divisor_tdata(robot_arm_control_0_s_axis_divisor_tdata_0),
+        .s_axis_divisor_tvalid(robot_arm_control_0_s_axis_divisor_tvalid_0));
+  lidar_arm_control_div_gen_1_0 div_gen_1
+       (.aclk(PWM_CLK_0_1),
+        .m_axis_dout_tdata(div_gen_1_m_axis_dout_tdata),
+        .m_axis_dout_tvalid(div_gen_1_m_axis_dout_tvalid),
+        .s_axis_dividend_tdata(robot_arm_control_0_s_axis_dividend_tdata_1),
+        .s_axis_dividend_tvalid(robot_arm_control_0_s_axis_dividend_tvalid_1),
+        .s_axis_divisor_tdata(robot_arm_control_0_s_axis_divisor_tdata_1),
+        .s_axis_divisor_tvalid(robot_arm_control_0_s_axis_divisor_tvalid_1));
   lidar_arm_control_processing_system7_0_0 processing_system7_0
        (.DDR_Addr(DDR_addr[14:0]),
         .DDR_BankAddr(DDR_ba[2:0]),
@@ -430,6 +458,10 @@ module lidar_arm_control
         .PWM2(robot_arm_control_0_PWM2),
         .PWM3(robot_arm_control_0_PWM3),
         .PWM_CLK(PWM_CLK_0_1),
+        .m_axis_dout_tdata_0(div_gen_0_m_axis_dout_tdata[23:0]),
+        .m_axis_dout_tdata_1(div_gen_1_m_axis_dout_tdata[23:0]),
+        .m_axis_dout_tvalid_0(div_gen_0_m_axis_dout_tvalid),
+        .m_axis_dout_tvalid_1(div_gen_1_m_axis_dout_tvalid),
         .s00_axi_aclk(processing_system7_0_FCLK_CLK0),
         .s00_axi_araddr(ps7_0_axi_periph_M00_AXI_ARADDR[3:0]),
         .s00_axi_aresetn(rst_ps7_0_100M_peripheral_aresetn),
@@ -450,7 +482,15 @@ module lidar_arm_control
         .s00_axi_wdata(ps7_0_axi_periph_M00_AXI_WDATA),
         .s00_axi_wready(ps7_0_axi_periph_M00_AXI_WREADY),
         .s00_axi_wstrb(ps7_0_axi_periph_M00_AXI_WSTRB),
-        .s00_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID));
+        .s00_axi_wvalid(ps7_0_axi_periph_M00_AXI_WVALID),
+        .s_axis_dividend_tdata_0(robot_arm_control_0_s_axis_dividend_tdata_0),
+        .s_axis_dividend_tdata_1(robot_arm_control_0_s_axis_dividend_tdata_1),
+        .s_axis_dividend_tvalid_0(robot_arm_control_0_s_axis_dividend_tvalid_0),
+        .s_axis_dividend_tvalid_1(robot_arm_control_0_s_axis_dividend_tvalid_1),
+        .s_axis_divisor_tdata_0(robot_arm_control_0_s_axis_divisor_tdata_0),
+        .s_axis_divisor_tdata_1(robot_arm_control_0_s_axis_divisor_tdata_1),
+        .s_axis_divisor_tvalid_0(robot_arm_control_0_s_axis_divisor_tvalid_0),
+        .s_axis_divisor_tvalid_1(robot_arm_control_0_s_axis_divisor_tvalid_1));
   lidar_arm_control_rst_ps7_0_100M_0 rst_ps7_0_100M
        (.aux_reset_in(1'b1),
         .dcm_locked(1'b1),

@@ -30,7 +30,20 @@ module lidar_packet_parser  #(
     input                             S_AXI_WVALID,
     input  [C_S_AXI_DATA_WIDTH-1 : 0] S_AXI_WDATA,
     output [23:0]                     angle,
-    output [23:0]                     distance
+    output [23:0]                     distance,
+    output                            object_det,
+    output reg                        s_axis_divisor_tvalid_0,
+    output reg [7:0]                  s_axis_divisor_tdata_0,
+    output reg                        s_axis_dividend_tvalid_0, 
+    output reg [15:0]                 s_axis_dividend_tdata_0,   
+    input                             m_axis_dout_tvalid_0,        
+    input      [23:0]                 m_axis_dout_tdata_0,
+    output reg                        s_axis_divisor_tvalid_1,
+    output reg [7:0]                  s_axis_divisor_tdata_1,
+    output reg                        s_axis_dividend_tvalid_1, 
+    output reg [15:0]                 s_axis_dividend_tdata_1,   
+    input                             m_axis_dout_tvalid_1,        
+    input      [23:0]                 m_axis_dout_tdata_1
     );
 		
 	reg [7:0] lidar_byte_mask, lidar_byte;
@@ -38,6 +51,9 @@ module lidar_packet_parser  #(
 	reg [7:0] new_lidar_sample[4:0];
 	reg [7:0] lidar_sample[4:0];
 	reg [2:0] sample;
+	reg       object_det_ff;
+	
+	assign object_det = object_det_ff;
 	
 	always @ (posedge PWM_CLK) begin
         if (S_AXI_WVALID) begin
@@ -88,14 +104,6 @@ module lidar_packet_parser  #(
             end
         end
 	end
-	
-    reg s_axis_divisor_tvalid_0, s_axis_divisor_tvalid_1;        // IN STD_LOGIC;
-    reg [7:0] s_axis_divisor_tdata_0, s_axis_divisor_tdata_1;    // IN STD_LOGIC_VECTOR(7 DOWNTO 0);
-    reg s_axis_dividend_tvalid_0, s_axis_dividend_tvalid_1;      // IN STD_LOGIC;
-    reg [15:0] s_axis_dividend_tdata_0, s_axis_dividend_tdata_1; // IN STD_LOGIC_VECTOR(15 DOWNTO 0);
-    wire m_axis_dout_tvalid_0, m_axis_dout_tvalid_1;              // OUT STD_LOGIC;
-    wire [23:0] m_axis_dout_tdata_0, m_axis_dout_tdata_1;         // OUT STD_LOGIC_VECTOR(23 DOWNTO 0)
-    
     
     always @ (posedge PWM_CLK) begin
         if (load_sample) begin
@@ -135,26 +143,38 @@ module lidar_packet_parser  #(
         end   
 	end
 
-    
-    div_gen_0 div_gen_0_0_i(
-        .aclk(PWM_CLK),                            
-        .s_axis_divisor_tvalid(s_axis_divisor_tvalid_0),
-        .s_axis_divisor_tdata(s_axis_divisor_tdata_0),    
-        .s_axis_dividend_tvalid(s_axis_dividend_tvalid_0), 
-        .s_axis_dividend_tdata(s_axis_dividend_tdata_0),   
-        .m_axis_dout_tvalid(m_axis_dout_tvalid_0),        
-        .m_axis_dout_tdata(m_axis_dout_tdata_0)
-    );
+    always @ (*) begin
+        if (distance_ff > 24'd0 && distance_ff < 24'd500) begin
+            if (angle_ff >= 24'd45) begin
+                object_det_ff = angle_ff <= 24'd135 ? 1'b1 : 1'b0;
+            end
+            else begin
+                object_det_ff = 1'b0;
+            end
+        end
+        else begin
+            object_det_ff = 1'b0;
+        end
+	end
+	
+//    div_gen_0 div_gen_0_0_i(
+//        .aclk(PWM_CLK),                            
+//        .s_axis_divisor_tvalid(s_axis_divisor_tvalid_0),
+//        .s_axis_divisor_tdata(s_axis_divisor_tdata_0),    
+//        .s_axis_dividend_tvalid(s_axis_dividend_tvalid_0), 
+//        .s_axis_dividend_tdata(s_axis_dividend_tdata_0),   
+//        .m_axis_dout_tvalid(m_axis_dout_tvalid_0),        
+//        .m_axis_dout_tdata(m_axis_dout_tdata_0)
+//    );
 
-    div_gen_0 div_gen_0_1_i(
-        .aclk(PWM_CLK),                            
-        .s_axis_divisor_tvalid(s_axis_divisor_tvalid_1),
-        .s_axis_divisor_tdata(s_axis_divisor_tdata_1),    
-        .s_axis_dividend_tvalid(s_axis_dividend_tvalid_1), 
-        .s_axis_dividend_tdata(s_axis_dividend_tdata_1),   
-        .m_axis_dout_tvalid(m_axis_dout_tvalid_1),        
-        .m_axis_dout_tdata(m_axis_dout_tdata_1)
-    );
-		
+//    div_gen_0 div_gen_0_1_i(
+//        .aclk(PWM_CLK),                            
+//        .s_axis_divisor_tvalid(s_axis_divisor_tvalid_1),
+//        .s_axis_divisor_tdata(s_axis_divisor_tdata_1),    
+//        .s_axis_dividend_tvalid(s_axis_dividend_tvalid_1), 
+//        .s_axis_dividend_tdata(s_axis_dividend_tdata_1),   
+//        .m_axis_dout_tvalid(m_axis_dout_tvalid_1),        
+//        .m_axis_dout_tdata(m_axis_dout_tdata_1)
+//    );
 
 endmodule

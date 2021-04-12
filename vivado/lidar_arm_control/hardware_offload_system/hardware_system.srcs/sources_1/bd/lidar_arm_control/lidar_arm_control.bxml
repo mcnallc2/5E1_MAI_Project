@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="lidar_arm_control" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1617319284"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1617319284"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1617319284"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1617319284"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1618247694"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1618247694"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1618247694"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1618247694"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/lidar_arm_control_processing_system7_0_0/lidar_arm_control_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>
@@ -68,6 +68,22 @@
       </File>
       <File Name="ip/lidar_arm_control_axi_gpio_0_0/lidar_arm_control_axi_gpio_0_0.xci" Type="IP">
         <Instance HierarchyPath="axi_gpio_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/lidar_arm_control_div_gen_0_0/lidar_arm_control_div_gen_0_0.xci" Type="IP">
+        <Instance HierarchyPath="div_gen_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+      <File Name="ip/lidar_arm_control_div_gen_1_0/lidar_arm_control_div_gen_1_0.xci" Type="IP">
+        <Instance HierarchyPath="div_gen_1"/>
         <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
         <Library Name="xil_defaultlib"/>
         <UsedIn Val="SYNTHESIS"/>

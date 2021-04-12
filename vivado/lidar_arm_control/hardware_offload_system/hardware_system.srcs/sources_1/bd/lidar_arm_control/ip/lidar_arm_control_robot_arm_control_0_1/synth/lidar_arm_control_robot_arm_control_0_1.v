@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:robot_arm_control:1.0
-// IP Revision: 13
+// IP Revision: 15
 
 (* X_CORE_INFO = "robot_arm_control_v1_0,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "lidar_arm_control_robot_arm_control_0_1,robot_arm_control_v1_0,{}" *)
@@ -59,6 +59,18 @@ module lidar_arm_control_robot_arm_control_0_1 (
   PWM1,
   PWM2,
   PWM3,
+  s_axis_divisor_tvalid_0,
+  s_axis_divisor_tdata_0,
+  s_axis_dividend_tvalid_0,
+  s_axis_dividend_tdata_0,
+  m_axis_dout_tvalid_0,
+  m_axis_dout_tdata_0,
+  s_axis_divisor_tvalid_1,
+  s_axis_divisor_tdata_1,
+  s_axis_dividend_tvalid_1,
+  s_axis_dividend_tdata_1,
+  m_axis_dout_tvalid_1,
+  m_axis_dout_tdata_1,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -89,6 +101,18 @@ output wire PWM0;
 output wire PWM1;
 output wire PWM2;
 output wire PWM3;
+output wire s_axis_divisor_tvalid_0;
+output wire [7 : 0] s_axis_divisor_tdata_0;
+output wire s_axis_dividend_tvalid_0;
+output wire [15 : 0] s_axis_dividend_tdata_0;
+input wire m_axis_dout_tvalid_0;
+input wire [23 : 0] m_axis_dout_tdata_0;
+output wire s_axis_divisor_tvalid_1;
+output wire [7 : 0] s_axis_divisor_tdata_1;
+output wire s_axis_dividend_tvalid_1;
+output wire [15 : 0] s_axis_dividend_tdata_1;
+input wire m_axis_dout_tvalid_1;
+input wire [23 : 0] m_axis_dout_tdata_1;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [3 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -146,6 +170,18 @@ input wire s00_axi_aresetn;
     .PWM1(PWM1),
     .PWM2(PWM2),
     .PWM3(PWM3),
+    .s_axis_divisor_tvalid_0(s_axis_divisor_tvalid_0),
+    .s_axis_divisor_tdata_0(s_axis_divisor_tdata_0),
+    .s_axis_dividend_tvalid_0(s_axis_dividend_tvalid_0),
+    .s_axis_dividend_tdata_0(s_axis_dividend_tdata_0),
+    .m_axis_dout_tvalid_0(m_axis_dout_tvalid_0),
+    .m_axis_dout_tdata_0(m_axis_dout_tdata_0),
+    .s_axis_divisor_tvalid_1(s_axis_divisor_tvalid_1),
+    .s_axis_divisor_tdata_1(s_axis_divisor_tdata_1),
+    .s_axis_dividend_tvalid_1(s_axis_dividend_tvalid_1),
+    .s_axis_dividend_tdata_1(s_axis_dividend_tdata_1),
+    .m_axis_dout_tvalid_1(m_axis_dout_tvalid_1),
+    .m_axis_dout_tdata_1(m_axis_dout_tdata_1),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

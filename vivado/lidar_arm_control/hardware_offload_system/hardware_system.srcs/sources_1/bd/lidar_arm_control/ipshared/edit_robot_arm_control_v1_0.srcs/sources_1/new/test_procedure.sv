@@ -21,24 +21,14 @@
 
 
 module test_proc(    
-    input         PWM_CLK,
-    output [31:0] pwm_hightime_base,
-    output [31:0] pwm_hightime_shoulder,
-    output [31:0] pwm_hightime_elbow,
-    output [31:0] pwm_hightime_claw
-    );
+    input  wire clk,
+    input  wire reset,
+    input  wire object_det,
+    output reg  [31:0] pwm_hightime_base_ff,
+    output reg  [31:0] pwm_hightime_shoulder_ff,
+    output reg  [31:0] pwm_hightime_elbow_ff,
+    output reg  [31:0] pwm_hightime_claw_ff);
     
-    reg [31:0] pwm_hightime_base_ff;
-    reg [31:0] pwm_hightime_shoulder_ff;
-    reg [31:0] pwm_hightime_elbow_ff;
-    reg [31:0] pwm_hightime_claw_ff;
-    
-    assign pwm_hightime_base = pwm_hightime_base_ff;
-    assign pwm_hightime_shoulder = pwm_hightime_shoulder_ff;
-    assign pwm_hightime_elbow = pwm_hightime_elbow_ff;
-    assign pwm_hightime_claw = pwm_hightime_claw_ff;
-    
-    parameter shift = 1;
     parameter DELAY_30MS = 64'd2000;
     parameter DELAY_3S   = 64'd200000;
     parameter ANGLE_0    = 64'd40000;
@@ -48,23 +38,36 @@ module test_proc(
     parameter B = 2'b01;
     parameter C = 2'b10;
     
-    reg [63:0] pwm_hightime_base_nxt;
-    reg [63:0] pwm_hightime_shoulder_nxt;
-    reg [63:0] pwm_hightime_elbow_nxt;
-    reg [63:0] pwm_hightime_claw_nxt;
-    reg [63:0] delay_ff, delay_nxt;
+    wire       shift;
+    reg [31:0] pwm_hightime_base_nxt;
+    reg [31:0] pwm_hightime_shoulder_nxt;
+    reg [31:0] pwm_hightime_elbow_nxt;
+    reg [31:0] pwm_hightime_claw_nxt;
+    reg [31:0] delay_ff, delay_nxt;
     reg [1:0]  state_ff, state_nxt;
 
               
+    assign shift = ~(object_det);
+               
     // sync block
-    always @(posedge PWM_CLK) begin
+    always @(posedge clk, posedge reset) begin
         //if there is a reset, go back the FSM A
-        pwm_hightime_base_ff <= pwm_hightime_base_nxt; 
-        pwm_hightime_base_ff <= pwm_hightime_base_nxt; 
-        pwm_hightime_base_ff <= pwm_hightime_base_nxt; 
-        pwm_hightime_base_ff <= pwm_hightime_base_nxt;      
-        delay_ff <= delay_nxt;
-        state_ff <= state_nxt;
+        if(reset) begin
+            pwm_hightime_base_ff     <= ANGLE_0;
+            pwm_hightime_shoulder_ff <= ANGLE_0;
+            pwm_hightime_elbow_ff    <= ANGLE_90;
+            pwm_hightime_claw_ff     <= ANGLE_90;
+            delay_ff <= 'h0;
+            state_ff <= A;
+        end
+        else begin
+            pwm_hightime_base_ff <= pwm_hightime_base_nxt; 
+            pwm_hightime_base_ff <= pwm_hightime_base_nxt; 
+            pwm_hightime_base_ff <= pwm_hightime_base_nxt; 
+            pwm_hightime_base_ff <= pwm_hightime_base_nxt;      
+            delay_ff <= delay_nxt;
+            state_ff <= state_nxt;
+        end
     end
         
     // comb block

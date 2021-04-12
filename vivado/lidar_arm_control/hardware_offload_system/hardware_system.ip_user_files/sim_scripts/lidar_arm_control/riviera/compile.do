@@ -20,6 +20,17 @@ vlib riviera/lib_srl_fifo_v1_0_2
 vlib riviera/axi_uartlite_v2_0_22
 vlib riviera/interrupt_control_v3_1_4
 vlib riviera/axi_gpio_v2_0_20
+vlib riviera/xbip_utils_v3_0_9
+vlib riviera/axi_utils_v2_0_5
+vlib riviera/xbip_pipe_v3_0_5
+vlib riviera/xbip_dsp48_wrapper_v3_0_4
+vlib riviera/xbip_dsp48_addsub_v3_0_5
+vlib riviera/xbip_bram18k_v3_0_5
+vlib riviera/mult_gen_v12_0_14
+vlib riviera/floating_point_v7_0_15
+vlib riviera/xbip_dsp48_mult_v3_0_5
+vlib riviera/xbip_dsp48_multadd_v3_0_5
+vlib riviera/div_gen_v5_1_14
 vlib riviera/axi_protocol_converter_v2_1_18
 
 vmap xilinx_vip riviera/xilinx_vip
@@ -41,6 +52,17 @@ vmap lib_srl_fifo_v1_0_2 riviera/lib_srl_fifo_v1_0_2
 vmap axi_uartlite_v2_0_22 riviera/axi_uartlite_v2_0_22
 vmap interrupt_control_v3_1_4 riviera/interrupt_control_v3_1_4
 vmap axi_gpio_v2_0_20 riviera/axi_gpio_v2_0_20
+vmap xbip_utils_v3_0_9 riviera/xbip_utils_v3_0_9
+vmap axi_utils_v2_0_5 riviera/axi_utils_v2_0_5
+vmap xbip_pipe_v3_0_5 riviera/xbip_pipe_v3_0_5
+vmap xbip_dsp48_wrapper_v3_0_4 riviera/xbip_dsp48_wrapper_v3_0_4
+vmap xbip_dsp48_addsub_v3_0_5 riviera/xbip_dsp48_addsub_v3_0_5
+vmap xbip_bram18k_v3_0_5 riviera/xbip_bram18k_v3_0_5
+vmap mult_gen_v12_0_14 riviera/mult_gen_v12_0_14
+vmap floating_point_v7_0_15 riviera/floating_point_v7_0_15
+vmap xbip_dsp48_mult_v3_0_5 riviera/xbip_dsp48_mult_v3_0_5
+vmap xbip_dsp48_multadd_v3_0_5 riviera/xbip_dsp48_multadd_v3_0_5
+vmap div_gen_v5_1_14 riviera/div_gen_v5_1_14
 vmap axi_protocol_converter_v2_1_18 riviera/axi_protocol_converter_v2_1_18
 
 vlog -work xilinx_vip  -sv2k12 "+incdir+/tools/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
@@ -84,7 +106,7 @@ vcom -work xil_defaultlib -93 \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/ec67/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/70cf/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0" "+incdir+/tools/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/sim/lidar_arm_control.v" \
-"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/561a/hdl/robot_arm_control_v1_0_S00_AXI.v" \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/e022/hdl/robot_arm_control_v1_0_S00_AXI.v" \
 
 vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/ec67/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/70cf/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0" "+incdir+/tools/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv" \
@@ -92,7 +114,7 @@ vlog -work xil_defaultlib  -sv2k12 "+incdir+../../../../hardware_system.srcs/sou
 "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv" \
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/ec67/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/70cf/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0" "+incdir+/tools/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
-"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/561a/hdl/robot_arm_control_v1_0.v" \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/e022/hdl/robot_arm_control_v1_0.v" \
 "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_robot_arm_control_0_1/sim/lidar_arm_control_robot_arm_control_0_1.v" \
 
 vlog -work generic_baseblocks_v2_1_0  -v2k5 "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/ec67/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/70cf/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0" "+incdir+/tools/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
@@ -142,6 +164,43 @@ vcom -work axi_gpio_v2_0_20 -93 \
 
 vcom -work xil_defaultlib -93 \
 "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_axi_gpio_0_0/sim/lidar_arm_control_axi_gpio_0_0.vhd" \
+
+vcom -work xbip_utils_v3_0_9 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/0da8/hdl/xbip_utils_v3_0_vh_rfs.vhd" \
+
+vcom -work axi_utils_v2_0_5 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/ec8e/hdl/axi_utils_v2_0_vh_rfs.vhd" \
+
+vcom -work xbip_pipe_v3_0_5 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/442e/hdl/xbip_pipe_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_wrapper_v3_0_4 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/cdbf/hdl/xbip_dsp48_wrapper_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_addsub_v3_0_5 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/a04b/hdl/xbip_dsp48_addsub_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_bram18k_v3_0_5 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/c08f/hdl/xbip_bram18k_v3_0_vh_rfs.vhd" \
+
+vcom -work mult_gen_v12_0_14 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/6bb5/hdl/mult_gen_v12_0_vh_rfs.vhd" \
+
+vcom -work floating_point_v7_0_15 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/a054/hdl/floating_point_v7_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_mult_v3_0_5 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/9f55/hdl/xbip_dsp48_mult_v3_0_vh_rfs.vhd" \
+
+vcom -work xbip_dsp48_multadd_v3_0_5 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/b226/hdl/xbip_dsp48_multadd_v3_0_vh_rfs.vhd" \
+
+vcom -work div_gen_v5_1_14 -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/d5ca/hdl/div_gen_v5_1_vh_rfs.vhd" \
+
+vcom -work xil_defaultlib -93 \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_div_gen_0_0/sim/lidar_arm_control_div_gen_0_0.vhd" \
+"../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_div_gen_1_0/sim/lidar_arm_control_div_gen_1_0.vhd" \
 
 vlog -work axi_protocol_converter_v2_1_18  -v2k5 "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/ec67/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/70cf/hdl" "+incdir+../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0" "+incdir+/tools/Xilinx/Vivado/2018.3/data/xilinx_vip/include" \
 "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

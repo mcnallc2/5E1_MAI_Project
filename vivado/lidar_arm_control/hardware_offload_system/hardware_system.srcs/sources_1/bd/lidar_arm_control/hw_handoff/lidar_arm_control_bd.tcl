@@ -181,6 +181,12 @@ proc create_root_design { parentCell } {
    CONFIG.C_BAUDRATE {115200} \
  ] $axi_uartlite_0
 
+  # Create instance: div_gen_0, and set properties
+  set div_gen_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:div_gen:5.1 div_gen_0 ]
+
+  # Create instance: div_gen_1, and set properties
+  set div_gen_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:div_gen:5.1 div_gen_1 ]
+
   # Create instance: processing_system7_0, and set properties
   set processing_system7_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0 ]
   set_property -dict [ list \
@@ -980,14 +986,26 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M02_AXI [get_bd_intf_pins axi_gpio_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M02_AXI]
 
   # Create port connections
-  connect_bd_net -net PWM_CLK_0_1 [get_bd_ports PWM_CLK] [get_bd_pins robot_arm_control_0/PWM_CLK]
+  connect_bd_net -net PWM_CLK_0_1 [get_bd_ports PWM_CLK] [get_bd_pins div_gen_0/aclk] [get_bd_pins div_gen_1/aclk] [get_bd_pins robot_arm_control_0/PWM_CLK]
   connect_bd_net -net axi_uartlite_0_interrupt [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins processing_system7_0/IRQ_F2P]
+  connect_bd_net -net div_gen_0_m_axis_dout_tdata [get_bd_pins div_gen_0/m_axis_dout_tdata] [get_bd_pins robot_arm_control_0/m_axis_dout_tdata_0]
+  connect_bd_net -net div_gen_0_m_axis_dout_tvalid [get_bd_pins div_gen_0/m_axis_dout_tvalid] [get_bd_pins robot_arm_control_0/m_axis_dout_tvalid_0]
+  connect_bd_net -net div_gen_1_m_axis_dout_tdata [get_bd_pins div_gen_1/m_axis_dout_tdata] [get_bd_pins robot_arm_control_0/m_axis_dout_tdata_1]
+  connect_bd_net -net div_gen_1_m_axis_dout_tvalid [get_bd_pins div_gen_1/m_axis_dout_tvalid] [get_bd_pins robot_arm_control_0/m_axis_dout_tvalid_1]
   connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins axi_gpio_0/s_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins robot_arm_control_0/s00_axi_aclk] [get_bd_pins rst_ps7_0_100M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_100M/ext_reset_in]
   connect_bd_net -net robot_arm_control_0_PWM0 [get_bd_ports PWM_0] [get_bd_pins robot_arm_control_0/PWM0]
   connect_bd_net -net robot_arm_control_0_PWM1 [get_bd_ports PWM_1] [get_bd_pins robot_arm_control_0/PWM1]
   connect_bd_net -net robot_arm_control_0_PWM2 [get_bd_ports PWM_2] [get_bd_pins robot_arm_control_0/PWM2]
   connect_bd_net -net robot_arm_control_0_PWM3 [get_bd_ports PWM_3] [get_bd_pins robot_arm_control_0/PWM3]
+  connect_bd_net -net robot_arm_control_0_s_axis_dividend_tdata_0 [get_bd_pins div_gen_0/s_axis_dividend_tdata] [get_bd_pins robot_arm_control_0/s_axis_dividend_tdata_0]
+  connect_bd_net -net robot_arm_control_0_s_axis_dividend_tdata_1 [get_bd_pins div_gen_1/s_axis_dividend_tdata] [get_bd_pins robot_arm_control_0/s_axis_dividend_tdata_1]
+  connect_bd_net -net robot_arm_control_0_s_axis_dividend_tvalid_0 [get_bd_pins div_gen_0/s_axis_dividend_tvalid] [get_bd_pins robot_arm_control_0/s_axis_dividend_tvalid_0]
+  connect_bd_net -net robot_arm_control_0_s_axis_dividend_tvalid_1 [get_bd_pins div_gen_1/s_axis_dividend_tvalid] [get_bd_pins robot_arm_control_0/s_axis_dividend_tvalid_1]
+  connect_bd_net -net robot_arm_control_0_s_axis_divisor_tdata_0 [get_bd_pins div_gen_0/s_axis_divisor_tdata] [get_bd_pins robot_arm_control_0/s_axis_divisor_tdata_0]
+  connect_bd_net -net robot_arm_control_0_s_axis_divisor_tdata_1 [get_bd_pins div_gen_1/s_axis_divisor_tdata] [get_bd_pins robot_arm_control_0/s_axis_divisor_tdata_1]
+  connect_bd_net -net robot_arm_control_0_s_axis_divisor_tvalid_0 [get_bd_pins div_gen_0/s_axis_divisor_tvalid] [get_bd_pins robot_arm_control_0/s_axis_divisor_tvalid_0]
+  connect_bd_net -net robot_arm_control_0_s_axis_divisor_tvalid_1 [get_bd_pins div_gen_1/s_axis_divisor_tvalid] [get_bd_pins robot_arm_control_0/s_axis_divisor_tvalid_1]
   connect_bd_net -net rst_ps7_0_100M_peripheral_aresetn [get_bd_pins axi_gpio_0/s_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins robot_arm_control_0/s00_axi_aresetn] [get_bd_pins rst_ps7_0_100M/peripheral_aresetn]
 
   # Create address segments

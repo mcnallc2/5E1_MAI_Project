@@ -25,13 +25,13 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 13793 
+INFO: Helper process launched with PID 29507 
 WARNING: [Synth 8-2611] redeclaration of ansi port PWM0 is not allowed [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/pwm_controller.sv:37]
 WARNING: [Synth 8-2611] redeclaration of ansi port PWM1 is not allowed [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/pwm_controller.sv:37]
 WARNING: [Synth 8-2611] redeclaration of ansi port PWM2 is not allowed [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/pwm_controller.sv:37]
 WARNING: [Synth 8-2611] redeclaration of ansi port PWM3 is not allowed [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/pwm_controller.sv:37]
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1392.559 ; gain = 8.398 ; free physical = 169 ; free virtual = 4280
+Starting Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1391.285 ; gain = 34.398 ; free physical = 130 ; free virtual = 2060
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'robot_arm_control_v1_0' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0.v:4]
 	Parameter PWM_COUNTER_MAX bound to: 2000000 - type: integer 
@@ -43,28 +43,25 @@ INFO: [Synth 8-6157] synthesizing module 'robot_arm_control_v1_0_S00_AXI' [/home
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
 	Parameter ADDR_LSB bound to: 2 - type: integer 
 	Parameter OPT_MEM_ADDR_BITS bound to: 1 - type: integer 
-INFO: [Synth 8-226] default block is never used [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0_S00_AXI.v:233]
-INFO: [Synth 8-226] default block is never used [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0_S00_AXI.v:374]
+INFO: [Synth 8-226] default block is never used [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0_S00_AXI.v:245]
+INFO: [Synth 8-226] default block is never used [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0_S00_AXI.v:386]
 INFO: [Synth 8-6157] synthesizing module 'lidar_packet_parser' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:23]
 	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
-INFO: [Synth 8-6157] synthesizing module 'div_gen_0' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.runs/synth_1/.Xil/Vivado-13766-noodle-box/realtime/div_gen_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'div_gen_0' (1#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.runs/synth_1/.Xil/Vivado-13766-noodle-box/realtime/div_gen_0_stub.v:6]
-WARNING: [Synth 8-6014] Unused sequential element new_lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:54]
-WARNING: [Synth 8-6014] Unused sequential element new_lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:69]
-WARNING: [Synth 8-6014] Unused sequential element lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:83]
-INFO: [Synth 8-4471] merging register 's_axis_dividend_tvalid_0_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:105]
-INFO: [Synth 8-4471] merging register 's_axis_divisor_tvalid_1_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:107]
-INFO: [Synth 8-4471] merging register 's_axis_dividend_tvalid_1_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:109]
-WARNING: [Synth 8-6014] Unused sequential element s_axis_dividend_tvalid_0_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:105]
-WARNING: [Synth 8-6014] Unused sequential element s_axis_divisor_tvalid_1_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:107]
-WARNING: [Synth 8-6014] Unused sequential element s_axis_dividend_tvalid_1_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:109]
-INFO: [Synth 8-6155] done synthesizing module 'lidar_packet_parser' (2#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:23]
+WARNING: [Synth 8-6014] Unused sequential element new_lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:70]
+WARNING: [Synth 8-6014] Unused sequential element new_lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:85]
+WARNING: [Synth 8-6014] Unused sequential element lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:99]
+INFO: [Synth 8-4471] merging register 's_axis_dividend_tvalid_0_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:113]
+INFO: [Synth 8-4471] merging register 's_axis_divisor_tvalid_1_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:115]
+INFO: [Synth 8-4471] merging register 's_axis_dividend_tvalid_1_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:117]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_dividend_tvalid_0_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:113]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_divisor_tvalid_1_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:115]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_dividend_tvalid_1_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:117]
+INFO: [Synth 8-6155] done synthesizing module 'lidar_packet_parser' (1#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'pwm_controller' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/pwm_controller.sv:23]
 	Parameter PWM_COUNTER_MAX bound to: 2000000 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'pwm_controller' (3#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/pwm_controller.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'pwm_controller' (2#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/pwm_controller.sv:23]
 INFO: [Synth 8-6157] synthesizing module 'test_proc' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:23]
-	Parameter shift bound to: 1 - type: integer 
 	Parameter DELAY_30MS bound to: 64'b0000000000000000000000000000000000000000000000000000011111010000 
 	Parameter DELAY_3S bound to: 64'b0000000000000000000000000000000000000000000000110000110101000000 
 	Parameter ANGLE_0 bound to: 64'b0000000000000000000000000000000000000000000000001001110001000000 
@@ -73,168 +70,54 @@ INFO: [Synth 8-6157] synthesizing module 'test_proc' [/home/cmcnally/Repos/robot
 	Parameter A bound to: 2'b00 
 	Parameter B bound to: 2'b01 
 	Parameter C bound to: 2'b10 
-INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:77]
-WARNING: [Synth 8-3848] Net pwm_hightime_shoulder_ff in module/entity test_proc does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:32]
-WARNING: [Synth 8-3848] Net pwm_hightime_elbow_ff in module/entity test_proc does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:33]
-WARNING: [Synth 8-3848] Net pwm_hightime_claw_ff in module/entity test_proc does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:34]
-INFO: [Synth 8-6155] done synthesizing module 'test_proc' (4#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:23]
-INFO: [Synth 8-6155] done synthesizing module 'robot_arm_control_v1_0_S00_AXI' (5#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0_S00_AXI.v:4]
-INFO: [Synth 8-6155] done synthesizing module 'robot_arm_control_v1_0' (6#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0.v:4]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[31]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[30]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[29]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[28]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[27]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[26]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[25]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[24]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[23]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[22]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[21]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[20]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[19]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[18]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[17]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[16]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[15]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[14]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[13]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[12]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[11]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[10]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[9]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[8]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[7]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[6]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[5]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[4]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[3]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[2]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[1]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_shoulder[0]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[31]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[30]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[29]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[28]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[27]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[26]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[25]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[24]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[23]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[22]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[21]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[20]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[19]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[18]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[17]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[16]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[15]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[14]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[13]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[12]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[11]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[10]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[9]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[8]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[7]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[6]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[5]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[4]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[3]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[2]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[1]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_elbow[0]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[31]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[30]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[29]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[28]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[27]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[26]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[25]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[24]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[23]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[22]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[21]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[20]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[19]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[18]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[17]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[16]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[15]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[14]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[13]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[12]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[11]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[10]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[9]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[8]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[7]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[6]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[5]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[4]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[3]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[2]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[1]
-WARNING: [Synth 8-3331] design test_proc has unconnected port pwm_hightime_claw[0]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:80]
+INFO: [Synth 8-6155] done synthesizing module 'test_proc' (3#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:23]
+INFO: [Synth 8-6155] done synthesizing module 'robot_arm_control_v1_0_S00_AXI' (4#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0_S00_AXI.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'robot_arm_control_v1_0' (5#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0.v:4]
 WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[31]
 WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[30]
 WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[29]
 WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[28]
-INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[15]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[14]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[13]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[12]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[11]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[10]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[9]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[8]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[2]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[1]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0_S00_AXI has unconnected port S_AXI_AWPROT[0]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[2]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[1]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0_S00_AXI has unconnected port S_AXI_ARPROT[0]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1422.684 ; gain = 38.523 ; free physical = 186 ; free virtual = 4298
----------------------------------------------------------------------------------
-
-Report Check Netlist: 
-+------+------------------+-------+---------+-------+------------------+
-|      |Item              |Errors |Warnings |Status |Description       |
-+------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
-+------+------------------+-------+---------+-------+------------------+
----------------------------------------------------------------------------------
-Start Handling Custom Attributes
+Finished Synthesize : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1422.535 ; gain = 65.648 ; free physical = 189 ; free virtual = 2078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1422.684 ; gain = 38.523 ; free physical = 184 ; free virtual = 4297
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1422.684 ; gain = 38.523 ; free physical = 184 ; free virtual = 4297
----------------------------------------------------------------------------------
-INFO: [Device 21-403] Loading part xc7z020clg400-1
-INFO: [Project 1-570] Preparing netlist for logic optimization
-
-Processing XDC Constraints
-Initializing timing engine
-Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/div_gen_0_0_i'
-Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/div_gen_0_0_i'
-Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/div_gen_0_1_i'
-Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/div_gen_0_1_i'
-Completed Processing XDC Constraints
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1769.707 ; gain = 0.000 ; free physical = 123 ; free virtual = 4046
-INFO: [Project 1-111] Unisim Transformation Summary:
-No Unisim elements were transformed.
-
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1769.707 ; gain = 0.000 ; free physical = 123 ; free virtual = 4046
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1769.707 ; gain = 0.000 ; free physical = 123 ; free virtual = 4046
----------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 192 ; free virtual = 4116
+Finished Constraint Validation : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1422.535 ; gain = 65.648 ; free physical = 183 ; free virtual = 2078
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 192 ; free virtual = 4116
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1430.539 ; gain = 73.652 ; free physical = 183 ; free virtual = 2079
 ---------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Applying 'set_property' XDC Constraints
----------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/div_gen_0_0_i. (constraint file  auto generated constraint, line ).
-Applied set_property DONT_TOUCH = true for robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/div_gen_0_1_i. (constraint file  auto generated constraint, line ).
----------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 193 ; free virtual = 4117
----------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-5544] ROM "new_lidar_sample_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "new_lidar_sample_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "new_lidar_sample_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
@@ -243,7 +126,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'te
 INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
 INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
-WARNING: [Synth 8-327] inferring latch for variable 'pwm_hightime_base_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:81]
+WARNING: [Synth 8-327] inferring latch for variable 'pwm_hightime_base_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:84]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
@@ -251,10 +134,10 @@ WARNING: [Synth 8-327] inferring latch for variable 'pwm_hightime_base_nxt_reg' 
                        B |                                1 |                               01
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encoding 'sequential' in module 'test_proc'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:83]
-WARNING: [Synth 8-327] inferring latch for variable 'delay_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:82]
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:86]
+WARNING: [Synth 8-327] inferring latch for variable 'delay_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv:85]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 184 ; free virtual = 4108
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1438.547 ; gain = 81.660 ; free physical = 132 ; free virtual = 2048
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -262,18 +145,18 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
 	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 6     
+	               32 Bit    Registers := 10    
 	               24 Bit    Registers := 2     
 	               16 Bit    Registers := 2     
 	                8 Bit    Registers := 12    
@@ -281,12 +164,10 @@ Detailed RTL Component Info :
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 7     
 +---Muxes : 
-	   2 Input     64 Bit        Muxes := 2     
-	   2 Input     33 Bit        Muxes := 1     
-	   2 Input     32 Bit        Muxes := 4     
+	   2 Input     32 Bit        Muxes := 6     
 	   4 Input     32 Bit        Muxes := 5     
 	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 13    
+	   2 Input      1 Bit        Muxes := 14    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -308,17 +189,15 @@ Detailed RTL Component Info :
 Module test_proc 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     64 Bit       Adders := 1     
-	   2 Input     33 Bit       Adders := 1     
+	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
 	   2 Input     11 Bit       Adders := 1     
 +---Registers : 
-	               64 Bit    Registers := 1     
-	               32 Bit    Registers := 1     
+	               32 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input     64 Bit        Muxes := 2     
-	   2 Input     33 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
 	   2 Input     11 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 4     
+	   2 Input      1 Bit        Muxes := 5     
 Module robot_arm_control_v1_0_S00_AXI 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -342,10 +221,17 @@ BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
 ---------------------------------------------------------------------------------
 Finished Part Resource Summary
 ---------------------------------------------------------------------------------
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0 has unconnected port s00_axi_awprot[2]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0 has unconnected port s00_axi_awprot[1]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0 has unconnected port s00_axi_awprot[0]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0 has unconnected port s00_axi_arprot[2]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0 has unconnected port s00_axi_arprot[1]
+WARNING: [Synth 8-3331] design robot_arm_control_v1_0 has unconnected port s00_axi_arprot[0]
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[11] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[12] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[13] )
@@ -367,127 +253,196 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_ar
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[29] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[30] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[31] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[32] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[33] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[34] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[35] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[36] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[37] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[38] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[39] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[40] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[41] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[42] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[43] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[44] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[45] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[46] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[47] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[48] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[49] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[50] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[51] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[52] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[53] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[54] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[55] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[56] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[57] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[58] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[59] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[60] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[61] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[62] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[63] )
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[11]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[12]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[12]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[13]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[13]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[14]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[14]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[15]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[15]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[16]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[16]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[17]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[17]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[18]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[18]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[19]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[19]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[20]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[20]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[21]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[21]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[22]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[22]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[23]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[23]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[24]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[24]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[25]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[25]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[26]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[26]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[27]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[27]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[28]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[28]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[29]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[29]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[30]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[11]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[12]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[13]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[14]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[15]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[16]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[17]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[18]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[19]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[20]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[21]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[22]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[23]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[24]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[25]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[26]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[27]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[28]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[29]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
 INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[30]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[31]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[32]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[32]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[33]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[33]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[34]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[34]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[35]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[35]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[36]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[36]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[37]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[37]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[38]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[38]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[39]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[39]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[40]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[40]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[41]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[41]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[42]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[42]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[43]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[43]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[44]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[44]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[45]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[45]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[46]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[46]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[47]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[47]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[48]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[48]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[49]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[49]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[50]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[50]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[51]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[51]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[52]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[52]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[53]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[53]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[54]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[54]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[55]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[55]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[56]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[56]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[57]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[57]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[58]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[58]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[59]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[59]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[60]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[60]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[61]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[61]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[62]'
-INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[62]' (FD) to 'robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[63]'
 INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/axi_rresp_reg[0]' (FDRE) to 'robot_arm_control_v1_0_S00_AXI_inst/axi_rresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/axi_rresp_reg[1] )
 INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/axi_bresp_reg[0]' (FDRE) to 'robot_arm_control_v1_0_S00_AXI_inst/axi_bresp_reg[1]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/axi_bresp_reg[1] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_ff_reg[63] )
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[63]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[62]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[61]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[60]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[59]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[58]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[57]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[56]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[55]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[54]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[53]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[52]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[51]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[50]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[49]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[48]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[47]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[46]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[45]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[44]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[43]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[42]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[41]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[40]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[39]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[38]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[37]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[36]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[35]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[34]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[33]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[32]) is unused and will be removed from module robot_arm_control_v1_0.
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[0]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[1]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[2]' (FDS) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[3]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[4]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[5]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[6]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[7]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[15] )
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[1]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[2]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[3]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[4]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[5]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_claw_ff_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_elbow_ff_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_shoulder_ff_reg[10] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[3][0]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[3][1]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[3][2]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[3][3]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[3][4]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[3][5]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][5]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[3][6]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[3][7]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][0]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][1]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][2]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][3]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][4]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][5]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][6]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[4][7]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[1][1]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[1][2]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[1][3]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[1][4]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[1][5]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[1][6]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[1][7]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[2][0]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_lidar_sample_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[3][0]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[1][0]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[3][1]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[3][2]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[3][3]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[3][4]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[3][5]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[3][6]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[3][7]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][0]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][1]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][2]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][3]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][4]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][5]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][5]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][6]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[4][7]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[1][1]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[1][2]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[1][3]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[1][4]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[1][5]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[1][6]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[1][7]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][0]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][1]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][1]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][2]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][2]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][3]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][3]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][4]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][4]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][5]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][5]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][6]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][6]' (FDE) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/lidar_sample_reg[2][7]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[0]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[1]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[2]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[3]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[4]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[5]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[6]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[7]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Synth 8-3886] merging instance 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_1_reg[8]' (FDR) to 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[2]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[1]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[0]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:76]
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[31]) is unused and will be removed from module robot_arm_control_v1_0.
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[30]) is unused and will be removed from module robot_arm_control_v1_0.
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[29]) is unused and will be removed from module robot_arm_control_v1_0.
@@ -521,44 +476,43 @@ WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[1]) is unused and will be removed from module robot_arm_control_v1_0.
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/pwm_hightime_base_nxt_reg[0]) is unused and will be removed from module robot_arm_control_v1_0.
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/FSM_sequential_state_nxt_reg) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[63]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[62]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[61]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[60]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[59]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[58]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[57]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[56]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[55]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[54]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[53]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[52]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[51]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[50]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[49]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[48]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[47]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[46]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[45]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[44]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[43]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[42]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[41]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[40]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[39]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[38]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[37]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[36]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[35]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[34]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[33]) is unused and will be removed from module robot_arm_control_v1_0.
-WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[32]) is unused and will be removed from module robot_arm_control_v1_0.
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[31]) is unused and will be removed from module robot_arm_control_v1_0.
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[30]) is unused and will be removed from module robot_arm_control_v1_0.
 WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[29]) is unused and will be removed from module robot_arm_control_v1_0.
-INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[28]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[27]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[26]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[25]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[24]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[23]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[22]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[21]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[20]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[19]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[18]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[17]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[16]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[15]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[14]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[13]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[12]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[11]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[10]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[9]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[8]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[7]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[6]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[5]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[4]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[3]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[2]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[1]) is unused and will be removed from module robot_arm_control_v1_0.
+WARNING: [Synth 8-3332] Sequential element (robot_arm_control_v1_0_S00_AXI_inst/test_proc_i/delay_nxt_reg[0]) is unused and will be removed from module robot_arm_control_v1_0.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/load_sample_reg__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:98]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:98]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:98]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 152 ; free virtual = 4096
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 145 ; free virtual = 1891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -566,17 +520,12 @@ Report RTL Partitions:
 | |RTL Partition |Replication |Instances |
 +-+--------------+------------+----------+
 +-+--------------+------------+----------+
----------------------------------------------------------------------------------
-Start Applying XDC Timing Constraints
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 137 ; free virtual = 3964
----------------------------------------------------------------------------------
+No constraint files found.
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:20 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 137 ; free virtual = 3964
+Finished Timing Optimization : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 145 ; free virtual = 1891
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -587,9 +536,8 @@ Report RTL Partitions:
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5966] Removing register instance (\robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/load_byte_reg__0 ) from module (robot_arm_control_v1_0) as it has self-loop and (\robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/load_byte_reg ) is actual driver [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:52]
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 134 ; free virtual = 3961
+Finished Technology Mapping : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 143 ; free virtual = 1889
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -613,32 +561,20 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 143 ; free virtual = 3970
+Finished IO Insertion : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 142 ; free virtual = 1889
 ---------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_byte with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_byte_reg__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:45]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_byte with 2nd driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_byte_reg/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:50]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/load_sample with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/load_sample_reg__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:82]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/load_sample with 2nd driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/load_sample_reg/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:101]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample[2] with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[2]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:60]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample[2] with 2nd driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[2]/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:67]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample[1] with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[1]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:60]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample[1] with 2nd driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[1]/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:67]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample[0] with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[0]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:60]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample[0] with 2nd driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/sample_reg[0]/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:67]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_sample with 1st driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_sample_reg__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:72]
-CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_sample with 2nd driver pin 'robot_arm_control_v1_0_S00_AXI_inst/lidar_packet_parser_i/new_sample_reg/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv:79]
 
 Report Check Netlist: 
 +------+------------------+-------+---------+-------+------------------+
 |      |Item              |Errors |Warnings |Status |Description       |
 +------+------------------+-------+---------+-------+------------------+
-|1     |multi_driven_nets |      0|        6|Failed |Multi driven nets |
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 143 ; free virtual = 3970
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 142 ; free virtual = 1890
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -650,89 +586,86 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 143 ; free virtual = 3970
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 141 ; free virtual = 1890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 143 ; free virtual = 3970
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 141 ; free virtual = 1890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 143 ; free virtual = 3970
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 141 ; free virtual = 1890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 143 ; free virtual = 3970
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 141 ; free virtual = 1890
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+------+--------------+----------+
-|      |BlackBox name |Instances |
-+------+--------------+----------+
-|1     |div_gen_0     |         2|
-+------+--------------+----------+
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
 
 Report Cell Usage: 
-+------+-------------+------+
-|      |Cell         |Count |
-+------+-------------+------+
-|1     |div_gen_0    |     1|
-|2     |div_gen_0__2 |     1|
-|3     |BUFG         |     2|
-|4     |CARRY4       |    38|
-|5     |LUT1         |    38|
-|6     |LUT2         |    87|
-|7     |LUT3         |     7|
-|8     |LUT4         |    56|
-|9     |LUT5         |    42|
-|10    |LUT6         |    48|
-|11    |FDRE         |   358|
-|12    |FDSE         |     3|
-|13    |IBUF         |    48|
-|14    |OBUF         |    45|
-+------+-------------+------+
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |BUFG   |     2|
+|2     |CARRY4 |    36|
+|3     |LUT1   |     5|
+|4     |LUT2   |    98|
+|5     |LUT3   |    46|
+|6     |LUT4   |    62|
+|7     |LUT5   |     8|
+|8     |LUT6   |    55|
+|9     |FDRE   |   282|
+|10    |FDSE   |     1|
+|11    |IBUF   |    98|
+|12    |OBUF   |    97|
++------+-------+------+
 
 Report Instance Areas: 
 +------+--------------------------------------+-------------------------------+------+
 |      |Instance                              |Module                         |Cells |
 +------+--------------------------------------+-------------------------------+------+
-|1     |top                                   |                               |   822|
-|2     |  robot_arm_control_v1_0_S00_AXI_inst |robot_arm_control_v1_0_S00_AXI |   727|
-|3     |    lidar_packet_parser_i             |lidar_packet_parser            |   194|
-|4     |    pwm_controller_i                  |pwm_controller                 |   124|
-|5     |    test_proc_i                       |test_proc                      |   182|
+|1     |top                                   |                               |   790|
+|2     |  robot_arm_control_v1_0_S00_AXI_inst |robot_arm_control_v1_0_S00_AXI |   593|
+|3     |    lidar_packet_parser_i             |lidar_packet_parser            |    73|
+|4     |    pwm_controller_i                  |pwm_controller                 |   115|
+|5     |    test_proc_i                       |test_proc                      |   178|
 +------+--------------------------------------+-------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1769.707 ; gain = 385.547 ; free physical = 143 ; free virtual = 3970
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 141 ; free virtual = 1890
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 12 critical warnings and 138 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:15 . Memory (MB): peak = 1769.707 ; gain = 38.523 ; free physical = 202 ; free virtual = 4029
-Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:21 . Memory (MB): peak = 1769.715 ; gain = 385.547 ; free physical = 202 ; free virtual = 4029
+Synthesis finished with 0 errors, 12 critical warnings and 114 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.312 ; gain = 234.426 ; free physical = 143 ; free virtual = 1892
+Synthesis Optimization Complete : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 1591.320 ; gain = 234.426 ; free physical = 142 ; free virtual = 1892
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1769.715 ; gain = 0.000 ; free physical = 140 ; free virtual = 3968
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1687.324 ; gain = 0.000 ; free physical = 122 ; free virtual = 1808
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-154 Infos, 221 Warnings, 12 Critical Warnings and 0 Errors encountered.
+239 Infos, 119 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1769.715 ; gain = 385.656 ; free physical = 193 ; free virtual = 4022
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1769.715 ; gain = 0.000 ; free physical = 193 ; free virtual = 4022
+synth_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 1687.324 ; gain = 330.539 ; free physical = 175 ; free virtual = 1864
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1687.324 ; gain = 0.000 ; free physical = 172 ; free virtual = 1864
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.runs/synth_1/robot_arm_control_v1_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file robot_arm_control_v1_0_utilization_synth.rpt -pb robot_arm_control_v1_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Apr  2 00:19:20 2021...
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 12 18:14:15 2021...

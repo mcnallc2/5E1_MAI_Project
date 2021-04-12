@@ -1,9 +1,0 @@
-0.6
-2018.3
-Dec  6 2018
-23:39:36
-/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system_2/arm_control_system/arm_control_system.sim/sim_1/behav/xsim/glbl.v,1544155481,verilog,,,,glbl,,,,,,,,
-/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system_2/arm_control_system/arm_control_system.srcs/sim_1/new/arm_control_tb.sv,1617037193,systemVerilog,,,,arm_control_tb,,,,,,,,
-/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system_2/arm_control_system/arm_control_system.srcs/sources_1/new/ClockDiv.v,1617033342,verilog,,/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system_2/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v,,ClockDiv,,,,,,,,
-/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system_2/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v,1617058240,verilog,,/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system_2/arm_control_system/arm_control_system.srcs/sources_1/new/uart.v,,arm_control_system,,,,,,,,
-/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system_2/arm_control_system/arm_control_system.srcs/sources_1/new/uart.v,1617042136,verilog,,,,UART,,,,,,,,

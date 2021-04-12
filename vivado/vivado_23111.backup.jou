@@ -1,0 +1,162 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr 12 12:14:12 2021
+# Process ID: 23111
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.xpr
+open_bd_design {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd}
+update_compile_order -fileset sources_1
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.sdk/lidar_arm_control_wrapper.hdf
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.xpr
+update_compile_order -fileset sources_1
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/freertos_system/freertos_system.sdk/lidar_arm_control_wrapper.hdf
+close_project
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.xpr
+update_compile_order -fileset sources_1
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+current_project hardware_system
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project edit_robot_arm_control_v1_0
+current_project hardware_system
+upgrade_ip -vlnv user.org:user:robot_arm_control:1.0 [get_ips  lidar_arm_control_robot_arm_control_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips lidar_arm_control_robot_arm_control_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd]
+catch { config_ip_cache -export [get_ips -all lidar_arm_control_robot_arm_control_0_1] }
+catch { config_ip_cache -export [get_ips -all lidar_arm_control_auto_pc_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd]
+launch_runs -jobs 2 lidar_arm_control_robot_arm_control_0_1_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -directory /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+current_project edit_robot_arm_control_v1_0
+current_project hardware_system
+reset_run lidar_arm_control_robot_arm_control_0_1_synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+current_project edit_robot_arm_control_v1_0
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+ipx::open_ipxact_file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/component.xml
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 14 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0
+current_project hardware_system
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project edit_robot_arm_control_v1_0
+current_project hardware_system
+upgrade_ip -vlnv user.org:user:robot_arm_control:1.0 [get_ips  lidar_arm_control_robot_arm_control_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips lidar_arm_control_robot_arm_control_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd]
+catch { config_ip_cache -export [get_ips -all lidar_arm_control_robot_arm_control_0_1] }
+catch { config_ip_cache -export [get_ips -all lidar_arm_control_auto_pc_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd]
+launch_runs -jobs 2 lidar_arm_control_robot_arm_control_0_1_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -directory /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:div_gen:5.1 div_gen_0
+endgroup
+set_property location {4 1187 921} [get_bd_cells div_gen_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:div_gen:5.1 div_gen_1
+endgroup
+set_property location {4 1337 1056} [get_bd_cells div_gen_1]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+connect_bd_net [get_bd_pins robot_arm_control_0/s_axis_divisor_tvalid_0] [get_bd_pins div_gen_0/s_axis_divisor_tvalid]
+connect_bd_net [get_bd_pins robot_arm_control_0/s_axis_divisor_tvalid_0] [get_bd_pins div_gen_0/s_axis_divisor_tdata]
+undo
+connect_bd_net [get_bd_pins robot_arm_control_0/s_axis_dividend_tvalid_0] [get_bd_pins div_gen_0/s_axis_dividend_tvalid]
+connect_bd_net [get_bd_pins div_gen_0/s_axis_dividend_tdata] [get_bd_pins robot_arm_control_0/s_axis_dividend_tdata_1]
+connect_bd_net [get_bd_pins div_gen_0/s_axis_divisor_tdata] [get_bd_pins robot_arm_control_0/s_axis_divisor_tdata_0]
+delete_bd_objs [get_bd_nets robot_arm_control_0_s_axis_dividend_tdata_1]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+connect_bd_net [get_bd_pins robot_arm_control_0/s_axis_dividend_tdata_0] [get_bd_pins div_gen_0/s_axis_dividend_tdata]
+set_property location {4 1470 961} [get_bd_cells div_gen_1]
+connect_bd_net [get_bd_pins robot_arm_control_0/s_axis_divisor_tvalid_1] [get_bd_pins div_gen_1/s_axis_divisor_tvalid]
+connect_bd_net [get_bd_pins robot_arm_control_0/s_axis_divisor_tdata_1] [get_bd_pins div_gen_1/s_axis_divisor_tdata]
+connect_bd_net [get_bd_pins robot_arm_control_0/s_axis_dividend_tvalid_1] [get_bd_pins div_gen_1/s_axis_dividend_tvalid]
+connect_bd_net [get_bd_pins robot_arm_control_0/s_axis_dividend_tdata_1] [get_bd_pins div_gen_1/s_axis_dividend_tdata]
+connect_bd_net [get_bd_ports PWM_CLK] [get_bd_pins div_gen_1/aclk]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+connect_bd_net [get_bd_pins div_gen_0/m_axis_dout_tdata] [get_bd_pins robot_arm_control_0/m_axis_dout_tdata_0]
+connect_bd_net [get_bd_pins div_gen_0/m_axis_dout_tvalid] [get_bd_pins robot_arm_control_0/m_axis_dout_tvalid_0]
+connect_bd_net [get_bd_pins div_gen_1/m_axis_dout_tdata] [get_bd_pins robot_arm_control_0/m_axis_dout_tdata_1]
+connect_bd_net [get_bd_pins div_gen_1/m_axis_dout_tvalid] [get_bd_pins robot_arm_control_0/m_axis_dout_tvalid_1]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+connect_bd_net [get_bd_ports PWM_CLK] [get_bd_pins div_gen_0/aclk]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+report_ip_status -name ip_status 
+reset_run lidar_arm_control_robot_arm_control_0_1_synth_1
+save_bd_design
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+regenerate_bd_layout -routing
+current_project edit_robot_arm_control_v1_0
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 15 [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+update_ip_catalog -rebuild -repo_path /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0
+current_project hardware_system
+update_ip_catalog -rebuild -scan_changes
+report_ip_status -name ip_status
+current_project edit_robot_arm_control_v1_0
+current_project hardware_system
+upgrade_ip -vlnv user.org:user:robot_arm_control:1.0 [get_ips  lidar_arm_control_robot_arm_control_0_1] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips lidar_arm_control_robot_arm_control_0_1] -no_script -sync -force -quiet
+generate_target all [get_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd]
+catch { config_ip_cache -export [get_ips -all lidar_arm_control_robot_arm_control_0_1] }
+catch { config_ip_cache -export [get_ips -all lidar_arm_control_auto_pc_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd]
+launch_runs -jobs 2 lidar_arm_control_robot_arm_control_0_1_synth_1
+export_simulation -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -directory /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs synth_1 -jobs 2
+wait_on_run synth_1
+launch_runs impl_1 -jobs 2
+wait_on_run impl_1
