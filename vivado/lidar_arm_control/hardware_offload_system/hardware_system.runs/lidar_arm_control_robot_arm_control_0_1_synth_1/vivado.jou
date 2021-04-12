@@ -2,11 +2,11 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Wed Mar  3 18:02:24 2021
-# Process ID: 24078
-# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/hardware_system.runs/lidar_arm_control_robot_arm_control_0_1_synth_1
+# Start of session at: Fri Apr  2 00:21:28 2021
+# Process ID: 14542
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/lidar_arm_control_robot_arm_control_0_1_synth_1
 # Command line: vivado -log lidar_arm_control_robot_arm_control_0_1.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source lidar_arm_control_robot_arm_control_0_1.tcl
-# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/hardware_system.runs/lidar_arm_control_robot_arm_control_0_1_synth_1/lidar_arm_control_robot_arm_control_0_1.vds
-# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/hardware_system.runs/lidar_arm_control_robot_arm_control_0_1_synth_1/vivado.jou
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/lidar_arm_control_robot_arm_control_0_1_synth_1/lidar_arm_control_robot_arm_control_0_1.vds
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/lidar_arm_control_robot_arm_control_0_1_synth_1/vivado.jou
 #-----------------------------------------------------------
 source lidar_arm_control_robot_arm_control_0_1.tcl -notrace

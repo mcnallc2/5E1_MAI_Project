@@ -1,0 +1,967 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 20063
+License: Customer
+
+Current time: 	Fri Apr 02 12:14:18 IST 2021
+Time zone: 	Greenwich Mean Time (Europe/Dublin)
+
+OS: Ubuntu
+OS Version: 5.4.0-70-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 108 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	cmcnally
+User home directory: /home/cmcnally
+User working directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+User country: 	IE
+User language: 	en
+User locale: 	en_IE
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2018.3
+RDI_DATADIR: /tools/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: /home/cmcnally/.Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: /home/cmcnally/.Xilinx/Vivado/2018.3/
+Vivado layouts directory: /home/cmcnally/.Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+Vivado journal file location: 	/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-20063-noodle-box
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2018.3
+XILINX_SDK: /tools/Xilinx/SDK/2018.3
+XILINX_VIVADO: /tools/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 850 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// HMemoryUtils.trashcanNow. Engine heap size: 811 MB. GUI used memory: 43 MB. Current time: 4/2/21, 12:14:20 PM IST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.xpr", 8); // q (Q, cp)
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 73 MB (+74447kb) [00:01:05]
+// [Engine Memory]: 842 MB (+731265kb) [00:01:05]
+// [GUI Memory]: 95 MB (+19196kb) [00:01:05]
+// WARNING: HEventQueue.dispatchEvent() is taking  3380 ms.
+// Tcl Message: open_project /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:13 ; elapsed = 00:00:05 . Memory (MB): peak = 6362.469 ; gain = 46.195 ; free physical = 126 ; free virtual = 4615 
+// HMemoryUtils.trashcanNow. Engine heap size: 871 MB. GUI used memory: 50 MB. Current time: 4/2/21, 12:15:16 PM IST
+// Project name: hex_calculator; location: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator; part: xc7a35tcpg236-1
+dismissDialog("Open Project"); // bx (cp)
+// [GUI Memory]: 108 MB (+7720kb) [00:01:11]
+// [Engine Memory]: 897 MB (+13524kb) [00:01:11]
+// [Engine Memory]: 966 MB (+25181kb) [00:01:13]
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (top_level_wrapper.sv) elapsed time: 0.2s
+// Elapsed time: 43 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level_wrapper (top_level_wrapper.sv)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level_wrapper (top_level_wrapper.sv)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// Elapsed time: 87 seconds
+selectCodeEditor("top_level_wrapper.sv", 128, 341); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 64, 241); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 82, 369); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 76, 330); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 51, 196); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 61, 188); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 61, 194); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 62, 198); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 49, 339); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 55, 366); // cl (w, cp)
+selectCodeEditor("top_level_wrapper.sv", 49, 340); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("top_level_wrapper.sv", 141, 446); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,009 MB. GUI used memory: 52 MB. Current time: 4/2/21, 12:17:45 PM IST
+// Elapsed time: 112 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 6 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// bx (cp):  Generate Bitstream : addNotify
+// TclEventType: RUN_MODIFY
+// [Engine Memory]: 1,016 MB (+1519kb) [00:05:35]
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Fri Apr  2 12:19:42 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log [Fri Apr  2 12:19:42 2021] Launched impl_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// WARNING: HTimer (ExpRunMgr Pending Runs Timer) is taking 408ms to process. Increasing delay to 3000 ms.
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 132 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager]", 21, true); // u (Q, cp) - Node
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Tcl Command: 'load_features labtools'
+// TclEventType: LOAD_FEATURE
+// bx (cp):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1334 ms.
+// Tcl Message: open_hw 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+dismissDialog("Open Hardware Manager"); // bx (cp)
+selectButton(PAResourceOtoP.ProgramDebugTab_OPEN_TARGET, "Open target"); // h (cQ, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,047 MB. GUI used memory: 58 MB. Current time: 4/2/21, 12:22:00 PM IST
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // af (al, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+// TclEventType: HW_SERVER_UPDATE
+// bx (cp):  Auto Connect : addNotify
+// TclEventType: HW_SERVER_UPDATE
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.3   **** Build date : Dec  6 2018-23:53:53     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_NEEDS_CLOSE
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// WARNING: HEventQueue.dispatchEvent() is taking  1935 ms.
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75E24A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// [Engine Memory]: 1,847 MB (+818700kb) [00:07:56]
+dismissDialog("Auto Connect"); // bx (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // af (al, Popup.HeavyWeightWindow)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cp)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (cp)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aI (aF, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,870 MB. GUI used memory: 58 MB. Current time: 4/2/21, 12:22:25 PM IST
+// [Engine Memory]: 2,508 MB (+596492kb) [00:09:30]
+// Elapsed time: 86 seconds
+selectButton(PAResourceTtoZ.TaskBanner_CLOSE, (String) null); // k (aA, cp)
+closeTask("Program and Debug", "Hardware Manager", "DesignTask.PROGRAM_DEBUG");
+// A (cp): Confirm Close: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (A)
+// bx (cp):  Close Hardware Manager : addNotify
+// TclEventType: HW_OBJECT_DELETE
+dismissDialog("Confirm Close"); // A (cp)
+// TclEventType: HW_SERVER_CLOSE
+// TclEventType: HW_SYSMON_DELETE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_TARGET_UPDATE
+// TclEventType: DEBUG_PROBE_DELETE
+// Tcl Message: close_hw 
+// TclEventType: DEBUG_PROBE_DELETE
+// TclEventType: HW_SESSION_CLOSE
+dismissDialog("Close Hardware Manager"); // bx (cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level_wrapper (top_level_wrapper.sv), arithmetic_i : arithmetic (arithmetic.sv)]", 4, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level_wrapper (top_level_wrapper.sv), arithmetic_i : arithmetic (arithmetic.sv)]", 4, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// Elapsed time: 328 seconds
+selectCodeEditor("arithmetic.sv", 151, 426); // cl (w, cp)
+// Elapsed time: 11 seconds
+selectCodeEditor("arithmetic.sv", 186, 455); // cl (w, cp)
+// Elapsed time: 27 seconds
+selectCodeEditor("arithmetic.sv", 307, 173); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 160, 380); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 305, 457); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 222, 379); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 401, 429); // cl (w, cp)
+// Elapsed time: 23 seconds
+selectCodeEditor("arithmetic.sv", 364, 474); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 329, 445); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 254, 494); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 235, 561); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 205, 544); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 188, 462); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 118 MB (+5812kb) [00:16:38]
+selectCodeEditor("arithmetic.sv", 269, 549); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,894 MB. GUI used memory: 58 MB. Current time: 4/2/21, 12:30:50 PM IST
+// Elapsed time: 20 seconds
+selectCodeEditor("arithmetic.sv", 383, 413); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 45 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level_wrapper.sv", 1); // k (j, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level_wrapper (top_level_wrapper.sv), calculator_fsm_i : calculator_fsm (calculator_fsm.sv)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, top_level_wrapper (top_level_wrapper.sv), calculator_fsm_i : calculator_fsm (calculator_fsm.sv)]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "top_level_wrapper.sv", 1); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "arithmetic.sv", 2); // k (j, cp)
+// Elapsed time: 22 seconds
+selectCodeEditor("arithmetic.sv", 148, 88); // cl (w, cp)
+// Elapsed time: 22 seconds
+selectCodeEditor("arithmetic.sv", 146, 595); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 145, 594); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 165, 458); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 125, 476); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("arithmetic.sv", 306, 141); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 123, 500); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 319, 575); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 195, 502); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 47 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 4 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// bx (cp):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Fri Apr  2 12:34:12 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log [Fri Apr  2 12:34:12 2021] Launched impl_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log 
+dismissDialog("Generate Bitstream"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 160 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Open Target]", 22, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HW_TARGET
+selectMenuItem(PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET, "Auto Connect"); // af (al, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// bx (cp):  Open Hardware Manager : addNotify
+// TclEventType: HW_SESSION_OPEN
+// WARNING: HEventQueue.dispatchEvent() is taking  1824 ms.
+// Tcl Message: open_hw 
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// [GUI Memory]: 127 MB (+2700kb) [00:22:50]
+// Run Command: PAResourceCommand.PACommandNames_AUTO_CONNECT_TARGET
+dismissDialog("Open Hardware Manager"); // bx (cp)
+// bx (cp):  Auto Connect : addNotify
+// TclEventType: HW_SERVER_UPDATE
+// Tcl Message: connect_hw_server 
+// Tcl Message: INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121 INFO: [Labtools 27-2222] Launching hw_server... INFO: [Labtools 27-2221] Launch Output:  ****** Xilinx hw_server v2018.3   **** Build date : Dec  6 2018-23:53:53     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.   
+// TclEventType: HW_TARGET_CHANGE
+// TclEventType: HW_TARGET_CLOSE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_ADD
+// TclEventType: HW_TARGET_UPDATE
+// Tcl Message: open_hw_target 
+// Tcl Message: INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210183A75E24A 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: current_hw_device [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+dismissDialog("Auto Connect"); // bx (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Open Hardware Manager, Program Device]", 23, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+selectMenuItem((HResource) null, "xc7a35t_0"); // af (al, cp)
+// PAPropertyPanels.initPanels (xc7a35t_0) elapsed time: 0.2s
+// Run Command: PAResourceCommand.PACommandNames_OPEN_HARDWARE_MANAGER
+// Tcl Command: 'rdi::info_commands get_hw_probes'
+// Run Command: PAResourceCommand.PACommandNames_PROGRAM_FPGA
+// bC (cp): Program Device: addNotify
+selectButton(PAResourceOtoP.ProgramFpgaDialog_PROGRAM, "Program"); // a (bC)
+// bx (cp):  Program Device : addNotify
+// TclEventType: HW_DEVICE_CHANGE
+dismissDialog("Program Device"); // bC (cp)
+// Tcl Message: set_property PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// Tcl Message: set_property FULL_PROBES.FILE {} [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: set_property PROGRAM.FILE {/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7a35t_0] 
+// Tcl Message: program_hw_devices [get_hw_devices xc7a35t_0] 
+// TclEventType: HW_DEVICE_CHANGE
+// Tcl Message: INFO: [Labtools 27-3164] End of startup status: HIGH 
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_SYSMON_CHANGE
+// TclEventType: HW_DEVICE_UPDATE
+// TclEventType: HW_DEVICE_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// TclEventType: HW_DEVICE_PROBES_CHANGE
+// Tcl Message: refresh_hw_device [lindex [get_hw_devices xc7a35t_0] 0] 
+// Tcl Message: INFO: [Labtools 27-1434] Device xc7a35t (JTAG device index = 0) is programmed with a design that has no supported debug core(s) in it. 
+// 'I' command handler elapsed time: 3 seconds
+dismissDialog("Program Device"); // bx (cp)
+// Elapsed time: 167 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "arithmetic.sv", 1); // k (j, cp)
+selectCodeEditor("arithmetic.sv", 265, 315); // cl (w, cp)
+// Elapsed time: 142 seconds
+selectCodeEditor("arithmetic.sv", 297, 51); // cl (w, cp)
+// Elapsed time: 165 seconds
+selectCodeEditor("arithmetic.sv", 310, 344); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 227, 215); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 169, 229); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 162, 250); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 171, 249); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 29 seconds
+selectCodeEditor("arithmetic.sv", 278, 313); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 304, 329); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 329, 412); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 204, 171); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 290, 182); // cl (w, cp)
+// Elapsed time: 11 seconds
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 56, 171); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 234, 174); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 230, 172); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 154, 190); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 369, 191); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 325, 186); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("arithmetic.sv", 56, 200); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 248, 199); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 241, 202); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 152, 216); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 335, 217); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 328, 217); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 58, 233); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 217, 231); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 209, 227); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 152, 250); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 309, 247); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 300, 249); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("arithmetic.sv", 255, 366); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 325, 279); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 73, 381); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 155, 385); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 310, 383); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 309, 397); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 307, 416); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 308, 421); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 299, 387); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 305, 401); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 307, 422); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 307, 414); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 309, 429); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 320, 434); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 321, 445); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 318, 454); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 324, 472); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 84, 382); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 298, 385); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 82, 399); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 328, 398); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 85, 411); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 384, 414); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 83, 430); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 363, 432); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 87, 447); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 326, 439); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 83, 457); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 317, 457); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 84, 474); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 296, 471); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 283, 383); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 355, 372); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 354, 380); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 404, 390); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 460, 423); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("arithmetic.sv", 206, 257); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 278, 286); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("arithmetic.sv", 177, 294); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 247, 131); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 245, 129); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 55, 144); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 250, 174); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 156, 99); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 281, 96); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 155, 114); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 313, 115); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 150, 129); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 152, 129); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 285, 130); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 248, 101); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 238, 93); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectCodeEditor("arithmetic.sv", 275, 154); // cl (w, cp)
+// Elapsed time: 28 seconds
+selectCodeEditor("arithmetic.sv", 265, 219); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 279, 440); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 365, 505); // cl (w, cp)
+// Elapsed time: 70 seconds
+selectCodeEditor("arithmetic.sv", 422, 382); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 156, 400); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 317, 145); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 204, 163); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 166, 162); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 269, 156); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 223, 222); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 319, 157); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 68, 369); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 155, 369); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 305, 367); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 82, 366); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 287, 366); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 218, 428); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 149, 432); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 160, 447); // cl (w, cp)
+// Elapsed time: 20 seconds
+selectCodeEditor("arithmetic.sv", 153, 475); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 483, 432); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("arithmetic.sv", 55, 191); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 419, 325); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("arithmetic.sv", 84, 488); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 290, 489); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 478, 478); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 53, 98); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 114, 440); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 232, 440); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 135 MB (+1616kb) [00:39:31]
+selectCodeEditor("arithmetic.sv", 208, 468); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 268, 96); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 264, 291); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 227, 322); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectCodeEditor("arithmetic.sv", 172, 367); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 169, 381); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 229, 398); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 225, 409); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 239, 427); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 231, 443); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("arithmetic.sv", 66, 373); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 53, 210); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 94, 476); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 137, 365); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 54, 403); // cl (w, cp)
+// Elapsed time: 20 seconds
+selectCodeEditor("arithmetic.sv", 381, 370); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 393, 353); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 398, 379); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 179, 418); // cl (w, cp)
+// Elapsed time: 31 seconds
+selectCodeEditor("arithmetic.sv", 194, 310); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 191, 318); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 200, 318); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 259, 335); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 252, 350); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 265, 367); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 262, 385); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 289, 400); // cl (w, cp)
+// Elapsed time: 17 seconds
+selectCodeEditor("arithmetic.sv", 361, 203); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 395, 314); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 167, 294); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("arithmetic.sv", 484, 321); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 419, 398); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 210, 379); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 306, 85); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 302, 66); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 169, 398); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 143, 81); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 86, 124); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 173, 127); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 369, 128); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 296, 263); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 198, 277); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 232, 373); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 516, 363); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 424, 401); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 410, 368); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 412, 429); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 318, 415); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 229, 413); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 370, 353); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 363, 344); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 252, 327); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 251, 332); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 204, 352); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 267, 355); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 205, 365); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 167, 358); // cl (w, cp)
+// Elapsed time: 26 seconds
+selectCodeEditor("arithmetic.sv", 250, 108); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 349, 115); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 52, 111); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 101, 132); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 55, 97); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 58, 87); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 172, 129); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 157, 380); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 160, 351); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 163, 379); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 162, 366); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 249, 387); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 241, 398); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 250, 405); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 315, 460); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 407, 474); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 216, 400); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 328, 382); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 245, 394); // cl (w, cp)
+// Elapsed time: 15 seconds
+selectCodeEditor("arithmetic.sv", 252, 309); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 251, 322); // cl (w, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("arithmetic.sv", 201, 340); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 360, 427); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 337, 428); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 312, 446); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 315, 455); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 310, 474); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 363, 442); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 428, 456); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 235, 532); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,478 MB. GUI used memory: 71 MB. Current time: 4/2/21, 1:00:50 PM IST
+selectCodeEditor("arithmetic.sv", 286, 557); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 453, 592); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 33 seconds
+selectCodeEditor("arithmetic.sv", 307, 326); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 406, 417); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 49, 405); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 48, 397); // cl (w, cp)
+typeControlKey(null, null, 'z');
+selectCodeEditor("arithmetic.sv", 378, 400); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 461, 411); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 404, 461); // cl (w, cp)
+// Elapsed time: 108 seconds
+selectCodeEditor("arithmetic.sv", 453, 309); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 327, 444); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 273, 414); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 396, 193); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 190, 449); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 307, 443); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 346, 216); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 199, 380); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 141, 386); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 394, 382); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 357, 382); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 371, 393); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 372, 410); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 397, 423); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 379, 427); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 439, 445); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 398, 456); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 439, 475); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 448, 462); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 450, 467); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,558 MB. GUI used memory: 69 MB. Current time: 4/2/21, 1:04:55 PM IST
+// Elapsed time: 31 seconds
+selectCodeEditor("arithmetic.sv", 413, 291); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 147, 552); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 230, 493); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 408, 460); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 386, 450); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 363, 460); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 278, 566); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 226, 517); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 341, 515); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,590 MB. GUI used memory: 69 MB. Current time: 4/2/21, 1:05:50 PM IST
+selectCodeEditor("arithmetic.sv", 413, 206); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 377, 369); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 278, 383); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 346, 524); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 276, 533); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 207, 529); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 216, 579); // cl (w, cp)
+// Elapsed time: 139 seconds
+selectCodeEditor("arithmetic.sv", 131, 378); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 219, 365); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 363, 409); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,622 MB. GUI used memory: 68 MB. Current time: 4/2/21, 1:08:40 PM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 215, 508); // cl (w, cp)
+// [Engine Memory]: 2,638 MB (+4432kb) [00:54:41]
+// Elapsed time: 42 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Fri Apr  2 13:09:31 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log [Fri Apr  2 13:09:31 2021] Launched impl_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 331 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aI (aF, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,672 MB. GUI used memory: 68 MB. Current time: 4/2/21, 1:15:10 PM IST
+// Elapsed time: 24 seconds
+selectCodeEditor("arithmetic.sv", 201, 400); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 210, 401); // cl (w, cp)
+// Elapsed time: 26 seconds
+selectCodeEditor("arithmetic.sv", 210, 323); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 447, 300); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 213, 346); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 174, 350); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 166, 352); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 265, 353); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 335, 380); // cl (w, cp)
+// Elapsed time: 19 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Fri Apr  2 13:16:41 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log [Fri Apr  2 13:16:41 2021] Launched impl_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log 
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// Elapsed time: 77 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, div_gen_0_synth_1]", 44); // ah (Q, cp)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, mult_gen_0_synth_1]", 45); // ah (Q, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,688 MB. GUI used memory: 68 MB. Current time: 4/2/21, 1:18:10 PM IST
+// Elapsed time: 23 seconds
+expandTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, synth_1, [Synth 8-327] inferring latch for variable 's_axis_divisor_tvalid_nxt_reg' [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv:174]. ]", 30); // ah (Q, cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 17 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+selectCodeEditor("arithmetic.sv", 342, 350); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 324, 80); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 307, 100); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 413, 454); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 383, 171); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 334, 201); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 2,720 MB. GUI used memory: 68 MB. Current time: 4/2/21, 1:19:15 PM IST
+selectCodeEditor("arithmetic.sv", 410, 201); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 411, 159); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 349, 370); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'c'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 215, 145); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 219, 84); // cl (w, cp)
+typeControlKey((HResource) null, "arithmetic.sv", 'v'); // cl (w, cp)
+selectCodeEditor("arithmetic.sv", 366, 152); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 352, 294); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("arithmetic.sv", 330, 263); // cl (w, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): Synthesis is Out-of-date: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 3 seconds
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILESET_TARGET_UCF_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// Tcl Message: [Fri Apr  2 13:19:52 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log [Fri Apr  2 13:19:52 2021] Launched impl_1... Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log 
+selectButton(PAResourceItoN.MsgView_CLEAR_MESSAGES_RESULTING_FROM_USER_EXECUTED, "Messages_cleanUpMessages"); // B (f, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 2,753 MB. GUI used memory: 68 MB. Current time: 4/2/21, 1:20:06 PM IST
+// Elapsed time: 10 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, mult_gen_0_synth_1]", 23); // ah (Q, cp)
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs, div_gen_0_synth_1]", 2); // ah (Q, cp)
+// [Engine Memory]: 2,938 MB (+176551kb) [01:06:05]
+// Elapsed time: 10 seconds
+collapseTree(PAResourceItoN.MsgTreePanel_MESSAGE_VIEW_TREE, "[, Synthesis, Out-of-Context Module Runs]", 1); // ah (Q, cp)
+// TclEventType: RUN_COMPLETED
+// HMemoryUtils.trashcanNow. Engine heap size: 2,753 MB. GUI used memory: 68 MB. Current time: 4/2/21, 1:20:36 PM IST
+// TclEventType: RUN_STEP_COMPLETED
+// [Engine Memory]: 3,211 MB (+131926kb) [01:06:59]

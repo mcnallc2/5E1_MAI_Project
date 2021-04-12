@@ -189,6 +189,9 @@ int shoulderAngle	= 0;	// start angle of the shoulder servo
 int elbowAngle		= 90;	// start angle of the elbow servo
 int clawAngle		= 90;	// start angle of the claw servo
 
+XTime tStart_React, tEnd_React;
+float us_reaction;
+
 typedef struct ObjectCoordinate{
     int angle;
     int distance;
@@ -206,6 +209,7 @@ int main(void){
 	xil_printf("\n>>> Start LIDAR object detection and ARM control\r\n\n");
 	// application health status
 	int Status;
+	XTime tStart_CL, tEnd_CL;
 
 	// Initialize the GPIO driver
 	Status = XGpio_Initialize(&Gpio, GPIO_EXAMPLE_DEVICE_ID);
@@ -236,9 +240,16 @@ int main(void){
 	///////////////
 	while (!FINISHED) {
 
+		XTime_GetTime(&tStart_CL);
+
 		testProcedure();
 		armControl();
 
+		XTime_GetTime(&tEnd_CL);
+
+		float us_process_len = 1.0 * (tEnd_CL - tStart_CL) / (COUNTS_PER_SECOND/1000000);
+		printf("\nClosed Loop Time: %f us", us_process_len);
+		printf("\nReaction Time: %f us", us_reaction);
 	}
 
 	xil_printf("UART: Disabling UartLite Intr System\r\n");
@@ -366,6 +377,10 @@ void armControl(void){
 	if (Status != XST_SUCCESS) {
 		xil_printf("PWM: BASE_SERVO PWM Failed\r\n");
 	}
+
+
+	XTime_GetTime(&tEnd_React);
+	us_reaction = 1.0 * (tEnd_React - tStart_React) / (COUNTS_PER_SECOND/1000000);
 
 	// Run the Timer Counter for SHOULDER_SERVO PWM
 	Status = TmrCtrPwmConfig(&InterruptController,
@@ -681,7 +696,7 @@ int UartLiteSampleLidar(INTC *IntcInstancePtr,
 		currentObject.angle		= minDistAngle;
 		currentObject.distance	= minDist;
 		xil_printf("LIDAR: Angle: %d - Distance: %d\n", minDistAngle, minDist);
-
+		XTime_GetTime(&tStart_React);
 //		int q2_angle = -1 * acos((((pow(minDist,2)) - (pow(UPPER_ARM,2)) - (pow(LOWER_ARM,2))) / (2 * UPPER_ARM * LOWER_ARM)));
 //		int q1_angle = atan((LOWER_ARM * sin(q2_angle)) / (UPPER_ARM + (LOWER_ARM * cos(q2_angle))));
 

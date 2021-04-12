@@ -1,8 +1,8 @@
-12:41:43 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+15:32:16 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
 
-12:41:43 Build Finished (took 79ms)
+15:32:16 Build Finished (took 61ms)
 

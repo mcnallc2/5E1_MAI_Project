@@ -47523,3 +47523,182 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
+15:26:09 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:26:35 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+15:28:17 **** Auto Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:46:0:
+../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:239:18: error: 'tStart_CL' undeclared (first use in this function)
+   XTime_GetTime(&tStart_CL);
+                  ^~~~~~~~~
+../src/main.c:239:18: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c:244:18: error: 'tEnd_CL' undeclared (first use in this function)
+   XTime_GetTime(&tEnd_CL);
+                  ^~~~~~~
+../src/main.c:248:36: error: 'us_reaction' undeclared (first use in this function); did you mean '__section'?
+   printf("\nReaction Time: %f us", us_reaction);
+                                    ^~~~~~~~~~~
+                                    __section
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:878:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+make: *** [src/main.o] Error 1
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+15:28:26 **** Auto Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:46:0:
+../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'main':
+../src/main.c:249:36: error: 'us_reaction' undeclared (first use in this function); did you mean '__section'?
+   printf("\nReaction Time: %f us", us_reaction);
+                                    ^~~~~~~~~~~
+                                    __section
+../src/main.c:249:36: note: each undeclared identifier is reported only once for each function it appears in
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:879:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/main.o' failed
+make: *** [src/main.o] Error 1
+15:29:23 **** Auto Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:46:0:
+../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:882:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_system_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control_system.elf  |tee "lidar_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90144	   3456	  25680	 119280	  1d1f0	lidar_arm_control_system.elf
+Finished building: lidar_arm_control_system.elf.size
+ 
+15:30:24 **** Auto Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:46:0:
+../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:882:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_system_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control_system.elf  |tee "lidar_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90208	   3456	  25680	 119344	  1d230	lidar_arm_control_system.elf
+Finished building: lidar_arm_control_system.elf.size
+ 
+15:31:49 **** Auto Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:46:0:
+../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:885:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_system_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control_system.elf  |tee "lidar_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90208	   3456	  25680	 119344	  1d230	lidar_arm_control_system.elf
+Finished building: lidar_arm_control_system.elf.size
+ 
+15:32:13 **** Auto Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+In file included from ../src/main.c:46:0:
+../../lidar_arm_control_system_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/main.c: In function 'TmrCtrPwmConfig':
+../src/main.c:886:6: warning: variable 'DutyCycle' set but not used [-Wunused-but-set-variable]
+  u8  DutyCycle;
+      ^~~~~~~~~
+Finished building: ../src/main.c
+ 
+Building target: lidar_arm_control_system.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_system_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control_system.elf"  ./src/main.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control_system.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control_system.elf  |tee "lidar_arm_control_system.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  90272	   3456	  25680	 119408	  1d270	lidar_arm_control_system.elf
+Finished building: lidar_arm_control_system.elf.size
+ 
+15:32:16 **** Incremental Build of configuration Debug for project lidar_arm_control_system ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

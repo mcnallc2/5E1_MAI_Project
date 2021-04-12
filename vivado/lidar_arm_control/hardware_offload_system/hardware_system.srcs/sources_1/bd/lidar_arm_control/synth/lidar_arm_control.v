@@ -1,7 +1,7 @@
 //Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-//Date        : Wed Mar  3 21:31:08 2021
+//Date        : Fri Apr  2 00:21:23 2021
 //Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 //Command     : generate_target lidar_arm_control.bd
 //Design      : lidar_arm_control
@@ -68,9 +68,9 @@ module lidar_arm_control
   output PWM_2;
   output PWM_3;
   (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 CLK.PWM_CLK CLK" *) (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME CLK.PWM_CLK, CLK_DOMAIN lidar_arm_control_PWM_CLK_0, FREQ_HZ 100000000, INSERT_VIP 0, PHASE 0.000" *) input PWM_CLK;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_0 " *) input [5:0]gpio_0_tri_i;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_0 " *) output [5:0]gpio_0_tri_o;
-  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_0 " *) output [5:0]gpio_0_tri_t;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_0 TRI_I" *) input [5:0]gpio_0_tri_i;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_0 TRI_O" *) output [5:0]gpio_0_tri_o;
+  (* X_INTERFACE_INFO = "xilinx.com:interface:gpio:1.0 gpio_0 TRI_T" *) output [5:0]gpio_0_tri_t;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl RxD" *) input uart_rtl_rxd;
   (* X_INTERFACE_INFO = "xilinx.com:interface:uart:1.0 uart_rtl TxD" *) output uart_rtl_txd;
 

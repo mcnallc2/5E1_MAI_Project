@@ -20,31 +20,31 @@ preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -y 640 -defaultsOSRD
 preplace inst axi_uartlite_0 -pg 1 -lvl 4 -y 1000 -defaultsOSRD
 preplace inst rst_ps7_0_100M -pg 1 -lvl 2 -y 1180 -defaultsOSRD
 preplace inst processing_system7_0 -pg 1 -lvl 2 -y 940 -defaultsOSRD
-preplace netloc processing_system7_0_DDR 1 2 3 650J 900 1030J 910 1400J
-preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 1040
-preplace netloc axi_uartlite_0_interrupt 1 0 5 30 800 NJ 800 670J 890 1050J 900 1370
-preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 680
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 1010
+preplace netloc processing_system7_0_DDR 1 2 3 NJ 890 NJ 890 NJ
+preplace netloc axi_uartlite_0_interrupt 1 0 5 20 1280 NJ 1280 NJ 1280 1070J 920 1330
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 670
 preplace netloc axi_timer_3_pwm0 1 4 1 NJ
 preplace netloc axi_timer_2_pwm0 1 4 1 NJ
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 710 420 1080
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 2 2 700 880 1050
 preplace netloc axi_timer_0_pwm0 1 4 1 NJ
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 250 1050 660
-preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1050
-preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1030
-preplace netloc axi_timer_3_interrupt 1 0 5 10 790 NJ 790 720J 880 1110J 890 1370
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 250 1050 650
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1030
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 1 1000
+preplace netloc axi_timer_3_interrupt 1 0 5 40 1070 NJ 1070 690J 860 1070J 670 1330
 preplace netloc xlconcat_0_dout 1 1 1 N
-preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 910 1020J 920 1410J
-preplace netloc axi_uartlite_0_UART 1 4 1 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ 910 NJ 910 NJ
 preplace netloc axi_gpio_0_GPIO 1 4 1 NJ
-preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 1090
-preplace netloc ps7_0_axi_periph_M05_AXI 1 3 1 1040
+preplace netloc axi_uartlite_0_UART 1 4 1 NJ
+preplace netloc ps7_0_axi_periph_M05_AXI 1 3 1 1000
+preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 1010
 preplace netloc axi_timer_1_pwm0 1 4 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 240 820 660 410 1070
-preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1060
-preplace netloc axi_timer_1_interrupt 1 0 5 20 810 NJ 810 700J 870 1110J 670 1370
-preplace netloc axi_timer_2_interrupt 1 0 5 40 1280 NJ 1280 NJ 1280 NJ 1280 1390
-preplace netloc axi_timer_0_interrupt 1 0 5 40 830 NJ 830 690J 860 1100J 660 1380
-levelinfo -pg 1 -10 140 450 870 1240 1430 -top 0 -bot 1290
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 240 1080 680 870 1040
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 1 1020
+preplace netloc axi_timer_1_interrupt 1 0 5 40 410 NJ 410 NJ 410 1070J 440 1330
+preplace netloc axi_timer_2_interrupt 1 0 5 30 1060 NJ 1060 660J 420 1060J 660 1330
+preplace netloc axi_timer_0_interrupt 1 0 5 30 220 NJ 220 NJ 220 NJ 220 1330
+levelinfo -pg 1 0 140 450 850 1200 1350 -top 0 -bot 1290
 "
 }
 {

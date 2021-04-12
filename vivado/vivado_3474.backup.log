@@ -1,0 +1,711 @@
+#-----------------------------------------------------------
+# Vivado v2018.3 (64-bit)
+# SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Start of session at: Mon Apr  5 10:36:58 2021
+# Process ID: 3474
+# Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+# Command line: vivado
+# Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+# Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 6390.246 ; gain = 99.836 ; free physical = 1436 ; free virtual = 6225
+update_compile_order -fileset sources_1
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Attempt to kill process failed
+
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Apr  5 10:37:50 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+file mkdir /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv w ]
+add_files -fileset sim_1 /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv
+update_compile_order -fileset sim_1
+update_compile_order -fileset sim_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module all_clear
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_tb
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+xvhdl --incr --relax -prj calculator_tb_vhdl.prj
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/div_gen_0/sim/div_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'div_gen_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/ip/mult_gen_0/sim/mult_gen_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_gen_0'
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L xbip_pipe_v3_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L floating_point_v7_0_15 -L xbip_dsp48_mult_v3_0_5 -L xbip_dsp48_multadd_v3_0_5 -L div_gen_v5_1_14 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-2646] VHDL unit instantiation in verilog should have an instance name [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv:277]
+WARNING: [VRFC 10-3091] actual bit length 5 differs from formal bit length 6 for port 'btn' [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv:71]
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x50b7e8]
+[1] /tools/Xilinx/Vivado/2018.3/lib/lnx64.o/libxsimverific.so(Verific::VeriVisitor::TraverseArray(Verific::Array const*)+0x86) [0x7f31854436c6]
+[2] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x531136]
+[3] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x50b66a]
+[4] /tools/Xilinx/Vivado/2018.3/lib/lnx64.o/libxsimverific.so(Verific::VeriVisitor::TraverseArray(Verific::Array const*)+0x86) [0x7f31854436c6]
+[5] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x531136]
+[6] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x50b66a]
+[7] /tools/Xilinx/Vivado/2018.3/lib/lnx64.o/libxsimverific.so(Verific::VeriVisitor::TraverseArray(Verific::Array const*)+0x86) [0x7f31854436c6]
+[8] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x531136]
+[9] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x5235b7]
+[10] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x48b3ef]
+[11] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x46cec2]
+[12] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x47e862]
+[13] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x45060d]
+[14] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f31837bfbf7]
+[15] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x46abb1]
+
+Done
+run_program: Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 7000.492 ; gain = 0.000 ; free physical = 1019 ; free virtual = 5995
+INFO: [USF-XSim-69] 'elaborate' step finished in '22' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:25 ; elapsed = 00:00:25 . Memory (MB): peak = 7000.492 ; gain = 0.000 ; free physical = 1012 ; free virtual = 5988
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module all_clear
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_tb
+xvhdl --incr --relax -prj calculator_tb_vhdl.prj
+INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xbip_utils_v3_0_9 -L axi_utils_v2_0_5 -L xbip_pipe_v3_0_5 -L xbip_dsp48_wrapper_v3_0_4 -L xbip_dsp48_addsub_v3_0_5 -L xbip_bram18k_v3_0_5 -L mult_gen_v12_0_14 -L floating_point_v7_0_15 -L xbip_dsp48_mult_v3_0_5 -L xbip_dsp48_multadd_v3_0_5 -L div_gen_v5_1_14 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+WARNING: [VRFC 10-2646] VHDL unit instantiation in verilog should have an instance name [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv:277]
+Completed static elaboration
+Starting simulation data flow analysis
+ERROR: [XSIM 43-3316] Signal SIGSEGV received.
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x50b7e8]
+[1] /tools/Xilinx/Vivado/2018.3/lib/lnx64.o/libxsimverific.so(Verific::VeriVisitor::TraverseArray(Verific::Array const*)+0x86) [0x7f0ad2b546c6]
+[2] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x531136]
+[3] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x50b66a]
+[4] /tools/Xilinx/Vivado/2018.3/lib/lnx64.o/libxsimverific.so(Verific::VeriVisitor::TraverseArray(Verific::Array const*)+0x86) [0x7f0ad2b546c6]
+[5] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x531136]
+[6] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x50b66a]
+[7] /tools/Xilinx/Vivado/2018.3/lib/lnx64.o/libxsimverific.so(Verific::VeriVisitor::TraverseArray(Verific::Array const*)+0x86) [0x7f0ad2b546c6]
+[8] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x531136]
+[9] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x5235b7]
+[10] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x48b3ef]
+[11] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x46cec2]
+[12] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x47e862]
+[13] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x45060d]
+[14] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xe7) [0x7f0ad0ed0bf7]
+[15] /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab() [0x46abb1]
+
+Done
+run_program: Time (s): cpu = 00:00:23 ; elapsed = 00:00:22 . Memory (MB): peak = 7000.492 ; gain = 0.000 ; free physical = 921 ; free virtual = 5902
+INFO: [USF-XSim-69] 'elaborate' step finished in '22' seconds
+INFO: [USF-XSim-99] Step results log file:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim/elaborate.log'
+ERROR: [USF-XSim-62] 'elaborate' step failed with error(s). Please check the Tcl console output or '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim/elaborate.log' file for more information.
+ERROR: [Vivado 12-4473] Detected error while running simulation. Please correct the issue and retry this operation.
+launch_simulation: Time (s): cpu = 00:00:26 ; elapsed = 00:00:25 . Memory (MB): peak = 7000.492 ; gain = 0.000 ; free physical = 921 ; free virtual = 5902
+ERROR: [Common 17-39] 'launch_simulation' failed due to earlier errors.
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module all_clear
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.all_clear(AC_DELAY=32'b01100100)
+Compiling module xil_defaultlib.calculator_fsm
+Compiling module xil_defaultlib.arithmetic
+Compiling module xil_defaultlib.seven_seg_ctrl
+Compiling module xil_defaultlib.top_level_wrapper
+Compiling module xil_defaultlib.calculator_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_tb_behav
+
+****** Webtalk v2018.3 (64-bit)
+  **** SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
+  **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+source /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim/xsim.dir/calculator_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+webtalk_transmit: Time (s): cpu = 00:00:00.57 ; elapsed = 00:00:06 . Memory (MB): peak = 398.605 ; gain = 0.000 ; free physical = 839 ; free virtual = 5918
+INFO: [Common 17-206] Exiting Webtalk at Mon Apr  5 11:44:25 2021...
+run_program: Time (s): cpu = 00:00:03 ; elapsed = 00:00:08 . Memory (MB): peak = 7040.492 ; gain = 0.000 ; free physical = 881 ; free virtual = 5960
+INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_tb_behav -key {Behavioral:sim_1:Functional:calculator_tb} -tclbatch {calculator_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 1000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 1000ns
+launch_simulation: Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 7102.168 ; gain = 61.676 ; free physical = 826 ; free virtual = 5930
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv:]
+WARNING: [filemgmt 56-199] Attempt to get parsing info during refresh. "On-the-fly" syntax checking information may be incorrect. [/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv:]
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+close_sim: Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 7116.055 ; gain = 0.000 ; free physical = 694 ; free virtual = 5809
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_tb_behav -key {Behavioral:sim_1:Functional:calculator_tb} -tclbatch {calculator_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module all_clear
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.all_clear(AC_DELAY=32'b01100100)
+Compiling module xil_defaultlib.calculator_fsm
+Compiling module xil_defaultlib.arithmetic
+Compiling module xil_defaultlib.seven_seg_ctrl
+Compiling module xil_defaultlib.top_level_wrapper
+Compiling module xil_defaultlib.calculator_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_tb_behav -key {Behavioral:sim_1:Functional:calculator_tb} -tclbatch {calculator_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module all_clear
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_tb
+INFO: [USF-XSim-69] 'compile' step finished in '0' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.all_clear(AC_DELAY=32'b01100100)
+Compiling module xil_defaultlib.calculator_fsm
+Compiling module xil_defaultlib.arithmetic
+Compiling module xil_defaultlib.seven_seg_ctrl
+Compiling module xil_defaultlib.top_level_wrapper
+Compiling module xil_defaultlib.calculator_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_tb_behav -key {Behavioral:sim_1:Functional:calculator_tb} -tclbatch {calculator_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module all_clear
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.all_clear(AC_DELAY=32'b01100100)
+Compiling module xil_defaultlib.calculator_fsm
+Compiling module xil_defaultlib.arithmetic
+Compiling module xil_defaultlib.seven_seg_ctrl
+Compiling module xil_defaultlib.top_level_wrapper
+Compiling module xil_defaultlib.calculator_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_tb_behav -key {Behavioral:sim_1:Functional:calculator_tb} -tclbatch {calculator_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property -name {xsim.simulate.runtime} -value {100000ns} -objects [get_filesets sim_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property -name {xsim.simulate.runtime} -value {10000ns} -objects [get_filesets sim_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module all_clear
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.all_clear(AC_DELAY=32'b01100100)
+Compiling module xil_defaultlib.calculator_fsm
+Compiling module xil_defaultlib.arithmetic
+Compiling module xil_defaultlib.seven_seg_ctrl
+Compiling module xil_defaultlib.top_level_wrapper
+Compiling module xil_defaultlib.calculator_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_tb_behav -key {Behavioral:sim_1:Functional:calculator_tb} -tclbatch {calculator_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 10000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 10000ns
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+set_property -name {xsim.simulate.runtime} -value {100000ns} -objects [get_filesets sim_1]
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+WARNING: [IP_Flow 19-3899] Cannot get the environment domain name variable for the component vendor name. Setting the vendor name to 'user.org'.
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
+INFO: [USF-XSim-69] 'elaborate' step finished in '0' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_tb_behav -key {Behavioral:sim_1:Functional:calculator_tb} -tclbatch {calculator_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+launch_simulation
+INFO: [Vivado 12-5682] Launching behavioral simulation in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-51] Simulation object is 'sim_1'
+INFO: [USF-XSim-7] Finding pre-compiled libraries...
+INFO: [USF-XSim-11] File '/tools/Xilinx/Vivado/2018.3/data/xsim/xsim.ini' copied to run dir:'/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [SIM-utils-54] Inspecting design source files for 'calculator_tb' in fileset 'sim_1'...
+INFO: [USF-XSim-97] Finding global include files...
+INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
+INFO: [USF-XSim-2] XSim::Compile design
+INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+xvlog --incr --relax -prj calculator_tb_vlog.prj
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/all_clear.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module all_clear
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/arithmetic.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module arithmetic
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/calculator_fsm.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_fsm
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/imports/Hex_Calculator/seven_seg_ctrl.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module seven_seg_ctrl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sources_1/new/top_level_wrapper.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module top_level_wrapper
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.srcs/sim_1/new/calculator_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module calculator_tb
+INFO: [USF-XSim-69] 'compile' step finished in '1' seconds
+INFO: [USF-XSim-3] XSim::Elaborate design
+INFO: [USF-XSim-61] Executing 'ELABORATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+Vivado Simulator 2018.3
+Copyright 1986-1999, 2001-2018 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2018.3/bin/unwrapped/lnx64.o/xelab -wto 7130c52938c14e9faf62ea899ba7c74f --incr --debug typical --relax --mt 8 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot calculator_tb_behav xil_defaultlib.calculator_tb xil_defaultlib.glbl -log elaborate.log 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling module xil_defaultlib.all_clear(AC_DELAY=32'b01100100)
+Compiling module xil_defaultlib.calculator_fsm
+Compiling module xil_defaultlib.arithmetic
+Compiling module xil_defaultlib.seven_seg_ctrl
+Compiling module xil_defaultlib.top_level_wrapper
+Compiling module xil_defaultlib.calculator_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot calculator_tb_behav
+INFO: [USF-XSim-69] 'elaborate' step finished in '1' seconds
+INFO: [USF-XSim-4] XSim::Simulate design
+INFO: [USF-XSim-61] Executing 'SIMULATE' step in '/home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.sim/sim_1/behav/xsim'
+INFO: [USF-XSim-98] *** Running xsim
+   with args "calculator_tb_behav -key {Behavioral:sim_1:Functional:calculator_tb} -tclbatch {calculator_tb.tcl} -log {simulate.log}"
+INFO: [USF-XSim-8] Loading simulator feature
+Vivado Simulator 2018.3
+Time resolution is 1 ps
+source calculator_tb.tcl
+# set curr_wave [current_wave_config]
+# if { [string length $curr_wave] == 0 } {
+#   if { [llength [get_objects]] > 0} {
+#     add_wave /
+#     set_property needs_save false [current_wave_config]
+#   } else {
+#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
+#   }
+# }
+# run 100000ns
+INFO: [USF-XSim-96] XSim completed. Design snapshot 'calculator_tb_behav' loaded.
+INFO: [USF-XSim-97] XSim simulation ran for 100000ns
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Apr  5 12:22:09 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Mon Apr  5 12:22:09 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+reset_run impl_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. PID not specified
+
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Apr  5 12:23:02 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/synth_1/runme.log
+[Mon Apr  5 12:23:02 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/digital-design-projects/integrated-systems-design/Hex_Calculator/hex_calculator/hex_calculator.runs/impl_1/runme.log
+close_sim
+INFO: [Simtcl 6-16] Simulation closed
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr  5 20:48:41 2021...

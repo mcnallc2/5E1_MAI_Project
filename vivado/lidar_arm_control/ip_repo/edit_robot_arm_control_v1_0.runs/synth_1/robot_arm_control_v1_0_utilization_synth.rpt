@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Mar 31 19:48:46 2021
+| Date         : Fri Apr  2 00:19:20 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file robot_arm_control_v1_0_utilization_synth.rpt -pb robot_arm_control_v1_0_utilization_synth.pb
 | Design       : robot_arm_control_v1_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  126 |     0 |     53200 |  0.24 |
-|   LUT as Logic          |  126 |     0 |     53200 |  0.24 |
+| Slice LUTs*             |  227 |     0 |     53200 |  0.43 |
+|   LUT as Logic          |  227 |     0 |     53200 |  0.43 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  191 |     0 |    106400 |  0.18 |
-|   Register as Flip Flop |  191 |     0 |    106400 |  0.18 |
+| Slice Registers         |  361 |     0 |    106400 |  0.34 |
+|   Register as Flip Flop |  361 |     0 |    106400 |  0.34 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
-| 1     |          Yes |         Set |            - |
-| 190   |          Yes |       Reset |            - |
+| 3     |          Yes |         Set |            - |
+| 358   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,27 +146,29 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  190 |        Flop & Latch |
-| LUT4     |  102 |                 LUT |
+| FDRE     |  358 |        Flop & Latch |
+| LUT2     |   87 |                 LUT |
+| LUT4     |   56 |                 LUT |
+| LUT6     |   48 |                 LUT |
 | IBUF     |   48 |                  IO |
 | OBUF     |   45 |                  IO |
-| LUT6     |   36 |                 LUT |
-| CARRY4   |   26 |          CarryLogic |
-| LUT2     |   21 |                 LUT |
-| LUT3     |    9 |                 LUT |
-| LUT1     |    2 |                 LUT |
+| LUT5     |   42 |                 LUT |
+| LUT1     |   38 |                 LUT |
+| CARRY4   |   38 |          CarryLogic |
+| LUT3     |    7 |                 LUT |
+| FDSE     |    3 |        Flop & Latch |
 | BUFG     |    2 |               Clock |
-| LUT5     |    1 |                 LUT |
-| FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------+------+
-| Ref Name | Used |
-+----------+------+
++-----------+------+
+|  Ref Name | Used |
++-----------+------+
+| div_gen_0 |    2 |
++-----------+------+
 
 
 9. Instantiated Netlists
