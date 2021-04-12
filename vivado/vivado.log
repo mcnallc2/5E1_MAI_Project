@@ -2,14 +2,129 @@
 # Vivado v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
-# Start of session at: Mon Apr 12 18:19:22 2021
-# Process ID: 3004
+# Start of session at: Mon Apr 12 19:29:55 2021
+# Process ID: 10085
 # Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
 # Command line: vivado
 # Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
 # Journal file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
 #-----------------------------------------------------------
 start_gui
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:06 . Memory (MB): peak = 6386.234 ; gain = 74.500 ; free physical = 1437 ; free virtual = 5821
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/axi_uartlite_0/axi_uartlite_0.xci] -no_script -reset -force -quiet
+remove_files  -fileset axi_uartlite_0 /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/axi_uartlite_0/axi_uartlite_0.xci
+INFO: [Project 1-386] Moving file '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/axi_uartlite_0/axi_uartlite_0.xci' from fileset 'axi_uartlite_0' to fileset 'sources_1'.
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_top.v] -no_script -reset -force -quiet
+remove_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_top.v
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_top.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_tx.v] -no_script -reset -force -quiet
+remove_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_tx.v
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_tx.v
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_rx.v] -no_script -reset -force -quiet
+remove_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_rx.v
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_rx.v
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/bbfifo_16x8.v] -no_script -reset -force -quiet
+remove_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/bbfifo_16x8.v
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/bbfifo_16x8.v
+update_compile_order -fileset sources_1
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_rx.v] -no_script -reset -force -quiet
+remove_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_rx.v
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_rx.v
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_tx.v] -no_script -reset -force -quiet
+remove_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_tx.v
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_tx.v
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v] -no_script -reset -force -quiet
+remove_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v
+export_ip_user_files -of_objects  [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sim_1/new/arm_control_tb.sv] -no_script -reset -force -quiet
+remove_files  -fileset sim_1 /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sim_1/new/arm_control_tb.sv
+file delete -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sim_1/new/arm_control_tb.sv
+close [ open /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv w ]
+add_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv
+close [ open /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/test_procedure.sv w ]
+add_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/test_procedure.sv
+update_compile_order -fileset sources_1
+close [ open /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv w ]
+add_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+create_ip -name div_gen -vendor xilinx.com -library ip -version 5.1 -module_name div_gen_0
+set_property -dict [list CONFIG.remainder_type {Remainder} CONFIG.fractional_width {16} CONFIG.latency {20}] [get_ips div_gen_0]
+generate_target {instantiation_template} [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'div_gen_0'...
+generate_target all [get_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'div_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'div_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'C Simulation' target for IP 'div_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Test Bench' target for IP 'div_gen_0'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'div_gen_0'...
+catch { config_ip_cache -export [get_ips -all div_gen_0] }
+export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0.xci]
+launch_runs -jobs 2 div_gen_0_synth_1
+[Mon Apr 12 19:45:53 2021] Launched div_gen_0_synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/div_gen_0_synth_1/runme.log
+export_simulation -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0.xci] -directory /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.ip_user_files/sim_scripts -ip_user_files_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.ip_user_files -ipstatic_source_dir /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.ip_user_files/ipstatic -lib_map_path [list {modelsim=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.cache/compile_simlib/modelsim} {questa=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.cache/compile_simlib/questa} {ies=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.cache/compile_simlib/ies} {xcelium=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.cache/compile_simlib/xcelium} {vcs=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.cache/compile_simlib/vcs} {riviera=/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.cache/compile_simlib/riviera}] -use_ip_compiled_libs -force -quiet
+close [ open /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/pwm_controller.sv w ]
+add_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/pwm_controller.sv
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Apr 12 19:57:29 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/synth_1/runme.log
+[Mon Apr 12 19:57:29 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Apr 12 19:59:38 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/synth_1/runme.log
+[Mon Apr 12 19:59:38 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Apr 12 20:00:53 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/synth_1/runme.log
+[Mon Apr 12 20:00:53 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/impl_1/runme.log
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 2
+[Mon Apr 12 20:05:51 2021] Launched synth_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/synth_1/runme.log
+[Mon Apr 12 20:05:51 2021] Launched impl_1...
+Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/impl_1/runme.log
+open_hw
+connect_hw_server
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2018.3
+  **** Build date : Dec  6 2018-23:53:53
+    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/impl_1/top_level_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
 open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.xpr
 Scanning sources...
 Finished scanning sources
@@ -26,15 +141,8 @@ WARNING: [IP_Flow 19-2207] Repository '/home/cmcnally/Repos/robotic-arm-control-
 WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/sample_gpio_ip_1.0'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:07 . Memory (MB): peak = 6413.273 ; gain = 129.762 ; free physical = 1775 ; free virtual = 6139
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:06 . Memory (MB): peak = 8218.219 ; gain = 56.414 ; free physical = 299 ; free virtual = 4399
 update_compile_order -fileset sources_1
-reset_run impl_1
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Attempt to kill process failed
-
-launch_runs impl_1 -jobs 2
-[Mon Apr 12 18:21:03 2021] Launched impl_1...
-Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/impl_1/runme.log
 open_bd_design {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd}
 Adding cell -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
 Adding cell -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
@@ -47,31 +155,48 @@ Adding cell -- xilinx.com:ip:div_gen:5.1 - div_gen_0
 Adding cell -- xilinx.com:ip:div_gen:5.1 - div_gen_1
 Adding cell -- user.org:user:robot_arm_control:1.0 - robot_arm_control_0
 Successfully read diagram <lidar_arm_control> from BD file </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>
-open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:06 . Memory (MB): peak = 6620.828 ; gain = 0.000 ; free physical = 1164 ; free virtual = 5611
-launch_runs impl_1 -to_step write_bitstream -jobs 2
-[Mon Apr 12 18:22:40 2021] Launched impl_1...
-Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/impl_1/runme.log
-open_hw
-connect_hw_server
-INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
-INFO: [Labtools 27-2222] Launching hw_server...
-INFO: [Labtools 27-2221] Launch Output:
+open_bd_design: Time (s): cpu = 00:00:08 ; elapsed = 00:00:05 . Memory (MB): peak = 8446.328 ; gain = 0.000 ; free physical = 135 ; free virtual = 4114
+regenerate_bd_layout -routing
+regenerate_bd_layout
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/ui/bd_9360b533.ui> 
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/impl_1/lidar_arm_control_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf
 
-****** Xilinx hw_server v2018.3
-  **** Build date : Dec  6 2018-23:53:53
-    ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+current_project arm_control_system
+close_project
+file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/impl_1/lidar_arm_control_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf
 
-
-open_hw_target
-INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Xilinx/1234-tulA
-set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/impl_1/lidar_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
-current_hw_device [get_hw_devices xc7z020_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
-set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/impl_1/lidar_arm_control_wrapper.bit} [get_hw_devices xc7z020_1]
-program_hw_devices [get_hw_devices xc7z020_1]
-INFO: [Labtools 27-3164] End of startup status: HIGH
-refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
-INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-393] Launching SDK...
+INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf
+INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages.
+open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0.v:]
+Scanning sources...
+Finished scanning sources
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0_S00_AXI.v:]
+WARNING: [filemgmt 56-99] Vivado Synthesis ignores library specification for Verilog or SystemVerilog files. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/hdl/robot_arm_control_v1_0.v:]
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/custom_robot_arm_control_system_1.0'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_pwm_1.0'.
+WARNING: [filemgmt 56-3] IP Repository Path: Could not find the directory '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/sample_gpio_ip_1.0'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/custom_robot_arm_control_system_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_pwm_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/sample_gpio_ip_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'.
+update_compile_order -fileset sources_1
+current_project hardware_system
+close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 12 23:52:10 2021...

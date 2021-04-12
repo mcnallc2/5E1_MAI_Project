@@ -2,53 +2,53 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 6.8.11  2018-08-07 bk=1.4403 VDI=40 GEI=35 GUI=JA:9.0 TLS
 #  -string -flagsOSRD
-preplace port uart_rtl -pg 1 -y 810 -defaultsOSRD
-preplace port DDR -pg 1 -y 970 -defaultsOSRD
-preplace port gpio_0 -pg 1 -y 1070 -defaultsOSRD
-preplace port PWM_0 -pg 1 -y 320 -defaultsOSRD
-preplace port PWM_1 -pg 1 -y 340 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -y 990 -defaultsOSRD
+preplace port uart_rtl -pg 1 -y 820 -defaultsOSRD
+preplace port DDR -pg 1 -y 980 -defaultsOSRD
+preplace port gpio_0 -pg 1 -y 1080 -defaultsOSRD
+preplace port PWM_0 -pg 1 -y 350 -defaultsOSRD
+preplace port PWM_1 -pg 1 -y 370 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -y 1000 -defaultsOSRD
 preplace port PWM_CLK -pg 1 -y 180 -defaultsOSRD
-preplace port PWM_2 -pg 1 -y 360 -defaultsOSRD
-preplace port PWM_3 -pg 1 -y 380 -defaultsOSRD
-preplace inst robot_arm_control_0 -pg 1 -lvl 3 -y 430 -defaultsOSRD
+preplace port PWM_2 -pg 1 -y 390 -defaultsOSRD
+preplace port PWM_3 -pg 1 -y 410 -defaultsOSRD
+preplace inst robot_arm_control_0 -pg 1 -lvl 3 -y 460 -defaultsOSRD
 preplace inst div_gen_0 -pg 1 -lvl 2 -y 120 -defaultsOSRD
-preplace inst div_gen_1 -pg 1 -lvl 2 -y 420 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 1070 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 3 -y 820 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 800 -defaultsOSRD
-preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 1240 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -y 1020 -defaultsOSRD
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 960
-preplace netloc processing_system7_0_DDR 1 1 3 NJ 970 NJ 970 NJ
+preplace inst div_gen_1 -pg 1 -lvl 2 -y 450 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 3 -y 1080 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 3 -y 830 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -y 810 -defaultsOSRD
+preplace inst rst_ps7_0_100M -pg 1 -lvl 1 -y 1250 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -y 1030 -defaultsOSRD
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 950
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 980 NJ 980 NJ
 preplace netloc robot_arm_control_0_PWM3 1 3 1 NJ
 preplace netloc div_gen_0_m_axis_dout_tvalid 1 2 1 980
-preplace netloc axi_uartlite_0_interrupt 1 0 4 20 910 450J 960 NJ 960 1440
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440
-preplace netloc robot_arm_control_0_s_axis_dividend_tdata_0 1 1 3 450 620 NJ 620 1480
-preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 480 1000 990
-preplace netloc robot_arm_control_0_s_axis_dividend_tdata_1 1 1 3 470 630 NJ 630 1450
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 40 1140 440
-preplace netloc robot_arm_control_0_s_axis_divisor_tvalid_0 1 1 3 460 260 NJ 260 1440
+preplace netloc axi_uartlite_0_interrupt 1 0 4 20 650 NJ 650 NJ 650 1430
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 450
+preplace netloc robot_arm_control_0_s_axis_dividend_tdata_0 1 1 3 470 260 NJ 260 1470
+preplace netloc rst_ps7_0_100M_peripheral_aresetn 1 1 2 480 1010 990
+preplace netloc robot_arm_control_0_s_axis_dividend_tdata_1 1 1 3 460 280 NJ 280 1460
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 40 1140 450
+preplace netloc robot_arm_control_0_s_axis_divisor_tvalid_0 1 1 3 460 250 NJ 250 1450
 preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 N
-preplace netloc robot_arm_control_0_s_axis_divisor_tvalid_1 1 1 3 480 590 950J 610 1460
-preplace netloc robot_arm_control_0_s_axis_divisor_tdata_0 1 1 3 480 240 NJ 240 1480
+preplace netloc robot_arm_control_0_s_axis_divisor_tvalid_1 1 1 3 480 330 950J 630 1440
+preplace netloc robot_arm_control_0_s_axis_divisor_tdata_0 1 1 3 450 240 NJ 240 1480
 preplace netloc div_gen_1_m_axis_dout_tvalid 1 2 1 N
-preplace netloc div_gen_1_m_axis_dout_tdata 1 2 1 980
-preplace netloc robot_arm_control_0_s_axis_divisor_tdata_1 1 1 3 460 640 NJ 640 1470
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 990 NJ 990 NJ
-preplace netloc PWM_CLK_0_1 1 0 3 NJ 180 440 540 970J
+preplace netloc div_gen_1_m_axis_dout_tdata 1 2 1 940
+preplace netloc robot_arm_control_0_s_axis_divisor_tdata_1 1 1 3 470 290 NJ 290 1430
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 1000 NJ 1000 NJ
+preplace netloc PWM_CLK_0_1 1 0 3 NJ 180 440 320 970J
 preplace netloc axi_gpio_0_GPIO 1 3 1 NJ
 preplace netloc axi_uartlite_0_UART 1 3 1 NJ
 preplace netloc div_gen_0_m_axis_dout_tdata 1 2 1 990
 preplace netloc robot_arm_control_0_PWM0 1 3 1 NJ
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 30 1130 460 980 980
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 30 1150 470 970 980
 preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 960
-preplace netloc robot_arm_control_0_s_axis_dividend_tvalid_0 1 1 3 490 250 NJ 250 1450
+preplace netloc robot_arm_control_0_s_axis_dividend_tvalid_0 1 1 3 480 270 NJ 270 1440
 preplace netloc robot_arm_control_0_PWM1 1 3 1 NJ
-preplace netloc robot_arm_control_0_s_axis_dividend_tvalid_1 1 1 3 490 600 NJ 600 1440
+preplace netloc robot_arm_control_0_s_axis_dividend_tvalid_1 1 1 3 480 640 NJ 640 1430
 preplace netloc robot_arm_control_0_PWM2 1 3 1 NJ
-levelinfo -pg 1 0 240 720 1220 1510 -top 0 -bot 1340
+levelinfo -pg 1 0 240 710 1210 1500 -top 0 -bot 1350
 "
 }
 {

@@ -1,0 +1,27 @@
+23:50:37 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30956	   1976	  24856	  57788	   e1bc	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+
+23:50:37 Build Finished (took 171ms)
+

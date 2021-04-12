@@ -6,4 +6,4 @@
 # Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 #
 
-vivado -log arm_control_system.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_control_system.tcl
+vivado -log top_level_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl

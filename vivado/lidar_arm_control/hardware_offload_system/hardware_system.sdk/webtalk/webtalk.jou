@@ -2,8 +2,8 @@
 # Webtalk v2018.3 (64-bit)
 # SW Build 2405991 on Thu Dec  6 23:36:41 MST 2018
 # 
-# Start of session at: Wed Mar 31 17:35:22 2021
-# Process ID: 12684
+# Start of session at: Mon Apr 12 23:52:02 2021
+# Process ID: 5220
 # Current directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/webtalk
 # Command line: wbtcv -mode batch -source sdk_webtalk.tcl
 # Log file: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/webtalk/webtalk.log

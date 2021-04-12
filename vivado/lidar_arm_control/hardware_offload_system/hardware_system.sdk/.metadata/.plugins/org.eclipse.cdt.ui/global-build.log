@@ -13992,3 +13992,998 @@ make pre-build main-build
 a9-linaro-pre-build-step
  
 make: Nothing to be done for 'main-build'.
+23:10:26 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/freertos_main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_main.d" -MT"src/freertos_main.o" -o "src/freertos_main.o" "../src/freertos_main.c"
+../src/freertos_main.c:329:13: warning: 'lidarScanning' defined but not used [-Wunused-function]
+ static void lidarScanning( void *pvParameters ){
+             ^~~~~~~~~~~~~
+../src/freertos_main.c:299:13: warning: 'armControl' defined but not used [-Wunused-function]
+ static void armControl( void *pvParameters ){
+             ^~~~~~~~~~
+../src/freertos_main.c:204:6: warning: 'testProcedure' defined but not used [-Wunused-function]
+ void testProcedure( void *pvParameters ){
+      ^~~~~~~~~~~~~
+../src/freertos_main.c:128:21: warning: 'xLidrCont' defined but not used [-Wunused-variable]
+ static TaskHandle_t xLidrCont;  // lidar controller task handler
+                     ^~~~~~~~~
+Finished building: ../src/freertos_main.c
+ 
+Building target: lidar_arm_control.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../lidar_arm_control_bsp/ps7_cortexa9_0/lib -o "lidar_arm_control.elf"  ./src/freertos_main.o   -Wl,--start-group,-lxil,-lfreertos,-lgcc,-lc,--end-group
+Finished building target: lidar_arm_control.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size lidar_arm_control.elf  |tee "lidar_arm_control.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  98256	   3420	  91664	 193340	  2f33c	lidar_arm_control.elf
+Finished building: lidar_arm_control.elf.size
+ 
+23:10:50 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/freertos_main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_main.d" -MT"src/freertos_main.o" -o "src/freertos_main.o" "../src/freertos_main.c"
+../src/freertos_main.c: In function 'endOfTestHandler':
+../src/freertos_main.c:375:15: error: 'xTestProc' undeclared (first use in this function)
+  vTaskDelete( xTestProc );
+               ^~~~~~~~~
+../src/freertos_main.c:375:15: note: each undeclared identifier is reported only once for each function it appears in
+../src/freertos_main.c:376:15: error: 'xArmCont' undeclared (first use in this function); did you mean 'armControl'?
+  vTaskDelete( xArmCont  );
+               ^~~~~~~~
+               armControl
+At top level:
+../src/freertos_main.c:320:13: warning: 'lidarScanning' defined but not used [-Wunused-function]
+ static void lidarScanning( void *pvParameters ){
+             ^~~~~~~~~~~~~
+../src/freertos_main.c:290:13: warning: 'armControl' defined but not used [-Wunused-function]
+ static void armControl( void *pvParameters ){
+             ^~~~~~~~~~
+src/subdir.mk:21: recipe for target 'src/freertos_main.o' failed
+make: *** [src/freertos_main.o] Error 1
+23:12:51 **** Auto Build of configuration Debug for project lidar_arm_control ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/freertos_main.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/freertos_main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../lidar_arm_control_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/freertos_main.d" -MT"src/freertos_main.o" -o "src/freertos_main.o" "../src/freertos_main.c"
+../src/freertos_main.c:17:10: fatal error: xparameters.h: No such file or directory
+ #include "xparameters.h"
+          ^~~~~~~~~~~~~~~
+compilation terminated.
+src/subdir.mk:21: recipe for target 'src/freertos_main.o' failed
+make: *** [src/freertos_main.o] Error 1
+23:18:45 **** Build of project re_route_application_bsp ****
+make -k all 
+Running Make include in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/robot_arm_control_v1_0/src
+make -C ps7_cortexa9_0/libsrc/robot_arm_control_v1_0/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartlite_v3_2/src
+make -C ps7_cortexa9_0/libsrc/uartlite_v3_2/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make include in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s include  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Running Make libs in ps7_cortexa9_0/libsrc/ddrps_v1_0/src
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling ddrps
+arm-none-eabi-ar: creating ../../../lib/libxil.a
+Running Make libs in ps7_cortexa9_0/libsrc/sdps_v3_6/src
+make -C ps7_cortexa9_0/libsrc/sdps_v3_6/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling sdps
+Running Make libs in ps7_cortexa9_0/libsrc/standalone_v6_8/src
+make -C ps7_cortexa9_0/libsrc/standalone_v6_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling standalone
+In file included from sleep.c:53:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xtime_l.c:49:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from xil_sleeptimer.c:51:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+In file included from usleep.c:56:0:
+xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/dmaps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling dmaps
+Running Make libs in ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling cpu_cortexa9
+Running Make libs in ps7_cortexa9_0/libsrc/emacps_v3_8/src
+make -C ps7_cortexa9_0/libsrc/emacps_v3_8/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling emacps
+Running Make libs in ps7_cortexa9_0/libsrc/gpiops_v3_4/src
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpiops
+Running Make libs in ps7_cortexa9_0/libsrc/qspips_v3_5/src
+make -C ps7_cortexa9_0/libsrc/qspips_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling qspips
+Running Make libs in ps7_cortexa9_0/libsrc/robot_arm_control_v1_0/src
+make -C ps7_cortexa9_0/libsrc/robot_arm_control_v1_0/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling robot_arm_control...
+robot_arm_control_selftest.c: In function 'ROBOT_ARM_CONTROL_Reg_SelfTest':
+robot_arm_control_selftest.c:52:66: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+    if ( ROBOT_ARM_CONTROL_mReadReg (baseaddr, read_loop_index*4) != (read_loop_index+1)*READ_WRITE_MUL_FACTOR){
+                                                                  ^~
+robot_arm_control_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-variable]
+  int Index;
+      ^~~~~
+Running Make libs in ps7_cortexa9_0/libsrc/scugic_v3_10/src
+make -C ps7_cortexa9_0/libsrc/scugic_v3_10/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scugic
+Running Make libs in ps7_cortexa9_0/libsrc/xadcps_v2_3/src
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling xadcps
+Running Make libs in ps7_cortexa9_0/libsrc/uartlite_v3_2/src
+make -C ps7_cortexa9_0/libsrc/uartlite_v3_2/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartlite
+Running Make libs in ps7_cortexa9_0/libsrc/devcfg_v3_5/src
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling devcfg
+Running Make libs in ps7_cortexa9_0/libsrc/gpio_v4_3/src
+make -C ps7_cortexa9_0/libsrc/gpio_v4_3/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling gpio
+Running Make libs in ps7_cortexa9_0/libsrc/scuwdt_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scuwdt
+Running Make libs in ps7_cortexa9_0/libsrc/uartps_v3_7/src
+make -C ps7_cortexa9_0/libsrc/uartps_v3_7/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling uartps
+Running Make libs in ps7_cortexa9_0/libsrc/usbps_v2_4/src
+make -C ps7_cortexa9_0/libsrc/usbps_v2_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling usbps
+Running Make libs in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling coresightps_dcc
+Running Make libs in ps7_cortexa9_0/libsrc/scutimer_v2_1/src
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s libs  "SHELL=/bin/sh" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -g -Wall -Wextra"
+Compiling scutimer
+Finished building libraries
+23:18:57 **** Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+Finished building: ../src/helloworld.c
+ 
+Building file: ../src/platform.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+Finished building: ../src/platform.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19348	   1144	  22568	  43060	   a834	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:18:58 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+23:27:30 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:120:1: error: unknown type name 'XTmrCtr'
+ XTmrCtr TimerCounterInst;     // The instance of the Timer Counter
+ ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:206:3: warning: implicit declaration of function 'testProcedure' [-Wimplicit-function-declaration]
+   testProcedure();
+   ^~~~~~~~~~~~~
+../src/helloworld.c:207:3: warning: implicit declaration of function 'armControl' [-Wimplicit-function-declaration]
+   armControl();
+   ^~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:236:6: warning: conflicting types for 'testProcedure'
+ void testProcedure(void){
+      ^~~~~~~~~~~~~
+../src/helloworld.c:206:3: note: previous implicit declaration of 'testProcedure' was here
+   testProcedure();
+   ^~~~~~~~~~~~~
+../src/helloworld.c: In function 'testProcedure':
+../src/helloworld.c:244:4: warning: implicit declaration of function 'home_position' [-Wimplicit-function-declaration]
+    home_position();
+    ^~~~~~~~~~~~~
+../src/helloworld.c:246:4: warning: implicit declaration of function '_delay_' [-Wimplicit-function-declaration]
+    _delay_(3000000);
+    ^~~~~~~
+../src/helloworld.c:264:4: warning: implicit declaration of function 'find_object' [-Wimplicit-function-declaration]
+    find_object();
+    ^~~~~~~~~~~
+../src/helloworld.c:275:4: warning: implicit declaration of function 'pickup_object' [-Wimplicit-function-declaration]
+    pickup_object();
+    ^~~~~~~~~~~~~
+../src/helloworld.c:286:4: warning: implicit declaration of function 'goto_target_location' [-Wimplicit-function-declaration]
+    goto_target_location();
+    ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:296:4: warning: implicit declaration of function 'putdown_object' [-Wimplicit-function-declaration]
+    putdown_object();
+    ^~~~~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:328:6: warning: conflicting types for 'armControl'
+ void armControl(void){
+      ^~~~~~~~~~
+../src/helloworld.c:207:3: note: previous implicit declaration of 'armControl' was here
+   armControl();
+   ^~~~~~~~~~
+../src/helloworld.c: In function 'armControl':
+../src/helloworld.c:333:11: warning: implicit declaration of function 'TmrCtrPwmConfig' [-Wimplicit-function-declaration]
+  Status = TmrCtrPwmConfig(&InterruptController,
+           ^~~~~~~~~~~~~~~
+../src/helloworld.c:335:4: error: 'BASE_SERVO_DEVICE_ID' undeclared (first use in this function); did you mean 'UARTLITE_DEVICE_ID'?
+    BASE_SERVO_DEVICE_ID,
+    ^~~~~~~~~~~~~~~~~~~~
+    UARTLITE_DEVICE_ID
+../src/helloworld.c:335:4: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:336:4: error: 'BASE_SERVO_INTERRUPT_ID' undeclared (first use in this function); did you mean 'BASE_SERVO_DEVICE_ID'?
+    BASE_SERVO_INTERRUPT_ID,
+    ^~~~~~~~~~~~~~~~~~~~~~~
+    BASE_SERVO_DEVICE_ID
+../src/helloworld.c:349:4: error: 'SHOULDER_SERVO_DEVICE_ID' undeclared (first use in this function); did you mean 'BASE_SERVO_DEVICE_ID'?
+    SHOULDER_SERVO_DEVICE_ID,
+    ^~~~~~~~~~~~~~~~~~~~~~~~
+    BASE_SERVO_DEVICE_ID
+../src/helloworld.c:350:4: error: 'SHOULDER_SERVO_INTERRUPT_ID' undeclared (first use in this function); did you mean 'BASE_SERVO_INTERRUPT_ID'?
+    SHOULDER_SERVO_INTERRUPT_ID,
+    ^~~~~~~~~~~~~~~~~~~~~~~~~~~
+    BASE_SERVO_INTERRUPT_ID
+../src/helloworld.c:359:4: error: 'ELBOW_SERVO_DEVICE_ID' undeclared (first use in this function); did you mean 'BASE_SERVO_DEVICE_ID'?
+    ELBOW_SERVO_DEVICE_ID,
+    ^~~~~~~~~~~~~~~~~~~~~
+    BASE_SERVO_DEVICE_ID
+../src/helloworld.c:360:4: error: 'ELBOW_SERVO_INTERRUPT_ID' undeclared (first use in this function); did you mean 'BASE_SERVO_INTERRUPT_ID'?
+    ELBOW_SERVO_INTERRUPT_ID,
+    ^~~~~~~~~~~~~~~~~~~~~~~~
+    BASE_SERVO_INTERRUPT_ID
+../src/helloworld.c:369:4: error: 'CLAW_SERVO_DEVICE_ID' undeclared (first use in this function); did you mean 'ELBOW_SERVO_DEVICE_ID'?
+    CLAW_SERVO_DEVICE_ID,
+    ^~~~~~~~~~~~~~~~~~~~
+    ELBOW_SERVO_DEVICE_ID
+../src/helloworld.c:370:4: error: 'CLAW_SERVO_INTERRUPT_ID' undeclared (first use in this function); did you mean 'ELBOW_SERVO_INTERRUPT_ID'?
+    CLAW_SERVO_INTERRUPT_ID,
+    ^~~~~~~~~~~~~~~~~~~~~~~
+    ELBOW_SERVO_INTERRUPT_ID
+../src/helloworld.c: At top level:
+../src/helloworld.c:840:3: error: unknown type name 'XTmrCtr'
+   XTmrCtr *TmrCtrInstancePtr,
+   ^~~~~~~
+../src/helloworld.c:960:3: error: unknown type name 'XTmrCtr'
+   XTmrCtr *TmrCtrInstancePtr,
+   ^~~~~~~
+../src/helloworld.c:1038:6: warning: conflicting types for 'home_position'
+ void home_position(void){
+      ^~~~~~~~~~~~~
+../src/helloworld.c:244:4: note: previous implicit declaration of 'home_position' was here
+    home_position();
+    ^~~~~~~~~~~~~
+../src/helloworld.c:1046:6: warning: conflicting types for 'find_object'
+ void find_object(void){
+      ^~~~~~~~~~~
+../src/helloworld.c:264:4: note: previous implicit declaration of 'find_object' was here
+    find_object();
+    ^~~~~~~~~~~
+../src/helloworld.c:1059:6: warning: conflicting types for 'pickup_object'
+ void pickup_object(void){
+      ^~~~~~~~~~~~~
+../src/helloworld.c:275:4: note: previous implicit declaration of 'pickup_object' was here
+    pickup_object();
+    ^~~~~~~~~~~~~
+../src/helloworld.c:1087:6: warning: conflicting types for 'goto_target_location'
+ void goto_target_location(void){
+      ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:286:4: note: previous implicit declaration of 'goto_target_location' was here
+    goto_target_location();
+    ^~~~~~~~~~~~~~~~~~~~
+../src/helloworld.c:1100:6: warning: conflicting types for 'putdown_object'
+ void putdown_object(void){
+      ^~~~~~~~~~~~~~
+../src/helloworld.c:296:4: note: previous implicit declaration of 'putdown_object' was here
+    putdown_object();
+    ^~~~~~~~~~~~~~
+../src/helloworld.c:1153:6: warning: conflicting types for '_delay_'
+ void _delay_(int useconds){
+      ^~~~~~~
+../src/helloworld.c:246:4: note: previous implicit declaration of '_delay_' was here
+    _delay_(3000000);
+    ^~~~~~~
+../src/helloworld.c:925:13: warning: 'TimerCounterHandler' defined but not used [-Wunused-function]
+ static void TimerCounterHandler(void *CallBackRef, u8 TmrCtrNumber){
+             ^~~~~~~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:29:43 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c:120:1: error: unknown type name 'XTmrCtr'
+ XTmrCtr TimerCounterInst;     // The instance of the Timer Counter
+ ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:173:19: warning: unused variable 'tEnd_CL' [-Wunused-variable]
+  XTime tStart_CL, tEnd_CL;
+                   ^~~~~~~
+../src/helloworld.c:173:8: warning: unused variable 'tStart_CL' [-Wunused-variable]
+  XTime tStart_CL, tEnd_CL;
+        ^~~~~~~~~
+At top level:
+../src/helloworld.c:126:14: warning: 'HighTimerHit' defined but not used [-Wunused-variable]
+ static int   HighTimerHit = FALSE;
+              ^~~~~~~~~~~~
+../src/helloworld.c:125:14: warning: 'PeriodTimerHit' defined but not used [-Wunused-variable]
+ static int   PeriodTimerHit = FALSE;
+              ^~~~~~~~~~~~~~
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:30:05 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:169:19: warning: unused variable 'tEnd_CL' [-Wunused-variable]
+  XTime tStart_CL, tEnd_CL;
+                   ^~~~~~~
+../src/helloworld.c:169:8: warning: unused variable 'tStart_CL' [-Wunused-variable]
+  XTime tStart_CL, tEnd_CL;
+        ^~~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31488	   1976	  24856	  58320	   e3d0	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:30:20 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:198:18: error: 'UartLiteInstPtr' undeclared (first use in this function); did you mean 'UartLiteInst'?
+   XUartLite_Recv(UartLiteInstPtr, RecvBuffer, RECV_BUFFER_SIZE);
+                  ^~~~~~~~~~~~~~~
+                  UartLiteInst
+../src/helloworld.c:198:18: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:32:51 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31488	   1976	  24856	  58320	   e3d0	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:33:31 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  31488	   1976	  24856	  58320	   e3d0	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:34:01 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:432:12: warning: statement with no effect [-Wunused-value]
+  RecvBuffer[0]
+  ~~~~~~~~~~^~~
+../src/helloworld.c:435:4: error: expected ';' before 'packet'
+    packet[0] = RecvBuffer[j++];
+    ^~~~~~
+../src/helloworld.c:436:27: error: 'j' undeclared (first use in this function); did you mean 'jn'?
+    packet[1] = RecvBuffer[j++];
+                           ^
+                           jn
+../src/helloworld.c:436:27: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:455:5: error: continue statement not within a loop
+     continue;  // invalid packet
+     ^~~~~~~~
+../src/helloworld.c:467:5: error: break statement not within loop or switch
+     break;
+     ^~~~~
+../src/helloworld.c:430:6: warning: variable 'objectFlag' set but not used [-Wunused-but-set-variable]
+  int objectFlag = 0;  // flags when an object has been found
+      ^~~~~~~~~~
+../src/helloworld.c:429:6: warning: variable 'minDistAngle' set but not used [-Wunused-but-set-variable]
+  int minDistAngle = 0; // angle for the min distance
+      ^~~~~~~~~~~~
+../src/helloworld.c: At top level:
+../src/helloworld.c:487:2: error: expected identifier or '(' before '}' token
+  }
+  ^
+../src/helloworld.c:489:2: error: expected identifier or '(' before 'if'
+  if (objectFlag){
+  ^~
+../src/helloworld.c:506:2: error: expected identifier or '(' before 'return'
+  return XST_SUCCESS;
+  ^~~~~~
+../src/helloworld.c:507:1: error: expected identifier or '(' before '}' token
+ }
+ ^
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:486:3: warning: control reaches end of non-void function [-Wreturn-type]
+   }
+   ^
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:34:09 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:432:12: warning: statement with no effect [-Wunused-value]
+  RecvBuffer[0]
+  ~~~~~~~~~~^~~
+../src/helloworld.c:434:2: error: expected ';' before 'return'
+  return XST_SUCCESS;
+  ^~~~~~
+../src/helloworld.c:430:6: warning: unused variable 'objectFlag' [-Wunused-variable]
+  int objectFlag = 0;  // flags when an object has been found
+      ^~~~~~~~~~
+../src/helloworld.c:429:6: warning: unused variable 'minDistAngle' [-Wunused-variable]
+  int minDistAngle = 0; // angle for the min distance
+      ^~~~~~~~~~~~
+../src/helloworld.c:428:6: warning: unused variable 'minDist' [-Wunused-variable]
+  int minDist = 500;  // minimum distance in entire sample
+      ^~~~~~~
+../src/helloworld.c:427:6: warning: unused variable 'firstAngle' [-Wunused-variable]
+  int firstAngle = 0; // saves the angle of the first measurement
+      ^~~~~~~~~~
+../src/helloworld.c:426:6: warning: unused variable 'measurements' [-Wunused-variable]
+  int measurements = 0; // number of measurements in the sample
+      ^~~~~~~~~~~~
+../src/helloworld.c:411:5: warning: unused variable 'packet' [-Wunused-variable]
+  u8 packet[PACKET_SIZE];
+     ^~~~~~
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+../src/helloworld.c:435:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+23:34:18 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:426:12: warning: statement with no effect [-Wunused-value]
+  RecvBuffer[0]
+  ~~~~~~~~~~^~~
+../src/helloworld.c:428:2: error: expected ';' before 'return'
+  return XST_SUCCESS;
+  ^~~~~~
+../src/helloworld.c:411:5: warning: unused variable 'packet' [-Wunused-variable]
+  u8 packet[PACKET_SIZE];
+     ^~~~~~
+../src/helloworld.c:429:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:34:45 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:423:2: error: 'byte' undeclared (first use in this function); did you mean 'inbyte'?
+  byte = RecvBuffer[0]
+  ^~~~
+  inbyte
+../src/helloworld.c:423:2: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:425:2: error: expected ';' before 'return'
+  return XST_SUCCESS;
+  ^~~~~~
+../src/helloworld.c:426:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+23:34:50 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:423:2: error: 'byte' undeclared (first use in this function); did you mean 'inbyte'?
+  byte = RecvBuffer[0];
+  ^~~~
+  inbyte
+../src/helloworld.c:423:2: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:35:03 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:423:7: warning: unused variable 'byte' [-Wunused-variable]
+  char byte = RecvBuffer[0];
+       ^~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30812	   1976	  24856	  57644	   e12c	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:35:18 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:423:5: warning: unused variable 'byte' [-Wunused-variable]
+  u8 byte = RecvBuffer[0];
+     ^~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30812	   1976	  24856	  57644	   e12c	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:44:25 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:423:5: warning: unused variable 'byte' [-Wunused-variable]
+  u8 byte = RecvBuffer[0];
+     ^~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30812	   1976	  24856	  57644	   e12c	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:46:40 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:425:13: error: 'ROBOT_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPS_DDR_CTRL_BASEADDR'?
+  Xil_Out32((ROBOT_CTRL_BASEADDR), baseDutyCycle);
+             ^~~~~~~~~~~~~~~~~~~
+             XPS_DDR_CTRL_BASEADDR
+../src/helloworld.c:425:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:425:35: error: 'baseDutyCycle' undeclared (first use in this function)
+  Xil_Out32((ROBOT_CTRL_BASEADDR), baseDutyCycle);
+                                   ^~~~~~~~~~~~~
+../src/helloworld.c:423:5: warning: unused variable 'byte' [-Wunused-variable]
+  u8 byte = RecvBuffer[0];
+     ^~~~
+../src/helloworld.c: In function 'armControl':
+../src/helloworld.c:444:8: error: unknown type name 'TickType_t'
+  const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
+        ^~~~~~~~~~
+../src/helloworld.c:444:31: warning: implicit declaration of function 'pdMS_TO_TICKS' [-Wimplicit-function-declaration]
+  const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
+                               ^~~~~~~~~~~~~
+../src/helloworld.c:444:46: error: 'DELAY_1_MSECOND' undeclared (first use in this function)
+  const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
+                                              ^~~~~~~~~~~~~~~
+../src/helloworld.c:449:20: error: 'PWM_BASEADDR' undeclared (first use in this function); did you mean 'XPS_OCM_BASEADDR'?
+         Xil_Out32((PWM_BASEADDR     ), baseDutyCycle);
+                    ^~~~~~~~~~~~
+                    XPS_OCM_BASEADDR
+../src/helloworld.c:449:40: error: 'baseDutyCycle' undeclared (first use in this function)
+         Xil_Out32((PWM_BASEADDR     ), baseDutyCycle);
+                                        ^~~~~~~~~~~~~
+../src/helloworld.c:450:40: error: 'shoulderDutyCycle' undeclared (first use in this function); did you mean 'baseDutyCycle'?
+         Xil_Out32((PWM_BASEADDR + 4 ), shoulderDutyCycle);
+                                        ^~~~~~~~~~~~~~~~~
+                                        baseDutyCycle
+../src/helloworld.c:451:40: error: 'elbowDutyCycle' undeclared (first use in this function); did you mean 'baseDutyCycle'?
+         Xil_Out32((PWM_BASEADDR + 8 ), elbowDutyCycle);
+                                        ^~~~~~~~~~~~~~
+                                        baseDutyCycle
+../src/helloworld.c:452:40: error: 'clawDutyCycle' undeclared (first use in this function); did you mean 'elbowDutyCycle'?
+         Xil_Out32((PWM_BASEADDR + 12), clawDutyCycle);
+                                        ^~~~~~~~~~~~~
+                                        elbowDutyCycle
+../src/helloworld.c:455:3: warning: implicit declaration of function 'vTaskDelay' [-Wimplicit-function-declaration]
+   vTaskDelay(x1msecond);
+   ^~~~~~~~~~
+At top level:
+../src/helloworld.c:440:13: warning: 'armControl' defined but not used [-Wunused-function]
+ static void armControl( void *pvParameters ){
+             ^~~~~~~~~~
+make: *** [src/helloworld.o] Error 1
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+23:46:49 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:425:13: error: 'ROBOT_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPS_DDR_CTRL_BASEADDR'?
+  Xil_Out32((ROBOT_CTRL_BASEADDR), baseDutyCycle);
+             ^~~~~~~~~~~~~~~~~~~
+             XPS_DDR_CTRL_BASEADDR
+../src/helloworld.c:425:13: note: each undeclared identifier is reported only once for each function it appears in
+../src/helloworld.c:425:35: error: 'baseDutyCycle' undeclared (first use in this function)
+  Xil_Out32((ROBOT_CTRL_BASEADDR), baseDutyCycle);
+                                   ^~~~~~~~~~~~~
+../src/helloworld.c:423:5: warning: unused variable 'byte' [-Wunused-variable]
+  u8 byte = RecvBuffer[0];
+     ^~~~
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:46:55 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:425:13: error: 'ROBOT_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPS_DDR_CTRL_BASEADDR'?
+  Xil_Out32((ROBOT_CTRL_BASEADDR), byte);
+             ^~~~~~~~~~~~~~~~~~~
+             XPS_DDR_CTRL_BASEADDR
+../src/helloworld.c:425:13: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:47:29 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'UartLiteSampleLidar':
+../src/helloworld.c:426:13: error: 'ROBOT_CTRL_BASEADDR' undeclared (first use in this function); did you mean 'XPS_DDR_CTRL_BASEADDR'?
+  Xil_Out32((ROBOT_CTRL_BASEADDR), byte);
+             ^~~~~~~~~~~~~~~~~~~
+             XPS_DDR_CTRL_BASEADDR
+../src/helloworld.c:426:13: note: each undeclared identifier is reported only once for each function it appears in
+src/subdir.mk:24: recipe for target 'src/helloworld.o' failed
+make: *** [src/helloworld.o] Error 1
+23:47:42 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30876	   1976	  24856	  57708	   e16c	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:47:45 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30876	   1976	  24856	  57708	   e16c	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:48:26 **** Incremental Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.
+23:49:38 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:208:7: warning: unused variable 'read' [-Wunused-variable]
+   int read = Xil_In32(ROBOT_CTRL_BASEADDR);
+       ^~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30940	   1976	  24856	  57772	   e1ac	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:49:57 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:208:7: warning: unused variable 'check_hw' [-Wunused-variable]
+   int check_hw = Xil_In32(ROBOT_CTRL_BASEADDR);
+       ^~~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30940	   1976	  24856	  57772	   e1ac	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 
+23:50:37 **** Auto Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+Building file: ../src/helloworld.c
+Invoking: ARM v7 gcc compiler
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../re_route_application_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+In file included from ../src/helloworld.c:46:0:
+../../re_route_application_bsp/ps7_cortexa9_0/include/xtime_l.h:87:9: note: #pragma message: For the sleep routines, Global timer is being used
+ #pragma message ("For the sleep routines, Global timer is being used")
+         ^~~~~~~
+Finished building: ../src/helloworld.c
+ 
+Building target: re_route_application.elf
+Invoking: ARM v7 gcc linker
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../re_route_application_bsp/ps7_cortexa9_0/lib -o "re_route_application.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+Finished building target: re_route_application.elf
+ 
+Invoking: ARM v7 Print Size
+arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  30956	   1976	  24856	  57788	   e1bc	re_route_application.elf
+Finished building: re_route_application.elf.size
+ 

@@ -36,4 +36,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log arm_control_system.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_control_system.tcl
+EAStep vivado -log top_level_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl

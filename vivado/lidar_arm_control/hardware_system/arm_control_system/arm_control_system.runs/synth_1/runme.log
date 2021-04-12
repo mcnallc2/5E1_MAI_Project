@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log arm_control_system.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source arm_control_system.tcl
+    with args -log top_level_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source top_level_wrapper.tcl
 
 
 ****** Vivado v2018.3 (64-bit)
@@ -8,145 +8,82 @@
   **** IP Build 2404404 on Fri Dec  7 01:43:56 MST 2018
     ** Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 
-source arm_control_system.tcl -notrace
-Command: synth_design -top arm_control_system -part xc7z020clg400-1
+source top_level_wrapper.tcl -notrace
+Command: synth_design -top top_level_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 6658 
+INFO: Helper process launched with PID 14616 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1383.152 ; gain = 0.000 ; free physical = 373 ; free virtual = 3384
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1384.156 ; gain = 0.000 ; free physical = 911 ; free virtual = 5404
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'arm_control_system' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:24]
-INFO: [Synth 8-6157] synthesizing module 'uart_top' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_top.v:13]
-INFO: [Synth 8-6157] synthesizing module 'uart_tx' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_tx.v:57]
-INFO: [Synth 8-6157] synthesizing module 'kcuart_tx' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_tx.v:59]
-INFO: [Synth 8-6157] synthesizing module 'LUT4' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b1110010011111111 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4' (1#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'MUXF5' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27608]
-INFO: [Synth 8-6155] done synthesizing module 'MUXF5' (2#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27608]
-INFO: [Synth 8-6157] synthesizing module 'MUXF6' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27645]
-INFO: [Synth 8-6155] done synthesizing module 'MUXF6' (3#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27645]
-INFO: [Synth 8-6157] synthesizing module 'FDRS' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:4005]
-	Parameter INIT bound to: 1'b0 
-	Parameter IS_C_INVERTED bound to: 1'b0 
-	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-	Parameter IS_S_INVERTED bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'FDRS' (4#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:4005]
-INFO: [Synth 8-6157] synthesizing module 'FDRE' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971]
-	Parameter INIT bound to: 1'b0 
-	Parameter IS_C_INVERTED bound to: 1'b0 
-	Parameter IS_D_INVERTED bound to: 1'b0 
-	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'FDRE' (5#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3971]
-INFO: [Synth 8-6157] synthesizing module 'LUT2' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26450]
-	Parameter INIT bound to: 4'b1000 
-INFO: [Synth 8-6155] done synthesizing module 'LUT2' (6#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26450]
-INFO: [Synth 8-6157] synthesizing module 'MULT_AND' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27560]
-INFO: [Synth 8-6155] done synthesizing module 'MULT_AND' (7#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27560]
-INFO: [Synth 8-6157] synthesizing module 'MUXCY' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27571]
-INFO: [Synth 8-6155] done synthesizing module 'MUXCY' (8#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:27571]
-INFO: [Synth 8-6157] synthesizing module 'XORCY' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711]
-INFO: [Synth 8-6155] done synthesizing module 'XORCY' (9#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:53711]
-INFO: [Synth 8-6157] synthesizing module 'LUT3' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26488]
-	Parameter INIT bound to: 8'b00010000 
-INFO: [Synth 8-6155] done synthesizing module 'LUT3' (10#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26488]
-INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized0' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b0000000110010000 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized0' (10#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'FDE' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3872]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'FDE' (11#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3872]
-INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized1' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b0001010101000000 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized1' (11#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized0' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26488]
-	Parameter INIT bound to: 8'b10010100 
-INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized0' (11#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26488]
-INFO: [Synth 8-6157] synthesizing module 'SRL16E' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699]
-	Parameter INIT bound to: 16'b0000000000000000 
-	Parameter IS_CLK_INVERTED bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'SRL16E' (12#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:51699]
-INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized2' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b0000000110000000 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized2' (12#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'FD' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3730]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'FD' (13#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3730]
-WARNING: [Synth 8-2887] Directive 'init' on 'mux1_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'mux2_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'mux3_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'mux4_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_0' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_1' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_2' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'ready_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'start_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'run_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'hot_state_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'stop_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'complete_lut' is unsupported and ignored
-INFO: [Synth 8-6155] done synthesizing module 'kcuart_tx' (14#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_tx.v:59]
-INFO: [Synth 8-6157] synthesizing module 'bbfifo_16x8' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/bbfifo_16x8.v:60]
-INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized3' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b0110011000000110 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized3' (14#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized4' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b0000000000000001 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized4' (14#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized5' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b1000000000000000 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized5' (14#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized6' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b1011111110100000 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized6' (14#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'FDR' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3958]
-	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-6155] done synthesizing module 'FDR' (15#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:3958]
-INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized1' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26488]
-	Parameter INIT bound to: 8'b11000100 
-INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized1' (15#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26488]
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_0' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_1' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_2' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_3' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'zero_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'full_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'dp_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'valid_lut' is unsupported and ignored
-INFO: [Synth 8-6155] done synthesizing module 'bbfifo_16x8' (16#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/bbfifo_16x8.v:60]
-INFO: [Synth 8-6155] done synthesizing module 'uart_tx' (17#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_tx.v:57]
-INFO: [Synth 8-6157] synthesizing module 'uart_rx' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_rx.v:57]
-INFO: [Synth 8-6157] synthesizing module 'kcuart_rx' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_rx.v:58]
-INFO: [Synth 8-6157] synthesizing module 'LUT4__parameterized7' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-	Parameter INIT bound to: 16'b0000000001000000 
-INFO: [Synth 8-6155] done synthesizing module 'LUT4__parameterized7' (17#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26530]
-INFO: [Synth 8-6157] synthesizing module 'LUT3__parameterized2' [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26488]
-	Parameter INIT bound to: 8'b01010100 
-INFO: [Synth 8-6155] done synthesizing module 'LUT3__parameterized2' (17#1) [/tools/Xilinx/Vivado/2018.3/scripts/rt/data/unisim_comp.v:26488]
-WARNING: [Synth 8-2887] Directive 'init' on 'valid_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'purge_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'strobe_lut' is unsupported and ignored
-INFO: [Synth 8-6155] done synthesizing module 'kcuart_rx' (18#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/kcuart_rx.v:58]
-INFO: [Synth 8-6155] done synthesizing module 'uart_rx' (19#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_rx.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'uart_top' (20#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/imports/uart/uart_top.v:13]
-INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:94]
-WARNING: [Synth 8-3848] Net pwm0_0 in module/entity arm_control_system does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:36]
-WARNING: [Synth 8-3848] Net pwm0_1 in module/entity arm_control_system does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:37]
-WARNING: [Synth 8-3848] Net pwm0_2 in module/entity arm_control_system does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:38]
-WARNING: [Synth 8-3848] Net pwm0_3 in module/entity arm_control_system does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:39]
-WARNING: [Synth 8-3848] Net i_rx_data_read in module/entity arm_control_system does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:48]
-INFO: [Synth 8-6155] done synthesizing module 'arm_control_system' (21#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:24]
-WARNING: [Synth 8-3917] design arm_control_system has port lidar_motor driven by constant 1
-WARNING: [Synth 8-3331] design arm_control_system has unconnected port pwm0_0
-WARNING: [Synth 8-3331] design arm_control_system has unconnected port pwm0_1
-WARNING: [Synth 8-3331] design arm_control_system has unconnected port pwm0_2
-WARNING: [Synth 8-3331] design arm_control_system has unconnected port pwm0_3
+INFO: [Synth 8-6157] synthesizing module 'top_level_wrapper' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:23]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter PWM_COUNTER_MAX bound to: 2000000 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'lidar_packet_parser' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:23]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'div_gen_0' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/synth_1/.Xil/Vivado-14599-noodle-box/realtime/div_gen_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'div_gen_0' (1#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/synth_1/.Xil/Vivado-14599-noodle-box/realtime/div_gen_0_stub.v:6]
+WARNING: [Synth 8-689] width (24) of port connection 'm_axis_dout_tdata' does not match port width (32) of module 'div_gen_0' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:168]
+WARNING: [Synth 8-689] width (24) of port connection 'm_axis_dout_tdata' does not match port width (32) of module 'div_gen_0' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:178]
+WARNING: [Synth 8-6014] Unused sequential element new_lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:71]
+WARNING: [Synth 8-6014] Unused sequential element new_lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:86]
+WARNING: [Synth 8-6014] Unused sequential element lidar_sample_reg[0] was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:100]
+INFO: [Synth 8-4471] merging register 's_axis_dividend_tvalid_0_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:114]
+INFO: [Synth 8-4471] merging register 's_axis_divisor_tvalid_1_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:116]
+INFO: [Synth 8-4471] merging register 's_axis_dividend_tvalid_1_reg' into 's_axis_divisor_tvalid_0_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:118]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_dividend_tvalid_0_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:114]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_divisor_tvalid_1_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:116]
+WARNING: [Synth 8-6014] Unused sequential element s_axis_dividend_tvalid_1_reg was removed.  [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:118]
+INFO: [Synth 8-6155] done synthesizing module 'lidar_packet_parser' (2#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:23]
+WARNING: [Synth 8-689] width (32) of port connection 'angle' does not match port width (24) of module 'lidar_packet_parser' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:49]
+WARNING: [Synth 8-689] width (32) of port connection 'distance' does not match port width (24) of module 'lidar_packet_parser' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:50]
+INFO: [Synth 8-6157] synthesizing module 'pwm_controller' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/pwm_controller.sv:23]
+	Parameter PWM_COUNTER_MAX bound to: 2000000 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'pwm_controller' (3#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/pwm_controller.sv:23]
+INFO: [Synth 8-6157] synthesizing module 'test_proc' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/test_procedure.sv:23]
+	Parameter DELAY_30MS bound to: 64'b0000000000000000000000000000000000000000000000000000011111010000 
+	Parameter DELAY_3S bound to: 64'b0000000000000000000000000000000000000000000000110000110101000000 
+	Parameter ANGLE_0 bound to: 64'b0000000000000000000000000000000000000000000000001001110001000000 
+	Parameter ANGLE_90 bound to: 64'b0000000000000000000000000000000000000000000000101010101110011000 
+	Parameter ANGLE_180 bound to: 64'b0000000000000000000000000000000000000000000001001011101011110000 
+	Parameter A bound to: 2'b00 
+	Parameter B bound to: 2'b01 
+	Parameter C bound to: 2'b10 
+INFO: [Synth 8-155] case statement is not full and has no default [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/test_procedure.sv:80]
+INFO: [Synth 8-6155] done synthesizing module 'test_proc' (4#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/test_procedure.sv:23]
+WARNING: [Synth 8-3848] Net S_AXI_WVALID in module/entity top_level_wrapper does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:39]
+WARNING: [Synth 8-3848] Net S_AXI_WDATA in module/entity top_level_wrapper does not have driver. [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:40]
+INFO: [Synth 8-6155] done synthesizing module 'top_level_wrapper' (5#1) [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:23]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[31]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[30]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[29]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[28]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[27]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[26]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[25]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[24]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[23]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[22]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[21]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[20]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[19]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[18]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[17]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[16]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[15]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[14]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[13]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[12]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[11]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[10]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[9]
+WARNING: [Synth 8-3331] design lidar_packet_parser has unconnected port S_AXI_WDATA[8]
+WARNING: [Synth 8-3331] design top_level_wrapper has unconnected port reset
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1400.551 ; gain = 17.398 ; free physical = 372 ; free virtual = 3394
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1426.805 ; gain = 42.648 ; free physical = 921 ; free virtual = 5415
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -155,107 +92,86 @@ Report Check Netlist:
 +------+------------------+-------+---------+-------+------------------+
 |1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
 +------+------------------+-------+---------+-------+------------------+
-WARNING: [Synth 8-3295] tying undriven pin uart_top_i:i_rx_data_read to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:65]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WVALID to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WDATA[7] to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WDATA[6] to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WDATA[5] to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WDATA[4] to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WDATA[3] to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WDATA[2] to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WDATA[1] to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
+WARNING: [Synth 8-3295] tying undriven pin lidar_packet_parser_i:S_AXI_WDATA[0] to constant 0 [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/top_level_wrapper.sv:45]
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1400.551 ; gain = 17.398 ; free physical = 372 ; free virtual = 3394
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1426.805 ; gain = 42.648 ; free physical = 921 ; free virtual = 5416
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1400.551 ; gain = 17.398 ; free physical = 372 ; free virtual = 3394
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1426.805 ; gain = 42.648 ; free physical = 921 ; free virtual = 5416
 ---------------------------------------------------------------------------------
-INFO: [Netlist 29-17] Analyzing 59 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'lidar_packet_parser_i/div_gen_0_0_i'
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'lidar_packet_parser_i/div_gen_0_0_i'
+Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'lidar_packet_parser_i/div_gen_0_1_i'
+Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/ip/div_gen_0/div_gen_0/div_gen_0_in_context.xdc] for cell 'lidar_packet_parser_i/div_gen_0_1_i'
 Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/constrs_1/imports/arm_control_system/PYNQ-Z2_v1.0.xdc]
 Finished Parsing XDC File [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/constrs_1/imports/arm_control_system/PYNQ-Z2_v1.0.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/constrs_1/imports/arm_control_system/PYNQ-Z2_v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/arm_control_system_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/arm_control_system_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1741.590 ; gain = 0.000 ; free physical = 124 ; free virtual = 3117
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/constrs_1/imports/arm_control_system/PYNQ-Z2_v1.0.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/top_level_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/top_level_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1776.836 ; gain = 0.000 ; free physical = 646 ; free virtual = 5140
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1741.590 ; gain = 0.000 ; free physical = 125 ; free virtual = 3118
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1776.836 ; gain = 0.000 ; free physical = 647 ; free virtual = 5141
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 39 instances were transformed.
-  FD => FDRE: 4 instances
-  FDE => FDRE: 26 instances
-  FDR => FDRE: 2 instances
-  FDRS => FDRS (FDRE, LUT2, VCC): 1 instances
-  MULT_AND => LUT2: 3 instances
-  MUXF5 => LUT3: 2 instances
-  MUXF6 => LUT3: 1 instances
+No Unisim elements were transformed.
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1741.590 ; gain = 0.000 ; free physical = 125 ; free virtual = 3118
-Constraint Validation Runtime : Time (s): cpu = 00:00:00.01 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1741.590 ; gain = 0.000 ; free physical = 125 ; free virtual = 3118
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1776.836 ; gain = 0.000 ; free physical = 647 ; free virtual = 5141
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1776.836 ; gain = 0.000 ; free physical = 647 ; free virtual = 5141
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'lidar_packet_parser_i/div_gen_0_0_i' at clock pin 'aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '1000.000' specified during out-of-context synthesis of instance 'lidar_packet_parser_i/div_gen_0_1_i' at clock pin 'aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 192 ; free virtual = 3194
+Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 727 ; free virtual = 5221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 192 ; free virtual = 3194
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 727 ; free virtual = 5221
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for lidar_packet_parser_i/div_gen_0_0_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for lidar_packet_parser_i/div_gen_0_1_i. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 194 ; free virtual = 3196
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 728 ; free virtual = 5223
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-5545] ROM "counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "baud_en" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'arm_control_system'
-INFO: [Synth 8-5544] ROM "i_tx_data_valid_nxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "i_tx_data_valid_nxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "i_tx_data_valid_nxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-INFO: [Synth 8-5544] ROM "i_tx_data_valid_nxt" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
-WARNING: [Synth 8-2887] Directive 'init' on 'mux1_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'mux2_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'mux3_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'mux4_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_0' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_1' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_2' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'ready_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'start_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'run_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'hot_state_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'stop_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'complete_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_0' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_1' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_2' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'count_lut_3' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'zero_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'full_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'dp_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'valid_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'valid_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'purge_lut' is unsupported and ignored
-WARNING: [Synth 8-2887] Directive 'init' on 'strobe_lut' is unsupported and ignored
-WARNING: [Synth 8-327] inferring latch for variable 'tx_byte_send_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:99]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:100]
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_onehot_state_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:100]
+INFO: [Synth 8-5544] ROM "new_lidar_sample_reg[4]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "new_lidar_sample_reg[3]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "new_lidar_sample_reg[2]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "new_lidar_sample_reg[1]" won't be mapped to Block RAM because address size (3) smaller than threshold (5)
+INFO: [Synth 8-802] inferred FSM for state register 'state_ff_reg' in module 'test_proc'
+INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+INFO: [Synth 8-5544] ROM "pwm_hightime_base_nxt" won't be mapped to Block RAM because address size (2) smaller than threshold (5)
+WARNING: [Synth 8-327] inferring latch for variable 'pwm_hightime_base_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/test_procedure.sv:84]
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
-                 iSTATE1 |                               00 |                              000
-                 iSTATE2 |                               01 |                              001
-                  iSTATE |                               10 |                              010
-                 iSTATE0 |                               11 |                              011
+                       A |                                0 |                               00
+                       B |                                1 |                               01
 ---------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encoding 'sequential' in module 'arm_control_system'
-WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:100]
-WARNING: [Synth 8-327] inferring latch for variable 'i_tx_data_valid_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:98]
-WARNING: [Synth 8-327] inferring latch for variable 'delay_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/arm_control_system.v:101]
+INFO: [Synth 8-3354] encoded FSM with state register 'state_ff_reg' using encoding 'sequential' in module 'test_proc'
+WARNING: [Synth 8-327] inferring latch for variable 'FSM_sequential_state_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/test_procedure.sv:86]
+WARNING: [Synth 8-327] inferring latch for variable 'delay_nxt_reg' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/test_procedure.sv:85]
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 183 ; free virtual = 3186
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 719 ; free virtual = 5214
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -269,20 +185,19 @@ Start RTL Component Statistics
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
-	   2 Input     14 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 2     
-	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 2     
+	               32 Bit    Registers := 5     
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 12    
+	                1 Bit    Registers := 1     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     14 Bit        Muxes := 1     
-	   4 Input      8 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 9     
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -290,31 +205,29 @@ Finished RTL Component Statistics
 Start RTL Hierarchical Component Statistics 
 ---------------------------------------------------------------------------------
 Hierarchical RTL Component report 
-Module arm_control_system 
+Module lidar_packet_parser 
 Detailed RTL Component Info : 
 +---Adders : 
-	   2 Input     14 Bit       Adders := 1     
+	   2 Input      3 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
-	                8 Bit    Registers := 1     
+	               24 Bit    Registers := 2     
+	               16 Bit    Registers := 2     
+	                8 Bit    Registers := 12    
 	                1 Bit    Registers := 1     
 +---Muxes : 
-	   4 Input     32 Bit        Muxes := 1     
-	   2 Input     14 Bit        Muxes := 1     
-	   4 Input      8 Bit        Muxes := 1     
-	   4 Input      2 Bit        Muxes := 1     
-	   2 Input      2 Bit        Muxes := 1     
-	   4 Input      1 Bit        Muxes := 1     
-Module uart_top 
+	   2 Input      1 Bit        Muxes := 4     
+Module test_proc 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input     32 Bit       Adders := 1     
+	   3 Input     32 Bit       Adders := 1     
+	   2 Input     11 Bit       Adders := 1     
 +---Registers : 
-	               32 Bit    Registers := 1     
-	                1 Bit    Registers := 1     
+	               32 Bit    Registers := 5     
 +---Muxes : 
-	   2 Input     32 Bit        Muxes := 1     
-	   2 Input      1 Bit        Muxes := 1     
+	   2 Input     32 Bit        Muxes := 2     
+	   2 Input     11 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
 ---------------------------------------------------------------------------------
 Finished RTL Hierarchical Component Statistics
 ---------------------------------------------------------------------------------
@@ -331,133 +244,288 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
-INFO: [Synth 8-5545] ROM "uart_top_i/counter" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-INFO: [Synth 8-5545] ROM "uart_top_i/baud_en" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
-WARNING: [Synth 8-3917] design arm_control_system has port lidar_motor driven by constant 1
-WARNING: [Synth 8-3331] design arm_control_system has unconnected port pwm0_0
-WARNING: [Synth 8-3331] design arm_control_system has unconnected port pwm0_1
-WARNING: [Synth 8-3331] design arm_control_system has unconnected port pwm0_2
-WARNING: [Synth 8-3331] design arm_control_system has unconnected port pwm0_3
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[14] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[15] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[16] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[17] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[18] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[19] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[20] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[21] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[22] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[23] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[24] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[25] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[26] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[27] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[28] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[29] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[30] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\delay_nxt_reg[31] )
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[14]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[15]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[16]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[17]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[18]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[19]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[20]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[21]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[22]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[23]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[24]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[25]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[26]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[27]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[28]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[29]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'delay_ff_reg[30]' (FDR) to 'delay_ff_reg[31]'
-INFO: [Synth 8-3886] merging instance 'tx_byte_send_nxt_reg[7]' (LD) to 'tx_byte_send_nxt_reg[2]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_byte_send_nxt_reg[6] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_byte_send_nxt_reg[4] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_byte_send_nxt_reg[3] )
-INFO: [Synth 8-3886] merging instance 'tx_byte_send_nxt_reg[2]' (LD) to 'tx_byte_send_nxt_reg[0]'
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (\tx_byte_send_nxt_reg[1] )
-INFO: [Synth 8-3886] merging instance 'tx_byte_send_ff_reg[7]' (FDR) to 'tx_byte_send_ff_reg[2]'
-INFO: [Synth 8-3886] merging instance 'tx_byte_send_ff_reg[6]' (FDR) to 'tx_byte_send_ff_reg[4]'
-INFO: [Synth 8-3886] merging instance 'tx_byte_send_ff_reg[4]' (FDR) to 'tx_byte_send_ff_reg[3]'
-INFO: [Synth 8-3886] merging instance 'tx_byte_send_ff_reg[3]' (FDR) to 'tx_byte_send_ff_reg[1]'
-INFO: [Synth 8-3886] merging instance 'tx_byte_send_ff_reg[2]' (FDR) to 'tx_byte_send_ff_reg[0]'
-INFO: [Synth 8-3886] merging instance 'tx_byte_send_ff_reg[1]' (FDR) to 'delay_ff_reg[31]'
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/sync_reg) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/stop_reg) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/data_reg_0) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/data_reg_1) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/data_reg_2) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/data_reg_3) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/data_reg_4) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/data_reg_5) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/data_reg_6) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/data_reg_7) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/start_reg) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/edge_reg) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_reg) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/purge_reg) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_0) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_1) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_2) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_3) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_4) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_5) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_6) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_7) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/valid_data_reg_8) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/kcuart/strobe_reg) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/buf_0/register_bit_0) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/buf_0/register_bit_1) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/buf_0/register_bit_2) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/buf_0/register_bit_3) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (uart_top_i/u2/buf_0/dp_flop) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (tx_byte_send_nxt_reg[6]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (tx_byte_send_nxt_reg[5]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (tx_byte_send_nxt_reg[4]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (tx_byte_send_nxt_reg[3]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (tx_byte_send_nxt_reg[1]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (tx_byte_send_nxt_reg[0]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_nxt_reg[1]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (FSM_sequential_state_nxt_reg[0]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (i_tx_data_valid_nxt_reg) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[31]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[30]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[29]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[28]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[27]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[26]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[25]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[24]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[23]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[22]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[21]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[20]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[19]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[18]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[17]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[16]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[15]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[14]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[13]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[12]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[11]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[10]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[9]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[8]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[7]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[6]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[5]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[4]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[3]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[2]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[1]) is unused and will be removed from module arm_control_system.
-WARNING: [Synth 8-3332] Sequential element (delay_nxt_reg[0]) is unused and will be removed from module arm_control_system.
-INFO: [Synth 8-3886] merging instance 'i_tx_data_valid_ff_reg' (FDR) to 'tx_byte_send_ff_reg[5]'
+WARNING: [Synth 8-3331] design top_level_wrapper has unconnected port reset
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[15] )
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[0]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[1]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[2]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[3]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[4]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[5]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[6]' (FDS) to 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[2]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_0_reg[7]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[0]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[1]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[1]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[3]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[3]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[4]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[4]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[5]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[5]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[6]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[6]' (FDR) to 'lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\lidar_packet_parser_i/s_axis_divisor_tdata_1_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/delay_nxt_reg[31] )
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[11]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[12]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[13]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[14]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[15]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[16]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[17]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[18]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[19]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[20]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[21]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[22]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[23]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[24]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[25]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[26]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[27]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[28]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[29]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3886] merging instance 'test_proc_i/delay_ff_reg[30]' (FD) to 'test_proc_i/delay_ff_reg[31]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_claw_ff_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[12] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[13] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[14] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[15] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[16] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[17] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[18] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[19] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[20] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[21] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[22] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[23] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[24] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[25] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[26] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[27] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[28] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[29] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[30] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_elbow_ff_reg[31] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[2] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[3] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[4] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[5] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[6] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[7] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[8] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[9] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[11] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\test_proc_i/pwm_hightime_shoulder_ff_reg[12] )
+INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[1][1]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[1][2]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[1][3]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[1][4]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[1][5]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][5]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[1][6]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[1][7]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[2][0]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[2][1]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[2][2]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[2][3]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[2][4]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[2][5]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][5]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[2][6]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[2][7]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[3][0]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[3][1]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[3][2]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[3][3]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[3][4]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[3][5]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][5]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[3][6]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[3][7]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/new_lidar_sample_reg[4][0]' (FDE) to 'lidar_packet_parser_i/new_lidar_sample_reg[1][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[1][1]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[1][0]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[1][2]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[1][3]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[1][4]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[1][5]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[1][6]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[1][7]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[2][0]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[2][1]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[2][2]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[2][3]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[2][4]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[2][5]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[2][6]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[2][7]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[3][0]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[3][1]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[3][2]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[3][3]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[3][4]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[3][5]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[3][6]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[3][7]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][0]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[4][0]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][1]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[4][1]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][2]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[4][2]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][3]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[4][3]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][4]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[4][4]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][5]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[4][5]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][6]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/lidar_sample_reg[4][6]' (FDE) to 'lidar_packet_parser_i/lidar_sample_reg[4][7]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[0]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[1]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[1]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[2]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[2]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[3]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[3]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[4]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[4]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[5]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[5]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[6]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[6]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[7]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[7]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[8]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[8]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[9]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[9]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[10]'
+INFO: [Synth 8-3886] merging instance 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[10]' (FDR) to 'lidar_packet_parser_i/s_axis_dividend_tdata_0_reg[11]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'lidar_packet_parser_i/sample_reg[2]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'lidar_packet_parser_i/sample_reg[1]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'lidar_packet_parser_i/sample_reg[0]__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'GND' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:77]
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[31]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[30]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[29]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[28]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[27]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[26]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[25]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[24]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[23]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[22]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[21]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[20]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[19]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[18]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[17]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[16]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[15]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[14]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[13]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[12]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[11]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[10]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[9]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[8]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[7]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[6]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[5]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[4]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[3]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[2]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[1]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/pwm_hightime_base_nxt_reg[0]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/FSM_sequential_state_nxt_reg) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[31]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[30]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[29]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[28]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[27]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[26]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[25]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[24]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[23]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[22]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[21]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[20]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[19]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[18]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[17]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[16]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[15]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[14]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[13]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[12]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[11]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[10]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[9]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[8]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[7]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[6]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[5]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[4]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[3]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[2]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[1]) is unused and will be removed from module top_level_wrapper.
+WARNING: [Synth 8-3332] Sequential element (test_proc_i/delay_nxt_reg[0]) is unused and will be removed from module top_level_wrapper.
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 1st driver pin 'lidar_packet_parser_i/load_sample_reg__0/Q' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:99]
+CRITICAL WARNING: [Synth 8-6859] multi-driven net on pin Q with 2nd driver pin 'VCC' [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:99]
+CRITICAL WARNING: [Synth 8-6858] multi-driven net Q is connected to at least one constant driver which has been preserved, other driver is ignored [/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.srcs/sources_1/new/lidar_packet_parser.sv:99]
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 172 ; free virtual = 3176
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 706 ; free virtual = 5202
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -469,13 +537,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 132 ; free virtual = 3045
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 577 ; free virtual = 5074
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:16 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 131 ; free virtual = 3044
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 571 ; free virtual = 5068
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -487,7 +555,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 140 ; free virtual = 3043
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:19 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 570 ; free virtual = 5067
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -511,7 +579,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 141 ; free virtual = 3043
+Finished IO Insertion : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 570 ; free virtual = 5067
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -524,7 +592,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 141 ; free virtual = 3043
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 570 ; free virtual = 5067
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -536,102 +604,87 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 141 ; free virtual = 3043
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 570 ; free virtual = 5067
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 141 ; free virtual = 3043
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 570 ; free virtual = 5067
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 141 ; free virtual = 3043
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 570 ; free virtual = 5067
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 141 ; free virtual = 3043
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 570 ; free virtual = 5067
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------+----------+
+|      |BlackBox name |Instances |
++------+--------------+----------+
+|1     |div_gen_0     |         2|
++------+--------------+----------+
 
 Report Cell Usage: 
-+------+---------+------+
-|      |Cell     |Count |
-+------+---------+------+
-|1     |BUFG     |     1|
-|2     |CARRY4   |    12|
-|3     |LUT2     |     8|
-|4     |LUT3     |     5|
-|5     |LUT4     |    36|
-|6     |LUT5     |    34|
-|7     |LUT6     |     1|
-|8     |MULT_AND |     3|
-|9     |MUXCY    |     6|
-|10    |MUXF5    |     2|
-|11    |MUXF6    |     1|
-|12    |SRL16E   |     9|
-|13    |XORCY    |     7|
-|14    |FD       |     1|
-|15    |FDCE     |    33|
-|16    |FDE      |     5|
-|17    |FDR      |     1|
-|18    |FDRE     |    26|
-|19    |IBUF     |     2|
-|20    |OBUF     |     2|
-|21    |OBUFT    |     4|
-+------+---------+------+
++------+-------------+------+
+|      |Cell         |Count |
++------+-------------+------+
+|1     |div_gen_0    |     1|
+|2     |div_gen_0__2 |     1|
+|3     |BUFG         |     1|
+|4     |CARRY4       |    36|
+|5     |LUT1         |     5|
+|6     |LUT2         |    95|
+|7     |LUT3         |    41|
+|8     |LUT4         |    36|
+|9     |LUT5         |     6|
+|10    |LUT6         |    21|
+|11    |FDRE         |   113|
+|12    |IBUF         |     1|
+|13    |OBUF         |     4|
++------+-------------+------+
 
 Report Instance Areas: 
-+------+-------------+------------+------+
-|      |Instance     |Module      |Cells |
-+------+-------------+------------+------+
-|1     |top          |            |   199|
-|2     |  uart_top_i |uart_top    |   147|
-|3     |    u1       |uart_tx     |    65|
-|4     |      buf_0  |bbfifo_16x8 |    28|
-|5     |      kcuart |kcuart_tx   |    37|
-+------+-------------+------------+------+
++------+------------------------+--------------------+------+
+|      |Instance                |Module              |Cells |
++------+------------------------+--------------------+------+
+|1     |top                     |                    |   425|
+|2     |  lidar_packet_parser_i |lidar_packet_parser |   131|
+|3     |  pwm_controller_i      |pwm_controller      |   116|
+|4     |  test_proc_i           |test_proc           |   172|
++------+------------------------+--------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.590 ; gain = 358.438 ; free physical = 141 ; free virtual = 3043
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1776.836 ; gain = 392.680 ; free physical = 570 ; free virtual = 5067
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 105 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:11 ; elapsed = 00:00:13 . Memory (MB): peak = 1741.590 ; gain = 17.398 ; free physical = 198 ; free virtual = 3101
-Synthesis Optimization Complete : Time (s): cpu = 00:00:16 ; elapsed = 00:00:17 . Memory (MB): peak = 1741.598 ; gain = 358.438 ; free physical = 198 ; free virtual = 3101
+Synthesis finished with 0 errors, 12 critical warnings and 69 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1776.836 ; gain = 42.648 ; free physical = 627 ; free virtual = 5124
+Synthesis Optimization Complete : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1776.844 ; gain = 392.680 ; free physical = 628 ; free virtual = 5124
 INFO: [Project 1-571] Translating synthesized netlist
-INFO: [Netlist 29-17] Analyzing 38 Unisim elements for replacement
+INFO: [Netlist 29-17] Analyzing 36 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1741.598 ; gain = 0.000 ; free physical = 138 ; free virtual = 3041
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1776.844 ; gain = 0.000 ; free physical = 568 ; free virtual = 5065
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 15 instances were transformed.
-  (MUXCY,XORCY) => CARRY4: 2 instances
-  FD => FDRE: 1 instances
-  FDE => FDRE: 5 instances
-  FDR => FDRE: 1 instances
-  MULT_AND => LUT2: 3 instances
-  MUXF5 => LUT3: 2 instances
-  MUXF6 => LUT3: 1 instances
+No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-137 Infos, 140 Warnings, 0 Critical Warnings and 0 Errors encountered.
+237 Infos, 117 Warnings, 12 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1741.598 ; gain = 358.547 ; free physical = 191 ; free virtual = 3094
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1741.598 ; gain = 0.000 ; free physical = 191 ; free virtual = 3094
+synth_design: Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1776.844 ; gain = 392.789 ; free physical = 624 ; free virtual = 5120
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1776.844 ; gain = 0.000 ; free physical = 624 ; free virtual = 5120
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/synth_1/arm_control_system.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file arm_control_system_utilization_synth.rpt -pb arm_control_system_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Mar 29 16:05:14 2021...
+INFO: [Common 17-1381] The checkpoint '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/arm_control_system/arm_control_system.runs/synth_1/top_level_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file top_level_wrapper_utilization_synth.rpt -pb top_level_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon Apr 12 20:06:22 2021...
