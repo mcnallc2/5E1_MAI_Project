@@ -483,10 +483,6 @@ static void baseControl( void *pvParameters ){
 		if (Status != XST_SUCCESS) {
 			xil_printf("PWM: BASE_SERVO PWM Failed\r\n");
 		}
-
-		XTime_GetTime(&tEnd_React);
-		us_reaction = 1.0 * (tEnd_React - tStart_React) / (COUNTS_PER_SECOND/1000000);
-
 		// Scheduler Delay
 		vTaskDelay(x1msecond);
 	}

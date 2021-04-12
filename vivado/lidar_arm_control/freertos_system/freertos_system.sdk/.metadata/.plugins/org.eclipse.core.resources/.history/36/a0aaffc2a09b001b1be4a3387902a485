@@ -334,19 +334,18 @@ int main(void){
 void testProcedure( void *pvParameters ){
 //void testProcedure(){
 
+	tStart_CL = tEnd_CL;
+	XTime_GetTime(&tEnd_CL);
+	us_closed_loop = 1.0 * (tEnd_CL - tStart_CL) / (COUNTS_PER_SECOND/1000000);
+
+	printf("\nClosed Loop Time: %f us", us_closed_loop);
+	printf("\nReaction Time: %f us", us_reaction);
+
 	xil_printf("TASK 1: TEST PROCEDURE\r\n");
 
 	const TickType_t x1msecond = pdMS_TO_TICKS( DELAY_1_MSECOND );
 
 	while(1){
-
-		tStart_CL = tEnd_CL;
-		XTime_GetTime(&tEnd_CL);
-		us_closed_loop = 1.0 * (tEnd_CL - tStart_CL) / (COUNTS_PER_SECOND/1000000);
-
-		printf("\nClosed Loop Time: %f us", us_closed_loop);
-		printf("\nReaction Time: %f us", us_reaction);
-
 		switch (TEST_STATE){
 		case 0:
 			if(!inPos){
@@ -483,10 +482,6 @@ static void baseControl( void *pvParameters ){
 		if (Status != XST_SUCCESS) {
 			xil_printf("PWM: BASE_SERVO PWM Failed\r\n");
 		}
-
-		XTime_GetTime(&tEnd_React);
-		us_reaction = 1.0 * (tEnd_React - tStart_React) / (COUNTS_PER_SECOND/1000000);
-
 		// Scheduler Delay
 		vTaskDelay(x1msecond);
 	}
@@ -953,7 +948,6 @@ int UartLiteSampleLidar(INTC *IntcInstancePtr,
 		currentObject.distance	= minDist;
 		xil_printf("LIDAR: Angle: %d - Distance: %d\n", minDistAngle, minDist);
 
-		XTime_GetTime(&tStart_React);
 //		int q2_angle = -1 * acos((((pow(minDist,2)) - (pow(UPPER_ARM,2)) - (pow(LOWER_ARM,2))) / (2 * UPPER_ARM * LOWER_ARM)));
 //		int q1_angle = atan((LOWER_ARM * sin(q2_angle)) / (UPPER_ARM + (LOWER_ARM * cos(q2_angle))));
 
