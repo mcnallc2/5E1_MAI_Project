@@ -48,7 +48,7 @@
 
 
 // IP VLNV: user.org:user:robot_arm_control:1.0
-// IP Revision: 15
+// IP Revision: 17
 
 (* X_CORE_INFO = "robot_arm_control_v1_0,Vivado 2018.3" *)
 (* CHECK_LICENSE_TYPE = "lidar_arm_control_robot_arm_control_0_1,robot_arm_control_v1_0,{}" *)
@@ -71,6 +71,7 @@ module lidar_arm_control_robot_arm_control_0_1 (
   s_axis_dividend_tdata_1,
   m_axis_dout_tvalid_1,
   m_axis_dout_tdata_1,
+  interrupt,
   s00_axi_awaddr,
   s00_axi_awprot,
   s00_axi_awvalid,
@@ -113,6 +114,9 @@ output wire s_axis_dividend_tvalid_1;
 output wire [15 : 0] s_axis_dividend_tdata_1;
 input wire m_axis_dout_tvalid_1;
 input wire [23 : 0] m_axis_dout_tdata_1;
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME interrupt, SENSITIVITY LEVEL_HIGH, PortWidth 1" *)
+(* X_INTERFACE_INFO = "xilinx.com:signal:interrupt:1.0 interrupt INTERRUPT" *)
+output wire interrupt;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWADDR" *)
 input wire [3 : 0] s00_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S00_AXI AWPROT" *)
@@ -182,6 +186,7 @@ input wire s00_axi_aresetn;
     .s_axis_dividend_tdata_1(s_axis_dividend_tdata_1),
     .m_axis_dout_tvalid_1(m_axis_dout_tvalid_1),
     .m_axis_dout_tdata_1(m_axis_dout_tdata_1),
+    .interrupt(interrupt),
     .s00_axi_awaddr(s00_axi_awaddr),
     .s00_axi_awprot(s00_axi_awprot),
     .s00_axi_awvalid(s00_axi_awvalid),

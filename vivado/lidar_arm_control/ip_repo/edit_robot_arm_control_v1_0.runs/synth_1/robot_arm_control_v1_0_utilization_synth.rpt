@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Mon Apr 12 18:14:15 2021
+| Date         : Tue Apr 13 12:10:21 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_utilization -file robot_arm_control_v1_0_utilization_synth.rpt -pb robot_arm_control_v1_0_utilization_synth.pb
 | Design       : robot_arm_control_v1_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  205 |     0 |     53200 |  0.39 |
-|   LUT as Logic          |  205 |     0 |     53200 |  0.39 |
+| Slice LUTs*             |  155 |     0 |     53200 |  0.29 |
+|   LUT as Logic          |  155 |     0 |     53200 |  0.29 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
-| Slice Registers         |  283 |     0 |    106400 |  0.27 |
-|   Register as Flip Flop |  283 |     0 |    106400 |  0.27 |
+| Slice Registers         |  120 |     0 |    106400 |  0.11 |
+|   Register as Flip Flop |  120 |     0 |    106400 |  0.11 |
 |   Register as Latch     |    0 |     0 |    106400 |  0.00 |
 | F7 Muxes                |    0 |     0 |     26600 |  0.00 |
 | F8 Muxes                |    0 |     0 |     13300 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 1     |          Yes |         Set |            - |
-| 282   |          Yes |       Reset |            - |
+| 119   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+--------+
 |          Site Type          | Used | Fixed | Available |  Util% |
 +-----------------------------+------+-------+-----------+--------+
-| Bonded IOB                  |  195 |     0 |       125 | 156.00 |
+| Bonded IOB                  |  156 |     0 |       125 | 124.80 |
 | Bonded IPADs                |    0 |     0 |         2 |   0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |   0.00 |
 | PHY_CONTROL                 |    0 |     0 |         4 |   0.00 |
@@ -146,17 +146,18 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  282 |        Flop & Latch |
-| LUT2     |   98 |                 LUT |
-| IBUF     |   98 |                  IO |
+| FDRE     |  119 |        Flop & Latch |
+| LUT2     |   99 |                 LUT |
 | OBUF     |   97 |                  IO |
-| LUT4     |   62 |                 LUT |
-| LUT6     |   55 |                 LUT |
-| LUT3     |   46 |                 LUT |
+| IBUF     |   58 |                  IO |
+| LUT4     |   46 |                 LUT |
+| LUT3     |   45 |                 LUT |
 | CARRY4   |   36 |          CarryLogic |
+| LUT6     |   24 |                 LUT |
 | LUT5     |    8 |                 LUT |
 | LUT1     |    5 |                 LUT |
 | BUFG     |    2 |               Clock |
+| OBUFT    |    1 |                  IO |
 | FDSE     |    1 |        Flop & Latch |
 +----------+------+---------------------+
 

@@ -43,7 +43,10 @@ module lidar_packet_parser  #(
     output reg                        s_axis_dividend_tvalid_1, 
     output reg [15:0]                 s_axis_dividend_tdata_1,   
     input                             m_axis_dout_tvalid_1,        
-    input      [23:0]                 m_axis_dout_tdata_1
+    input      [23:0]                 m_axis_dout_tdata_1,
+    //
+    output reg        slv_reg_rden,
+    output reg [31:0] reg_data_out
     );
 		
 	reg [7:0] lidar_byte_mask, lidar_byte;
@@ -147,13 +150,19 @@ module lidar_packet_parser  #(
         if (distance_ff > 24'd0 && distance_ff < 24'd500) begin
             if (angle_ff >= 24'd45) begin
                 object_det_ff = angle_ff <= 24'd135 ? 1'b1 : 1'b0;
+                slv_reg_rden  = angle_ff <= 24'd135 ? 1'b1 : 1'b0;
+                reg_data_out  = angle_ff <= 24'd135 ? 1'b1 : 1'b0;
             end
             else begin
                 object_det_ff = 1'b0;
+                slv_reg_rden  = 1'b0;
+                reg_data_out  = 1'b0;
             end
         end
         else begin
             object_det_ff = 1'b0;
+            slv_reg_rden  = 1'b0;
+            reg_data_out  = 1'b0;
         end
 	end
 	

@@ -3,10 +3,10 @@
 <!--The data in this file is primarily intended for consumption by Xilinx tools.
 The structure and the elements are likely to change over the next few releases.
 This means code written to parse this file will need to be revisited each subsequent release.-->
-<application name="pa" timeStamp="Mon Mar 22 23:56:14 2021">
+<application name="pa" timeStamp="Wed Apr 14 15:22:26 2021">
 <section name="Project Information" visible="false">
 <property name="ProjectID" value="4f4f1b6c11324032a2378b95dea24b92" type="ProjectID"/>
-<property name="ProjectIteration" value="175" type="ProjectIteration"/>
+<property name="ProjectIteration" value="176" type="ProjectIteration"/>
 </section>
 <section name="PlanAhead Usage" visible="true">
 <item name="Project Data">
@@ -46,7 +46,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="ResetLayout" value="1" type="JavaHandler"/>
 <property name="RunBitgen" value="166" type="JavaHandler"/>
 <property name="RunDesignAhead" value="1" type="JavaHandler"/>
-<property name="RunImplementation" value="23" type="JavaHandler"/>
+<property name="RunImplementation" value="24" type="JavaHandler"/>
 <property name="RunSchematic" value="33" type="JavaHandler"/>
 <property name="RunSynthesis" value="43" type="JavaHandler"/>
 <property name="RunTrigger" value="66" type="JavaHandler"/>
@@ -79,7 +79,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="BaseDialog_CANCEL" value="219" type="GuiHandlerData"/>
 <property name="BaseDialog_CLOSE" value="1" type="GuiHandlerData"/>
 <property name="BaseDialog_NO" value="2" type="GuiHandlerData"/>
-<property name="BaseDialog_OK" value="510" type="GuiHandlerData"/>
+<property name="BaseDialog_OK" value="511" type="GuiHandlerData"/>
 <property name="BaseDialog_YES" value="162" type="GuiHandlerData"/>
 <property name="BoardChooser_BOARD_TABLE" value="2" type="GuiHandlerData"/>
 <property name="ClosePlanner_CANCEL" value="2" type="GuiHandlerData"/>
@@ -108,7 +108,7 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="FilteredNetsWarningDialog_OK" value="6" type="GuiHandlerData"/>
 <property name="FindAndPickNetsDialog_NETS_TREE_TABLE_PANEL" value="132" type="GuiHandlerData"/>
 <property name="Finder_ADD_NEW_CRITERION" value="2" type="GuiHandlerData"/>
-<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="673" type="GuiHandlerData"/>
+<property name="FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE" value="674" type="GuiHandlerData"/>
 <property name="GettingStartedView_CLEAR_LIST" value="1" type="GuiHandlerData"/>
 <property name="GettingStartedView_CREATE_NEW_PROJECT" value="1" type="GuiHandlerData"/>
 <property name="GettingStartedView_OPEN_PROJECT" value="2" type="GuiHandlerData"/>
@@ -258,11 +258,6 @@ This means code written to parse this file will need to be revisited each subseq
 <property name="WaveformView_GOTO_TIME_0" value="8" type="GuiHandlerData"/>
 <property name="WaveformView_NEXT_TRANSITION" value="29" type="GuiHandlerData"/>
 <property name="WaveformView_PREVIOUS_TRANSITION" value="26" type="GuiHandlerData"/>
-</item>
-<item name="Other">
-<property name="GuiMode" value="142" type="GuiMode"/>
-<property name="BatchMode" value="0" type="BatchMode"/>
-<property name="TclMode" value="77" type="TclMode"/>
 </item>
 </section>
 </application>

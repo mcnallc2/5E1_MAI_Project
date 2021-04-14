@@ -1,7 +1,7 @@
 -- Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
--- Date        : Mon Apr 12 18:15:44 2021
+-- Date        : Tue Apr 13 12:11:31 2021
 -- Host        : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 -- Command     : write_vhdl -force -mode synth_stub
 --               /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_robot_arm_control_0_1/lidar_arm_control_robot_arm_control_0_1_stub.vhdl
@@ -31,6 +31,7 @@ entity lidar_arm_control_robot_arm_control_0_1 is
     s_axis_dividend_tdata_1 : out STD_LOGIC_VECTOR ( 15 downto 0 );
     m_axis_dout_tvalid_1 : in STD_LOGIC;
     m_axis_dout_tdata_1 : in STD_LOGIC_VECTOR ( 23 downto 0 );
+    interrupt : out STD_LOGIC;
     s00_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
     s00_axi_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
     s00_axi_awvalid : in STD_LOGIC;
@@ -60,7 +61,7 @@ architecture stub of lidar_arm_control_robot_arm_control_0_1 is
 attribute syn_black_box : boolean;
 attribute black_box_pad_pin : string;
 attribute syn_black_box of stub : architecture is true;
-attribute black_box_pad_pin of stub : architecture is "PWM_CLK,PWM0,PWM1,PWM2,PWM3,s_axis_divisor_tvalid_0,s_axis_divisor_tdata_0[7:0],s_axis_dividend_tvalid_0,s_axis_dividend_tdata_0[15:0],m_axis_dout_tvalid_0,m_axis_dout_tdata_0[23:0],s_axis_divisor_tvalid_1,s_axis_divisor_tdata_1[7:0],s_axis_dividend_tvalid_1,s_axis_dividend_tdata_1[15:0],m_axis_dout_tvalid_1,m_axis_dout_tdata_1[23:0],s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn";
+attribute black_box_pad_pin of stub : architecture is "PWM_CLK,PWM0,PWM1,PWM2,PWM3,s_axis_divisor_tvalid_0,s_axis_divisor_tdata_0[7:0],s_axis_dividend_tvalid_0,s_axis_dividend_tdata_0[15:0],m_axis_dout_tvalid_0,m_axis_dout_tdata_0[23:0],s_axis_divisor_tvalid_1,s_axis_divisor_tdata_1[7:0],s_axis_dividend_tvalid_1,s_axis_dividend_tdata_1[15:0],m_axis_dout_tvalid_1,m_axis_dout_tdata_1[23:0],interrupt,s00_axi_awaddr[3:0],s00_axi_awprot[2:0],s00_axi_awvalid,s00_axi_awready,s00_axi_wdata[31:0],s00_axi_wstrb[3:0],s00_axi_wvalid,s00_axi_wready,s00_axi_bresp[1:0],s00_axi_bvalid,s00_axi_bready,s00_axi_araddr[3:0],s00_axi_arprot[2:0],s00_axi_arvalid,s00_axi_arready,s00_axi_rdata[31:0],s00_axi_rresp[1:0],s00_axi_rvalid,s00_axi_rready,s00_axi_aclk,s00_axi_aresetn";
 attribute X_CORE_INFO : string;
 attribute X_CORE_INFO of stub : architecture is "robot_arm_control_v1_0,Vivado 2018.3";
 begin

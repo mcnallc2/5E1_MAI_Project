@@ -1,0 +1,140 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 32204
+License: Customer
+
+Current time: 	Tue Apr 13 12:14:26 IST 2021
+Time zone: 	Greenwich Mean Time (Europe/Dublin)
+
+OS: Ubuntu
+OS Version: 5.4.0-70-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 108 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	cmcnally
+User home directory: /home/cmcnally
+User working directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+User country: 	IE
+User language: 	en
+User locale: 	en_IE
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2018.3
+RDI_DATADIR: /tools/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: /home/cmcnally/.Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: /home/cmcnally/.Xilinx/Vivado/2018.3/
+Vivado layouts directory: /home/cmcnally/.Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+Vivado journal file location: 	/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-32204-noodle-box
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2018.3
+XILINX_SDK: /tools/Xilinx/SDK/2018.3
+XILINX_VIVADO: /tools/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	194 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 862 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr", 0); // q (Q, cp)
+// bx (cp):  Open Project : addNotify
+// Opening Vivado Project: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr. Version: Vivado v2018.3 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 826 MB. GUI used memory: 44 MB. Current time: 4/13/21, 12:14:28 PM IST
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 98 MB (+100785kb) [00:00:15]
+// [Engine Memory]: 852 MB (+742255kb) [00:00:15]
+// [GUI Memory]: 108 MB (+4330kb) [00:00:18]
+// [Engine Memory]: 902 MB (+7744kb) [00:00:18]
+// WARNING: HEventQueue.dispatchEvent() is taking  4475 ms.
+// Tcl Message: open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'. 
+// Tcl Message: open_project: Time (s): cpu = 00:00:16 ; elapsed = 00:00:07 . Memory (MB): peak = 6368.414 ; gain = 58.176 ; free physical = 773 ; free virtual = 3174 
+// Project name: edit_robot_arm_control_v1_0; location: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo; part: xc7z020clg400-1
+// [Engine Memory]: 966 MB (+19466kb) [00:00:21]
+// Elapsed time: 10 seconds
+dismissDialog("Open Project"); // bx (cp)
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 1,059 MB (+47218kb) [00:00:24]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 16 seconds
+expandTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 3); // B (D, cp)
+// PAPropertyPanels.initPanels (component.xml) elapsed time: 0.3s
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 4, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 4, false, false, false, false, false, true); // B (D, cp) - Double Click
+// bx (cp):  Open IP-XACT File : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// WARNING: HEventQueue.dispatchEvent() is taking  1939 ms.
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/component.xml 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("Open IP-XACT File"); // bx (cp)
+// [Engine Memory]: 1,121 MB (+8687kb) [00:00:43]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,121 MB. GUI used memory: 91 MB. Current time: 4/13/21, 12:14:58 PM IST
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (Q, cp)
+// [GUI Memory]: 121 MB (+8561kb) [00:00:51]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - robot_arm_control", 1); // k (j, cp)

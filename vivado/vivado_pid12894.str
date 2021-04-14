@@ -1,0 +1,443 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 12894
+License: Customer
+
+Current time: 	Wed Apr 14 15:09:20 IST 2021
+Time zone: 	Greenwich Mean Time (Europe/Dublin)
+
+OS: Ubuntu
+OS Version: 5.4.0-70-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 108 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	cmcnally
+User home directory: /home/cmcnally
+User working directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+User country: 	IE
+User language: 	en
+User locale: 	en_IE
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2018.3
+RDI_DATADIR: /tools/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: /home/cmcnally/.Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: /home/cmcnally/.Xilinx/Vivado/2018.3/
+Vivado layouts directory: /home/cmcnally/.Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+Vivado journal file location: 	/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-12894-noodle-box
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2018.3
+XILINX_SDK: /tools/Xilinx/SDK/2018.3
+XILINX_VIVADO: /tools/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	185 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 808 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 768 MB. GUI used memory: 43 MB. Current time: 4/14/21, 3:09:22 PM IST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // af (cp, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+// Elapsed time: 16 seconds
+setFileChooser("/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.xpr");
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:10:53 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+// [GUI Memory]: 81 MB (+82227kb) [00:01:43]
+// [Engine Memory]: 788 MB (+675142kb) [00:01:43]
+// Elapsed time: 10 seconds
+selectButton(RDIResource.HExceptionDialog_EXIT, "Exit"); // a (ae, aa)
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:11:04 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp, Popup.HeavyWeightWindow)
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:11:08 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // af (cp, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.xpr");
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:11:19 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// Elapsed time: 17 seconds
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr", 1); // q (Q, cp)
+// [GUI Memory]: 90 MB (+5096kb) [00:02:26]
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:11:36 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr", 1, false, false, false, false, true); // q (Q, cp) - Double Click
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:11:37 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr", 1); // q (Q, cp)
+// Opening Vivado Project: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr. Version: Vivado v2018.3 
+// bx (cp):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 105 MB (+11321kb) [00:02:31]
+// [Engine Memory]: 898 MB (+73756kb) [00:02:31]
+// [GUI Memory]: 112 MB (+1993kb) [00:02:33]
+// WARNING: HEventQueue.dispatchEvent() is taking  3371 ms.
+// Tcl Message: open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system/bare_metal_system.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'. 
+// [Engine Memory]: 953 MB (+10739kb) [00:02:34]
+// HMemoryUtils.trashcanNow. Engine heap size: 953 MB. GUI used memory: 58 MB. Current time: 4/14/21, 3:11:45 PM IST
+// Tcl Message: open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:06 . Memory (MB): peak = 6514.129 ; gain = 115.168 ; free physical = 126 ; free virtual = 3905 
+// [Engine Memory]: 1,389 MB (+406977kb) [00:02:36]
+// Project name: bare_metal_system; location: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/bare_metal_system; part: xc7z020clg400-1
+// [GUI Memory]: 118 MB (+188kb) [00:02:36]
+dismissDialog("Open Project"); // bx (cp)
+// [Engine Memory]: 1,578 MB (+124711kb) [00:02:37]
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_EDIT, "Edit"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // af (cp, Popup.HeavyWeightWindow)
+// Tcl Message: update_compile_order -fileset sources_1 
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // af (cp, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+setFileChooser("/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/us_arm_control/bare_metal_system/us_arm_control_system/us_arm_control_system.xpr");
+// TclEventType: PROJECT_CLOSE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,021 MB. GUI used memory: 57 MB. Current time: 4/14/21, 3:12:04 PM IST
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:12:04 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_Yes", "Yes"); // JButton (C, I)
+// Tcl Message: close_project 
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// Elapsed time: 19 seconds
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ac (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_WINDOW, "Window"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // X (q, cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FLOW, "Flow"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenuItem(PAResourceCommand.PACommandNames_OPEN_PROJECT, "Open..."); // af (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_PROJECT
+dismissFileChooser();
+closeMainWindow("Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:12:36 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+closeMainWindow("Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:12:39 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+closeMainWindow("Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:12:45 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+closeMainWindow("Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:12:46 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+closeMainWindow("Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:12:46 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+closeMainWindow("Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:12:48 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+// Elapsed time: 50 seconds
+closeMainWindow("Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:13:38 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/
+closeMainWindow("Vivado 2018.3"); // cp
+// A (cp): Exit Vivado: addNotify
+/*
+#--------------------------------------------------------------------------
+# Xilinx Vivado v2018.3 (64-bit)
+# SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+# IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+# Current time: Wed Apr 14 15:13:41 IST 2021
+# Process ID (PID): 12894
+# OS: Ubuntu
+# User: cmcnally
+#
+# This file is an indication that an internal application error occurred.
+# This information is useful for debugging. Please open a case with Xilinx.
+# Technical Support with this file and a testcase attached.
+#--------------------------------------------------------------------------
+java.lang.IllegalArgumentException: Window must not be zero (See /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado_pid12894.debug)
+*/

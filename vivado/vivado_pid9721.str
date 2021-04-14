@@ -1,0 +1,1494 @@
+/*
+
+Xilinx Vivado v2018.3 (64-bit) [Major: 2018, Minor: 3]
+SW Build: 2405991 on Thu Dec  6 23:36:41 MST 2018
+IP Build: 2404404 on Fri Dec  7 01:43:56 MST 2018
+
+Process ID (PID): 9721
+License: Customer
+
+Current time: 	Tue Apr 13 10:02:17 IST 2021
+Time zone: 	Greenwich Mean Time (Europe/Dublin)
+
+OS: Ubuntu
+OS Version: 5.4.0-70-generic
+OS Architecture: amd64
+Available processors (cores): 4
+
+Display: :0
+Screen size: 1920x1080
+Screen resolution (DPI): 96
+Available screens: 2
+Available disk space: 108 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=12
+
+Java version: 	9.0.4 64-bit
+Java home: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4
+Java executable location: 	/tools/Xilinx/Vivado/2018.3/tps/lnx64/jre9.0.4/bin/java
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	cmcnally
+User home directory: /home/cmcnally
+User working directory: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado
+User country: 	IE
+User language: 	en
+User locale: 	en_IE
+
+RDI_BASEROOT: /tools/Xilinx/Vivado
+HDI_APPROOT: /tools/Xilinx/Vivado/2018.3
+RDI_DATADIR: /tools/Xilinx/Vivado/2018.3/data
+RDI_BINDIR: /tools/Xilinx/Vivado/2018.3/bin
+
+Vivado preferences file location: /home/cmcnally/.Xilinx/Vivado/2018.3/vivado.xml
+Vivado preferences directory: /home/cmcnally/.Xilinx/Vivado/2018.3/
+Vivado layouts directory: /home/cmcnally/.Xilinx/Vivado/2018.3/layouts
+PlanAhead jar file location: 	/tools/Xilinx/Vivado/2018.3/lib/classes/planAhead.jar
+Vivado log file location: 	/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.log
+Vivado journal file location: 	/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/vivado.jou
+Engine tmp dir: 	./.Xil/Vivado-9721-noodle-box
+
+Xilinx Environment Variables
+----------------------------
+XILINX: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_DSP: /tools/Xilinx/Vivado/2018.3/ids_lite/ISE
+XILINX_PLANAHEAD: /tools/Xilinx/Vivado/2018.3
+XILINX_SDK: /tools/Xilinx/SDK/2018.3
+XILINX_VIVADO: /tools/Xilinx/Vivado/2018.3
+XILINX_VIVADO_HLS: /tools/Xilinx/Vivado/2018.3
+
+
+GUI allocated memory:	188 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 810 MB
+
+Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// Tcl Message: start_gui 
+// HMemoryUtils.trashcanNow. Engine heap size: 768 MB. GUI used memory: 43 MB. Current time: 4/13/21, 10:02:19 AM IST
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+// WARNING: HEventQueue.dispatchEvent() is taking  1001 ms.
+selectList(PAResourceQtoS.SyntheticaGettingStartedView_RECENT_PROJECTS, "/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr", 0); // q (Q, cp)
+// Opening Vivado Project: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr. Version: Vivado v2018.3 
+// bx (cp):  Open Project : addNotify
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 96 MB (+97940kb) [00:06:55]
+// [Engine Memory]: 839 MB (+727824kb) [00:06:55]
+// [GUI Memory]: 103 MB (+2819kb) [00:06:56]
+// [Engine Memory]: 882 MB (+1531kb) [00:06:58]
+// WARNING: HEventQueue.dispatchEvent() is taking  3448 ms.
+// Tcl Message: open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories 
+// Tcl Message: INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 901 MB. GUI used memory: 53 MB. Current time: 4/13/21, 10:09:05 AM IST
+// Tcl Message: open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:06 . Memory (MB): peak = 6383.934 ; gain = 104.195 ; free physical = 176 ; free virtual = 4568 
+// Project name: edit_robot_arm_control_v1_0; location: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo; part: xc7z020clg400-1
+dismissDialog("Open Project"); // bx (cp)
+// TclEventType: FILE_SET_CHANGE
+// [Engine Memory]: 973 MB (+49206kb) [00:07:03]
+// Tcl Message: update_compile_order -fileset sources_1 
+// PAPropertyPanels.initPanels (robot_arm_control_v1_0.v) elapsed time: 0.2s
+// Elapsed time: 69 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v)]", 1, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v)]", 1, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// Elapsed time: 66 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v), robot_arm_control_v1_0_S00_AXI_inst : robot_arm_control_v1_0_S00_AXI (robot_arm_control_v1_0_S00_AXI.v)]", 2, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v), robot_arm_control_v1_0_S00_AXI_inst : robot_arm_control_v1_0_S00_AXI (robot_arm_control_v1_0_S00_AXI.v)]", 2, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+// Elapsed time: 40 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 259, 406); // cl (w, cp)
+// Elapsed time: 391 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 97, 355); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 111, 340); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 135, 308); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 124, 338); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 116, 341); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 190, 287); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 101, 230); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 92, 236); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 92, 172); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 61, 140); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 61, 366); // cl (w, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 136, 369); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 110, 367); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 332, 418); // cl (w, cp)
+// Elapsed time: 22 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 122, 399); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 99, 311); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 99, 411); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 83, 278); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 94, 410); // cl (w, cp)
+// Elapsed time: 72 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 76, 267); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'v'); // cl (w, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 994 MB. GUI used memory: 57 MB. Current time: 4/13/21, 10:21:24 AM IST
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARESETN", true); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARESETN"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARESETN"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARESETN"); // l (aT, cp)
+// [GUI Memory]: 109 MB (+509kb) [00:20:45]
+// Elapsed time: 85 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0.v", 1); // k (j, cp)
+selectCodeEditor("robot_arm_control_v1_0.v", 300, 323); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 20 seconds
+selectCodeEditor("robot_arm_control_v1_0.v", 213, 359); // cl (w, cp)
+// [Engine Memory]: 1,030 MB (+8215kb) [00:21:13]
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 2); // k (j, cp)
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARESETN"); // l (aT, cp)
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (aL, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,030 MB. GUI used memory: 67 MB. Current time: 4/13/21, 10:23:24 AM IST
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// [GUI Memory]: 115 MB (+208kb) [00:21:19]
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 305, 309); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 14 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0.v", 1); // k (j, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,061 MB. GUI used memory: 57 MB. Current time: 4/13/21, 10:23:44 AM IST
+selectCodeEditor("robot_arm_control_v1_0.v", 363, 383); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("robot_arm_control_v1_0.v", 291, 414); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 2); // k (j, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 209, 247); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 348, 349); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 258, 392); // cl (w, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v), robot_arm_control_v1_0_S00_AXI_inst : robot_arm_control_v1_0_S00_AXI (robot_arm_control_v1_0_S00_AXI.v), lidar_packet_parser_i : lidar_packet_parser (lidar_packet_parser.sv)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v), robot_arm_control_v1_0_S00_AXI_inst : robot_arm_control_v1_0_S00_AXI (robot_arm_control_v1_0_S00_AXI.v), lidar_packet_parser_i : lidar_packet_parser (lidar_packet_parser.sv)]", 3, false); // B (D, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,094 MB. GUI used memory: 57 MB. Current time: 4/13/21, 10:24:24 AM IST
+// [Engine Memory]: 1,094 MB (+13797kb) [00:22:17]
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v), robot_arm_control_v1_0_S00_AXI_inst : robot_arm_control_v1_0_S00_AXI (robot_arm_control_v1_0_S00_AXI.v), lidar_packet_parser_i : lidar_packet_parser (lidar_packet_parser.sv)]", 3, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, robot_arm_control_v1_0 (robot_arm_control_v1_0.v), robot_arm_control_v1_0_S00_AXI_inst : robot_arm_control_v1_0_S00_AXI (robot_arm_control_v1_0_S00_AXI.v), lidar_packet_parser_i : lidar_packet_parser (lidar_packet_parser.sv)]", 3, false, false, false, false, false, true); // B (D, cp) - Double Click
+selectCodeEditor("lidar_packet_parser.sv", 411, 236); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("lidar_packet_parser.sv", 354, 265); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0.v", 1); // k (j, cp)
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+selectCodeEditor("robot_arm_control_v1_0.v", 227, 418); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lidar_packet_parser.sv", 2); // k (j, cp)
+selectCodeEditor("lidar_packet_parser.sv", 278, 339); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 470, 292); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'c'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 485, 287); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 280, 355); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 280, 355); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'c'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 275, 350); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 257, 427); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 113, 307); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 77, 372); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// HMemoryUtils.trashcanNow. Engine heap size: 1,128 MB. GUI used memory: 58 MB. Current time: 4/13/21, 10:25:54 AM IST
+selectCodeEditor("lidar_packet_parser.sv", 115, 312); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'c'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 114, 352); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 115, 365); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+selectCodeEditor("lidar_packet_parser.sv", 113, 371); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 85, 446); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("lidar_packet_parser.sv", 269, 409); // cl (w, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// TclEventType: RUN_MODIFY
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Apr 13 10:26:21 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 42 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("lidar_packet_parser.sv", 274, 313); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 7, true); // B (D, cp) - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT]", 7, true, false, false, false, false, true); // B (D, cp) - Double Click - Node
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 8, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 8, false, false, false, false, false, true); // B (D, cp) - Double Click
+// bx (cp):  Open IP-XACT File : addNotify
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: LOAD_FEATURE
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// [Engine Memory]: 1,150 MB (+711kb) [00:25:23]
+// WARNING: HEventQueue.dispatchEvent() is taking  1497 ms.
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/component.xml 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("Open IP-XACT File"); // bx (cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (Q, cp)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cp)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,157 MB. GUI used memory: 71 MB. Current time: 4/13/21, 10:27:34 AM IST
+// Tcl Message: INFO: [IP_Flow 19-5169] Module 'robot_arm_control_v1_0' uses SystemVerilog sources with a Verilog top file. These SystemVerilog files will not be analysed by the packager. INFO: [IP_Flow 19-5107] Inferred bus interface 'interrupt' of definition 'xilinx.com:signal:interrupt:1.0' (from Xilinx Repository). INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. INFO: [IP_Flow 19-4728] Bus Interface 'interrupt': Added interface parameter 'SENSITIVITY' with value 'LEVEL_HIGH'. 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (Q, cp)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cp)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 16 [ipx::current_core] 
+// bx (cp):  Package IP : addNotify
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0' 
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceQtoS.ReviewContentPanel_FINISHED_PACKAGING_SUCCESSFULLY_OK", "OK"); // JButton (C, I)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenu(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "Open Recent"); // ac (cp, Popup.HeavyWeightWindow)
+selectMenuItem(PAResourceItoN.MainMenuMgr_OPEN_RECENT_PROJECT, "/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.xpr"); // af (cp, Popup.HeavyWeightWindow)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Opening Vivado Project: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.xpr. Version: Vivado v2018.3 
+// bx (cp):  Open Project : addNotify
+selectButton("PAResourceOtoP.PABaseTab_WOULD_YOU_LIKE_TO_CLOSE_CURRENTLY_No", "No"); // JButton (C, I)
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// Tcl Message: open_project /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.xpr 
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 123 MB (+2273kb) [00:25:45]
+// TclEventType: PROJECT_NEW
+// [Engine Memory]: 1,243 MB (+37193kb) [00:25:47]
+// [GUI Memory]: 132 MB (+3626kb) [00:25:48]
+// WARNING: HEventQueue.dispatchEvent() is taking  3314 ms.
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0'. 
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository '/tools/Xilinx/Vivado/2018.3/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 1,257 MB. GUI used memory: 89 MB. Current time: 4/13/21, 10:27:56 AM IST
+// WARNING: HEventQueue.dispatchEvent() is taking  1078 ms.
+// Tcl Message: open_project: Time (s): cpu = 00:00:12 ; elapsed = 00:00:06 . Memory (MB): peak = 6740.715 ; gain = 53.438 ; free physical = 471 ; free virtual = 4753 
+// Project name: hardware_system; location: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system; part: xc7z020clg400-1
+// [Engine Memory]: 2,045 MB (+776382kb) [00:25:50]
+dismissDialog("Open Project"); // bx (cp)
+// [GUI Memory]: 141 MB (+2420kb) [00:25:52]
+// Tcl Message: update_compile_order -fileset sources_1 
+// [GUI Memory]: 149 MB (+568kb) [00:26:05]
+// Elapsed time: 20 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, IP Integrator, Open Block Design]", 7, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_OPEN_BLOCK_DESIGN
+// bx (cp):  Open Block Design : addNotify
+// TclEventType: RSB_CHANGE_CURRENT_DIAGRAM
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: RSB_OPEN_DIAGRAM
+// Tcl Message: open_bd_design {/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd} 
+// TclEventType: RSB_OPEN_DIAGRAM
+// [Engine Memory]: 2,157 MB (+9635kb) [00:26:15]
+// WARNING: HEventQueue.dispatchEvent() is taking  1104 ms.
+// TclEventType: RSB_CONNECTION_CHANGE
+closeView(PAResourceOtoP.PAViews_PROJECT_SUMMARY, "Project Summary"); // v
+// TclEventType: RSB_LOCK_CHANGE
+// 'bA' command handler elapsed time: 4 seconds
+dismissDialog("Open Block Design"); // bx (cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,474 MB. GUI used memory: 93 MB. Current time: 4/13/21, 10:28:24 AM IST
+selectTab((HResource) null, (HResource) null, "Reports", 3); // aI (aF, cp)
+selectTab((HResource) null, (HResource) null, "Log", 2); // aI (aF, cp)
+selectButton(PAResourceQtoS.SystemTab_REPORT_IP_STATUS, "Report IP Status"); // h (cQ, cp)
+// Run Command: PAResourceCommand.PACommandNames_REPORT_IP_STATUS
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, cp)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// Tcl Message: upgrade_ip -vlnv user.org:user:robot_arm_control:1.0 [get_ips  lidar_arm_control_robot_arm_control_0_1] -log ip_upgrade.log 
+// Tcl Message: Upgrading '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd' 
+// TclEventType: RUN_RESET
+// bx (cp):  Upgrade IP : addNotify
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded lidar_arm_control_robot_arm_control_0_1 (robot_arm_control_v1.0 1.0) from revision 15 to revision 16 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>  Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/ui/bd_9360b533.ui>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips lidar_arm_control_robot_arm_control_0_1] -no_script -sync -force -quiet 
+// a (cp): Critical Messages: addNotify
+// aI (cp): Generate Output Products: addNotify
+selectButton("PAResourceTtoZ.UpgradeIP_IP_UPGRADE_COMPLETED_OK", "OK"); // JButton (C, I)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// bx (cp):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: generate_target all [get_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>  
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.v 
+// Tcl Message: VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/sim/lidar_arm_control.v VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hdl/lidar_arm_control_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M . INFO: [BD 41-1029] Generation completed for the IP Integrator block robot_arm_control_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block div_gen_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block div_gen_1 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control.hwh Generated Block Design Tcl file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control_bd.tcl Generated Hardware Definition File /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.hwdef 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all lidar_arm_control_robot_arm_control_0_1] } 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all lidar_arm_control_auto_pc_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP lidar_arm_control_auto_pc_0, cache-ID = 68168676865e6a57; cache size = 8.853 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1002 ms.
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// [GUI Memory]: 156 MB (+332kb) [00:26:41]
+// Tcl Message: launch_runs -jobs 2 lidar_arm_control_robot_arm_control_0_1_synth_1 
+// Tcl Message: [Tue Apr 13 10:28:47 2021] Launched lidar_arm_control_robot_arm_control_0_1_synth_1... Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/lidar_arm_control_robot_arm_control_0_1_synth_1/runme.log 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// a (cp): Critical Messages: addNotify
+// Elapsed time: 13 seconds
+dismissDialog("Managing Output Products"); // bx (cp)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cp)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cp)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cQ, cp)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// [GUI Memory]: 166 MB (+1951kb) [00:26:54]
+// Run Command: PAResourceCommand.PACommandNames_CUSTOMIZE_RSB_BLOC
+// O (cp):  Re-customize IP : addNotify
+// r (cp): Re-customize IP: addNotify
+// cl (r): Configuration Presets: addNotify
+// WARNING: HEventQueue.dispatchEvent() is taking  2027 ms.
+// Elapsed time: 16 seconds
+dismissDialog("Re-customize IP"); // O (cp)
+selectButton("Interrupts", "Interrupts"); // k (ch, r)
+expandTreeTable(PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, "Fabric Interrupts ;  ; Enable PL Interrupts to PS and vice versa", 0); // an (Q, r)
+expandTreeTable(PAResourceEtoH.GICTreeTablePanel_GIC_TREE_TABLE, "PL-PS Interrupt Ports ; PL-PS Interrupt Ports ; PL-PS Interrupt Ports", 1); // an (Q, r)
+// [GUI Memory]: 188 MB (+13931kb) [00:27:14]
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (r)
+dismissDialog("Re-customize IP"); // r (cp)
+selectView(PAResourceOtoP.PAViews_SYSTEM, "System", 82, 260, 1133, 601, false, false, false, true, false); // fS (k, cp) - Popup Trigger
+selectMenu(PAResourceQtoS.SelectMenu_HIGHLIGHT, "Highlight"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SystemBuilderView_ORIENTATION, "Orientation"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SystemBuilderView_EXPAND_COLLAPSE, "Expand/Collapse"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SystemBuilderView_PINNING, "Pinning"); // ac (al, cp)
+selectMenu(PAResourceQtoS.SystemBuilderMenu_IP_DOCUMENTATION, "IP Documentation"); // ac (al, cp)
+selectButton(PAResourceQtoS.SystemBuilderView_ADD_IP, "System_RSB_ADD_IP"); // B (f, cp)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: FILE_SET_CHANGE
+setText("PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE_SEARCH_FIELD", "con"); // OverlayTextField (ay, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Concat", 13, "Concat", 0, false); // O (Q, ResizableWindow)
+expandTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Concat", 13); // O (Q, ResizableWindow)
+selectTreeTable(PAResourceAtoD.CoreTreeTablePanel_CORE_TREE_TABLE, "Concat", 13, "Concat", 0, false, false, false, false, false, true); // O (Q, ResizableWindow) - Double Click
+// bx (cp):  Add IP : addNotify
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: startgroup 
+// TclEventType: DG_GRAPH_STALE
+// Tcl Message: create_bd_cell -type ip -vlnv xilinx.com:ip:xlconcat:2.1 xlconcat_0 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_PROPERTY_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_ADD_OBJECT
+// Tcl Message: endgroup 
+dismissDialog("Add IP"); // bx (cp)
+//  *** Exceptions that should be ignored by HSystem.debug () - swept under the rug. *** 
+/*
+java.lang.NullPointerException
+*/
+// Tcl Command: 'set_property location {0.5 40 1037} [get_bd_cells xlconcat_0]'
+// TclEventType: RSB_CANVAS_LOCATION
+// Tcl Message: set_property location {0.5 40 1037} [get_bd_cells xlconcat_0] 
+// [GUI Memory]: 199 MB (+2221kb) [00:27:30]
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets axi_uartlite_0_interrupt] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins xlconcat_0/In0] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins robot_arm_control_0/interrupt] [get_bd_pins xlconcat_0/In1] 
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins xlconcat_0/dout] [get_bd_pins processing_system7_0/IRQ_F2P] 
+// Elapsed time: 38 seconds
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // B (f, cp)
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+// Elapsed time: 16 seconds
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cQ, cp)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // B (f, cp)
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+// Elapsed time: 14 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cp): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bx (cp):  Save Constraints : addNotify
+// TclEventType: RSB_SAVE_DIAGRAM
+dismissDialog("Save Project"); // al (cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>  Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/ui/bd_9360b533.ui>  
+// A (cp): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bx (cp)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 4 seconds
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// bx (cp):  Generate Bitstream : addNotify
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>  
+// Tcl Message: VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.v 
+// Tcl Message: VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/sim/lidar_arm_control.v VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hdl/lidar_arm_control_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control.hwh Generated Block Design Tcl file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control_bd.tcl Generated Hardware Definition File /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.hwdef 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: RUN_RESET
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP lidar_arm_control_auto_pc_0, cache-ID = 68168676865e6a57; cache size = 9.304 MB. 
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:25 ; elapsed = 00:00:22 . Memory (MB): peak = 7386.559 ; gain = 59.094 ; free physical = 675 ; free virtual = 4359 
+// aX (cp): Launch Run Critical Messages: addNotify
+// Elapsed time: 23 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (aX)
+// [GUI Memory]: 212 MB (+2634kb) [00:29:07]
+dismissDialog("Launch Run Critical Messages"); // aX (cp)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cQ, cp)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// bx (cp):  Report IP Status : addNotify
+// Tcl Message: report_ip_status -name ip_status  
+dismissDialog("Report IP Status"); // bx (cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// A (cp): No Implementation Results Available: addNotify
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+dismissDialog("No Implementation Results Available"); // A (cp)
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// TclEventType: RUN_RESET
+dismissDialog("Launch Runs"); // f (cp)
+// bx (cp):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+dismissDialog("Generate Bitstream"); // bx (cp)
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RUN_STEP_COMPLETED
+// TclEventType: RUN_COMPLETED
+// ah (cp): Bitstream Generation Completed: addNotify
+// Elapsed time: 194 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Bitstream Generation Completed"); // ah (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ac (cp)
+selectMenuItem(PAResourceCommand.PACommandNames_EXPORT_HARDWARE, "Export Hardware..."); // af (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Run Command: PAResourceCommand.PACommandNames_EXPORT_HARDWARE
+// X (cp): Export Hardware: addNotify
+selectCheckBox(PAResourceItoN.NewExportHardwareDialog_INCLUDE_BITSTREAM, "Include bitstream", true); // g (Q, X): TRUE
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (X)
+// 'm' command handler elapsed time: 3 seconds
+selectButton("PAResourceItoN.NewExportHardwareDialog_EXPORTED_FILE_FOR_THIS_MODULE_WAS_Yes", "Yes"); // JButton (C, J)
+dismissDialog("Export Hardware"); // X (cp)
+// Tcl Message: file copy -force /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/impl_1/lidar_arm_control_wrapper.sysdef /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf  
+selectMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+selectMenu(PAResourceItoN.MainMenuMgr_PROJECT, "Project"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_CHECKPOINT, "Checkpoint"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_IP, "IP"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_TEXT_EDITOR, "Text Editor"); // ac (cp)
+selectMenu(PAResourceItoN.MainMenuMgr_EXPORT, "Export"); // ac (cp)
+selectMenuItem(PAResourceCommand.PACommandNames_LAUNCH_HARDWARE, "Launch SDK"); // af (cp)
+dismissMenu(PAResourceItoN.MainMenuMgr_FILE, "File"); // X (q, cp)
+// Run Command: PAResourceCommand.PACommandNames_LAUNCH_HARDWARE
+// aa (cp): Launch SDK: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (aa)
+dismissDialog("Launch SDK"); // aa (cp)
+// Tcl Message: launch_sdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf 
+// Tcl Message: INFO: [Vivado 12-393] Launching SDK... INFO: [Vivado 12-417] Running xsdk -workspace /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk -hwspec /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.sdk/lidar_arm_control_wrapper.hdf INFO: [Vivado 12-3157] SDK launch initiated. Please check console for any further messages. 
+// [GUI Memory]: 223 MB (+937kb) [00:42:42]
+// HMemoryUtils.trashcanNow. Engine heap size: 1,941 MB. GUI used memory: 127 MB. Current time: 4/13/21, 10:58:24 AM IST
+// Elapsed time: 2633 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ar (Q, cp)
+expandTreeTable(PAResourceOtoP.PortAndInterfaceFacetTable_PORT_AND_INTERFACE_FACET_TABLE, "interrupt ; master ;  ; false ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // M (Q, cp)
+collapseTreeTable(PAResourceOtoP.PortAndInterfaceFacetTable_PORT_AND_INTERFACE_FACET_TABLE, "interrupt ; master ;  ; false ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // M (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization GUI", 6); // ar (Q, cp)
+// Elapsed time: 20 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Addressing and Memory", 5); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Compatibility", 1); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Identification", 0); // ar (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Ports and Interfaces", 4); // ar (Q, cp)
+selectTreeTable(PAResourceOtoP.PortAndInterfaceFacetTable_PORT_AND_INTERFACE_FACET_TABLE, "interrupt ; master ;  ; false ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1, "interrupt", 0, true); // M (Q, cp) - Node
+// Tcl Message: current_project edit_robot_arm_control_v1_0 
+expandTreeTable(PAResourceOtoP.PortAndInterfaceFacetTable_PORT_AND_INTERFACE_FACET_TABLE, "interrupt ; master ;  ; false ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // M (Q, cp)
+collapseTreeTable(PAResourceOtoP.PortAndInterfaceFacetTable_PORT_AND_INTERFACE_FACET_TABLE, "interrupt ; master ;  ; false ;  ;  ;  ;  ;  ;  ;  ;  ; ", 1); // M (Q, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (Q, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,897 MB. GUI used memory: 114 MB. Current time: 4/13/21, 11:28:24 AM IST
+// Elapsed time: 769 seconds
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (Q, cp)
+// TclEventType: PACKAGER_UNLOAD_CORE
+closeView(PAResourceOtoP.PAViews_PACKAGE_IP, "Package IP - robot_arm_control"); // ac
+closeView(PAResourceOtoP.PAViews_PACKAGE_IP, "Package IP - robot_arm_control"); // ac
+// Tcl Message: ipx::unload_core /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/component.xml 
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0.v", 0); // k (j, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 1); // k (j, cp)
+// HMemoryUtils.trashcanNow. Engine heap size: 1,882 MB. GUI used memory: 112 MB. Current time: 4/13/21, 11:58:25 AM IST
+// Elapsed time: 1574 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 159, 322); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 434, 312); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 434, 290); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 436, 283); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 442, 260); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 443, 253); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 489, 228); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 488, 261); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 496, 275); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 506, 300); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 511, 289); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 508, 268); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 508, 249); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 512, 274); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 513, 285); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 513, 293); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 514, 295, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 515, 311); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 511, 286); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 508, 265); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 507, 254); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 507, 250); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 509, 278); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 509, 284); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 511, 293); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 510, 314); // cl (w, cp)
+// Elapsed time: 25 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 98, 232); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'c'); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 219, 488); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'v'); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 189, 97); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'c'); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 146, 579); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'v'); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 146, 579); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 158, 590); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'v'); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 145, 580); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'c'); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'v'); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 15 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 309, 441); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 260, 504); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'c'); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lidar_packet_parser.sv", 2); // k (j, cp)
+selectCodeEditor("lidar_packet_parser.sv", 174, 398); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 63, 400); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 65, 417); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 1); // k (j, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 188, 494); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 190, 282); // cl (w, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reg_data_out"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reg_data_out"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "reg_data_out"); // l (aT, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 90, 188); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'c'); // cl (w, cp)
+typeControlKey(null, null, 'z');
+setText(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_wren", true); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_wren"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_wren"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_wren"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_wren"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_wren"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_wren"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_wren"); // l (aT, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 97, 384); // cl (w, cp)
+typeControlKey((HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 'c'); // cl (w, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 182, 383); // cl (w, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "axi_arready"); // l (aT, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 455, 311); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 280, 297); // cl (w, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "S_AXI_ARVALID"); // l (aT, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 136, 387); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 28, 381); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 79, 384); // cl (w, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "slv_reg_rden"); // l (aT, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 57, 24); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 357, 214); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lidar_packet_parser.sv", 2); // k (j, cp)
+selectCodeEditor("lidar_packet_parser.sv", 28, 398); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 1); // k (j, cp)
+// Elapsed time: 14 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 106, 370); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 106, 369, false, false, false, false, true); // cl (w, cp) - Double Click
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "C_S_AXI_DATA_WIDTH"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "C_S_AXI_DATA_WIDTH"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "C_S_AXI_DATA_WIDTH"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "C_S_AXI_DATA_WIDTH"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "C_S_AXI_DATA_WIDTH"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "C_S_AXI_DATA_WIDTH"); // l (aT, cp)
+applyEnter(RDIResource.HCodeEditor_SEARCH_TEXT_COMBO_BOX, "C_S_AXI_DATA_WIDTH"); // l (aT, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "lidar_packet_parser.sv", 2); // k (j, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("lidar_packet_parser.sv", 74, 401); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("lidar_packet_parser.sv", 296, 436); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 224, 233); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'c'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 475, 252); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 236, 265); // cl (w, cp)
+// Elapsed time: 10 seconds
+selectCodeEditor("lidar_packet_parser.sv", 199, 265); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 196, 298); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 284, 263); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 204, 268); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 227, 280); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 196, 296); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 331, 275); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 217, 279); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 210, 280); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 128, 280); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 436, 292); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 203, 277); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectCodeEditor("lidar_packet_parser.sv", 475, 278); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'c'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 237, 341); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 393, 348); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 426, 336); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 428, 340); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 429, 354); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 282, 358); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'c'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 221, 431); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 223, 423); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 221, 425, false, false, false, false, true); // cl (w, cp) - Double Click
+selectCodeEditor("lidar_packet_parser.sv", 219, 428); // cl (w, cp)
+typeControlKey((HResource) null, "lidar_packet_parser.sv", 'v'); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 270, 445); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("lidar_packet_parser.sv", 316, 428); // cl (w, cp)
+selectCodeEditor("lidar_packet_parser.sv", 79, 267); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("lidar_packet_parser.sv", 259, 292); // cl (w, cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 1); // k (j, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 177, 315); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 46, 295); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 49, 327); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 229, 348); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 192, 343); // cl (w, cp)
+// Elapsed time: 22 seconds
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+typeControlKey(null, null, 'z');
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 10 seconds
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0.v", 0); // k (j, cp)
+// Elapsed time: 12 seconds
+selectCodeEditor("robot_arm_control_v1_0.v", 215, 474); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 1); // k (j, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 182, 522); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 30 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 71, 354); // cl (w, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 316, 361); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 177, 348); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 207, 376); // cl (w, cp)
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 395, 405); // cl (w, cp)
+// Elapsed time: 18 seconds
+selectButton(RDIResource.HCodeEditor_CLOSE, (String) null); // k (aL, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Apr 13 12:08:07 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 8, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 8, false, false, false, false, false, true); // B (D, cp) - Double Click
+// bx (cp):  Open IP-XACT File : addNotify
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_CURRENT_CORE
+// Run Command: PAResourceCommand.PACommandNames_IP_PACKAGER
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::open_ipxact_file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0/component.xml 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_OBJECT_CHANGE
+dismissDialog("Open IP-XACT File"); // bx (cp)
+// TclEventType: RUN_FAILED
+// ah (cp): Synthesis Failed: addNotify
+// Elapsed time: 10 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0.v", 0); // k (j, cp)
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: FILE_SET_CHANGE
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Apr 13 12:08:40 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_FAILED
+// ah (cp): Synthesis Failed: addNotify
+// Elapsed time: 17 seconds
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (ah)
+// Run Command: PAResourceCommand.PACommandNames_MESSAGE_WINDOW
+dismissDialog("Synthesis Failed"); // ah (cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0_S00_AXI.v", 1); // k (j, cp)
+// Elapsed time: 24 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 149, 488); // cl (w, cp)
+// Elapsed time: 13 seconds
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 214, 472, false, true, false, false, false); // cl (w, cp) - Control Key
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 51, 398); // cl (w, cp)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+selectCodeEditor("robot_arm_control_v1_0_S00_AXI.v", 364, 408); // cl (w, cp)
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Synthesis, Run Synthesis]", 15, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_SYNTHESIS
+// bx (cp):  Resetting Runs : addNotify
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// bx (cp):  Starting Design Runs : addNotify
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs synth_1 -jobs 2 
+// Tcl Message: [Tue Apr 13 12:10:00 2021] Launched synth_1... Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/edit_robot_arm_control_v1_0.runs/synth_1/runme.log 
+dismissDialog("Starting Design Runs"); // bx (cp)
+// TclEventType: RUN_COMPLETED
+// ah (cp): Synthesis Completed: addNotify
+// Elapsed time: 26 seconds
+selectButton(RDIResource.BaseDialog_CANCEL, "Cancel"); // a (ah)
+dismissDialog("Synthesis Completed"); // ah (cp)
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "Package IP - robot_arm_control", 3); // k (j, cp)
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "File Groups", 2); // ar (Q, cp)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from File Groups Wizard"); // h (M, cp)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes files [ipx::current_core] 
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Customization Parameters", 3); // ar (Q, cp)
+selectButton(PAResourceItoN.MessageBanner_CHANGES_DETECTED_IN_VIVADO_PROJECT_THAT, "Merge changes from Customization Parameters Wizard"); // h (M, cp)
+// TclEventType: PACKAGER_COMPONENT_RESET
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: ipx::merge_project_changes hdl_parameters [ipx::current_core] 
+// Tcl Message: INFO: [IP_Flow 19-5169] Module 'robot_arm_control_v1_0' uses SystemVerilog sources with a Verilog top file. These SystemVerilog files will not be analysed by the packager. INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'. 
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectList(PAResourceOtoP.PackagerStepsPanel_PACKAGER_STEPS_LIST, "Review and Package", 7); // ar (Q, cp)
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+selectButton(PAResourceQtoS.ReviewContentPanel_RE_PACKAGE_IP, "Re-Package IP"); // a (c, cp)
+// TclEventType: PACKAGER_OBJECT_CHANGE
+// Tcl Message: set_property core_revision 17 [ipx::current_core] 
+// Tcl Message: ipx::create_xgui_files [ipx::current_core] 
+// Tcl Message: ipx::update_checksums [ipx::current_core] 
+// Tcl Message: ipx::save_core [ipx::current_core] 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// bx (cp):  Package IP : addNotify
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// Tcl Message: update_ip_catalog -rebuild -repo_path /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0 
+// Tcl Message: INFO: [IP_Flow 19-725] Reloaded user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0' 
+// TclEventType: FILE_SET_CHANGE
+selectButton("PAResourceQtoS.ReviewContentPanel_FINISHED_PACKAGING_SUCCESSFULLY_OK", "OK"); // JButton (C, I)
+selectButton(PAResourceOtoP.PlanAheadTab_REFRESH_IP_CATALOG, "Refresh IP Catalog"); // h (cQ, cp)
+// Tcl Message: current_project hardware_system 
+// TclEventType: CREATE_IP_CATALOG
+// TclEventType: IP_LOCK_CHANGE
+// WARNING: HEventQueue.dispatchEvent() is taking  1032 ms.
+// TclEventType: IP_LOCK_CHANGE
+// Tcl Message: update_ip_catalog -rebuild -scan_changes 
+// bx (cp):  Refresh IP Catalog : addNotify
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: RSB_LOCK_CHANGE
+// TclEventType: IP_LOCK_CHANGE
+// TclEventType: RSB_BITABEN_IPREPODATA_REFRESH
+// TclEventType: BDCELL_LOCK_CHANGE
+// TclEventType: CREATE_IP_CATALOG
+// [Engine Memory]: 2,310 MB (+47336kb) [02:08:36]
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1700] Loaded user IP repository '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/ip_repo/robot_arm_control_1.0'. 
+// TclEventType: IP_SUMMARY_RESULTS
+// [Engine Memory]: 2,909 MB (+507515kb) [02:08:37]
+// HMemoryUtils.trashcanNow. Engine heap size: 2,204 MB. GUI used memory: 131 MB. Current time: 4/13/21, 12:10:45 PM IST
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status 
+// Tcl Message: current_project edit_robot_arm_control_v1_0 
+dismissDialog("Refresh IP Catalog"); // bx (cp)
+selectButton(PAResourceItoN.IPStatusSectionPanel_UPGRADE_SELECTED, "Upgrade Selected"); // a (g, cp)
+// Run Command: PAResourceCommand.PACommandNames_UPGRADE_IP
+// TclEventType: RSB_OPEN_DIAGRAM
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_DELETE
+// bx (cp):  Upgrade IP : addNotify
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: FILE_SET_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: upgrade_ip -vlnv user.org:user:robot_arm_control:1.0 [get_ips  lidar_arm_control_robot_arm_control_0_1] -log ip_upgrade.log 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILESET_UPDATE_IP
+// TclEventType: IP_UPGRADE_COMPLETE
+// Tcl Message: current_project hardware_system 
+// Tcl Message: Upgrading '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd' 
+// Tcl Message: INFO: [IP_Flow 19-3422] Upgraded lidar_arm_control_robot_arm_control_0_1 (robot_arm_control_v1.0 1.0) from revision 16 to revision 17 
+// Tcl Message: Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>  Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/ui/bd_9360b533.ui>  
+// Tcl Message: INFO: [Coretcl 2-1525] Wrote upgrade log to '/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/ip_upgrade.log'. 
+// Tcl Message: export_ip_user_files -of_objects [get_ips lidar_arm_control_robot_arm_control_0_1] -no_script -sync -force -quiet 
+// aI (cp): Generate Output Products: addNotify
+selectButton("PAResourceTtoZ.UpgradeIP_IP_UPGRADE_COMPLETED_OK", "OK"); // JButton (C, I)
+selectButton(PAResourceQtoS.SimpleOutputProductDialog_GENERATE_OUTPUT_PRODUCTS_IMMEDIATELY, "Generate"); // a (aI)
+// bx (cp):  Managing Output Products : addNotify
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: generate_target all [get_files  /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>  
+// Tcl Message: VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.v 
+// Tcl Message: VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/sim/lidar_arm_control.v VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hdl/lidar_arm_control_wrapper.v 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control.hwh Generated Block Design Tcl file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control_bd.tcl Generated Hardware Definition File /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.hwdef 
+// Tcl Message: catch { config_ip_cache -export [get_ips -all lidar_arm_control_robot_arm_control_0_1] } 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: catch { config_ip_cache -export [get_ips -all lidar_arm_control_auto_pc_0] } 
+// TclEventType: OOC_IP_CACHE_USED
+// TclEventType: PROJ_DESIGN_MODE_SET
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP lidar_arm_control_auto_pc_0, cache-ID = 68168676865e6a57; cache size = 10.008 MB. 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: export_ip_user_files -of_objects [get_files /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] -no_script -sync -force -quiet 
+// TclEventType: FILE_SET_NEW
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_ADD
+// Tcl Message: create_ip_run [get_files -of_objects [get_fileset sources_1] /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs -jobs 2 lidar_arm_control_robot_arm_control_0_1_synth_1 
+// Tcl Message: [Tue Apr 13 12:10:55 2021] Launched lidar_arm_control_robot_arm_control_0_1_synth_1... Run output will be captured here: /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.runs/lidar_arm_control_robot_arm_control_0_1_synth_1/runme.log 
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: PROJECT_CHANGE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// TclEventType: PACKAGER_MESSAGE_RESET
+// TclEventType: PACKAGER_UNLOAD_CORE
+// a (cp): Critical Messages: addNotify
+// Elapsed time: 11 seconds
+dismissDialog("Managing Output Products"); // bx (cp)
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (a)
+dismissDialog("Critical Messages"); // a (cp)
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cQ, cp)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// bx (cp):  Report IP Status : addNotify
+// Tcl Message: report_ip_status -name ip_status  
+dismissDialog("Report IP Status"); // bx (cp)
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// Tcl Message: delete_bd_objs [get_bd_nets robot_arm_control_0_interrupt] 
+// Run Command: RDIResourceCommand.RDICommands_DELETE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: delete_bd_objs [get_bd_nets axi_uartlite_0_interrupt] [get_bd_nets xlconcat_0_dout] [get_bd_cells xlconcat_0] 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_COMPLETED
+// TclEventType: RSB_CONNECTION_CHANGE
+// Tcl Message: connect_bd_net [get_bd_pins axi_uartlite_0/interrupt] [get_bd_pins processing_system7_0/IRQ_F2P] 
+// Elapsed time: 34 seconds
+selectButton(RDIResource.HPopupTitle_CLOSE, (String) null); // k (n, ResizableWindow)
+selectButton(PAResourceCommand.PACommandNames_REGENERATE_LAYOUT, "System_regenerate_rsb_layout"); // B (f, cp)
+// Run Command: PAResourceCommand.PACommandNames_REGENERATE_LAYOUT
+// Tcl Command: 'regenerate_bd_layout'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_REGENERATE_LAYOUT
+// Tcl Message: regenerate_bd_layout 
+selectButton(PAResourceQtoS.SystemBuilderView_OPTIMIZE_ROUTING, "System_RSB_OPTIMIZE_LAYOUT"); // B (f, cp)
+// Tcl Command: 'regenerate_bd_layout -routing'
+// TclEventType: RSB_LAYOUT_STATE
+// TclEventType: RSB_ROUTE_LAYOUT
+// Tcl Message: regenerate_bd_layout -routing 
+selectButton(RDIResource.BaseReportTab_RERUN, "Rerun"); // h (cQ, cp)
+// Tcl Command: 'report_ip_status -name ip_status '
+// TclEventType: IP_SUMMARY_RESULTS
+// Tcl Message: report_ip_status -name ip_status  
+selectTab("PlanAheadTabBaseWorkspace_JideTabbedPane", (HResource) null, "robot_arm_control_v1_0.v", 0); // k (j, cp)
+selectCodeEditor("robot_arm_control_v1_0.v", 192, 307); // cl (w, cp)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 17 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Program and Debug, Generate Bitstream]", 20, false); // u (Q, cp)
+// Run Command: PAResourceCommand.PACommandNames_RUN_BITGEN
+// al (cp): Save Project: addNotify
+selectButton(PAResourceQtoS.SaveProjectUtils_SAVE, "Save"); // a (al)
+// bx (cp):  Save Constraints : addNotify
+dismissDialog("Save Project"); // al (cp)
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// Tcl Message: save_bd_design 
+// Tcl Message: Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>  Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/ui/bd_9360b533.ui>  
+// A (cp): Synthesis is Out-of-date: addNotify
+dismissDialog("Save Constraints"); // bx (cp)
+selectButton(RDIResource.BaseDialog_YES, "Yes"); // a (A)
+// bx (cp):  Resetting Runs : addNotify
+dismissDialog("Synthesis is Out-of-date"); // A (cp)
+// TclEventType: RUN_MODIFY
+// TclEventType: RUN_RESET
+// TclEventType: RUN_MODIFY
+// Tcl Message: reset_run synth_1 
+// f (cp): Launch Runs: addNotify
+selectButton(RDIResource.BaseDialog_OK, "OK"); // a (f)
+// 'cw' command handler elapsed time: 3 seconds
+// TclEventType: RSB_SCRIPT_TASK
+dismissDialog("Launch Runs"); // f (cp)
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: RSB_SCRIPT_TASK
+// bx (cp):  Generate Bitstream : addNotify
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: launch_runs impl_1 -to_step write_bitstream -jobs 2 
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_REMOVE_OBJECT
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SAVE_DIAGRAM
+// TclEventType: REPORT_IP_STATUS_STALE
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RSB_SCRIPT_TASK
+// Tcl Message: Wrote  : </home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/lidar_arm_control.bd>  
+// Tcl Message: VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.v 
+// Tcl Message: VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/sim/lidar_arm_control.v VHDL Output written to : /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hdl/lidar_arm_control_wrapper.v 
+// TclEventType: FILE_SET_CHANGE
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_100M . INFO: [BD 41-1029] Generation completed for the IP Integrator block robot_arm_control_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/xbar . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_uartlite_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block axi_gpio_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block div_gen_0 . INFO: [BD 41-1029] Generation completed for the IP Integrator block div_gen_1 . 
+// Tcl Message: INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc . 
+// Tcl Message: Exporting to file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control.hwh Generated Block Design Tcl file /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/hw_handoff/lidar_arm_control_bd.tcl Generated Hardware Definition File /home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/synth/lidar_arm_control.hwdef 
+// TclEventType: PROJ_DESIGN_MODE_SET
+// TclEventType: RUN_RESET
+// Tcl Message: INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP lidar_arm_control_auto_pc_0, cache-ID = 68168676865e6a57; cache size = 10.341 MB. 
+// TclEventType: RUN_RESET
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: FILE_SET_CHANGE
+// TclEventType: RUN_LAUNCH
+// TclEventType: RUN_MODIFY
+// Tcl Message: launch_runs: Time (s): cpu = 00:00:24 ; elapsed = 00:00:23 . Memory (MB): peak = 7804.730 ; gain = 46.125 ; free physical = 526 ; free virtual = 2767 
+// aX (cp): Launch Run Critical Messages: addNotify
+// Elapsed time: 25 seconds
+selectButton(PAResourceAtoD.CmdMsgDialog_OK, "OK"); // f (aX)
+dismissDialog("Launch Run Critical Messages"); // aX (cp)
+// TclEventType: PACKAGER_MESSAGE_UPDATE
+// TclEventType: DG_GRAPH_STALE
+// TclEventType: FILE_SET_CHANGE
+// Elapsed time: 12 seconds
+selectCodeEditor("robot_arm_control_v1_0.v", 370, 307); // cl (w, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 8, false); // B (D, cp)
+selectTree(PAResourceEtoH.FileSetPanel_FILE_SET_PANEL_TREE, "[root, Design Sources, IP-XACT, component.xml]", 8, false, false, false, false, false, true); // B (D, cp) - Double Click

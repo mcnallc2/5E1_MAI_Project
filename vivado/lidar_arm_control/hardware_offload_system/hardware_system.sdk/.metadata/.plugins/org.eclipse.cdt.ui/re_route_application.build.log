@@ -1,4 +1,4 @@
-23:50:37 **** Auto Build of configuration Debug for project re_route_application ****
+12:32:58 **** Auto Build of configuration Debug for project re_route_application ****
 make pre-build main-build 
 a9-linaro-pre-build-step
  
@@ -19,9 +19,9 @@ Finished building target: re_route_application.elf
 Invoking: ARM v7 Print Size
 arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size"
    text	   data	    bss	    dec	    hex	filename
-  30956	   1976	  24856	  57788	   e1bc	re_route_application.elf
+  30972	   1976	  24856	  57804	   e1cc	re_route_application.elf
 Finished building: re_route_application.elf.size
  
 
-23:50:37 Build Finished (took 171ms)
+12:32:58 Build Finished (took 251ms)
 

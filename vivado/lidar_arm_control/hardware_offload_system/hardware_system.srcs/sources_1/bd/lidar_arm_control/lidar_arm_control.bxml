@@ -2,10 +2,10 @@
 <Root MajorVersion="0" MinorVersion="36">
   <CompositeFile CompositeFileTopName="lidar_arm_control" CanBeSetAsTop="false" CanDisplayChildGraph="true">
     <Description>Composite Fileset</Description>
-    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1618247694"/>
-    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1618247694"/>
-    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1618247694"/>
-    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1618247694"/>
+    <Generation Name="SYNTHESIS" State="GENERATED" Timestamp="1618312356"/>
+    <Generation Name="IMPLEMENTATION" State="GENERATED" Timestamp="1618312356"/>
+    <Generation Name="SIMULATION" State="GENERATED" Timestamp="1618312356"/>
+    <Generation Name="HW_HANDOFF" State="GENERATED" Timestamp="1618312356"/>
     <FileCollection Name="SOURCES" Type="SOURCES">
       <File Name="ip/lidar_arm_control_processing_system7_0_0/lidar_arm_control_processing_system7_0_0.xci" Type="IP">
         <Instance HierarchyPath="processing_system7_0"/>

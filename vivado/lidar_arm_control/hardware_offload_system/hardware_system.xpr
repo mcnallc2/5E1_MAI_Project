@@ -43,13 +43,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="5"/>
-    <Option Name="WTModelSimExportSim" Val="5"/>
-    <Option Name="WTQuestaExportSim" Val="5"/>
-    <Option Name="WTIesExportSim" Val="5"/>
-    <Option Name="WTVcsExportSim" Val="5"/>
-    <Option Name="WTRivieraExportSim" Val="5"/>
-    <Option Name="WTActivehdlExportSim" Val="5"/>
+    <Option Name="WTXSimExportSim" Val="7"/>
+    <Option Name="WTModelSimExportSim" Val="7"/>
+    <Option Name="WTQuestaExportSim" Val="7"/>
+    <Option Name="WTIesExportSim" Val="7"/>
+    <Option Name="WTVcsExportSim" Val="7"/>
+    <Option Name="WTRivieraExportSim" Val="7"/>
+    <Option Name="WTActivehdlExportSim" Val="7"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -70,14 +70,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_div_gen_1_0/lidar_arm_control_div_gen_1_0.xci">
-          <Proxy FileSetName="lidar_arm_control_div_gen_1_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_div_gen_0_0/lidar_arm_control_div_gen_0_0.xci">
-          <Proxy FileSetName="lidar_arm_control_div_gen_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_axi_gpio_0_0/lidar_arm_control_axi_gpio_0_0.xci">
           <Proxy FileSetName="lidar_arm_control_axi_gpio_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_axi_uartlite_0_0/lidar_arm_control_axi_uartlite_0_0.xci">
+          <Proxy FileSetName="lidar_arm_control_axi_uartlite_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_xbar_0/lidar_arm_control_xbar_0.xci">
+          <Proxy FileSetName="lidar_arm_control_xbar_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_robot_arm_control_0_1/lidar_arm_control_robot_arm_control_0_1.xci">
+          <Proxy FileSetName="lidar_arm_control_robot_arm_control_0_1"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_processing_system7_0_0/lidar_arm_control_processing_system7_0_0.xci">
           <Proxy FileSetName="lidar_arm_control_processing_system7_0_0"/>
@@ -85,14 +88,11 @@
         <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_rst_ps7_0_100M_0/lidar_arm_control_rst_ps7_0_100M_0.xci">
           <Proxy FileSetName="lidar_arm_control_rst_ps7_0_100M_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_robot_arm_control_0_1/lidar_arm_control_robot_arm_control_0_1.xci">
-          <Proxy FileSetName="lidar_arm_control_robot_arm_control_0_1"/>
+        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_div_gen_0_0/lidar_arm_control_div_gen_0_0.xci">
+          <Proxy FileSetName="lidar_arm_control_div_gen_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_xbar_0/lidar_arm_control_xbar_0.xci">
-          <Proxy FileSetName="lidar_arm_control_xbar_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_axi_uartlite_0_0/lidar_arm_control_axi_uartlite_0_0.xci">
-          <Proxy FileSetName="lidar_arm_control_axi_uartlite_0_0"/>
+        <CompFileExtendedInfo CompFileName="lidar_arm_control.bd" FileRelPathName="ip/lidar_arm_control_div_gen_1_0/lidar_arm_control_div_gen_1_0.xci">
+          <Proxy FileSetName="lidar_arm_control_div_gen_1_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/lidar_arm_control/hdl/lidar_arm_control_wrapper.v">

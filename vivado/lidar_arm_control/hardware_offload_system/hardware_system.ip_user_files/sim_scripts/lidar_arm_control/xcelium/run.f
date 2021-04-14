@@ -39,7 +39,7 @@
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/sim/lidar_arm_control.v" \
-  "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/e022/hdl/robot_arm_control_v1_0_S00_AXI.v" \
+  "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/c02a/hdl/robot_arm_control_v1_0_S00_AXI.v" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib -sv \
   "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/edit_robot_arm_control_v1_0.srcs/sources_1/new/lidar_packet_parser.sv" \
@@ -47,7 +47,7 @@
   "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/edit_robot_arm_control_v1_0.srcs/sources_1/new/test_procedure.sv" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \
-  "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/e022/hdl/robot_arm_control_v1_0.v" \
+  "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/c02a/hdl/robot_arm_control_v1_0.v" \
   "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_robot_arm_control_0_1/sim/lidar_arm_control_robot_arm_control_0_1.v" \
 -endlib
 -makelib xcelium_lib/generic_baseblocks_v2_1_0 \
@@ -134,6 +134,12 @@
 -makelib xcelium_lib/xil_defaultlib \
   "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_div_gen_0_0/sim/lidar_arm_control_div_gen_0_0.vhd" \
   "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_div_gen_1_0/sim/lidar_arm_control_div_gen_1_0.vhd" \
+-endlib
+-makelib xcelium_lib/xlconcat_v2_1_1 \
+  "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/2f66/hdl/xlconcat_v2_1_vl_rfs.v" \
+-endlib
+-makelib xcelium_lib/xil_defaultlib \
+  "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_xlconcat_0_0/sim/lidar_arm_control_xlconcat_0_0.v" \
 -endlib
 -makelib xcelium_lib/axi_protocol_converter_v2_1_18 \
   "../../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ipshared/7a04/hdl/axi_protocol_converter_v2_1_vl_rfs.v" \

@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0/lidar_arm_control_processing_system7_0_0.xdc rfile:../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0/lidar_arm_control_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/cmcnally/Repos/robotic-arm-control-system-analysis/vivado/lidar_arm_control/hardware_offload_system/hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0/lidar_arm_control_processing_system7_0_0.xdc rfile:../../../hardware_system.srcs/sources_1/bd/lidar_arm_control/ip/lidar_arm_control_processing_system7_0_0/lidar_arm_control_processing_system7_0_0.xdc id:1 order:EARLY scoped_inst:inst} [current_design]
 current_instance inst
 set_property src_info {type:SCOPED_XDC file:1 line:21 export:INPUT save:INPUT read:READ} [current_design]
 set_input_jitter clk_fpga_0 0.3

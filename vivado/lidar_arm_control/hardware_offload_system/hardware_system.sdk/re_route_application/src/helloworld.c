@@ -425,6 +425,7 @@ int UartLiteSampleLidar(INTC *IntcInstancePtr,
 	TotalRecvCount = 0;
 
 	u8 byte = RecvBuffer[0];
+	xil_printf("Recv Byte: %x\r\n", byte);
 
 	Xil_Out32((ROBOT_CTRL_BASEADDR), byte);
 
