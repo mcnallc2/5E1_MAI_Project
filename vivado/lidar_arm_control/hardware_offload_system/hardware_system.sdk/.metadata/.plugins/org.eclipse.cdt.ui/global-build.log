@@ -15785,3 +15785,8 @@ arm-none-eabi-size re_route_application.elf  |tee "re_route_application.elf.size
   30972	   1976	  24856	  57804	   e1cc	re_route_application.elf
 Finished building: re_route_application.elf.size
  
+12:31:56 **** Incremental Build of configuration Debug for project re_route_application ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+ 
+make: Nothing to be done for 'main-build'.

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Apr 14 15:23:00 2021
+| Date         : Mon Apr 19 12:22:58 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_control_sets -verbose -file us_arm_control_wrapper_control_sets_placed.rpt
 | Design       : us_arm_control_wrapper
@@ -23,8 +23,8 @@ Table of Contents
 +----------------------------------------------------------+-------+
 |                          Status                          | Count |
 +----------------------------------------------------------+-------+
-| Number of unique control sets                            |    13 |
-| Unused register locations in slices containing registers |    54 |
+| Number of unique control sets                            |     9 |
+| Unused register locations in slices containing registers |    26 |
 +----------------------------------------------------------+-------+
 
 
@@ -34,7 +34,7 @@ Table of Contents
 +--------+--------------+
 | Fanout | Control Sets |
 +--------+--------------+
-|      1 |            6 |
+|      1 |            2 |
 |    16+ |            7 |
 +--------+--------------+
 
@@ -45,9 +45,9 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             394 |          141 |
-| No           | No                    | Yes                    |            1252 |          327 |
-| No           | Yes                   | No                     |             260 |          105 |
+| No           | No                    | No                     |             390 |          143 |
+| No           | No                    | Yes                    |             732 |          201 |
+| No           | Yes                   | No                     |             260 |           99 |
 | Yes          | No                    | No                     |               0 |            0 |
 | Yes          | No                    | Yes                    |             128 |           27 |
 | Yes          | Yes                   | No                     |               0 |            0 |
@@ -62,17 +62,13 @@ Table of Contents
 +------------------------------------+-----------------------------------------+------------------+------------------+----------------+
 |  us_sensor_0_i/trig_reg_i_2_n_4    |                                         |                  |                1 |              1 |
 |  us_sensor_1_i/trig_reg_i_2__0_n_4 |                                         |                  |                1 |              1 |
-|  us_sensor_2_i/trig_reg_i_2__1_n_4 |                                         |                  |                1 |              1 |
-|  us_sensor_3_i/trig_reg_i_2__2_n_4 |                                         |                  |                1 |              1 |
-|  us_sensor_4_i/trig_reg_i_2__3_n_4 |                                         |                  |                1 |              1 |
-|  us_sensor_5_i/trig_reg_i_2__4_n_4 |                                         |                  |                1 |              1 |
-|  clk_IBUF_BUFG                     | us_sensor_0_i/counter_ff[63]_i_1_n_4    | reset_IBUF       |               14 |             64 |
-|  clk_IBUF_BUFG                     | us_sensor_1_i/counter_ff[63]_i_1__0_n_4 | reset_IBUF       |               13 |             64 |
-|  n_2_171_BUFG                      |                                         |                  |               28 |             64 |
-|  n_3_673_BUFG                      |                                         |                  |               25 |             64 |
-|  n_0_244_BUFG                      |                                         |                  |               44 |            130 |
-|  n_1_746_BUFG                      |                                         |                  |               38 |            130 |
-|  clk_IBUF_BUFG                     |                                         | reset_IBUF       |              432 |           1512 |
+|  clk_IBUF_BUFG                     | us_sensor_0_i/counter_ff[63]_i_1_n_4    | reset_IBUF       |               13 |             64 |
+|  clk_IBUF_BUFG                     | us_sensor_1_i/counter_ff[63]_i_1__0_n_4 | reset_IBUF       |               14 |             64 |
+|  n_2_171_BUFG                      |                                         |                  |               24 |             64 |
+|  n_3_673_BUFG                      |                                         |                  |               28 |             64 |
+|  n_1_746_BUFG                      |                                         |                  |               47 |            130 |
+|  n_0_244_BUFG                      |                                         |                  |               42 |            130 |
+|  clk_IBUF_BUFG                     |                                         | reset_IBUF       |              300 |            992 |
 +------------------------------------+-----------------------------------------+------------------+------------------+----------------+
 
 

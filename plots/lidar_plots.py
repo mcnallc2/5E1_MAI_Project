@@ -63,15 +63,17 @@ plt.savefig("lidar_control_system/lidar_sensor_FFs.png", bbox_inches = "tight")
 
 
 ## system power estimates
-X_pe = ['BareMetal', 'FreeRTOS', 'Hardware']
+X_p = ['BareMetal', 'FreeRTOS', 'Hardware']
 y_pe = [1.418, 1.418, 1.416]
+y_pm = [1.913, 1.944, 1.893]
 
 ## plotting predictions
 plt.figure(5)
-plt.plot(X_pe, y_pe, color='green', marker='o', linewidth=1)
+plt.plot(X_p, y_pe, color='green', marker='o', linewidth=1)
+plt.plot(X_p, y_pm, color='red', marker='o', linewidth=1)
 plt.xlabel('Platform Type', fontweight='bold')
-plt.ylabel('Total On-Chip Power (W)', fontweight='bold')
-
+plt.ylabel('Power Consumption (W)', fontweight='bold')
+plt.legend(['Vivado Power Estimations', 'Total Increase in Board Power Consumption'])
 ## display plots
 plt.savefig("lidar_control_system/lidar_sensor_power.png", bbox_inches = "tight")
 # plt.show()

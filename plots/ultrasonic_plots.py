@@ -86,16 +86,18 @@ plt.savefig("ultrasonic_control_system/us_sensor_FFs.png", bbox_inches = "tight"
 
 
 
-## system power estimates
-X_pe = ['BareMetal', 'FreeRTOS', 'Hardware']
+## system power
+X_p = ['BareMetal', 'FreeRTOS', 'Hardware']
 y_pe = [1.418, 1.418, 0.145]
+y_pm = [1.359, 1.395, 1.003]
 
 ## plotting predictions
 plt.figure(5)
-plt.plot(X_pe, y_pe, color='green', marker='o', linewidth=1)
+plt.plot(X_p, y_pe, color='green', marker='o', linewidth=1)
+plt.plot(X_p, y_pm, color='red', marker='o', linewidth=1)
 plt.xlabel('Platform Type', fontweight='bold')
-plt.ylabel('Total On-Chip Power (W)', fontweight='bold')
-
+plt.ylabel('Power Consumption (W)', fontweight='bold')
+plt.legend(['Vivado Power Estimations', 'Total Increase in Board Power Consumption'])
 ## display plots
 plt.savefig("ultrasonic_control_system/us_sensor_power.png", bbox_inches = "tight")
 # plt.show()

@@ -1,7 +1,7 @@
 Copyright 1986-2018 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2018.3 (lin64) Build 2405991 Thu Dec  6 23:36:41 MST 2018
-| Date         : Wed Apr 14 15:23:25 2021
+| Date         : Mon Apr 19 12:23:22 2021
 | Host         : noodle-box running 64-bit Ubuntu 18.04.5 LTS
 | Command      : report_methodology -file us_arm_control_wrapper_methodology_drc_routed.rpt -pb us_arm_control_wrapper_methodology_drc_routed.pb -rpx us_arm_control_wrapper_methodology_drc_routed.rpx
 | Design       : us_arm_control_wrapper
@@ -23,12 +23,12 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 406
+             Violations found: 398
 +-----------+----------+-------------------------------+------------+
 | Rule      | Severity | Description                   | Violations |
 +-----------+----------+-------------------------------+------------+
-| TIMING-18 | Warning  | Missing input or output delay | 12         |
-| TIMING-20 | Warning  | Non-clocked latch             | 394        |
+| TIMING-18 | Warning  | Missing input or output delay | 8          |
+| TIMING-20 | Warning  | Non-clocked latch             | 390        |
 +-----------+----------+-------------------------------+------------+
 
 2. REPORT DETAILS
@@ -45,50 +45,30 @@ Related violations: <none>
 
 TIMING-18#3 Warning
 Missing input or output delay  
-An input delay is missing on echo_2 relative to clock(s) sys_clk_pin
+An input delay is missing on reset relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#4 Warning
 Missing input or output delay  
-An input delay is missing on echo_3 relative to clock(s) sys_clk_pin
+An output delay is missing on object_det relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#5 Warning
 Missing input or output delay  
-An input delay is missing on echo_4 relative to clock(s) sys_clk_pin
+An output delay is missing on pwm_out[0] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#6 Warning
 Missing input or output delay  
-An input delay is missing on echo_5 relative to clock(s) sys_clk_pin
+An output delay is missing on pwm_out[1] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
 TIMING-18#7 Warning
 Missing input or output delay  
-An input delay is missing on reset relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#8 Warning
-Missing input or output delay  
-An output delay is missing on object_det relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#9 Warning
-Missing input or output delay  
-An output delay is missing on pwm_out[0] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#10 Warning
-Missing input or output delay  
-An output delay is missing on pwm_out[1] relative to clock(s) sys_clk_pin
-Related violations: <none>
-
-TIMING-18#11 Warning
-Missing input or output delay  
 An output delay is missing on pwm_out[2] relative to clock(s) sys_clk_pin
 Related violations: <none>
 
-TIMING-18#12 Warning
+TIMING-18#8 Warning
 Missing input or output delay  
 An output delay is missing on pwm_out[3] relative to clock(s) sys_clk_pin
 Related violations: <none>
@@ -2041,26 +2021,6 @@ Related violations: <none>
 TIMING-20#390 Warning
 Non-clocked latch  
 The latch us_sensor_1_i/trig_reg cannot be properly analyzed as its control pin us_sensor_1_i/trig_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#391 Warning
-Non-clocked latch  
-The latch us_sensor_2_i/trig_reg cannot be properly analyzed as its control pin us_sensor_2_i/trig_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#392 Warning
-Non-clocked latch  
-The latch us_sensor_3_i/trig_reg cannot be properly analyzed as its control pin us_sensor_3_i/trig_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#393 Warning
-Non-clocked latch  
-The latch us_sensor_4_i/trig_reg cannot be properly analyzed as its control pin us_sensor_4_i/trig_reg/G is not reached by a timing clock
-Related violations: <none>
-
-TIMING-20#394 Warning
-Non-clocked latch  
-The latch us_sensor_5_i/trig_reg cannot be properly analyzed as its control pin us_sensor_5_i/trig_reg/G is not reached by a timing clock
 Related violations: <none>
 
 
